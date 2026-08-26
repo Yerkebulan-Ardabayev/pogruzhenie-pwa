@@ -3,7 +3,7 @@ const DB_VERSION = 1;
 const STORE_NAME = "records";
 const DAY_MS = 24 * 60 * 60 * 1000;
 const KEEP_KEYS = [
-  "level", "theme", "channels", "onboarded", "volume", "muted", "rate", "videoSize",
+  "level", "audience", "course", "theme", "channels", "onboarded", "volume", "muted", "rate", "videoSize",
 ];
 const STORE_ROOTS = ["writing/", "speaking/", "cache/gen/"];
 
@@ -469,6 +469,151 @@ function speechSynthesisCall(text, lang = "en-US") {
   return {ok: true};
 }
 
+function speechWords(value) {
+  const contractions = {
+    "i'm": "i am", "what's": "what is", "it's": "it is", "don't": "do not",
+    "doesn't": "does not", "can't": "can not", "couldn't": "could not",
+    "i'd": "i would", "let's": "let us", "you're": "you are", "we're": "we are",
+  };
+  const numbers = {"0": "zero", "1": "one", "2": "two", "3": "three", "4": "four",
+    "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine", "10": "ten"};
+  let text = String(value || "").toLowerCase().replace(/[’‘]/g, "'");
+  Object.entries(contractions).forEach(([short, full]) => {
+    text = text.replace(new RegExp(`\\b${short.replace("'", "\\'")}\\b`, "g"), full);
+  });
+  return (text.match(/[a-z0-9]+/g) || []).map((word) => numbers[word] || word);
+}
+
+function tokenDistance(a, b) {
+  const rows = Array.from({length: a.length + 1}, (_, i) => {
+    const row = Array(b.length + 1).fill(0);
+    row[0] = i;
+    return row;
+  });
+  for (let j = 0; j <= b.length; j += 1) rows[0][j] = j;
+  for (let i = 1; i <= a.length; i += 1) {
+    for (let j = 1; j <= b.length; j += 1) {
+      rows[i][j] = a[i - 1] === b[j - 1]
+        ? rows[i - 1][j - 1]
+        : 1 + Math.min(rows[i - 1][j], rows[i][j - 1], rows[i - 1][j - 1]);
+    }
+  }
+  return rows[a.length][b.length];
+}
+
+function missingWords(expected, heard) {
+  const remaining = [...heard];
+  return expected.filter((word) => {
+    const at = remaining.indexOf(word);
+    if (at < 0) return true;
+    remaining.splice(at, 1);
+    return false;
+  });
+}
+
+function orderedWords(expected, heard) {
+  let cursor = 0;
+  const matched = [];
+  const missing = [];
+  expected.forEach((word) => {
+    const at = heard.indexOf(word, cursor);
+    if (at < 0) {
+      missing.push(word);
+      return;
+    }
+    matched.push(word);
+    cursor = at + 1;
+  });
+  return {matched, missing};
+}
+
+export function scorePhrase(expected, heard, accepted = []) {
+  const variants = [expected, ...(accepted || [])].filter(Boolean);
+  const heardWords = speechWords(heard);
+  let best = null;
+  variants.forEach((variant) => {
+    const required = speechWords(variant);
+    const openTail = String(variant).includes("...");
+    let score;
+    let ordered = null;
+    if (openTail) {
+      ordered = orderedWords(required, heardWords);
+      score = required.length ? ordered.matched.length / required.length : 0;
+    } else {
+      const longest = Math.max(required.length, heardWords.length, 1);
+      score = Math.max(0, 1 - tokenDistance(required, heardWords) / longest);
+    }
+    const result = {
+      expected: variant,
+      heard: String(heard || "").trim(),
+      score: Math.round(score * 100),
+      missing: ordered ? ordered.missing : missingWords(required, heardWords),
+      extra: openTail ? [] : missingWords(heardWords, required),
+    };
+    if (!best || result.score > best.score) best = result;
+  });
+  best ||= {expected: String(expected || ""), heard: String(heard || ""), score: 0, missing: [], extra: []};
+  best.status = best.score >= 80 ? "good" : best.score >= 50 ? "close" : "again";
+  best.claim = "Проверяю, распознались ли слова. Акцент и интонацию эта проверка не оценивает.";
+  return best;
+}
+
+function recognizeSpeech() {
+  const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Recognition) {
+    fail("В этом браузере нет распознавания речи. На iPhone открой установленное приложение из Safari и проверь, что Siri включена.", "speech-unavailable");
+  }
+  return new Promise((resolve, reject) => {
+    const recognition = new Recognition();
+    let finished = false;
+    const finish = (fn, value) => {
+      if (finished) return;
+      finished = true;
+      clearTimeout(timer);
+      fn(value);
+    };
+    recognition.lang = "en-US";
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 3;
+    recognition.onresult = (event) => {
+      const result = event.results?.[event.resultIndex || 0];
+      const alternatives = result ? Array.from(result).map((item) => ({
+        transcript: String(item.transcript || "").trim(),
+        confidence: Number.isFinite(item.confidence) ? item.confidence : null,
+      })).filter((item) => item.transcript) : [];
+      if (!alternatives.length) {
+        finish(reject, problem("Речь не распозналась. Нажми ещё раз и скажи фразу ближе к телефону.", "no-speech"));
+        return;
+      }
+      finish(resolve, {ok: true, text: alternatives[0].transcript, alternatives});
+    };
+    recognition.onerror = (event) => {
+      const messages = {
+        "not-allowed": "Safari не получил доступ к распознаванию речи. Разреши микрофон для сайта и проверь, что Siri включена.",
+        "service-not-allowed": "Служба распознавания речи недоступна. Проверь, что Siri включена, затем открой приложение из Safari.",
+        "audio-capture": "Не получилось включить микрофон. Проверь разрешение микрофона для сайта.",
+        "no-speech": "Речь не услышана. Нажми ещё раз и скажи фразу ближе к телефону.",
+        "network": "Для распознавания сейчас нужна сеть. Запись и переслушивание остаются доступны.",
+      };
+      finish(reject, problem(messages[event.error] || "Речь не распозналась. Попробуй ещё раз.", event.error || "speech"));
+    };
+    recognition.onnomatch = () => finish(reject, problem("Слова не распознались. Послушай образец и попробуй ещё раз.", "no-match"));
+    recognition.onend = () => {
+      if (!finished) finish(reject, problem("Распознавание закончилось без текста. Попробуй ещё раз.", "no-speech"));
+    };
+    const timer = setTimeout(() => {
+      try { recognition.abort(); } catch {}
+      finish(reject, problem("Распознавание не ответило. Проверь сеть и Siri или используй запись с переслушиванием.", "speech-timeout"));
+    }, 15_000);
+    try {
+      recognition.start();
+    } catch {
+      finish(reject, problem("Не получилось запустить распознавание. Подожди секунду и нажми ещё раз.", "speech-start"));
+    }
+  });
+}
+
 async function startRecording() {
   if (!navigator.mediaDevices?.getUserMedia || !("MediaRecorder" in window)) {
     fail("запись голоса не поддерживается этим браузером", "mic");
@@ -599,6 +744,11 @@ export const bridge = {
         return {ok: true, scope};
       }
       case "seed": return {data: await loadSeed(String(args.name || ""))};
+      case "course.load": {
+        const response = await fetch(new URL("data/course/pre-a1/catalog.json", import.meta.url));
+        if (!response.ok) fail("курс Pre-A1 не найден");
+        return {data: await response.json()};
+      }
       case "tools": return {mode: "pwa", ytdlp: "", claude: "", whisper: "", hasToken: false};
       case "typing":
       case "theme": return {ok: true};
@@ -620,6 +770,8 @@ export const bridge = {
       case "token.set": unavailable("Токен Claude"); break;
       case "limitStatus": return {blocked: false};
       case "speak": return speechSynthesisCall(String(args.text || ""), String(args.lang || "en-US"));
+      case "speech.check": return recognizeSpeech();
+      case "speech.score": return scorePhrase(String(args.expected || ""), String(args.heard || ""), args.accepted || []);
       case "rec.start": return startRecording();
       case "rec.stop": return stopRecording();
       case "rec.delete": recordings.delete(String(args.path || "")); return {ok: true};
@@ -715,7 +867,8 @@ function updateIsSafe() {
   const current = document.querySelector(".screen.on")?.id;
   const overlayOpen = document.getElementById("overlay")?.classList.contains("on");
   const recording = document.getElementById("micbtn")?.classList.contains("recording");
-  return (current === "s-today" || current === "s-settings") && !overlayOpen && !recording;
+  const courseRecording = document.getElementById("courseRecBtn")?.classList.contains("recording");
+  return (current === "s-today" || current === "s-settings") && !overlayOpen && !recording && !courseRecording;
 }
 
 function showUpdateBanner(reload) {

@@ -644,6 +644,69 @@ audio{width:100%; margin-top:12px}
 .mt{margin-top:12px}
 .mb{margin-bottom:12px}
 
+/* Pre-A1 это отдельный спокойный маршрут, а не уменьшенная копия взрослого
+   плана. Детская тема похожа на иллюстрированную карточку, взрослая на
+   рабочий блокнот. Сетка и учебная логика у них общие. */
+.coursehero{position:relative; overflow:hidden; padding:22px; border:2px solid var(--line2)}
+.coursehero .eyebrow,.courselabel{font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink3)}
+.coursehero h2{font-size:25px; margin:5px 0 8px}
+.coursehero .courselead{max-width:680px; color:var(--ink2); line-height:1.55}
+.courseprogress{display:flex; align-items:center; gap:12px; margin-top:16px}
+.coursebar{height:9px; flex:1; min-width:100px; overflow:hidden; border-radius:999px; background:var(--line)}
+.coursebar>span{display:block; height:100%; width:0; border-radius:inherit; background:var(--acc); transition:width .25s ease}
+.courseunits{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px}
+.courseunit{position:relative; width:100%; min-height:132px; padding:16px; text-align:left;
+  color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:16px; cursor:pointer}
+.courseunit:hover{border-color:var(--acc); transform:translateY(-1px)}
+.courseunit.current{border-width:2px; border-color:var(--acc)}
+.courseunit.locked{opacity:.55}
+.courseunit .courseicon{font-size:30px; line-height:1; margin-bottom:10px}
+.courseunit .coursetitle{display:block; font-weight:700; font-size:16px; margin-bottom:5px}
+.courseunit .coursecan{display:block; color:var(--ink3); font-size:12px; line-height:1.35}
+.courseunit .coursecount{position:absolute; right:12px; top:12px; font-size:11px; color:var(--ink3)}
+.lessonhead{border-left:5px solid var(--acc); padding-left:16px}
+.lessonhead h2{font-size:24px; margin:4px 0 8px}
+.candobox{font-size:16px; line-height:1.45}
+.phrasegrid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px}
+.phrasecard{position:relative; min-height:116px; padding:14px 48px 14px 14px; border:1px solid var(--line);
+  border-radius:15px; background:var(--bg2)}
+.phrasecard .pic{font-size:29px; margin-bottom:7px}
+.phrasecard .en{font-weight:700; font-size:17px; line-height:1.25}
+.phrasecard .ru{color:var(--ink3); font-size:13px; margin-top:4px}
+.phrasecard .hear{position:absolute; top:10px; right:10px; min-width:38px; min-height:38px; border-radius:12px;
+  border:1px solid var(--line2); background:var(--card); color:var(--ink); cursor:pointer}
+.onlinevideo{aspect-ratio:16/9; width:100%; overflow:hidden; border-radius:14px; background:#000}
+.onlinevideo iframe{display:block; width:100%; height:100%; border:0}
+.passlist{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-top:10px}
+.passbtn{min-height:62px; padding:8px; border-radius:13px; border:1px solid var(--line); background:var(--bg2);
+  color:var(--ink2); text-align:left; cursor:pointer}
+.passbtn.on{border-color:var(--acc); color:var(--ink); background:var(--accbg)}
+.passbtn.done::after{content:" ✓"; color:var(--ok)}
+.choicegrid{display:grid; gap:8px; margin-top:12px}
+.choicebtn{min-height:48px; padding:10px 13px; text-align:left; border:1px solid var(--line); border-radius:13px;
+  color:var(--ink); background:var(--bg2); cursor:pointer}
+.choicebtn.good{border-color:var(--ok); background:rgba(72,199,142,.12)}
+.choicebtn.bad{border-color:var(--danger); background:rgba(230,91,91,.10)}
+.speechtargets{display:flex; flex-wrap:wrap; gap:7px; margin:10px 0}
+.speechtarget{min-height:44px; padding:8px 11px; border:1px solid var(--line); border-radius:12px;
+  color:var(--ink2); background:var(--bg2); cursor:pointer}
+.speechtarget.on{border-color:var(--acc); color:var(--ink); background:var(--accbg)}
+.speechresult{margin-top:12px; padding:13px; border:1px solid var(--line); border-radius:13px; line-height:1.45}
+.speechresult.good{border-color:var(--ok)}
+.speechresult.close{border-color:var(--amber)}
+.speechresult.again{border-color:var(--danger)}
+.speechprivacy{font-size:12px; color:var(--ink3); margin-top:10px; line-height:1.45}
+.lessonfinish{display:flex; gap:10px; align-items:center; justify-content:flex-end; flex-wrap:wrap}
+html[data-audience="child"] #s-course .coursehero{background:#17364a; border-color:#55c7c1}
+html[data-audience="child"] #s-course .courseunit:nth-child(4n+1){border-color:#55c7c1}
+html[data-audience="child"] #s-course .courseunit:nth-child(4n+2){border-color:#e9b85b}
+html[data-audience="child"] #s-course .courseunit:nth-child(4n+3){border-color:#ef879a}
+html[data-audience="child"] #s-course .courseunit:nth-child(4n){border-color:#8aa7ff}
+html[data-audience="child"] #s-course .coursehero h2{font-family:"Avenir Next Rounded","Avenir Next",sans-serif}
+html[data-audience="adult"] #s-course .coursehero{background:#18251f; border-color:#8ea982}
+html[data-audience="adult"] #s-course .courseunit{border-left:4px solid #8ea982; border-radius:9px}
+html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
+
 /* ─── Узкое окно: макет подстраивается сам ───
    Правил перелома в этой странице не было ВООБЩЕ, а масштаб страницы их
    требует: `pageZoom` уменьшает саму CSS-ширину окна, поэтому 120% в окне
@@ -765,6 +828,17 @@ audio{width:100%; margin-top:12px}
   #toasts{left:10px; right:10px; bottom:calc(124px + env(safe-area-inset-bottom)); transform:none}
   .toast{max-width:none}
   .pwa-update-banner{left:10px; right:10px; align-items:flex-start}
+  .courseunits,.phrasegrid{grid-template-columns:1fr}
+  .coursehero{padding:17px}
+  .coursehero h2,.lessonhead h2{font-size:21px}
+  .passlist{grid-template-columns:1fr}
+  .passbtn{min-height:50px}
+  .lessonfinish .btn{width:100%}
+  html[data-level="PRE_A1"] #side{height:calc(62px + env(safe-area-inset-bottom));
+    grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:54px}
+  html[data-level="PRE_A1"] #main{padding-bottom:calc(62px + env(safe-area-inset-bottom))}
+  html[data-level="PRE_A1"] #wpop,html[data-level="PRE_A1"] #toasts{
+    bottom:calc(70px + env(safe-area-inset-bottom))}
 }
 </style>
 </head>
@@ -774,13 +848,14 @@ audio{width:100%; margin-top:12px}
     <div class="brand">Погружение<small>английский каждый день</small></div>
     <div class="sep"></div>
     <button class="navb" title="Сегодня" data-s="today"><span class="ic">🗓</span><span class="t">Сегодня</span><span class="k">⌘1</span></button>
-    <button class="navb" title="Аудирование" data-s="listen"><span class="ic">🎧</span><span class="t">Аудирование</span><span class="k">⌘2</span></button>
+    <button class="navb foundation-nav hidden" title="Курс с нуля" data-s="course"><span class="ic">🌱</span><span class="t">Курс с нуля</span><span class="k"></span></button>
+    <button class="navb advanced-nav" title="Аудирование" data-s="listen"><span class="ic">🎧</span><span class="t">Аудирование</span><span class="k">⌘2</span></button>
     <button class="navb" title="Слова" data-s="words"><span class="ic">🗂</span><span class="t">Слова</span><span class="k">⌘3</span></button>
-    <button class="navb" title="Письмо" data-s="write"><span class="ic">✍️</span><span class="t">Письмо</span><span class="k">⌘4</span></button>
-    <button class="navb" title="Говорение" data-s="speak"><span class="ic">🎙</span><span class="t">Говорение</span><span class="k">⌘5</span></button>
-    <button class="navb" title="Чтение" data-s="read"><span class="ic">📖</span><span class="t">Чтение</span><span class="k">⌘6</span></button>
-    <button class="navb" title="Грамматика" data-s="grammar"><span class="ic">🧩</span><span class="t">Грамматика</span><span class="k">⌘7</span></button>
-    <button class="navb" title="Реконструкция" data-s="recon"><span class="ic">🧠</span><span class="t">Реконструкция</span><span class="k">⌘8</span></button>
+    <button class="navb advanced-nav" title="Письмо" data-s="write"><span class="ic">✍️</span><span class="t">Письмо</span><span class="k">⌘4</span></button>
+    <button class="navb advanced-nav" title="Говорение" data-s="speak"><span class="ic">🎙</span><span class="t">Говорение</span><span class="k">⌘5</span></button>
+    <button class="navb advanced-nav" title="Чтение" data-s="read"><span class="ic">📖</span><span class="t">Чтение</span><span class="k">⌘6</span></button>
+    <button class="navb advanced-nav" title="Грамматика" data-s="grammar"><span class="ic">🧩</span><span class="t">Грамматика</span><span class="k">⌘7</span></button>
+    <button class="navb advanced-nav" title="Реконструкция" data-s="recon"><span class="ic">🧠</span><span class="t">Реконструкция</span><span class="k">⌘8</span></button>
     <div class="sep"></div>
     <button class="navb" title="Настройки" data-s="settings"><span class="ic">⚙️</span><span class="t">Настройки</span><span class="k">⌘9</span></button>
     <div class="foot" id="streakFoot">Серия: <b>0</b> дн.</div>
@@ -808,6 +883,15 @@ audio{width:100%; margin-top:12px}
             <button class="btn pri" onclick="go('settings')">Настроить</button>
           </div>
         </div>
+        <div class="card coursehero hidden" id="foundationToday">
+          <div class="eyebrow">Сегодня · курс с нуля</div>
+          <h2 id="foundationTodayTitle">Следующий короткий урок готов</h2>
+          <div class="courselead" id="foundationTodayText">Видео, несколько фраз, один ответ вслух.</div>
+          <div class="row mt wrap">
+            <button class="btn pri" onclick="go('course')">Начать урок →</button>
+            <span class="muted small" id="foundationTodayProgress"></span>
+          </div>
+        </div>
         <div id="dayhero">
           <div class="card big">
             <h2 id="planTitle">План дня</h2>
@@ -833,10 +917,75 @@ audio{width:100%; margin-top:12px}
             <div class="muted small" style="text-align:center" id="ringNote">блоков сделано</div>
           </div>
         </div>
-        <div class="card">
+        <div class="card" id="methodToday">
           <div class="muted small">Суть метода: полное погружение без перерывов, как будто переехал в англоязычную страну.
           Один час на навык это планка, а не обязаловка: делай сколько успеваешь, приложение считает серию дней.
           Подробнее: меню «Метод» наверху.</div>
+        </div>
+      </section>
+
+      <!-- ══════════ КУРС С НУЛЯ ══════════ -->
+      <section class="screen" id="s-course">
+        <div id="courseHome">
+          <div class="card coursehero">
+            <div class="eyebrow">С нуля · Pre-A1</div>
+            <h2 id="courseHeroTitle">Первые понятные фразы</h2>
+            <div class="courselead" id="courseHeroLead">Короткий маршрут с видео, повторением и речью.</div>
+            <div class="courseprogress">
+              <div class="coursebar"><span id="courseBar"></span></div>
+              <b class="num" id="courseProgressText">0 / 24</b>
+            </div>
+          </div>
+          <div class="card hidden" id="courseDue"></div>
+          <div class="courseunits" id="courseUnits"></div>
+        </div>
+        <div id="courseLesson" class="hidden">
+          <div class="row mb wrap">
+            <button class="btn ghost" onclick="courseBack()">← Все уроки</button>
+            <span style="flex:1"></span>
+            <span class="chip" id="lessonMinutes"></span>
+          </div>
+          <div class="card lessonhead">
+            <div class="courselabel" id="lessonLabel"></div>
+            <h2 id="lessonTitle"></h2>
+            <div class="candobox"><b>После урока:</b> <span id="lessonCanDo"></span></div>
+            <div class="muted small mt" id="lessonInstruction"></div>
+          </div>
+          <div class="card">
+            <div class="row mb wrap"><b>1. Подготовь фразы</b><span class="muted small">нажми 🔊, послушай и повтори</span></div>
+            <div class="phrasegrid" id="lessonPhrases"></div>
+          </div>
+          <div class="card">
+            <div class="row mb wrap">
+              <b>2. Посмотри онлайн</b>
+              <span class="chip">нужен интернет</span>
+              <span style="flex:1"></span>
+              <button class="btn sm ghost" onclick="courseOpenSource()">Источник ↗</button>
+            </div>
+            <div class="onlinevideo" id="courseVideo"></div>
+            <div class="passlist" id="coursePasses"></div>
+            <div class="muted small mt" id="courseVideoTask"></div>
+          </div>
+          <div class="card" id="courseTaskCard">
+            <b>3. Вспомни без подсказки</b>
+            <div id="courseTask"></div>
+          </div>
+          <div class="card" id="courseSpeechCard">
+            <div class="row mb wrap"><b>4. Скажи вслух</b><span class="muted small">выбери фразу, послушай образец, затем говори</span></div>
+            <div class="speechtargets" id="courseSpeechTargets"></div>
+            <div class="row wrap">
+              <button class="btn" onclick="courseHearTarget()">🔊 Послушать</button>
+              <button class="btn pri" id="courseSayBtn" onclick="courseSay()">🎙 Сказать и проверить</button>
+              <button class="btn ghost" id="courseRecBtn" onclick="courseRecToggle()">Записать себя</button>
+            </div>
+            <audio id="courseRecAudio" class="hidden mt" controls></audio>
+            <div id="courseSpeechResult" class="hidden"></div>
+            <div class="speechprivacy">Проверка показывает, распознались ли нужные слова. Она не выставляет оценку акценту и интонации. Само «Погружение» не сохраняет и не публикует голос. Для распознавания Safari может использовать системную службу речи.</div>
+          </div>
+          <div class="card lessonfinish">
+            <span class="muted small" id="courseFinishHint">Сначала выполни активное задание.</span>
+            <button class="btn pri" id="courseFinishBtn" onclick="courseComplete()">Урок готов</button>
+          </div>
         </div>
       </section>
 
@@ -1314,8 +1463,12 @@ audio{width:100%; margin-top:12px}
         </div>
         <div class="card">
           <h2>Уровень</h2>
+          <div class="row wrap mb" id="audienceBtns">
+            <button class="btn" data-audience="child" onclick="setAudience('child')">🧒 Ребёнок 9-12</button>
+            <button class="btn" data-audience="adult" onclick="setAudience('adult')">👤 Взрослый</button>
+          </div>
           <div class="lvlbtns" id="lvlBtns"></div>
-          <div class="muted small mt">От уровня зависят вопросы, тексты, темы и строгость проверок.</div>
+          <div class="muted small mt">«С нуля · Pre-A1» открывает отдельный пошаговый курс. От A1 и выше остаётся полный план погружения.</div>
         </div>
         <div class="card" data-native-only>
           <h2>Библиотека: ролики и тексты заранее</h2>
@@ -1452,11 +1605,14 @@ let S = {
   screen: "today", packs: {}, review: {queue: [], i: 0, shown: false},
   video: null, rec: {timer: null, secs: 0, path: "", b64: ""},
   lastQ: "", lesson: null, curText: null, schemeTab: 0, recon: null,
+  course: {catalog: null, loading: null, lessons: [], lesson: null, speechIndex: 0,
+    taskDone: false, speechDone: false, recOn: false, recPath: ""},
 };
-const LEVELS = ["A1", "A2", "B1", "B2", "C1"];
+const LEVELS = ["PRE_A1", "A1", "A2", "B1", "B2", "C1"];
+function levelLabel(level) { return level === "PRE_A1" ? "С нуля · Pre-A1" : level; }
 const MOD2SCREEN = {today:"today", listening:"listen", words:"words", writing:"write",
                     speaking:"speak", reading:"read", grammar:"grammar", recon:"recon"};
-const TIMED = {listen:1, words:1, write:1, speak:1, read:1, grammar:1, recon:1};
+const TIMED = {course:1, listen:1, words:1, write:1, speak:1, read:1, grammar:1, recon:1};
 
 function esc(s) {
   return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -1508,7 +1664,8 @@ document.addEventListener("visibilitychange", function () {
 
 /* ───────────────────────── навигация ───────────────────────── */
 const TITLES = {
-  today: ["Сегодня", ""], listen: ["Аудирование", "видео с переводом и тетрадкой"],
+  today: ["Сегодня", ""], course: ["Курс с нуля", "короткое видео, полезные фразы, ответ вслух"],
+  listen: ["Аудирование", "видео с переводом и тетрадкой"],
   words: ["Слова", "тетрадка и повторение по интервалам"],
   write: ["Письмо", "текст каждый вечер + проверка"],
   speak: ["Говорение", "схема, запись, разбор твоей речи"],
@@ -1528,6 +1685,9 @@ function go(name) {
   renderHeadRight();
   hidePop();
   if (name === "today") renderToday();
+  if (name === "course") loadFoundationCourse().then(renderCourseHome).catch(function (e) {
+    el("courseUnits").innerHTML = "<div class='card err'>" + esc(e.error || "курс не загрузился") + "</div>";
+  });
   if (name === "words") { buildQueue(); renderReview(); renderAllWords(); }
   if (name === "write") { renderWriteChips(); renderWriteHelp(); showLimitBanner("writeLimit"); }
   if (name === "speak") showLimitBanner("speakLimit");
@@ -1633,8 +1793,45 @@ const BLOCK_WHY_MOD = {
   grammar: "правило закрепляется",
   recon: "пассивное знание становится активным",
 };
+function isFoundation() { return S.state.level === "PRE_A1"; }
+function applyLearnerMode() {
+  const foundation = isFoundation();
+  document.documentElement.dataset.level = S.state.level || "";
+  document.documentElement.dataset.audience = S.state.audience || "adult";
+  document.querySelectorAll(".foundation-nav").forEach(function (node) {
+    node.classList.toggle("hidden", !foundation);
+  });
+  document.querySelectorAll(".advanced-nav").forEach(function (node) {
+    node.classList.toggle("hidden", foundation);
+  });
+  if (!foundation && S.screen === "course") go("today");
+}
+function renderFoundationToday() {
+  loadFoundationCourse().then(function () {
+    const completed = foundationCompleted();
+    const next = S.course.lessons.find(function (lesson) { return !completed[lesson.id]; });
+    el("foundationTodayTitle").textContent = next ? next.title : "Маршрут Pre-A1 пройден";
+    el("foundationTodayText").textContent = next
+      ? next.canDo
+      : "Все 24 микроурока завершены. Открывай курс и возвращайся к урокам на повторение.";
+    el("foundationTodayProgress").textContent = Object.keys(completed).length + " из " + S.course.lessons.length + " уроков";
+  }).catch(function () {
+    el("foundationTodayTitle").textContent = "Курс пока не загрузился";
+    el("foundationTodayText").textContent = "Проверь соединение и открой приложение ещё раз.";
+  });
+}
 function renderToday() {
   const d = ensureDay();
+  const foundation = isFoundation();
+  el("foundationToday").classList.toggle("hidden", !foundation);
+  el("dayhero").classList.toggle("hidden", foundation);
+  el("methodToday").classList.toggle("hidden", foundation);
+  if (foundation) {
+    el("tokenWarn").classList.add("hidden");
+    renderFoundationToday();
+    refreshStreak();
+    return;
+  }
   // Про недостающий токен говорим ЗАРАНЕЕ, а не в момент, когда человек уже
   // написал текст и нажал «Проверить».
   el("tokenWarn").classList.toggle("hidden", S.tools.hasToken !== false || S.tools.mode === "pwa");
@@ -1754,6 +1951,383 @@ function addFilmPhrase() {
   el("filmPhrase").value = "";
   addWord(v, "", "из фильма", "film");
   toast("Фраза в тетрадке, перевод подтянется");
+}
+
+/* ───────────────────── курс с нуля, Pre-A1 ────────────────── */
+function foundationState() {
+  if (!S.state.foundation) S.state.foundation = {completed: {}, progress: {}, review: {}};
+  if (!S.state.foundation.completed) S.state.foundation.completed = {};
+  if (!S.state.foundation.progress) S.state.foundation.progress = {};
+  if (!S.state.foundation.review) S.state.foundation.review = {};
+  return S.state.foundation;
+}
+function foundationCompleted() { return foundationState().completed; }
+function foundationLessonProgress(id) {
+  const f = foundationState();
+  if (!f.progress[id]) f.progress[id] = {passes: {}, taskDone: false, speechDone: false, attempts: 0, bestSpeech: 0};
+  return f.progress[id];
+}
+function loadFoundationCourse() {
+  if (S.course.catalog) {
+    S.course.lessons = (S.course.catalog.lessons || []).filter(function (lesson) {
+      return lesson.audience === (S.state.audience || "adult");
+    });
+    return Promise.resolve(S.course.catalog);
+  }
+  if (S.course.loading) return S.course.loading;
+  S.course.loading = call("course.load").then(function (r) {
+    const catalog = r.data || {};
+    const all = catalog.lessons || [];
+    const child = all.filter(function (lesson) { return lesson.audience === "child"; }).length;
+    const adult = all.filter(function (lesson) { return lesson.audience === "adult"; }).length;
+    if (catalog.level !== "PRE_A1" || child !== 24 || adult !== 24) {
+      throw {error: "курс повреждён: ожидается по 24 урока для ребёнка и взрослого"};
+    }
+    S.course.catalog = catalog;
+    S.course.lessons = all.filter(function (lesson) {
+      return lesson.audience === (S.state.audience || "adult");
+    });
+    return catalog;
+  }).finally(function () { S.course.loading = null; });
+  return S.course.loading;
+}
+function courseUnitGroups() {
+  const groups = [];
+  S.course.lessons.forEach(function (lesson) {
+    let group = groups.find(function (item) { return item.unit === lesson.unit; });
+    if (!group) {
+      group = {unit: lesson.unit, order: lesson.unitOrder, lessons: []};
+      groups.push(group);
+    }
+    group.lessons.push(lesson);
+  });
+  groups.sort(function (a, b) { return a.order - b.order; });
+  groups.forEach(function (group) { group.lessons.sort(function (a, b) { return a.encounter - b.encounter; }); });
+  return groups;
+}
+function renderCourseHome() {
+  if (!S.course.catalog) return;
+  el("courseHome").classList.remove("hidden");
+  el("courseLesson").classList.add("hidden");
+  const child = (S.state.audience || "adult") === "child";
+  el("courseHeroTitle").textContent = child ? "Твоя английская история начинается здесь" : "Практический английский с самого начала";
+  el("courseHeroLead").textContent = child
+    ? "Один короткий урок: послушать, посмотреть, выбрать смысл и сказать самой. Ошибка не закрывает путь дальше."
+    : "Короткие ситуации из жизни, ясная русская опора, затем собственная реплика без подсказки.";
+  const completed = foundationCompleted();
+  const count = S.course.lessons.filter(function (lesson) { return completed[lesson.id]; }).length;
+  el("courseProgressText").textContent = count + " / " + S.course.lessons.length;
+  el("courseBar").style.width = Math.round(count * 100 / Math.max(1, S.course.lessons.length)) + "%";
+
+  const due = Object.keys(foundationState().review).filter(function (id) {
+    const item = foundationState().review[id];
+    return item && (item.due || 0) <= (S.today.dayNumber || 0) && S.course.lessons.some(function (lesson) { return lesson.id === id; });
+  });
+  const dueBox = el("courseDue");
+  dueBox.classList.toggle("hidden", !due.length);
+  if (due.length) {
+    dueBox.innerHTML = "";
+    const row = document.createElement("div");
+    row.className = "row wrap";
+    const copy = document.createElement("div");
+    copy.style.flex = "1";
+    copy.innerHTML = "<b>Пора вспомнить: " + due.length + "</b>" +
+      "<div class='muted small'>Сначала попробуй сказать фразы без подсказки, потом проверь себя.</div>";
+    const repeat = document.createElement("button");
+    repeat.className = "btn";
+    repeat.textContent = "Повторить →";
+    repeat.onclick = function () { courseOpen(due[0]); };
+    row.appendChild(copy);
+    row.appendChild(repeat);
+    dueBox.appendChild(row);
+  }
+
+  const current = S.course.lessons.find(function (lesson) { return !completed[lesson.id]; });
+  const box = el("courseUnits");
+  box.innerHTML = "";
+  courseUnitGroups().forEach(function (group) {
+    const done = group.lessons.filter(function (lesson) { return completed[lesson.id]; }).length;
+    const next = group.lessons.find(function (lesson) { return !completed[lesson.id]; }) || group.lessons[group.lessons.length - 1];
+    const button = document.createElement("button");
+    button.className = "courseunit" + (current && next.id === current.id ? " current" : "");
+    button.innerHTML = "<span class='coursecount'>" + done + "/3</span>" +
+      "<div class='courseicon'>" + esc(next.chunks[0].icon || "🌱") + "</div>" +
+      "<span class='coursetitle'>" + esc(String(next.title).split(":")[0]) + "</span>" +
+      "<span class='coursecan'>" + esc(next.canDo) + "</span>";
+    button.onclick = function () { courseOpen(next.id); };
+    box.appendChild(button);
+  });
+}
+function courseOpen(id) {
+  const lesson = S.course.lessons.find(function (item) { return item.id === id; });
+  if (!lesson) { toast("Урок не найден", "bad"); return; }
+  S.course.lesson = lesson;
+  S.course.speechIndex = lesson.activeTask?.targetIndex || 0;
+  const progress = foundationLessonProgress(lesson.id);
+  S.course.taskDone = !!progress.taskDone;
+  S.course.speechDone = !!progress.speechDone;
+  el("courseHome").classList.add("hidden");
+  el("courseLesson").classList.remove("hidden");
+  renderCourseLesson();
+  el("scene").scrollTop = 0;
+}
+function courseBack() {
+  if (S.course.recOn) courseRecToggle();
+  if (S.course.recPath) call("rec.delete", {path: S.course.recPath}).catch(function () {});
+  S.course.recPath = "";
+  el("courseVideo").innerHTML = "";
+  renderCourseHome();
+}
+function renderCourseLesson() {
+  const lesson = S.course.lesson;
+  if (!lesson) return;
+  const progress = foundationLessonProgress(lesson.id);
+  el("lessonMinutes").textContent = lesson.minutes + " мин";
+  el("lessonLabel").textContent = "Тема " + lesson.unitOrder + " · встреча " + lesson.encounter + " из 3";
+  el("lessonTitle").textContent = lesson.title;
+  el("lessonCanDo").textContent = lesson.canDo;
+  el("lessonInstruction").textContent = lesson.instruction;
+  const phrases = el("lessonPhrases");
+  phrases.innerHTML = "";
+  (lesson.chunks || []).forEach(function (chunk, index) {
+    const card = document.createElement("div");
+    card.className = "phrasecard";
+    card.innerHTML = "<div class='pic'>" + esc(chunk.icon || "💬") + "</div>" +
+      "<div class='en'>" + esc(chunk.en) + "</div><div class='ru'>" + esc(chunk.ru) + "</div>" +
+      "<button class='hear' aria-label='Послушать фразу'>🔊</button>";
+    card.querySelector("button").onclick = function () { courseSpeakPhrase(index); };
+    phrases.appendChild(card);
+  });
+  if (navigator.onLine === false) {
+    el("courseVideo").innerHTML = "<div class='err' style='padding:18px'>Видео нужно смотреть при наличии интернета. Фразы, задания и повторение продолжают работать.</div>";
+  } else {
+    const video = lesson.video || {};
+    el("courseVideo").innerHTML = "<iframe title='" + esc(video.sourceTitle || "Учебное видео") +
+      "' src='https://www.youtube-nocookie.com/embed/" + esc(video.id) +
+      "?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en' allow='accelerometer; autoplay; encrypted-media; picture-in-picture' allowfullscreen></iframe>";
+  }
+  const passText = ["1. Узнаю слова", "2. Смотрю с EN", "3. Повторяю вслух"];
+  const passes = el("coursePasses");
+  passes.innerHTML = "";
+  passText.forEach(function (text, index) {
+    const button = document.createElement("button");
+    const n = index + 1;
+    button.className = "passbtn" + (progress.passes[n] ? " done on" : "");
+    button.textContent = text;
+    button.onclick = function () { coursePass(n); };
+    passes.appendChild(button);
+  });
+  el("courseVideoTask").textContent = lesson.videoTask;
+  renderCourseTask();
+  renderCourseSpeechTargets();
+  el("courseSpeechResult").className = "hidden";
+  el("courseSpeechResult").innerHTML = "";
+  el("courseRecAudio").classList.add("hidden");
+  el("courseRecBtn").textContent = "Записать себя";
+  updateCourseFinish();
+}
+function courseSpeakPhrase(index) {
+  const chunk = S.course.lesson?.chunks?.[index];
+  if (!chunk) return;
+  call("speak", {text: String(chunk.en).replace("...", ""), lang: "en-US"})
+    .catch(function (e) { toast(e.error || "озвучка не сработала", "bad"); });
+}
+function coursePass(n) {
+  const lesson = S.course.lesson;
+  if (!lesson) return;
+  const progress = foundationLessonProgress(lesson.id);
+  progress.passes[n] = !progress.passes[n];
+  saveState();
+  const button = el("coursePasses").children[n - 1];
+  if (button) {
+    button.classList.toggle("done", !!progress.passes[n]);
+    button.classList.toggle("on", !!progress.passes[n]);
+  }
+  updateCourseFinish();
+}
+function renderCourseTask() {
+  const lesson = S.course.lesson;
+  const box = el("courseTask");
+  box.innerHTML = "";
+  const target = lesson.chunks[lesson.activeTask?.targetIndex || 0];
+  if (lesson.activeTask?.type === "speak") {
+    box.innerHTML = "<div class='mt'>Закрой перевод и скажи: <b>" + esc(target.ru) +
+      "</b>. Затем используй проверку речи ниже.</div>";
+    return;
+  }
+  const question = document.createElement("div");
+  question.className = "mt";
+  question.innerHTML = "Что значит <b>“" + esc(target.en) + "”</b>?";
+  box.appendChild(question);
+  const choices = document.createElement("div");
+  choices.className = "choicegrid";
+  const chunks = lesson.chunks || [];
+  const options = [target];
+  for (let offset = 1; options.length < Math.min(3, chunks.length); offset += 1) {
+    const item = chunks[((lesson.activeTask?.targetIndex || 0) + offset) % chunks.length];
+    if (!options.includes(item)) options.push(item);
+  }
+  options.sort(function (a, b) { return String(a.ru).localeCompare(String(b.ru), "ru"); });
+  options.forEach(function (option) {
+    const button = document.createElement("button");
+    button.className = "choicebtn";
+    button.textContent = option.ru;
+    button.onclick = function () { courseAnswer(button, option === target, choices); };
+    choices.appendChild(button);
+  });
+  box.appendChild(choices);
+}
+function courseAnswer(button, good, choices) {
+  choices.querySelectorAll("button").forEach(function (node) { node.disabled = true; });
+  button.classList.add(good ? "good" : "bad");
+  if (good) {
+    S.course.taskDone = true;
+    foundationLessonProgress(S.course.lesson.id).taskDone = true;
+    toast("Верно. Теперь скажи фразу вслух.");
+  } else {
+    toast("Пока нет. Послушай фразу ещё раз и попробуй без спешки.", "warn");
+    setTimeout(renderCourseTask, 900);
+  }
+  saveState();
+  updateCourseFinish();
+}
+function renderCourseSpeechTargets() {
+  const box = el("courseSpeechTargets");
+  box.innerHTML = "";
+  (S.course.lesson?.chunks || []).forEach(function (chunk, index) {
+    const button = document.createElement("button");
+    button.className = "speechtarget" + (index === S.course.speechIndex ? " on" : "");
+    button.textContent = chunk.en;
+    button.onclick = function () { S.course.speechIndex = index; renderCourseSpeechTargets(); };
+    box.appendChild(button);
+  });
+}
+function courseHearTarget() { courseSpeakPhrase(S.course.speechIndex); }
+function courseSay() {
+  if (S.tools.mode !== "pwa") {
+    toast("На Mac открою полный разбор через Whisper");
+    go("speak");
+    return;
+  }
+  const chunk = S.course.lesson?.chunks?.[S.course.speechIndex];
+  if (!chunk) return;
+  const button = el("courseSayBtn");
+  const out = el("courseSpeechResult");
+  button.disabled = true;
+  out.className = "speechresult";
+  out.innerHTML = "<span class='spin'></span> Слушаю. Скажи фразу один раз, спокойно и близко к телефону.";
+  call("speech.check").then(function (heard) {
+    const alternatives = heard.alternatives?.length ? heard.alternatives : [{transcript: heard.text || ""}];
+    return Promise.all(alternatives.map(function (item) {
+      return call("speech.score", {expected: chunk.en, accepted: chunk.accepted || [], heard: item.transcript});
+    }));
+  }).then(function (scores) {
+    scores.sort(function (a, b) { return b.score - a.score; });
+    const score = scores[0];
+    const progress = foundationLessonProgress(S.course.lesson.id);
+    progress.attempts = (progress.attempts || 0) + 1;
+    progress.bestSpeech = Math.max(progress.bestSpeech || 0, score.score || 0);
+    progress.speechDone = true;
+    S.course.speechDone = true;
+    if (S.course.lesson.activeTask?.type === "speak") {
+      progress.taskDone = true;
+      S.course.taskDone = true;
+    }
+    saveState();
+    renderCourseSpeechScore(score);
+    updateCourseFinish();
+  }).catch(function (e) {
+    out.className = "speechresult again";
+    out.innerHTML = "<b>Проверка сейчас недоступна.</b><div class='mt'>" + esc(e.error || "Не получилось распознать речь") +
+      "</div><div class='muted small mt'>Можно нажать «Записать себя», переслушать и продолжить урок.</div>";
+  }).finally(function () { button.disabled = false; });
+}
+function renderCourseSpeechScore(score) {
+  const out = el("courseSpeechResult");
+  out.className = "speechresult " + score.status;
+  let title = "Попробуй ещё раз";
+  if (score.status === "good") title = "Фраза распознана";
+  else if (score.status === "close") title = "Почти получилось";
+  let html = "<b>" + title + " · " + score.score + "% слов</b>" +
+    "<div class='mt'><span class='muted small'>Safari услышал:</span> " + esc(score.heard || "ничего") + "</div>";
+  if ((score.missing || []).length) html += "<div class='mt'>Повтори: <b>" + esc(score.missing.join(" · ")) + "</b></div>";
+  html += "<div class='muted small mt'>" + esc(score.claim || "") + "</div>";
+  out.innerHTML = html;
+}
+function courseRecToggle() {
+  const button = el("courseRecBtn");
+  if (!S.course.recOn) {
+    button.disabled = true;
+    call("rec.start").then(function () {
+      S.course.recOn = true;
+      button.textContent = "■ Остановить запись";
+      button.classList.add("recording");
+      el("courseRecAudio").classList.add("hidden");
+    }).catch(function (e) {
+      toast(e.error || "запись не стартовала", "bad");
+    }).finally(function () { button.disabled = false; });
+    return;
+  }
+  S.course.recOn = false;
+  button.disabled = true;
+  call("rec.stop").then(function (r) {
+    S.course.recPath = r.path || "";
+    const audio = el("courseRecAudio");
+    audio.src = "data:" + (r.mime || "audio/mp4") + ";base64," + (r.b64 || "");
+    audio.classList.remove("hidden");
+    button.textContent = "Записать ещё раз";
+    const progress = foundationLessonProgress(S.course.lesson.id);
+    progress.speechDone = true;
+    S.course.speechDone = true;
+    if (S.course.lesson.activeTask?.type === "speak") {
+      progress.taskDone = true;
+      S.course.taskDone = true;
+    }
+    saveState();
+    updateCourseFinish();
+  }).catch(function (e) {
+    toast(e.error || "запись не остановилась", "bad");
+    button.textContent = "Записать себя";
+  }).finally(function () {
+    button.disabled = false;
+    button.classList.remove("recording");
+  });
+}
+function updateCourseFinish() {
+  const lesson = S.course.lesson;
+  if (!lesson) return;
+  const progress = foundationLessonProgress(lesson.id);
+  const ready = !!progress.taskDone || !!progress.speechDone;
+  el("courseFinishBtn").disabled = !ready;
+  const passCount = Object.keys(progress.passes || {}).filter(function (key) { return progress.passes[key]; }).length;
+  el("courseFinishHint").textContent = ready
+    ? "Активное задание выполнено. Просмотров отмечено: " + passCount + " из 3."
+    : "Сначала выбери смысл или попробуй сказать целевую фразу.";
+}
+function courseComplete() {
+  const lesson = S.course.lesson;
+  if (!lesson) return;
+  const progress = foundationLessonProgress(lesson.id);
+  if (!progress.taskDone && !progress.speechDone) {
+    toast("Сначала выполни активное задание", "warn");
+    return;
+  }
+  const f = foundationState();
+  f.completed[lesson.id] = {at: Date.now(), date: todayKey(), bestSpeech: progress.bestSpeech || 0};
+  f.review[lesson.id] = {due: (S.today.dayNumber || 0) + 1, interval: 1};
+  const day = ensureDay();
+  day.blocks.foundation = true;
+  (lesson.chunks || []).forEach(function (chunk) {
+    addWord(chunk.en, chunk.ru, lesson.canDo, "Pre-A1");
+  });
+  saveState();
+  saveWords();
+  toast("Урок завершён. Фразы вернутся на повторение завтра.");
+  courseBack();
+}
+function courseOpenSource() {
+  const url = S.course.lesson?.video?.sourceUrl;
+  if (url) call("openURL", {url: url}).catch(function (e) { toast(e.error || "источник не открылся", "bad"); });
 }
 
 /* ─────────────────────── аудирование ───────────────────────── */
@@ -5144,9 +5718,12 @@ function renderSettings() {
   LEVELS.forEach(function (l) {
     const b = document.createElement("button");
     b.className = "lvlb" + (S.state.level === l ? " on" : "");
-    b.textContent = l;
+    b.textContent = levelLabel(l);
     b.onclick = function () { setLevel(l); };
     lb.appendChild(b);
+  });
+  document.querySelectorAll("#audienceBtns [data-audience]").forEach(function (button) {
+    button.classList.toggle("pri", button.dataset.audience === (S.state.audience || "adult"));
   });
   el("themeLbl").textContent = (S.state.theme === "day") ? "День" : "Ночь";
   const t = S.tools;
@@ -5256,7 +5833,7 @@ function refreshTools() {
     S.tools = t;
     if (S.screen === "settings") renderSettings();
     // Баннер живёт на «Сегодня», его надо пересобрать даже если мы не там.
-    el("tokenWarn").classList.toggle("hidden", S.tools.hasToken !== false);
+    el("tokenWarn").classList.toggle("hidden", S.tools.hasToken !== false || S.tools.mode === "pwa" || isFoundation());
   }).catch(function () {});
 }
 /* ── Обнуление ────────────────────────────────────────────────
@@ -5300,10 +5877,30 @@ function doReset(scope) {
 
 function setLevel(l) {
   S.state.level = l;
+  if (l === "PRE_A1") {
+    S.state.course = "foundation-v1";
+    if (!S.state.audience) S.state.audience = "adult";
+  }
   S.packs = {};
+  applyLearnerMode();
   saveState();
   renderSettings();
-  toast("Уровень: " + l);
+  toast("Уровень: " + levelLabel(l));
+  if (l === "PRE_A1") go("course");
+}
+function setAudience(audience) {
+  if (audience !== "child" && audience !== "adult") return;
+  S.state.audience = audience;
+  S.course.lessons = S.course.catalog ? (S.course.catalog.lessons || []).filter(function (lesson) {
+    return lesson.audience === audience;
+  }) : [];
+  applyLearnerMode();
+  saveState();
+  renderSettings();
+  if (isFoundation()) {
+    toast(audience === "child" ? "Маршрут: ребёнок 9-12" : "Маршрут: взрослый");
+    go("course");
+  }
 }
 function toggleTheme() {
   S.state.theme = (S.state.theme === "day") ? "night" : "day";
@@ -5372,30 +5969,45 @@ function showMethod() {
     "<b>Аргумент</b><div class='muted small'>Point (тезис) → Reason (причина) → Example (пример).</div>");
 }
 function onboarding() {
-  let html = "<h2>Погружение</h2>" +
-    "<div class='muted mb'>Приложение ведёт тебя по методу полного погружения: каждый день видео с разбором, " +
-    "слова с повторением, свой текст с проверкой и говорение по схеме с разбором твоей речи.</div>" +
-    "<b>Какой у тебя уровень?</b><div class='lvlbtns mt' id='obLvls'></div>" +
-    "<div class='muted small mt'>Не знаешь: бери A2, если понимаешь простые фразы, или B1, если смотришь видео с субтитрами.</div>";
+  let html = "<h2>Кто будет заниматься?</h2>" +
+    "<div class='muted mb'>Для ребёнка и взрослого используются разные темы, видео и оформление. Прогресс остаётся только на этом устройстве.</div>" +
+    "<div class='choicegrid' id='obAudience'>" +
+      "<button class='choicebtn' data-audience='child'>🧒 <b>Ребёнок 9-12 лет</b><br><span class='muted small'>коротко, наглядно, знакомые ситуации</span></button>" +
+      "<button class='choicebtn' data-audience='adult'>👤 <b>Взрослый</b><br><span class='muted small'>практические диалоги без детской подачи</span></button>" +
+    "</div><div id='obLevelStep' class='hidden mt'><b>С какого уровня начать?</b>" +
+      "<div class='lvlbtns mt' id='obLvls'></div>" +
+      "<div class='muted small mt'>Если не знаешь ни одного английского слова, выбирай «С нуля · Pre-A1». A1 подходит после базового знакомства с языком.</div></div>";
   el("obox").innerHTML = html;
   el("overlay").classList.add("on");
+  document.querySelectorAll("#obAudience [data-audience]").forEach(function (button) {
+    button.onclick = function () {
+      S.state.audience = button.dataset.audience;
+      document.querySelectorAll("#obAudience [data-audience]").forEach(function (node) {
+        node.classList.toggle("good", node === button);
+      });
+      el("obLevelStep").classList.remove("hidden");
+    };
+  });
   const box = el("obLvls");
   LEVELS.forEach(function (l) {
     const b = document.createElement("button");
-    b.className = "lvlb"; b.textContent = l;
+    b.className = "lvlb"; b.textContent = levelLabel(l); b.dataset.level = l;
     b.onclick = function () {
+      if (!S.state.audience) { toast("Сначала выбери: ребёнок или взрослый", "warn"); return; }
       S.state.level = l;
+      if (l === "PRE_A1") S.state.course = "foundation-v1";
       S.state.onboarded = true;
+      applyLearnerMode();
       saveState();
       closeOverlay();
-      toast("Уровень " + l + ". Поехали!");
+      toast(levelLabel(l) + ". Начинаем!");
       // Пачки контента и уже отрисованные экраны собирались до выбора уровня,
       // поэтому перечитываем их под выбранный.
       S.packs = {};
       S.curText = null;
       renderToday();
-      renderRead();
-      newQuestion();
+      if (l === "PRE_A1") go("course");
+      else { renderRead(); newQuestion(); }
     };
     box.appendChild(b);
   });
@@ -5435,6 +6047,7 @@ function init() {
       }).catch(function () {});
     }
     applyTheme();
+    applyLearnerMode();
     // Темы грамматики, пройденные прошлой версией, переносим в карточки со
     // сроком: раньше «пройдена» означала «больше не вернётся никогда».
     migrateGrammar();
@@ -5454,9 +6067,11 @@ function init() {
     renderRecents();
     loadLibrary();
     loadSeries();
-    stab(0);
-    newQuestion();
-    renderRead();
+    if (!isFoundation()) {
+      stab(0);
+      newQuestion();
+      renderRead();
+    }
     buildQueue();
     renderHeadRight();
     if (!S.state.onboarded) onboarding();

@@ -1,0 +1,3238 @@
+{
+  "version": 1,
+  "course": "foundation-v1",
+  "level": "PRE_A1",
+  "generatedAt": "2026-08-26",
+  "method": {
+    "sequence": [
+      "prepare",
+      "watch",
+      "retrieve",
+      "speak",
+      "review"
+    ],
+    "speechCheck": "browser-recognition-plus-word-match",
+    "speechCheckClaim": "Проверяет, распознались ли целевые слова. Не оценивает акцент или интонацию."
+  },
+  "lessons": [
+    {
+      "id": "child-hello-01",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "hello",
+      "unitOrder": 1,
+      "encounter": 1,
+      "order": 1,
+      "title": "Привет и имя: Знакомство",
+      "canDo": "Могу поздороваться, назвать своё имя и спросить имя другого человека",
+      "minutes": 10,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "fN1Cyr0ZK9M",
+        "sourceTitle": "Hello Hello! Can You Clap Your Hands?",
+        "sourceUrl": "https://www.youtube.com/watch?v=fN1Cyr0ZK9M",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 92,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Hello!",
+          "ru": "Привет!",
+          "icon": "👋",
+          "accepted": [
+            "Hi"
+          ]
+        },
+        {
+          "en": "My name is ...",
+          "ru": "Меня зовут ...",
+          "icon": "🙂",
+          "accepted": [
+            "I am ...",
+            "I'm ..."
+          ]
+        },
+        {
+          "en": "What is your name?",
+          "ru": "Как тебя зовут?",
+          "icon": "❓",
+          "accepted": [
+            "What's your name?"
+          ]
+        },
+        {
+          "en": "Nice to meet you.",
+          "ru": "Приятно познакомиться.",
+          "icon": "🤝",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-hello-02",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "hello",
+      "unitOrder": 1,
+      "encounter": 2,
+      "order": 2,
+      "title": "Привет и имя: Тренировка",
+      "canDo": "Могу поздороваться, назвать своё имя и спросить имя другого человека",
+      "minutes": 10,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "fN1Cyr0ZK9M",
+        "sourceTitle": "Hello Hello! Can You Clap Your Hands?",
+        "sourceUrl": "https://www.youtube.com/watch?v=fN1Cyr0ZK9M",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 92,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Hello!",
+          "ru": "Привет!",
+          "icon": "👋",
+          "accepted": [
+            "Hi"
+          ]
+        },
+        {
+          "en": "My name is ...",
+          "ru": "Меня зовут ...",
+          "icon": "🙂",
+          "accepted": [
+            "I am ...",
+            "I'm ..."
+          ]
+        },
+        {
+          "en": "What is your name?",
+          "ru": "Как тебя зовут?",
+          "icon": "❓",
+          "accepted": [
+            "What's your name?"
+          ]
+        },
+        {
+          "en": "Nice to meet you.",
+          "ru": "Приятно познакомиться.",
+          "icon": "🤝",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-hello-03",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "hello",
+      "unitOrder": 1,
+      "encounter": 3,
+      "order": 3,
+      "title": "Привет и имя: Говорю сам",
+      "canDo": "Могу поздороваться, назвать своё имя и спросить имя другого человека",
+      "minutes": 10,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "fN1Cyr0ZK9M",
+        "sourceTitle": "Hello Hello! Can You Clap Your Hands?",
+        "sourceUrl": "https://www.youtube.com/watch?v=fN1Cyr0ZK9M",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 92,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Hello!",
+          "ru": "Привет!",
+          "icon": "👋",
+          "accepted": [
+            "Hi"
+          ]
+        },
+        {
+          "en": "My name is ...",
+          "ru": "Меня зовут ...",
+          "icon": "🙂",
+          "accepted": [
+            "I am ...",
+            "I'm ..."
+          ]
+        },
+        {
+          "en": "What is your name?",
+          "ru": "Как тебя зовут?",
+          "icon": "❓",
+          "accepted": [
+            "What's your name?"
+          ]
+        },
+        {
+          "en": "Nice to meet you.",
+          "ru": "Приятно познакомиться.",
+          "icon": "🤝",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-instructions-01",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "instructions",
+      "unitOrder": 2,
+      "encounter": 1,
+      "order": 4,
+      "title": "Делаю по команде: Знакомство",
+      "canDo": "Понимаю и выполняю пять простых команд на английском",
+      "minutes": 10,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "fuZktwZKYNE",
+        "sourceTitle": "Classroom Commands, English for Children Good TPR Lesson",
+        "sourceUrl": "https://www.youtube.com/watch?v=fuZktwZKYNE",
+        "channel": "FreddiesVilleVideos",
+        "durationSeconds": 111,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Stand up.",
+          "ru": "Встань.",
+          "icon": "🧍",
+          "accepted": []
+        },
+        {
+          "en": "Sit down.",
+          "ru": "Сядь.",
+          "icon": "🪑",
+          "accepted": []
+        },
+        {
+          "en": "Look.",
+          "ru": "Посмотри.",
+          "icon": "👀",
+          "accepted": []
+        },
+        {
+          "en": "Listen.",
+          "ru": "Послушай.",
+          "icon": "👂",
+          "accepted": []
+        },
+        {
+          "en": "Repeat, please.",
+          "ru": "Повтори, пожалуйста.",
+          "icon": "🔁",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-instructions-02",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "instructions",
+      "unitOrder": 2,
+      "encounter": 2,
+      "order": 5,
+      "title": "Делаю по команде: Тренировка",
+      "canDo": "Понимаю и выполняю пять простых команд на английском",
+      "minutes": 10,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "fuZktwZKYNE",
+        "sourceTitle": "Classroom Commands, English for Children Good TPR Lesson",
+        "sourceUrl": "https://www.youtube.com/watch?v=fuZktwZKYNE",
+        "channel": "FreddiesVilleVideos",
+        "durationSeconds": 111,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Stand up.",
+          "ru": "Встань.",
+          "icon": "🧍",
+          "accepted": []
+        },
+        {
+          "en": "Sit down.",
+          "ru": "Сядь.",
+          "icon": "🪑",
+          "accepted": []
+        },
+        {
+          "en": "Look.",
+          "ru": "Посмотри.",
+          "icon": "👀",
+          "accepted": []
+        },
+        {
+          "en": "Listen.",
+          "ru": "Послушай.",
+          "icon": "👂",
+          "accepted": []
+        },
+        {
+          "en": "Repeat, please.",
+          "ru": "Повтори, пожалуйста.",
+          "icon": "🔁",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-instructions-03",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "instructions",
+      "unitOrder": 2,
+      "encounter": 3,
+      "order": 6,
+      "title": "Делаю по команде: Говорю сам",
+      "canDo": "Понимаю и выполняю пять простых команд на английском",
+      "minutes": 10,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "fuZktwZKYNE",
+        "sourceTitle": "Classroom Commands, English for Children Good TPR Lesson",
+        "sourceUrl": "https://www.youtube.com/watch?v=fuZktwZKYNE",
+        "channel": "FreddiesVilleVideos",
+        "durationSeconds": 111,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Stand up.",
+          "ru": "Встань.",
+          "icon": "🧍",
+          "accepted": []
+        },
+        {
+          "en": "Sit down.",
+          "ru": "Сядь.",
+          "icon": "🪑",
+          "accepted": []
+        },
+        {
+          "en": "Look.",
+          "ru": "Посмотри.",
+          "icon": "👀",
+          "accepted": []
+        },
+        {
+          "en": "Listen.",
+          "ru": "Послушай.",
+          "icon": "👂",
+          "accepted": []
+        },
+        {
+          "en": "Repeat, please.",
+          "ru": "Повтори, пожалуйста.",
+          "icon": "🔁",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-numbers-colours-01",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "numbers-colours",
+      "unitOrder": 3,
+      "encounter": 1,
+      "order": 7,
+      "title": "Числа и цвета: Знакомство",
+      "canDo": "Могу назвать несколько чисел и цветов вокруг себя",
+      "minutes": 10,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "jYAWf8Y91hA",
+        "sourceTitle": "I See Something Blue",
+        "sourceUrl": "https://www.youtube.com/watch?v=jYAWf8Y91hA",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 183,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "One, two, three.",
+          "ru": "Один, два, три.",
+          "icon": "🔢",
+          "accepted": []
+        },
+        {
+          "en": "It is blue.",
+          "ru": "Это синее.",
+          "icon": "🔵",
+          "accepted": [
+            "It's blue"
+          ]
+        },
+        {
+          "en": "I see red.",
+          "ru": "Я вижу красное.",
+          "icon": "🔴",
+          "accepted": []
+        },
+        {
+          "en": "What colour is it?",
+          "ru": "Какого это цвета?",
+          "icon": "🎨",
+          "accepted": [
+            "What color is it?"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-numbers-colours-02",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "numbers-colours",
+      "unitOrder": 3,
+      "encounter": 2,
+      "order": 8,
+      "title": "Числа и цвета: Тренировка",
+      "canDo": "Могу назвать несколько чисел и цветов вокруг себя",
+      "minutes": 10,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "jYAWf8Y91hA",
+        "sourceTitle": "I See Something Blue",
+        "sourceUrl": "https://www.youtube.com/watch?v=jYAWf8Y91hA",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 183,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "One, two, three.",
+          "ru": "Один, два, три.",
+          "icon": "🔢",
+          "accepted": []
+        },
+        {
+          "en": "It is blue.",
+          "ru": "Это синее.",
+          "icon": "🔵",
+          "accepted": [
+            "It's blue"
+          ]
+        },
+        {
+          "en": "I see red.",
+          "ru": "Я вижу красное.",
+          "icon": "🔴",
+          "accepted": []
+        },
+        {
+          "en": "What colour is it?",
+          "ru": "Какого это цвета?",
+          "icon": "🎨",
+          "accepted": [
+            "What color is it?"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-numbers-colours-03",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "numbers-colours",
+      "unitOrder": 3,
+      "encounter": 3,
+      "order": 9,
+      "title": "Числа и цвета: Говорю сам",
+      "canDo": "Могу назвать несколько чисел и цветов вокруг себя",
+      "minutes": 10,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "jYAWf8Y91hA",
+        "sourceTitle": "I See Something Blue",
+        "sourceUrl": "https://www.youtube.com/watch?v=jYAWf8Y91hA",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 183,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "One, two, three.",
+          "ru": "Один, два, три.",
+          "icon": "🔢",
+          "accepted": []
+        },
+        {
+          "en": "It is blue.",
+          "ru": "Это синее.",
+          "icon": "🔵",
+          "accepted": [
+            "It's blue"
+          ]
+        },
+        {
+          "en": "I see red.",
+          "ru": "Я вижу красное.",
+          "icon": "🔴",
+          "accepted": []
+        },
+        {
+          "en": "What colour is it?",
+          "ru": "Какого это цвета?",
+          "icon": "🎨",
+          "accepted": [
+            "What color is it?"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-animals-01",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "animals",
+      "unitOrder": 4,
+      "encounter": 1,
+      "order": 10,
+      "title": "Животные: Знакомство",
+      "canDo": "Могу назвать знакомое животное и сказать, какое мне нравится",
+      "minutes": 10,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "9FcCV286-gA",
+        "sourceTitle": "The Animals On The Farm",
+        "sourceUrl": "https://www.youtube.com/watch?v=9FcCV286-gA",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 187,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "It is a cat.",
+          "ru": "Это кошка.",
+          "icon": "🐈",
+          "accepted": [
+            "It's a cat"
+          ]
+        },
+        {
+          "en": "It is a dog.",
+          "ru": "Это собака.",
+          "icon": "🐕",
+          "accepted": [
+            "It's a dog"
+          ]
+        },
+        {
+          "en": "It is a cow.",
+          "ru": "Это корова.",
+          "icon": "🐄",
+          "accepted": [
+            "It's a cow"
+          ]
+        },
+        {
+          "en": "I like dogs.",
+          "ru": "Мне нравятся собаки.",
+          "icon": "❤️",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-animals-02",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "animals",
+      "unitOrder": 4,
+      "encounter": 2,
+      "order": 11,
+      "title": "Животные: Тренировка",
+      "canDo": "Могу назвать знакомое животное и сказать, какое мне нравится",
+      "minutes": 10,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "9FcCV286-gA",
+        "sourceTitle": "The Animals On The Farm",
+        "sourceUrl": "https://www.youtube.com/watch?v=9FcCV286-gA",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 187,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "It is a cat.",
+          "ru": "Это кошка.",
+          "icon": "🐈",
+          "accepted": [
+            "It's a cat"
+          ]
+        },
+        {
+          "en": "It is a dog.",
+          "ru": "Это собака.",
+          "icon": "🐕",
+          "accepted": [
+            "It's a dog"
+          ]
+        },
+        {
+          "en": "It is a cow.",
+          "ru": "Это корова.",
+          "icon": "🐄",
+          "accepted": [
+            "It's a cow"
+          ]
+        },
+        {
+          "en": "I like dogs.",
+          "ru": "Мне нравятся собаки.",
+          "icon": "❤️",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-animals-03",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "animals",
+      "unitOrder": 4,
+      "encounter": 3,
+      "order": 12,
+      "title": "Животные: Говорю сам",
+      "canDo": "Могу назвать знакомое животное и сказать, какое мне нравится",
+      "minutes": 10,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "9FcCV286-gA",
+        "sourceTitle": "The Animals On The Farm",
+        "sourceUrl": "https://www.youtube.com/watch?v=9FcCV286-gA",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 187,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "It is a cat.",
+          "ru": "Это кошка.",
+          "icon": "🐈",
+          "accepted": [
+            "It's a cat"
+          ]
+        },
+        {
+          "en": "It is a dog.",
+          "ru": "Это собака.",
+          "icon": "🐕",
+          "accepted": [
+            "It's a dog"
+          ]
+        },
+        {
+          "en": "It is a cow.",
+          "ru": "Это корова.",
+          "icon": "🐄",
+          "accepted": [
+            "It's a cow"
+          ]
+        },
+        {
+          "en": "I like dogs.",
+          "ru": "Мне нравятся собаки.",
+          "icon": "❤️",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-family-01",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "family",
+      "unitOrder": 5,
+      "encounter": 1,
+      "order": 13,
+      "title": "Моя семья: Знакомство",
+      "canDo": "Могу показать членов семьи и сказать, кто это",
+      "minutes": 10,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "yDua9ms9_eg",
+        "sourceTitle": "The People In My Family",
+        "sourceUrl": "https://www.youtube.com/watch?v=yDua9ms9_eg",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 146,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "This is my mum.",
+          "ru": "Это моя мама.",
+          "icon": "👩",
+          "accepted": [
+            "This is my mom"
+          ]
+        },
+        {
+          "en": "This is my dad.",
+          "ru": "Это мой папа.",
+          "icon": "👨",
+          "accepted": []
+        },
+        {
+          "en": "I have a sister.",
+          "ru": "У меня есть сестра.",
+          "icon": "👧",
+          "accepted": []
+        },
+        {
+          "en": "This is my family.",
+          "ru": "Это моя семья.",
+          "icon": "👨‍👩‍👧",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-family-02",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "family",
+      "unitOrder": 5,
+      "encounter": 2,
+      "order": 14,
+      "title": "Моя семья: Тренировка",
+      "canDo": "Могу показать членов семьи и сказать, кто это",
+      "minutes": 10,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "yDua9ms9_eg",
+        "sourceTitle": "The People In My Family",
+        "sourceUrl": "https://www.youtube.com/watch?v=yDua9ms9_eg",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 146,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "This is my mum.",
+          "ru": "Это моя мама.",
+          "icon": "👩",
+          "accepted": [
+            "This is my mom"
+          ]
+        },
+        {
+          "en": "This is my dad.",
+          "ru": "Это мой папа.",
+          "icon": "👨",
+          "accepted": []
+        },
+        {
+          "en": "I have a sister.",
+          "ru": "У меня есть сестра.",
+          "icon": "👧",
+          "accepted": []
+        },
+        {
+          "en": "This is my family.",
+          "ru": "Это моя семья.",
+          "icon": "👨‍👩‍👧",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-family-03",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "family",
+      "unitOrder": 5,
+      "encounter": 3,
+      "order": 15,
+      "title": "Моя семья: Говорю сам",
+      "canDo": "Могу показать членов семьи и сказать, кто это",
+      "minutes": 10,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "yDua9ms9_eg",
+        "sourceTitle": "The People In My Family",
+        "sourceUrl": "https://www.youtube.com/watch?v=yDua9ms9_eg",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 146,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "This is my mum.",
+          "ru": "Это моя мама.",
+          "icon": "👩",
+          "accepted": [
+            "This is my mom"
+          ]
+        },
+        {
+          "en": "This is my dad.",
+          "ru": "Это мой папа.",
+          "icon": "👨",
+          "accepted": []
+        },
+        {
+          "en": "I have a sister.",
+          "ru": "У меня есть сестра.",
+          "icon": "👧",
+          "accepted": []
+        },
+        {
+          "en": "This is my family.",
+          "ru": "Это моя семья.",
+          "icon": "👨‍👩‍👧",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-food-01",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "food",
+      "unitOrder": 6,
+      "encounter": 1,
+      "order": 16,
+      "title": "Еда, нравится или нет: Знакомство",
+      "canDo": "Могу сказать, какая еда мне нравится, и спросить другого человека",
+      "minutes": 10,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "frN3nvhIHUk",
+        "sourceTitle": "Do You Like Broccoli Ice Cream?",
+        "sourceUrl": "https://www.youtube.com/watch?v=frN3nvhIHUk",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 163,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I like apples.",
+          "ru": "Мне нравятся яблоки.",
+          "icon": "🍎",
+          "accepted": []
+        },
+        {
+          "en": "I do not like broccoli.",
+          "ru": "Мне не нравится брокколи.",
+          "icon": "🥦",
+          "accepted": [
+            "I don't like broccoli"
+          ]
+        },
+        {
+          "en": "Do you like pizza?",
+          "ru": "Тебе нравится пицца?",
+          "icon": "🍕",
+          "accepted": []
+        },
+        {
+          "en": "Yes, I do.",
+          "ru": "Да.",
+          "icon": "👍",
+          "accepted": []
+        },
+        {
+          "en": "No, I do not.",
+          "ru": "Нет.",
+          "icon": "👎",
+          "accepted": [
+            "No I don't"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-food-02",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "food",
+      "unitOrder": 6,
+      "encounter": 2,
+      "order": 17,
+      "title": "Еда, нравится или нет: Тренировка",
+      "canDo": "Могу сказать, какая еда мне нравится, и спросить другого человека",
+      "minutes": 10,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "frN3nvhIHUk",
+        "sourceTitle": "Do You Like Broccoli Ice Cream?",
+        "sourceUrl": "https://www.youtube.com/watch?v=frN3nvhIHUk",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 163,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I like apples.",
+          "ru": "Мне нравятся яблоки.",
+          "icon": "🍎",
+          "accepted": []
+        },
+        {
+          "en": "I do not like broccoli.",
+          "ru": "Мне не нравится брокколи.",
+          "icon": "🥦",
+          "accepted": [
+            "I don't like broccoli"
+          ]
+        },
+        {
+          "en": "Do you like pizza?",
+          "ru": "Тебе нравится пицца?",
+          "icon": "🍕",
+          "accepted": []
+        },
+        {
+          "en": "Yes, I do.",
+          "ru": "Да.",
+          "icon": "👍",
+          "accepted": []
+        },
+        {
+          "en": "No, I do not.",
+          "ru": "Нет.",
+          "icon": "👎",
+          "accepted": [
+            "No I don't"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-food-03",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "food",
+      "unitOrder": 6,
+      "encounter": 3,
+      "order": 18,
+      "title": "Еда, нравится или нет: Говорю сам",
+      "canDo": "Могу сказать, какая еда мне нравится, и спросить другого человека",
+      "minutes": 10,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "frN3nvhIHUk",
+        "sourceTitle": "Do You Like Broccoli Ice Cream?",
+        "sourceUrl": "https://www.youtube.com/watch?v=frN3nvhIHUk",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 163,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I like apples.",
+          "ru": "Мне нравятся яблоки.",
+          "icon": "🍎",
+          "accepted": []
+        },
+        {
+          "en": "I do not like broccoli.",
+          "ru": "Мне не нравится брокколи.",
+          "icon": "🥦",
+          "accepted": [
+            "I don't like broccoli"
+          ]
+        },
+        {
+          "en": "Do you like pizza?",
+          "ru": "Тебе нравится пицца?",
+          "icon": "🍕",
+          "accepted": []
+        },
+        {
+          "en": "Yes, I do.",
+          "ru": "Да.",
+          "icon": "👍",
+          "accepted": []
+        },
+        {
+          "en": "No, I do not.",
+          "ru": "Нет.",
+          "icon": "👎",
+          "accepted": [
+            "No I don't"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-routine-01",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "routine",
+      "unitOrder": 7,
+      "encounter": 1,
+      "order": 19,
+      "title": "Мой день: Знакомство",
+      "canDo": "Могу назвать несколько действий своего обычного дня",
+      "minutes": 10,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "4XLQpRI_wOQ",
+        "sourceTitle": "This Is The Way",
+        "sourceUrl": "https://www.youtube.com/watch?v=4XLQpRI_wOQ",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 138,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I wake up.",
+          "ru": "Я просыпаюсь.",
+          "icon": "⏰",
+          "accepted": []
+        },
+        {
+          "en": "I wash my face.",
+          "ru": "Я умываюсь.",
+          "icon": "🫧",
+          "accepted": []
+        },
+        {
+          "en": "I eat breakfast.",
+          "ru": "Я завтракаю.",
+          "icon": "🥣",
+          "accepted": []
+        },
+        {
+          "en": "I go to school.",
+          "ru": "Я иду в школу.",
+          "icon": "🎒",
+          "accepted": []
+        },
+        {
+          "en": "I go to bed.",
+          "ru": "Я ложусь спать.",
+          "icon": "🛏️",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-routine-02",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "routine",
+      "unitOrder": 7,
+      "encounter": 2,
+      "order": 20,
+      "title": "Мой день: Тренировка",
+      "canDo": "Могу назвать несколько действий своего обычного дня",
+      "minutes": 10,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "4XLQpRI_wOQ",
+        "sourceTitle": "This Is The Way",
+        "sourceUrl": "https://www.youtube.com/watch?v=4XLQpRI_wOQ",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 138,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I wake up.",
+          "ru": "Я просыпаюсь.",
+          "icon": "⏰",
+          "accepted": []
+        },
+        {
+          "en": "I wash my face.",
+          "ru": "Я умываюсь.",
+          "icon": "🫧",
+          "accepted": []
+        },
+        {
+          "en": "I eat breakfast.",
+          "ru": "Я завтракаю.",
+          "icon": "🥣",
+          "accepted": []
+        },
+        {
+          "en": "I go to school.",
+          "ru": "Я иду в школу.",
+          "icon": "🎒",
+          "accepted": []
+        },
+        {
+          "en": "I go to bed.",
+          "ru": "Я ложусь спать.",
+          "icon": "🛏️",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-routine-03",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "routine",
+      "unitOrder": 7,
+      "encounter": 3,
+      "order": 21,
+      "title": "Мой день: Говорю сам",
+      "canDo": "Могу назвать несколько действий своего обычного дня",
+      "minutes": 10,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "4XLQpRI_wOQ",
+        "sourceTitle": "This Is The Way",
+        "sourceUrl": "https://www.youtube.com/watch?v=4XLQpRI_wOQ",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 138,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I wake up.",
+          "ru": "Я просыпаюсь.",
+          "icon": "⏰",
+          "accepted": []
+        },
+        {
+          "en": "I wash my face.",
+          "ru": "Я умываюсь.",
+          "icon": "🫧",
+          "accepted": []
+        },
+        {
+          "en": "I eat breakfast.",
+          "ru": "Я завтракаю.",
+          "icon": "🥣",
+          "accepted": []
+        },
+        {
+          "en": "I go to school.",
+          "ru": "Я иду в школу.",
+          "icon": "🎒",
+          "accepted": []
+        },
+        {
+          "en": "I go to bed.",
+          "ru": "Я ложусь спать.",
+          "icon": "🛏️",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-days-time-01",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "days-time",
+      "unitOrder": 8,
+      "encounter": 1,
+      "order": 22,
+      "title": "Дни и время: Знакомство",
+      "canDo": "Могу назвать сегодняшний день и спросить время",
+      "minutes": 10,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "loINl3Ln6Ck",
+        "sourceTitle": "Days Of The Week Song",
+        "sourceUrl": "https://www.youtube.com/watch?v=loINl3Ln6Ck",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 85,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Today is Monday.",
+          "ru": "Сегодня понедельник.",
+          "icon": "📅",
+          "accepted": []
+        },
+        {
+          "en": "What day is it?",
+          "ru": "Какой сегодня день?",
+          "icon": "❓",
+          "accepted": []
+        },
+        {
+          "en": "What time is it?",
+          "ru": "Который час?",
+          "icon": "🕒",
+          "accepted": []
+        },
+        {
+          "en": "It is seven o'clock.",
+          "ru": "Сейчас семь часов.",
+          "icon": "🕖",
+          "accepted": [
+            "It's seven o'clock"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-days-time-02",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "days-time",
+      "unitOrder": 8,
+      "encounter": 2,
+      "order": 23,
+      "title": "Дни и время: Тренировка",
+      "canDo": "Могу назвать сегодняшний день и спросить время",
+      "minutes": 10,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "loINl3Ln6Ck",
+        "sourceTitle": "Days Of The Week Song",
+        "sourceUrl": "https://www.youtube.com/watch?v=loINl3Ln6Ck",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 85,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Today is Monday.",
+          "ru": "Сегодня понедельник.",
+          "icon": "📅",
+          "accepted": []
+        },
+        {
+          "en": "What day is it?",
+          "ru": "Какой сегодня день?",
+          "icon": "❓",
+          "accepted": []
+        },
+        {
+          "en": "What time is it?",
+          "ru": "Который час?",
+          "icon": "🕒",
+          "accepted": []
+        },
+        {
+          "en": "It is seven o'clock.",
+          "ru": "Сейчас семь часов.",
+          "icon": "🕖",
+          "accepted": [
+            "It's seven o'clock"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "child-days-time-03",
+      "audience": "child",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "days-time",
+      "unitOrder": 8,
+      "encounter": 3,
+      "order": 24,
+      "title": "Дни и время: Говорю сам",
+      "canDo": "Могу назвать сегодняшний день и спросить время",
+      "minutes": 10,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "loINl3Ln6Ck",
+        "sourceTitle": "Days Of The Week Song",
+        "sourceUrl": "https://www.youtube.com/watch?v=loINl3Ln6Ck",
+        "channel": "Super Simple Songs - Kids Songs",
+        "durationSeconds": 85,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Today is Monday.",
+          "ru": "Сегодня понедельник.",
+          "icon": "📅",
+          "accepted": []
+        },
+        {
+          "en": "What day is it?",
+          "ru": "Какой сегодня день?",
+          "icon": "❓",
+          "accepted": []
+        },
+        {
+          "en": "What time is it?",
+          "ru": "Который час?",
+          "icon": "🕒",
+          "accepted": []
+        },
+        {
+          "en": "It is seven o'clock.",
+          "ru": "Сейчас семь часов.",
+          "icon": "🕖",
+          "accepted": [
+            "It's seven o'clock"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-hello-01",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "hello",
+      "unitOrder": 1,
+      "encounter": 1,
+      "order": 1,
+      "title": "Знакомство: Знакомство",
+      "canDo": "Могу поздороваться, представиться и вежливо закончить знакомство",
+      "minutes": 12,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "HooNbcbgi9U",
+        "sourceTitle": "Meeting new people - what to say in English",
+        "sourceUrl": "https://www.youtube.com/watch?v=HooNbcbgi9U",
+        "channel": "British Council | English",
+        "durationSeconds": 206,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Hello, I am ...",
+          "ru": "Здравствуйте, я ...",
+          "icon": "👋",
+          "accepted": [
+            "Hello I'm ..."
+          ]
+        },
+        {
+          "en": "What is your name?",
+          "ru": "Как вас зовут?",
+          "icon": "❓",
+          "accepted": [
+            "What's your name?"
+          ]
+        },
+        {
+          "en": "Nice to meet you.",
+          "ru": "Приятно познакомиться.",
+          "icon": "🤝",
+          "accepted": []
+        },
+        {
+          "en": "Nice to meet you too.",
+          "ru": "Мне тоже приятно познакомиться.",
+          "icon": "🙂",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-hello-02",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "hello",
+      "unitOrder": 1,
+      "encounter": 2,
+      "order": 2,
+      "title": "Знакомство: Тренировка",
+      "canDo": "Могу поздороваться, представиться и вежливо закончить знакомство",
+      "minutes": 12,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "HooNbcbgi9U",
+        "sourceTitle": "Meeting new people - what to say in English",
+        "sourceUrl": "https://www.youtube.com/watch?v=HooNbcbgi9U",
+        "channel": "British Council | English",
+        "durationSeconds": 206,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Hello, I am ...",
+          "ru": "Здравствуйте, я ...",
+          "icon": "👋",
+          "accepted": [
+            "Hello I'm ..."
+          ]
+        },
+        {
+          "en": "What is your name?",
+          "ru": "Как вас зовут?",
+          "icon": "❓",
+          "accepted": [
+            "What's your name?"
+          ]
+        },
+        {
+          "en": "Nice to meet you.",
+          "ru": "Приятно познакомиться.",
+          "icon": "🤝",
+          "accepted": []
+        },
+        {
+          "en": "Nice to meet you too.",
+          "ru": "Мне тоже приятно познакомиться.",
+          "icon": "🙂",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-hello-03",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "hello",
+      "unitOrder": 1,
+      "encounter": 3,
+      "order": 3,
+      "title": "Знакомство: Говорю сам",
+      "canDo": "Могу поздороваться, представиться и вежливо закончить знакомство",
+      "minutes": 12,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "HooNbcbgi9U",
+        "sourceTitle": "Meeting new people - what to say in English",
+        "sourceUrl": "https://www.youtube.com/watch?v=HooNbcbgi9U",
+        "channel": "British Council | English",
+        "durationSeconds": 206,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Hello, I am ...",
+          "ru": "Здравствуйте, я ...",
+          "icon": "👋",
+          "accepted": [
+            "Hello I'm ..."
+          ]
+        },
+        {
+          "en": "What is your name?",
+          "ru": "Как вас зовут?",
+          "icon": "❓",
+          "accepted": [
+            "What's your name?"
+          ]
+        },
+        {
+          "en": "Nice to meet you.",
+          "ru": "Приятно познакомиться.",
+          "icon": "🤝",
+          "accepted": []
+        },
+        {
+          "en": "Nice to meet you too.",
+          "ru": "Мне тоже приятно познакомиться.",
+          "icon": "🙂",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-contact-01",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "contact",
+      "unitOrder": 2,
+      "encounter": 1,
+      "order": 4,
+      "title": "Имя и контакты: Знакомство",
+      "canDo": "Могу продиктовать имя, телефон и электронную почту",
+      "minutes": 12,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "O2_uHGjC5Cw",
+        "sourceTitle": "BCA1 Listening: Business cards",
+        "sourceUrl": "https://www.youtube.com/watch?v=O2_uHGjC5Cw",
+        "channel": "British Council - A1",
+        "durationSeconds": 90,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "How do you spell your name?",
+          "ru": "Как пишется ваше имя по буквам?",
+          "icon": "🔤",
+          "accepted": []
+        },
+        {
+          "en": "My phone number is ...",
+          "ru": "Мой номер телефона ...",
+          "icon": "📱",
+          "accepted": []
+        },
+        {
+          "en": "My email is ...",
+          "ru": "Моя электронная почта ...",
+          "icon": "✉️",
+          "accepted": []
+        },
+        {
+          "en": "Please write it down.",
+          "ru": "Пожалуйста, запишите это.",
+          "icon": "📝",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-contact-02",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "contact",
+      "unitOrder": 2,
+      "encounter": 2,
+      "order": 5,
+      "title": "Имя и контакты: Тренировка",
+      "canDo": "Могу продиктовать имя, телефон и электронную почту",
+      "minutes": 12,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "O2_uHGjC5Cw",
+        "sourceTitle": "BCA1 Listening: Business cards",
+        "sourceUrl": "https://www.youtube.com/watch?v=O2_uHGjC5Cw",
+        "channel": "British Council - A1",
+        "durationSeconds": 90,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "How do you spell your name?",
+          "ru": "Как пишется ваше имя по буквам?",
+          "icon": "🔤",
+          "accepted": []
+        },
+        {
+          "en": "My phone number is ...",
+          "ru": "Мой номер телефона ...",
+          "icon": "📱",
+          "accepted": []
+        },
+        {
+          "en": "My email is ...",
+          "ru": "Моя электронная почта ...",
+          "icon": "✉️",
+          "accepted": []
+        },
+        {
+          "en": "Please write it down.",
+          "ru": "Пожалуйста, запишите это.",
+          "icon": "📝",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-contact-03",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "contact",
+      "unitOrder": 2,
+      "encounter": 3,
+      "order": 6,
+      "title": "Имя и контакты: Говорю сам",
+      "canDo": "Могу продиктовать имя, телефон и электронную почту",
+      "minutes": 12,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "O2_uHGjC5Cw",
+        "sourceTitle": "BCA1 Listening: Business cards",
+        "sourceUrl": "https://www.youtube.com/watch?v=O2_uHGjC5Cw",
+        "channel": "British Council - A1",
+        "durationSeconds": 90,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "How do you spell your name?",
+          "ru": "Как пишется ваше имя по буквам?",
+          "icon": "🔤",
+          "accepted": []
+        },
+        {
+          "en": "My phone number is ...",
+          "ru": "Мой номер телефона ...",
+          "icon": "📱",
+          "accepted": []
+        },
+        {
+          "en": "My email is ...",
+          "ru": "Моя электронная почта ...",
+          "icon": "✉️",
+          "accepted": []
+        },
+        {
+          "en": "Please write it down.",
+          "ru": "Пожалуйста, запишите это.",
+          "icon": "📝",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-time-date-01",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "time-date",
+      "unitOrder": 3,
+      "encounter": 1,
+      "order": 7,
+      "title": "Время и дата: Знакомство",
+      "canDo": "Могу спросить время и назвать простой день или час",
+      "minutes": 12,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "81MmK177K_c",
+        "sourceTitle": "Learn to talk about the time!",
+        "sourceUrl": "https://www.youtube.com/watch?v=81MmK177K_c",
+        "channel": "BBC Learning English",
+        "durationSeconds": 358,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "What time is it?",
+          "ru": "Который час?",
+          "icon": "🕒",
+          "accepted": []
+        },
+        {
+          "en": "It is nine o'clock.",
+          "ru": "Сейчас девять часов.",
+          "icon": "🕘",
+          "accepted": [
+            "It's nine o'clock"
+          ]
+        },
+        {
+          "en": "Today is Monday.",
+          "ru": "Сегодня понедельник.",
+          "icon": "📅",
+          "accepted": []
+        },
+        {
+          "en": "The meeting is at ten.",
+          "ru": "Встреча в десять.",
+          "icon": "🗓️",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-time-date-02",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "time-date",
+      "unitOrder": 3,
+      "encounter": 2,
+      "order": 8,
+      "title": "Время и дата: Тренировка",
+      "canDo": "Могу спросить время и назвать простой день или час",
+      "minutes": 12,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "81MmK177K_c",
+        "sourceTitle": "Learn to talk about the time!",
+        "sourceUrl": "https://www.youtube.com/watch?v=81MmK177K_c",
+        "channel": "BBC Learning English",
+        "durationSeconds": 358,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "What time is it?",
+          "ru": "Который час?",
+          "icon": "🕒",
+          "accepted": []
+        },
+        {
+          "en": "It is nine o'clock.",
+          "ru": "Сейчас девять часов.",
+          "icon": "🕘",
+          "accepted": [
+            "It's nine o'clock"
+          ]
+        },
+        {
+          "en": "Today is Monday.",
+          "ru": "Сегодня понедельник.",
+          "icon": "📅",
+          "accepted": []
+        },
+        {
+          "en": "The meeting is at ten.",
+          "ru": "Встреча в десять.",
+          "icon": "🗓️",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-time-date-03",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "time-date",
+      "unitOrder": 3,
+      "encounter": 3,
+      "order": 9,
+      "title": "Время и дата: Говорю сам",
+      "canDo": "Могу спросить время и назвать простой день или час",
+      "minutes": 12,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "81MmK177K_c",
+        "sourceTitle": "Learn to talk about the time!",
+        "sourceUrl": "https://www.youtube.com/watch?v=81MmK177K_c",
+        "channel": "BBC Learning English",
+        "durationSeconds": 358,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "What time is it?",
+          "ru": "Который час?",
+          "icon": "🕒",
+          "accepted": []
+        },
+        {
+          "en": "It is nine o'clock.",
+          "ru": "Сейчас девять часов.",
+          "icon": "🕘",
+          "accepted": [
+            "It's nine o'clock"
+          ]
+        },
+        {
+          "en": "Today is Monday.",
+          "ru": "Сегодня понедельник.",
+          "icon": "📅",
+          "accepted": []
+        },
+        {
+          "en": "The meeting is at ten.",
+          "ru": "Встреча в десять.",
+          "icon": "🗓️",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-family-01",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "family",
+      "unitOrder": 4,
+      "encounter": 1,
+      "order": 10,
+      "title": "Семья и люди: Знакомство",
+      "canDo": "Могу коротко рассказать о своей семье",
+      "minutes": 12,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "x72gP4HrU58",
+        "sourceTitle": "Talking about family: Real Easy English",
+        "sourceUrl": "https://www.youtube.com/watch?v=x72gP4HrU58",
+        "channel": "BBC Learning English",
+        "durationSeconds": 350,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "This is my family.",
+          "ru": "Это моя семья.",
+          "icon": "👨‍👩‍👧",
+          "accepted": []
+        },
+        {
+          "en": "I have one child.",
+          "ru": "У меня один ребёнок.",
+          "icon": "🧒",
+          "accepted": []
+        },
+        {
+          "en": "This is my husband.",
+          "ru": "Это мой муж.",
+          "icon": "👨",
+          "accepted": [
+            "This is my wife"
+          ]
+        },
+        {
+          "en": "We live in Kazakhstan.",
+          "ru": "Мы живём в Казахстане.",
+          "icon": "🏠",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-family-02",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "family",
+      "unitOrder": 4,
+      "encounter": 2,
+      "order": 11,
+      "title": "Семья и люди: Тренировка",
+      "canDo": "Могу коротко рассказать о своей семье",
+      "minutes": 12,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "x72gP4HrU58",
+        "sourceTitle": "Talking about family: Real Easy English",
+        "sourceUrl": "https://www.youtube.com/watch?v=x72gP4HrU58",
+        "channel": "BBC Learning English",
+        "durationSeconds": 350,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "This is my family.",
+          "ru": "Это моя семья.",
+          "icon": "👨‍👩‍👧",
+          "accepted": []
+        },
+        {
+          "en": "I have one child.",
+          "ru": "У меня один ребёнок.",
+          "icon": "🧒",
+          "accepted": []
+        },
+        {
+          "en": "This is my husband.",
+          "ru": "Это мой муж.",
+          "icon": "👨",
+          "accepted": [
+            "This is my wife"
+          ]
+        },
+        {
+          "en": "We live in Kazakhstan.",
+          "ru": "Мы живём в Казахстане.",
+          "icon": "🏠",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-family-03",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "family",
+      "unitOrder": 4,
+      "encounter": 3,
+      "order": 12,
+      "title": "Семья и люди: Говорю сам",
+      "canDo": "Могу коротко рассказать о своей семье",
+      "minutes": 12,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "x72gP4HrU58",
+        "sourceTitle": "Talking about family: Real Easy English",
+        "sourceUrl": "https://www.youtube.com/watch?v=x72gP4HrU58",
+        "channel": "BBC Learning English",
+        "durationSeconds": 350,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "This is my family.",
+          "ru": "Это моя семья.",
+          "icon": "👨‍👩‍👧",
+          "accepted": []
+        },
+        {
+          "en": "I have one child.",
+          "ru": "У меня один ребёнок.",
+          "icon": "🧒",
+          "accepted": []
+        },
+        {
+          "en": "This is my husband.",
+          "ru": "Это мой муж.",
+          "icon": "👨",
+          "accepted": [
+            "This is my wife"
+          ]
+        },
+        {
+          "en": "We live in Kazakhstan.",
+          "ru": "Мы живём в Казахстане.",
+          "icon": "🏠",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-cafe-01",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "cafe",
+      "unitOrder": 5,
+      "encounter": 1,
+      "order": 13,
+      "title": "Заказ в кафе: Знакомство",
+      "canDo": "Могу сделать простой заказ и спросить цену",
+      "minutes": 12,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "0cmI_TrMT8I",
+        "sourceTitle": "BCA1 Listening: Ordering in a cafe",
+        "sourceUrl": "https://www.youtube.com/watch?v=0cmI_TrMT8I",
+        "channel": "British Council - A1",
+        "durationSeconds": 110,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I would like a coffee, please.",
+          "ru": "Я бы хотел кофе, пожалуйста.",
+          "icon": "☕",
+          "accepted": [
+            "I'd like a coffee please"
+          ]
+        },
+        {
+          "en": "Can I have water, please?",
+          "ru": "Можно мне воду, пожалуйста?",
+          "icon": "💧",
+          "accepted": []
+        },
+        {
+          "en": "How much is it?",
+          "ru": "Сколько это стоит?",
+          "icon": "💳",
+          "accepted": []
+        },
+        {
+          "en": "Thank you.",
+          "ru": "Спасибо.",
+          "icon": "🙏",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-cafe-02",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "cafe",
+      "unitOrder": 5,
+      "encounter": 2,
+      "order": 14,
+      "title": "Заказ в кафе: Тренировка",
+      "canDo": "Могу сделать простой заказ и спросить цену",
+      "minutes": 12,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "0cmI_TrMT8I",
+        "sourceTitle": "BCA1 Listening: Ordering in a cafe",
+        "sourceUrl": "https://www.youtube.com/watch?v=0cmI_TrMT8I",
+        "channel": "British Council - A1",
+        "durationSeconds": 110,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I would like a coffee, please.",
+          "ru": "Я бы хотел кофе, пожалуйста.",
+          "icon": "☕",
+          "accepted": [
+            "I'd like a coffee please"
+          ]
+        },
+        {
+          "en": "Can I have water, please?",
+          "ru": "Можно мне воду, пожалуйста?",
+          "icon": "💧",
+          "accepted": []
+        },
+        {
+          "en": "How much is it?",
+          "ru": "Сколько это стоит?",
+          "icon": "💳",
+          "accepted": []
+        },
+        {
+          "en": "Thank you.",
+          "ru": "Спасибо.",
+          "icon": "🙏",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-cafe-03",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "cafe",
+      "unitOrder": 5,
+      "encounter": 3,
+      "order": 15,
+      "title": "Заказ в кафе: Говорю сам",
+      "canDo": "Могу сделать простой заказ и спросить цену",
+      "minutes": 12,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "0cmI_TrMT8I",
+        "sourceTitle": "BCA1 Listening: Ordering in a cafe",
+        "sourceUrl": "https://www.youtube.com/watch?v=0cmI_TrMT8I",
+        "channel": "British Council - A1",
+        "durationSeconds": 110,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I would like a coffee, please.",
+          "ru": "Я бы хотел кофе, пожалуйста.",
+          "icon": "☕",
+          "accepted": [
+            "I'd like a coffee please"
+          ]
+        },
+        {
+          "en": "Can I have water, please?",
+          "ru": "Можно мне воду, пожалуйста?",
+          "icon": "💧",
+          "accepted": []
+        },
+        {
+          "en": "How much is it?",
+          "ru": "Сколько это стоит?",
+          "icon": "💳",
+          "accepted": []
+        },
+        {
+          "en": "Thank you.",
+          "ru": "Спасибо.",
+          "icon": "🙏",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-directions-01",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "directions",
+      "unitOrder": 6,
+      "encounter": 1,
+      "order": 16,
+      "title": "Как пройти: Знакомство",
+      "canDo": "Могу спросить дорогу и понять три простых указания",
+      "minutes": 12,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "SHXPpsIJTb0",
+        "sourceTitle": "Asking for and giving directions",
+        "sourceUrl": "https://www.youtube.com/watch?v=SHXPpsIJTb0",
+        "channel": "BBC Learning English",
+        "durationSeconds": 237,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Excuse me, where is the station?",
+          "ru": "Извините, где станция?",
+          "icon": "🚉",
+          "accepted": []
+        },
+        {
+          "en": "Go straight.",
+          "ru": "Идите прямо.",
+          "icon": "⬆️",
+          "accepted": []
+        },
+        {
+          "en": "Turn left.",
+          "ru": "Поверните налево.",
+          "icon": "⬅️",
+          "accepted": []
+        },
+        {
+          "en": "Turn right.",
+          "ru": "Поверните направо.",
+          "icon": "➡️",
+          "accepted": []
+        },
+        {
+          "en": "It is near here.",
+          "ru": "Это рядом.",
+          "icon": "📍",
+          "accepted": [
+            "It's near here"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-directions-02",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "directions",
+      "unitOrder": 6,
+      "encounter": 2,
+      "order": 17,
+      "title": "Как пройти: Тренировка",
+      "canDo": "Могу спросить дорогу и понять три простых указания",
+      "minutes": 12,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "SHXPpsIJTb0",
+        "sourceTitle": "Asking for and giving directions",
+        "sourceUrl": "https://www.youtube.com/watch?v=SHXPpsIJTb0",
+        "channel": "BBC Learning English",
+        "durationSeconds": 237,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Excuse me, where is the station?",
+          "ru": "Извините, где станция?",
+          "icon": "🚉",
+          "accepted": []
+        },
+        {
+          "en": "Go straight.",
+          "ru": "Идите прямо.",
+          "icon": "⬆️",
+          "accepted": []
+        },
+        {
+          "en": "Turn left.",
+          "ru": "Поверните налево.",
+          "icon": "⬅️",
+          "accepted": []
+        },
+        {
+          "en": "Turn right.",
+          "ru": "Поверните направо.",
+          "icon": "➡️",
+          "accepted": []
+        },
+        {
+          "en": "It is near here.",
+          "ru": "Это рядом.",
+          "icon": "📍",
+          "accepted": [
+            "It's near here"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-directions-03",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "directions",
+      "unitOrder": 6,
+      "encounter": 3,
+      "order": 18,
+      "title": "Как пройти: Говорю сам",
+      "canDo": "Могу спросить дорогу и понять три простых указания",
+      "minutes": 12,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "SHXPpsIJTb0",
+        "sourceTitle": "Asking for and giving directions",
+        "sourceUrl": "https://www.youtube.com/watch?v=SHXPpsIJTb0",
+        "channel": "BBC Learning English",
+        "durationSeconds": 237,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Excuse me, where is the station?",
+          "ru": "Извините, где станция?",
+          "icon": "🚉",
+          "accepted": []
+        },
+        {
+          "en": "Go straight.",
+          "ru": "Идите прямо.",
+          "icon": "⬆️",
+          "accepted": []
+        },
+        {
+          "en": "Turn left.",
+          "ru": "Поверните налево.",
+          "icon": "⬅️",
+          "accepted": []
+        },
+        {
+          "en": "Turn right.",
+          "ru": "Поверните направо.",
+          "icon": "➡️",
+          "accepted": []
+        },
+        {
+          "en": "It is near here.",
+          "ru": "Это рядом.",
+          "icon": "📍",
+          "accepted": [
+            "It's near here"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-routine-work-01",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "routine-work",
+      "unitOrder": 7,
+      "encounter": 1,
+      "order": 19,
+      "title": "День и работа: Знакомство",
+      "canDo": "Могу назвать несколько действий своего рабочего дня",
+      "minutes": 12,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "RP1AL2DU6vQ",
+        "sourceTitle": "English - Daily routine",
+        "sourceUrl": "https://www.youtube.com/watch?v=RP1AL2DU6vQ",
+        "channel": "Loescher Editore video",
+        "durationSeconds": 109,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I work in ...",
+          "ru": "Я работаю в ...",
+          "icon": "💼",
+          "accepted": []
+        },
+        {
+          "en": "I start at nine.",
+          "ru": "Я начинаю в девять.",
+          "icon": "🕘",
+          "accepted": []
+        },
+        {
+          "en": "I have lunch at one.",
+          "ru": "Я обедаю в час.",
+          "icon": "🍽️",
+          "accepted": []
+        },
+        {
+          "en": "I go home at six.",
+          "ru": "Я иду домой в шесть.",
+          "icon": "🏠",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-routine-work-02",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "routine-work",
+      "unitOrder": 7,
+      "encounter": 2,
+      "order": 20,
+      "title": "День и работа: Тренировка",
+      "canDo": "Могу назвать несколько действий своего рабочего дня",
+      "minutes": 12,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "RP1AL2DU6vQ",
+        "sourceTitle": "English - Daily routine",
+        "sourceUrl": "https://www.youtube.com/watch?v=RP1AL2DU6vQ",
+        "channel": "Loescher Editore video",
+        "durationSeconds": 109,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I work in ...",
+          "ru": "Я работаю в ...",
+          "icon": "💼",
+          "accepted": []
+        },
+        {
+          "en": "I start at nine.",
+          "ru": "Я начинаю в девять.",
+          "icon": "🕘",
+          "accepted": []
+        },
+        {
+          "en": "I have lunch at one.",
+          "ru": "Я обедаю в час.",
+          "icon": "🍽️",
+          "accepted": []
+        },
+        {
+          "en": "I go home at six.",
+          "ru": "Я иду домой в шесть.",
+          "icon": "🏠",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-routine-work-03",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "routine-work",
+      "unitOrder": 7,
+      "encounter": 3,
+      "order": 21,
+      "title": "День и работа: Говорю сам",
+      "canDo": "Могу назвать несколько действий своего рабочего дня",
+      "minutes": 12,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "RP1AL2DU6vQ",
+        "sourceTitle": "English - Daily routine",
+        "sourceUrl": "https://www.youtube.com/watch?v=RP1AL2DU6vQ",
+        "channel": "Loescher Editore video",
+        "durationSeconds": 109,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "I work in ...",
+          "ru": "Я работаю в ...",
+          "icon": "💼",
+          "accepted": []
+        },
+        {
+          "en": "I start at nine.",
+          "ru": "Я начинаю в девять.",
+          "icon": "🕘",
+          "accepted": []
+        },
+        {
+          "en": "I have lunch at one.",
+          "ru": "Я обедаю в час.",
+          "icon": "🍽️",
+          "accepted": []
+        },
+        {
+          "en": "I go home at six.",
+          "ru": "Я иду домой в шесть.",
+          "icon": "🏠",
+          "accepted": []
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-help-plans-01",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "help-plans",
+      "unitOrder": 8,
+      "encounter": 1,
+      "order": 22,
+      "title": "Помощь и простой план: Знакомство",
+      "canDo": "Могу попросить о помощи, переспросить и договориться на завтра",
+      "minutes": 12,
+      "instruction": "Послушай фразы, посмотри видео и узнай знакомые слова.",
+      "videoTask": "Смотри ради общего смысла. Отмечай знакомые слова, понимать всё не нужно.",
+      "video": {
+        "provider": "youtube",
+        "id": "hO98Bjn87KM",
+        "sourceTitle": "How to ask for a favour in English",
+        "sourceUrl": "https://www.youtube.com/watch?v=hO98Bjn87KM",
+        "channel": "British Council | English",
+        "durationSeconds": 252,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Can you help me, please?",
+          "ru": "Вы можете мне помочь?",
+          "icon": "🆘",
+          "accepted": []
+        },
+        {
+          "en": "I do not understand.",
+          "ru": "Я не понимаю.",
+          "icon": "🤔",
+          "accepted": [
+            "I don't understand"
+          ]
+        },
+        {
+          "en": "Could you repeat, please?",
+          "ru": "Повторите, пожалуйста.",
+          "icon": "🔁",
+          "accepted": []
+        },
+        {
+          "en": "Let us meet tomorrow.",
+          "ru": "Давайте встретимся завтра.",
+          "icon": "📆",
+          "accepted": [
+            "Let's meet tomorrow"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-help-plans-02",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "help-plans",
+      "unitOrder": 8,
+      "encounter": 2,
+      "order": 23,
+      "title": "Помощь и простой план: Тренировка",
+      "canDo": "Могу попросить о помощи, переспросить и договориться на завтра",
+      "minutes": 12,
+      "instruction": "Посмотри ещё раз с английскими подписями и выбери правильный смысл.",
+      "videoTask": "Включи английские субтитры источника. Остановись после целевой фразы и повтори её.",
+      "video": {
+        "provider": "youtube",
+        "id": "hO98Bjn87KM",
+        "sourceTitle": "How to ask for a favour in English",
+        "sourceUrl": "https://www.youtube.com/watch?v=hO98Bjn87KM",
+        "channel": "British Council | English",
+        "durationSeconds": 252,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Can you help me, please?",
+          "ru": "Вы можете мне помочь?",
+          "icon": "🆘",
+          "accepted": []
+        },
+        {
+          "en": "I do not understand.",
+          "ru": "Я не понимаю.",
+          "icon": "🤔",
+          "accepted": [
+            "I don't understand"
+          ]
+        },
+        {
+          "en": "Could you repeat, please?",
+          "ru": "Повторите, пожалуйста.",
+          "icon": "🔁",
+          "accepted": []
+        },
+        {
+          "en": "Let us meet tomorrow.",
+          "ru": "Давайте встретимся завтра.",
+          "icon": "📆",
+          "accepted": [
+            "Let's meet tomorrow"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 1
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": "adult-help-plans-03",
+      "audience": "adult",
+      "level": "PRE_A1",
+      "course": "foundation-v1",
+      "unit": "help-plans",
+      "unitOrder": 8,
+      "encounter": 3,
+      "order": 24,
+      "title": "Помощь и простой план: Говорю сам",
+      "canDo": "Могу попросить о помощи, переспросить и договориться на завтра",
+      "minutes": 12,
+      "instruction": "Повтори фразы за образцом, затем скажи их без подсказки.",
+      "videoTask": "Смотри короткими кусками. После каждой знакомой фразы ставь паузу и говори вслух.",
+      "video": {
+        "provider": "youtube",
+        "id": "hO98Bjn87KM",
+        "sourceTitle": "How to ask for a favour in English",
+        "sourceUrl": "https://www.youtube.com/watch?v=hO98Bjn87KM",
+        "channel": "British Council | English",
+        "durationSeconds": 252,
+        "rights": "youtube-public-embed",
+        "playableInEmbed": true,
+        "ageLimit": 0,
+        "onlineOnly": true,
+        "checkedAt": "2026-08-26"
+      },
+      "chunks": [
+        {
+          "en": "Can you help me, please?",
+          "ru": "Вы можете мне помочь?",
+          "icon": "🆘",
+          "accepted": []
+        },
+        {
+          "en": "I do not understand.",
+          "ru": "Я не понимаю.",
+          "icon": "🤔",
+          "accepted": [
+            "I don't understand"
+          ]
+        },
+        {
+          "en": "Could you repeat, please?",
+          "ru": "Повторите, пожалуйста.",
+          "icon": "🔁",
+          "accepted": []
+        },
+        {
+          "en": "Let us meet tomorrow.",
+          "ru": "Давайте встретимся завтра.",
+          "icon": "📆",
+          "accepted": [
+            "Let's meet tomorrow"
+          ]
+        }
+      ],
+      "activeTask": {
+        "type": "speak",
+        "targetIndex": 2
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ]
+    }
+  ]
+}
