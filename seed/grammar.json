@@ -1,0 +1,62 @@
+{
+  "A1": [
+    {"topic": "To be: am / is / are", "hint": "я есть, он есть, они есть"},
+    {"topic": "Present Simple: I work / he works", "hint": "обычные действия, окончание -s"},
+    {"topic": "Артикли a / an / the", "hint": "когда какой и когда никакого"},
+    {"topic": "Множественное число существительных", "hint": "-s, -es и неправильные"},
+    {"topic": "Местоимения: I, me, my, mine", "hint": "кто делает и чьё это"},
+    {"topic": "There is / there are", "hint": "есть, находится"},
+    {"topic": "Can / can't", "hint": "умею, могу"},
+    {"topic": "Предлоги места: in, on, at, under", "hint": "где именно"},
+    {"topic": "Вопросы: do / does", "hint": "как спросить в настоящем"},
+    {"topic": "Have got / has got", "hint": "у меня есть"}
+  ],
+  "A2": [
+    {"topic": "Past Simple: правильные и неправильные глаголы", "hint": "вчера, на прошлой неделе"},
+    {"topic": "Present Continuous против Present Simple", "hint": "сейчас против вообще"},
+    {"topic": "Future: will и be going to", "hint": "решил сейчас против запланировал"},
+    {"topic": "Степени сравнения: bigger, the biggest", "hint": "больше, самый большой"},
+    {"topic": "Модальные: must, should, have to", "hint": "должен, следует, приходится"},
+    {"topic": "Countable и uncountable: some, any, much, many", "hint": "сколько чего"},
+    {"topic": "Past Continuous: I was working", "hint": "делал в момент времени"},
+    {"topic": "Present Perfect: I have done", "hint": "первое знакомство"},
+    {"topic": "Наречия частоты: always, usually, never", "hint": "куда ставить в предложении"},
+    {"topic": "Предлоги времени: in, on, at", "hint": "в понедельник, в мае, в 8 часов"}
+  ],
+  "B1": [
+    {"topic": "Present Perfect против Past Simple", "hint": "главная боль русскоязычных"},
+    {"topic": "Present Perfect Continuous", "hint": "делаю уже два часа"},
+    {"topic": "Условные предложения 0, 1, 2 типа", "hint": "if I have, if I had"},
+    {"topic": "Пассивный залог: is made, was built", "hint": "когда важно не кто, а что"},
+    {"topic": "Reported speech: he said that", "hint": "пересказ чужих слов"},
+    {"topic": "Герундий и инфинитив: stop doing против stop to do", "hint": "смысл меняется"},
+    {"topic": "Relative clauses: who, which, that", "hint": "который"},
+    {"topic": "used to и would", "hint": "раньше было"},
+    {"topic": "Past Perfect: I had finished", "hint": "до другого прошлого"},
+    {"topic": "Модальные вероятности: might, could, must be", "hint": "наверное, возможно"}
+  ],
+  "B2": [
+    {"topic": "Условные 3 типа и mixed conditionals", "hint": "если бы тогда, было бы сейчас"},
+    {"topic": "Инверсия: never have I seen", "hint": "усиление и формальность"},
+    {"topic": "Cleft sentences: it was John who", "hint": "выделение главного"},
+    {"topic": "Артикли в абстрактных и обобщающих значениях", "hint": "тонкие случаи"},
+    {"topic": "Модальные в прошлом: should have, must have, could have", "hint": "надо было, наверное было"},
+    {"topic": "Passive с инфинитивом: is said to be", "hint": "говорят, что"},
+    {"topic": "Фразовые глаголы: разделяемые и нет", "hint": "turn it off против look after it"},
+    {"topic": "Согласование времён в сложных предложениях", "hint": "когда сдвигать время"},
+    {"topic": "Wish / if only", "hint": "сожаления и желания"},
+    {"topic": "Discourse markers: however, moreover, nevertheless", "hint": "связки в письменной речи"}
+  ],
+  "C1": [
+    {"topic": "Nominalisation и академический стиль", "hint": "глагол в существительное"},
+    {"topic": "Тонкие оттенки перфектных форм", "hint": "have been doing против have done"},
+    {"topic": "Subjunctive: I suggest that he be", "hint": "формальные конструкции"},
+    {"topic": "Ellipsis и substitution", "hint": "как носители сокращают"},
+    {"topic": "Хеджирование: it would appear that", "hint": "осторожные утверждения"},
+    {"topic": "Коллокации высокой частотности", "hint": "какие слова дружат"},
+    {"topic": "Fronting и порядок слов для акцента", "hint": "что вынести вперёд"},
+    {"topic": "Participle clauses: having finished", "hint": "компактные конструкции"},
+    {"topic": "Идиоматичность против буквальности", "hint": "где калька с русского слышна"},
+    {"topic": "Регистр: formal, neutral, informal", "hint": "одно и то же тремя способами"}
+  ]
+}

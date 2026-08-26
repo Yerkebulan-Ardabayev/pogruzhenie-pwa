@@ -1,0 +1,28 @@
+{
+  "id": "../",
+  "name": "Погружение",
+  "short_name": "Погружение",
+  "description": "Английский каждый день: план, слова, чтение, говорение и реконструкция.",
+  "lang": "ru",
+  "start_url": "../ui.html",
+  "scope": "../",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#060e16",
+  "theme_color": "#060e16",
+  "categories": ["education"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
