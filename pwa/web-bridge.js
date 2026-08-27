@@ -1,3 +1,5 @@
+import {grammarLesson, speakingSample, writingHints, basicWritingCheck, onlineVideos} from "./offline-learning.js";
+
 const DB_NAME = "pogruzhenie-pwa";
 const DB_VERSION = 1;
 const STORE_NAME = "records";
@@ -168,7 +170,7 @@ function planFor(day) {
 
   if (day === 5) add("film_full", "Посмотреть фильм на английском целиком", "С пятницы самое глубокое погружение", "today", "Вечер");
   if (day === 6 || day === 7) add("film_full", "Фильм целиком, английские субтитры", "Просто смотреть, ничего не разбирать", "today", "Вечер");
-  add("write", "Написать текст на английском + проверка ИИ", "Вставить новые слова из тетрадки, затем получить исправления", "writing", "Вечер");
+  add("write", "Написать текст на английском + базовая проверка", "Вставить новые слова из тетрадки и проверить несколько правил без ИИ", "writing", "Вечер");
   add("speak", "Ответить на вопросы вслух по схеме", "Well/So, I think that, эхо вопроса, because", "speaking", "Вечер");
   add("grammar", "Грамматика: новая тема или повторение", "Пройденное возвращается по кривой забывания", "grammar", "Вечер");
   if (day <= 6) add("recon", "Реконструкция разобранного куска: три круга", "Пропуски, свои пропуски, пустой лист", "recon", "Вечер");
@@ -781,9 +783,22 @@ export const bridge = {
       case "series.list": return {folder: "", episodes: []};
       case "series.pick":
       case "series.open": unavailable("Доступ к фильмам на диске Mac"); break;
-      case "library.load": return {items: [], running: false, pwa: true};
+      case "library.load": return {items:(await onlineVideos()).map((video) => ({...video,kind:"online",onlineOnly:true})), running:false, pwa:true};
       case "library.text": return loadTextTranslation(String(args.text || ""));
       case "library.refill": unavailable("Пополнение библиотеки"); break;
+      case "ai.grammarLesson": return grammarLesson(args);
+      case "ai.speakSample": return speakingSample(args);
+      case "ai.writeHints": return writingHints(args);
+      case "ai.checkWriting": return basicWritingCheck(args);
+      case "ai.checkSentence": {
+        const checked = basicWritingCheck({text:args.sentence});
+        const word = String(args.word || "").toLowerCase().match(/[a-z]+(?:['’][a-z]+)?/g) || [];
+        const sentence = String(args.sentence || "").toLowerCase().match(/[a-z]+(?:['’][a-z]+)?/g) || [];
+        const wordFound = word.length > 0 && sentence.some((_, i) => word.every((token,j) => sentence[i+j] === token));
+        return {...checked,wordFound};
+      }
+      case "ai.canISay": return {mode:"comparison",original:String(args.original || ""),
+        identical:tokens(String(args.original || "")).map((t) => t.norm).join(" ") === tokens(String(args.mine || "")).map((t) => t.norm).join(" ")};
       case "ai.word": {
         const glossary = await loadGlossary();
         const entry = glossary[glossaryKey(args.word)];
@@ -807,6 +822,8 @@ export const bridge = {
     }
     return {ok: false};
   },
+
+  onlineVideos,
 
   async exportData() {
     await window.flushPwaData?.();
@@ -948,17 +965,35 @@ function preparePwaPage() {
   if (card) card.classList.remove("hidden");
   const listenNotice = document.getElementById("pwaListenNotice");
   if (listenNotice) listenNotice.classList.remove("hidden");
+  const phoneVideos = document.getElementById("phoneVideos");
+  if (listenNotice && phoneVideos) listenNotice.before(phoneVideos);
+  const videoToggle = document.getElementById("pickBtn");
+  if (videoToggle) videoToggle.setAttribute("data-native-only", "");
   const analyze = document.getElementById("sttBtn");
-  if (analyze) analyze.textContent = "Разбор доступен на Mac";
+  if (analyze) analyze.textContent = "Сравнить запись";
+  const checkWriting = document.getElementById("wCheckBtn");
+  if (checkWriting) checkWriting.textContent = "Базовая проверка";
+  const intro = document.getElementById("listenIntro");
+  if (intro) intro.hidden = true;
+  const writingHint = document.getElementById("wtext");
+  if (writingHint) writingHint.placeholder = "Напиши несколько предложений по-английски. Черновик сохраняется на этом устройстве.";
+  // Keep the navigation in the same flex viewport as the content. Safari's
+  // keyboard and collapsing browser bars resize the visual viewport.
+  const resizeViewport = () => {
+    const viewport = window.visualViewport;
+    if (viewport && viewport.scale === 1) {
+      document.documentElement.style.setProperty("--pwa-viewport-height", `${viewport.height}px`);
+    }
+  };
+  resizeViewport();
+  window.visualViewport?.addEventListener("resize", resizeViewport);
+  window.addEventListener("resize", resizeViewport);
   const draft = localStorage.getItem("pogruzhenie-writing-draft") || "";
   const writing = document.getElementById("wtext");
   if (writing && draft && !writing.value) {
     writing.value = draft;
     setTimeout(() => window.wCount?.(), 0);
   }
-  document.addEventListener("input", (event) => {
-    if (event.target?.id === "wtext") localStorage.setItem("pogruzhenie-writing-draft", event.target.value);
-  });
   registerServiceWorker();
 }
 

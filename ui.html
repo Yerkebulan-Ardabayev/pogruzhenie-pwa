@@ -82,7 +82,7 @@ input:focus, textarea:focus, select:focus{border-color:var(--acc)}
 #side .foot{margin-top:auto; padding:8px 10px; font-size:12px; color:var(--ink3)}
 #side .foot b{color:var(--acc)}
 
-#main{flex:1; display:flex; flex-direction:column; min-width:0}
+#main{flex:1; display:flex; flex-direction:column; min-width:0; min-height:0}
 #head{
   display:flex; align-items:center; gap:14px;
   padding:44px 26px 12px; border-bottom:1px solid var(--line);
@@ -102,7 +102,7 @@ input:focus, textarea:focus, select:focus{border-color:var(--acc)}
 .zb{padding:5px 11px; font-size:13px; font-weight:700; color:var(--ink2); line-height:1.3}
 .zb:hover{background:var(--acc-soft); color:var(--acc)}
 .zb.val{font-weight:600; font-size:12.5px; min-width:52px; border-left:1px solid var(--line); border-right:1px solid var(--line); font-family:ui-rounded}
-#scene{flex:1; overflow-y:auto; padding:20px 26px 40px}
+#scene{flex:1; min-height:0; overflow-y:auto; padding:20px 26px 40px}
 .screen{display:none; max-width:1060px; margin:0 auto}
 .screen.on{display:block}
 
@@ -765,17 +765,18 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
 /* iPhone: нижняя навигация, safe area и касания не мельче 44 пикселей.
    428x926 соответствует iPhone 13 Pro Max, 393x852 покрывает iPhone 16. */
 @media (max-width: 600px) {
-  html,body{width:100%; height:100%; overscroll-behavior:none}
+  html,body{width:100%; height:100%; overflow:hidden; overscroll-behavior:none}
   body{overflow:hidden; -webkit-tap-highlight-color:transparent}
   input,textarea,select{font-size:16px}
-  #app{display:block; height:100dvh; min-height:100dvh}
-  #main{height:100dvh; padding-bottom:calc(116px + env(safe-area-inset-bottom))}
+  #app{display:flex; flex-direction:column; height:100%; height:100dvh; min-height:0}
+  html.pwa #app{height:var(--pwa-viewport-height,100dvh)}
+  #main{order:0; flex:1; height:auto; min-height:0; padding-bottom:0}
   #side{
-    position:fixed; z-index:90; left:0; right:0; bottom:0; top:auto;
-    width:100%; min-width:0; height:calc(116px + env(safe-area-inset-bottom));
+    position:relative; z-index:90; order:1; flex:none;
+    width:100%; min-width:0; height:calc(124px + env(safe-area-inset-bottom));
     padding:5px max(5px,env(safe-area-inset-left)) env(safe-area-inset-bottom)
       max(5px,env(safe-area-inset-right));
-    display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:54px;
+    display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:58px;
     align-content:start; align-items:stretch; gap:2px; overflow:hidden;
     border-right:0; border-top:1px solid var(--line); background:var(--bg1);
     scrollbar-width:none; -webkit-overflow-scrolling:touch
@@ -783,12 +784,12 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
   #side::-webkit-scrollbar{display:none}
   #side .brand,#side .sep,#side .foot{display:none}
   #side .navb{
-    flex:none; width:100%; min-width:0; min-height:54px; padding:4px 3px;
+    flex:none; width:100%; min-width:0; min-height:54px; padding:4px 0;
     flex-direction:column; justify-content:center; gap:0; text-align:center; border-radius:12px
   }
   #side .navb .ic{width:auto; font-size:19px; line-height:24px}
-  #side .navb .t{display:block; width:100%; overflow:hidden; text-overflow:ellipsis;
-    font-size:9px; line-height:13px; white-space:nowrap}
+  #side .navb .t{display:block; width:100%; overflow-wrap:anywhere;
+    font-size:10px; line-height:12px; white-space:normal}
   #side .navb .k{display:none}
   #head{
     min-height:calc(60px + env(safe-area-inset-top));
@@ -799,7 +800,7 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
   #head .right{width:auto; max-width:60%; margin-left:auto; gap:6px; justify-content:flex-end}
   #head .right .zoomer{display:none}
   #head .right .chip{max-width:100%; padding:4px 8px; font-size:11px; white-space:normal; text-align:right}
-  #scene{padding:12px 10px 26px; -webkit-overflow-scrolling:touch; overflow-x:hidden}
+  #scene{padding:12px 10px 26px; -webkit-overflow-scrolling:touch; overflow-x:hidden; overscroll-behavior-y:contain}
   .screen{width:100%; max-width:100%}
   .card{padding:15px 14px; margin-bottom:10px; border-radius:15px}
   .btn{min-height:44px; padding:9px 13px; justify-content:center}
@@ -820,6 +821,12 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
   .pbrow{gap:6px}
   #pseek{min-width:120px; flex:1}
   #wtext{min-height:38dvh}
+  #s-write .row,#s-speak .row,#gLesson>.card>.row{flex-wrap:wrap}
+  #recDone>.row{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+  #recDone>.row .pri{grid-column:1 / -1}
+  #speakStage audio{display:block; width:100%; max-width:100%}
+  #gLesson>.card>.row h2{min-width:180px}
+  .exrow input{width:min(100%,200px)}
   #wpop{left:10px!important; right:10px!important; top:auto!important;
     bottom:calc(124px + env(safe-area-inset-bottom)); width:auto; max-width:none}
   #overlay{align-items:flex-end; padding:0}
@@ -836,7 +843,7 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
   .lessonfinish .btn{width:100%}
   html[data-level="PRE_A1"] #side{height:calc(62px + env(safe-area-inset-bottom));
     grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:54px}
-  html[data-level="PRE_A1"] #main{padding-bottom:calc(62px + env(safe-area-inset-bottom))}
+  html[data-level="PRE_A1"] #main{padding-bottom:0}
   html[data-level="PRE_A1"] #wpop,html[data-level="PRE_A1"] #toasts{
     bottom:calc(70px + env(safe-area-inset-bottom))}
 }
@@ -855,7 +862,7 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
     <button class="navb advanced-nav" title="Говорение" data-s="speak"><span class="ic">🎙</span><span class="t">Говорение</span><span class="k">⌘5</span></button>
     <button class="navb advanced-nav" title="Чтение" data-s="read"><span class="ic">📖</span><span class="t">Чтение</span><span class="k">⌘6</span></button>
     <button class="navb advanced-nav" title="Грамматика" data-s="grammar"><span class="ic">🧩</span><span class="t">Грамматика</span><span class="k">⌘7</span></button>
-    <button class="navb advanced-nav" title="Реконструкция" data-s="recon"><span class="ic">🧠</span><span class="t">Реконструкция</span><span class="k">⌘8</span></button>
+    <button class="navb advanced-nav" title="Реконструкция" data-s="recon"><span class="ic">🧠</span><span class="t">Реконструк<wbr>ция</span><span class="k">⌘8</span></button>
     <div class="sep"></div>
     <button class="navb" title="Настройки" data-s="settings"><span class="ic">⚙️</span><span class="t">Настройки</span><span class="k">⌘9</span></button>
     <div class="foot" id="streakFoot">Серия: <b>0</b> дн.</div>
@@ -993,9 +1000,9 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
       <section class="screen" id="s-listen">
         <div class="card hidden pwa-only" id="pwaListenNotice">
           <h2>Режим iPhone</h2>
-          <div class="muted small">Готовые материалы, чтение, слова и упражнения работают на телефоне.
-            Автоматически скачивать и переводить новые субтитры может только Mac или отдельный защищённый сервер.
-            Канал и YouTube можно открыть здесь, а полный разбор нового ролика продолжить на Mac.</div>
+          <div class="muted small">Послушай выбранный ролик и перескажи главную мысль.
+            Видео требует интернета. Уроки грамматики, тексты и тетрадка
+            доступны без Mac. Автоматический перевод новых видеосубтитров в этой версии не подключён.</div>
         </div>
         <!-- Стартовая страница: сначала «как заниматься», потом выбор видео.
              Плеер открывается на весь экран, полка в это время спрятана. -->
@@ -1024,6 +1031,13 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
           <span class="row wrap" id="homeMarks" style="gap:6px"></span>
         </div>
         <div id="vidPick" class="hidden">
+        <div class="card pwa-only" id="phoneVideos">
+          <h2>Видео онлайн</h2>
+          <div class="muted small mb">Для видео нужен интернет. Готового перевода субтитров здесь нет.
+            После просмотра нажми «+1 посмотрел».</div>
+          <div id="phoneVideoCards"></div>
+          <div id="phoneVideoPlayer" class="hidden mt"></div>
+        </div>
         <!-- Полка: то, что конвейер принёс и перевёл заранее. Открывается
              мгновенно, потому что и субтитры, и перевод уже на диске. -->
         <!-- Сериал с диска: следующие серии, а не весь сезон списком. -->
@@ -1046,7 +1060,7 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
           <div id="shelfCards"></div>
         </div>
         <div id="recents"></div>
-        <div class="card" id="ownLink">
+        <div class="card" id="ownLink" data-native-only>
           <b>Свой ролик по ссылке</b>
           <div class="muted small" style="margin:4px 0 8px">Это не поиск по интернету. Открой видео на
             YouTube в браузере, скопируй адрес из адресной строки и вставь сюда: скачаю субтитры,
@@ -1208,7 +1222,9 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
             <div class="wskel" id="wSkel"></div>
             <div id="wIdeas" class="hidden"></div>
           </div>
-          <textarea id="wtext" placeholder="Пиши как можешь, прямо всё, что лезет в голову. Метод: писать каждый вечер, вставлять новые слова, потом отдать ИИ на исправление." oninput="wCount()"></textarea>
+          <div class="muted small mt pwa-only" id="phoneWritingNote">На телефоне доступна базовая проверка нескольких правил.
+            Она не оценивает смысл и не находит все грамматические ошибки. Текст остаётся на этом устройстве.</div>
+          <textarea id="wtext" lang="en" spellcheck="true" placeholder="Пиши как можешь, прямо всё, что лезет в голову. Метод: писать каждый вечер, вставлять новые слова, потом отдать ИИ на исправление." oninput="wCount()"></textarea>
           <div class="row mt">
             <span class="muted small" id="wWords">0 слов</span>
             <span style="flex:1"></span>
@@ -1219,12 +1235,12 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
         </div>
         <div id="wResult" class="hidden">
           <div class="card">
-            <h2>Исправленный вариант</h2>
+            <h2 id="wResultTitle">Исправленный вариант</h2>
             <div class="corrected" id="wCorrected"></div>
             <div class="muted mt" id="wComment"></div>
           </div>
           <div class="card">
-            <h2>Разбор ошибок</h2>
+            <h2 id="wErrorsTitle">Разбор ошибок</h2>
             <div id="wErrors"></div>
           </div>
         </div>
@@ -1272,6 +1288,13 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
           </div>
         </div>
         <div class="card" id="speakStage">
+          <div class="pwa-only mb">
+            <b>Проверить слова в образце</b>
+            <div class="muted small mb">Произнеси первую фразу образца. Сравню распознанные слова,
+              без оценки акцента и интонации. Распознавание может использовать системную службу речи.</div>
+            <button class="btn" id="phoneSpeechBtn" onclick="checkPhoneSpeech()">🎙 Произнести фразу</button>
+            <div id="phoneSpeechResult" class="mt hidden" aria-live="polite"></div>
+          </div>
           <div id="recZone">
             <button id="micbtn" onclick="recToggle()" title="Клик: начать, ещё клик: остановить">🎙</button>
             <div id="recTimer" class="num hidden">0:00</div>
@@ -1354,7 +1377,7 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
           </div>
           <div class="card">
             <h2>Упражнения</h2>
-            <div class="exhint">Впиши вместо <b>___</b> глагол из скобок в нужной форме. Это 1–3 слова
+            <div class="exhint" id="gExerciseHint">Впиши вместо <b>___</b> глагол из скобок в нужной форме. Это 1–3 слова
               (например <b>have finished</b> или <b>saw</b>), только вставку, не всю фразу целиком.</div>
             <div id="gExercises"></div>
             <div id="gGrades" class="mt"></div>
@@ -1675,6 +1698,11 @@ const TITLES = {
   settings: ["Настройки", ""],
 };
 function go(name) {
+  if (S.screen === "listen" && name !== "listen") {
+    el("phoneVideoPlayer").innerHTML = "";
+    el("phoneVideoPlayer").classList.add("hidden");
+  }
+  if (S.screen !== name) el("scene").scrollTop = 0;
   S.screen = name;
   document.querySelectorAll(".screen").forEach(function (s) { s.classList.remove("on"); });
   el("s-" + name).classList.add("on");
@@ -2356,6 +2384,49 @@ function toggleVidPick() {
 function renderListenHome() {
   renderResume();
   renderMarks();
+  if (document.documentElement.classList.contains("pwa")) {
+    el("vidPick").classList.remove("hidden");
+    el("pickBtn").textContent = "🎬 Скрыть список";
+    renderPhoneVideos();
+  }
+}
+async function renderPhoneVideos() {
+  const box = el("phoneVideoCards");
+  if (box.dataset.loaded) return;
+  box.textContent = "Загружаю список…";
+  try {
+    const bridge = await call.webBridge;
+    const videos = await bridge.onlineVideos();
+    box.innerHTML = "";
+    videos.forEach(function (video) {
+      const button = document.createElement("button");
+      button.className = "btn mb";
+      button.style.cssText = "width:100%;text-align:left";
+      button.textContent = video.title + " · " + video.channel;
+      button.onclick = function () {
+        const player = el("phoneVideoPlayer");
+        player.innerHTML = "";
+        const frame = document.createElement("iframe");
+        frame.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(video.id) + "?playsinline=1";
+        frame.title = video.title;
+        frame.allow = "encrypted-media; picture-in-picture; fullscreen";
+        frame.allowFullscreen = true;
+        frame.style.cssText = "width:100%;aspect-ratio:16/9;border:0";
+        player.appendChild(frame);
+        const source = document.createElement("a");
+        source.href = "https://www.youtube.com/watch?v=" + encodeURIComponent(video.id);
+        source.target = "_blank"; source.rel = "noopener noreferrer";
+        source.className = "btn mt"; source.textContent = "Открыть на YouTube ↗";
+        player.appendChild(source);
+        player.classList.remove("hidden");
+        player.scrollIntoView({block:"nearest", behavior:"smooth"});
+      };
+      box.appendChild(button);
+    });
+    box.dataset.loaded = "1";
+  } catch (e) {
+    box.textContent = "Список пока не загрузился. Вернись в раздел при наличии сети.";
+  }
 }
 /// Последнее видео, у которого проходы не закончены: его предлагаем добить.
 function latestStudy() {
@@ -3953,7 +4024,13 @@ function renderReview() {
   const box = el("revcard");
   const q = S.review.queue;
   if (!S.words.length) {
-    box.innerHTML = "<div class='muted'>Тетрадка пока пустая. Слова добавляются кликом из видео и текстов, фразы из фильмов, или руками на вкладке «Добавить».</div>";
+    box.innerHTML = document.documentElement.classList.contains("pwa")
+      ? "<b>Тетрадка на этом устройстве пока пустая</b><div class='muted mt'>Слова с Mac или другого телефона не переносятся автоматически. " +
+        "Добавь слово из текста или вручную. Резервную копию другого iPhone можно импортировать в Настройках.</div>" +
+        "<div class='row wrap mt'><button class='btn pri' onclick=\"go('read')\">Выбрать слова из текста</button>" +
+        "<button class='btn' onclick=\"wtab('add')\">Добавить слово</button>" +
+        "<button class='btn ghost' onclick=\"go('settings')\">Перенести данные</button></div>"
+      : "<div class='muted'>Тетрадка пока пустая. Слова добавляются кликом из видео и текстов, фразы из фильмов, или руками на вкладке «Добавить».</div>";
     return;
   }
   if (S.review.i >= q.length) {
@@ -4099,6 +4176,12 @@ function sentenceCheck() {
   el("sentBtn").disabled = true;
   el("sentRes").innerHTML = '<span class="spin"></span>';
   call("ai.checkSentence", {word: w.word, sentence: s, level: S.state.level}).then(function (r) {
+    if (r.mode === "basic") {
+      const message = r.wordFound ? "Слово найдено в предложении. " : "Целевое слово в этой форме не найдено. ";
+      el("sentRes").textContent = message + r.comment +
+        (r.errors.length ? " Замечания: " + r.errors.map(function (er) { return er.was + " → " + er.fix; }).join("; ") : "");
+      return;
+    }
     el("sentRes").innerHTML =
       "<div class='fixrow'><span class='" + (r.ok ? "to" : "was") + "'>" + esc(s) + "</span>" +
       (r.ok ? " ✓" : " → <span class='to'>" + esc(r.fix) + "</span>") +
@@ -4209,6 +4292,7 @@ function bumpPack(kind) {
   saveState();
 }
 function refillPack(kind) {
+  if (document.documentElement.classList.contains("pwa")) return;
   const key = packKey(kind);
   const pack = S.packs[key] || [];
   const cmd = kind === "questions" ? "ai.genQuestions" : kind === "texts" ? "ai.genTexts" : "ai.genTopics";
@@ -4337,6 +4421,10 @@ function newTopic(silent) {
 function wCount() {
   const n = (el("wtext").value.match(/\S+/g) || []).length;
   el("wWords").textContent = n + " " + plural(n, "слово", "слова", "слов");
+  if (document.documentElement.classList.contains("pwa")) {
+    try { localStorage.setItem("pogruzhenie-writing-draft", el("wtext").value); }
+    catch (e) { toast("Не удалось сохранить черновик. Скопируй текст перед закрытием.", "warn"); }
+  }
 }
 function checkWriting() {
   const text = el("wtext").value.trim();
@@ -4344,8 +4432,10 @@ function checkWriting() {
   const btn = el("wCheckBtn");
   el("wErr").classList.add("hidden");
   btn.disabled = true; btn.innerHTML = '<span class="spin"></span> Проверяю…';
-  call("ai.checkWriting", {text: text, level: S.state.level}).then(function (r) {
+  call("ai.checkWriting", {text: text, level: S.state.level}).then(async function (r) {
     el("wResult").classList.remove("hidden");
+    el("wResultTitle").textContent = r.mode === "basic" ? "Твой текст" : "Исправленный вариант";
+    el("wErrorsTitle").textContent = r.mode === "basic" ? "Базовые замечания" : "Разбор ошибок";
     el("wCorrected").textContent = r.corrected || "";
     el("wComment").textContent = r.comment || "";
     const eb = el("wErrors");
@@ -4357,12 +4447,14 @@ function checkWriting() {
         esc(er.fix) + "</span><span class='why'>" + esc(er.why || "") + "</span>";
       eb.appendChild(d);
     });
-    if (!(r.errors || []).length) eb.innerHTML = "<div class='muted'>Ошибок не нашлось. Отлично!</div>";
+    if (!(r.errors || []).length) eb.textContent = r.mode === "basic"
+      ? "В проверенных правилах совпадений нет. Это не означает, что весь текст написан без ошибок."
+      : "Ошибок не нашлось. Отлично!";
     const entry = {date: todayKey(), topic: el("wTopic").textContent, text: text,
-                   corrected: r.corrected, errors: r.errors || [], comment: r.comment || "",
+                   corrected: r.corrected, errors: r.errors || [], comment: r.comment || "", mode:r.mode || "ai",
                    stamp: new Date().toISOString().slice(0, 16)};
     const rel = "writing/" + todayKey() + "-" + Date.now() + ".json";
-    call("store.save", {rel: rel, data: entry});
+    await call("store.save", {rel: rel, data: entry});
     if (!S.state.writing) S.state.writing = [];
     S.state.writing.unshift({rel: rel, date: entry.date, topic: entry.topic});
     S.state.writing = S.state.writing.slice(0, 200);
@@ -4375,7 +4467,7 @@ function checkWriting() {
     el("wErr").textContent = e.error || "проверка не прошла";
     el("wErr").classList.remove("hidden");
     toast("Проверка не прошла", "bad");
-  }).finally(function () { btn.disabled = false; btn.textContent = "Проверить"; });
+  }).finally(function () { btn.disabled = false; btn.textContent = document.documentElement.classList.contains("pwa") ? "Базовая проверка" : "Проверить"; });
 }
 function showWriteHistory() {
   const list = S.state.writing || [];
@@ -4395,7 +4487,11 @@ function openWriting(i) {
     const d = r.data || {};
     let html = "<h2>" + esc(d.date) + " · " + esc(d.topic || "") + "</h2>" +
       "<div class='muted small mb'>Мой текст:</div><div class='corrected mb'>" + esc(d.text || "") + "</div>" +
-      "<div class='muted small mb'>Исправленный:</div><div class='corrected'>" + esc(d.corrected || "") + "</div>";
+      "<div class='muted small mb'>" + (d.mode === "basic" ? "Базовая проверка, без ИИ:" : "Исправленный:") +
+      "</div><div class='corrected'>" + esc(d.mode === "basic" ? d.comment || "" : d.corrected || "") + "</div>";
+    if (d.mode === "basic") (d.errors || []).forEach(function (er) {
+      html += "<div class='fixrow'>" + esc(er.was) + " → " + esc(er.fix) + "<span class='why'>" + esc(er.why) + "</span></div>";
+    });
     openOverlay(html);
   }).catch(function (e) { toast(e.error || "не открылось", "bad"); });
 }
@@ -4519,13 +4615,18 @@ function loadSample() {
   if (!S.lastQ) return;                    // вопрос ещё не выбран (старт окна)
   const box = el("sampleBox");
   const req = ++sampleReq;
+  S.phoneSample = null;
+  el("phoneSpeechBtn").disabled = true;
+  el("phoneSpeechResult").classList.add("hidden");
   box.classList.remove("hidden");
   box.innerHTML = '<span class="spin"></span> Готовлю образец ответа…';
   call("ai.speakSample", {question: S.lastQ, scheme: SCHEMES[S.schemeTab].name,
                           level: S.state.level}).then(function (r) {
     if (req !== sampleReq) return;         // человек уже сменил вопрос или схему
-    let html = "<div class='muted small mb'>Образец по схеме «" +
-      esc(SCHEMES[S.schemeTab].name) + "» на этот вопрос:</div>";
+    S.phoneSample = r;
+    el("phoneSpeechBtn").disabled = !r.full;
+    let html = "<div class='muted small mb'>" + (r.scaffold ? "Опора" : "Образец") + " по схеме «" +
+      esc(SCHEMES[S.schemeTab].name) + "» на этот вопрос" + (r.offline ? " (готовый материал)" : "") + ":</div>";
     (r.steps || []).forEach(function (st, j) {
       html += "<div class='stepcard'><div class='n'>" + (j + 1) + "</div><div class='body'>" +
         "<div class='say'>" + esc(st.step || "") + "</div>" +
@@ -4536,7 +4637,14 @@ function loadSample() {
       html += "<div class='mt full'>" + esc(r.full) +
         "<div class='ru'>" + esc(r.fullRu || "") + "</div></div>";
     }
+    if (r.scaffold) html += "<div class='muted small mt'>Это каркас для своего ответа. Готовый образец для повторения есть на вкладке «Ответ на вопрос».</div>";
     box.innerHTML = html;
+    if (document.documentElement.classList.contains("pwa") && r.full) {
+      const hear = document.createElement("button");
+      hear.className = "btn mt"; hear.textContent = "🔊 Послушать образец";
+      hear.onclick = function () { call("speak", {text:r.full}).catch(function (e) { toast(e.error || "Озвучка недоступна", "warn"); }); };
+      box.appendChild(hear);
+    }
   }).catch(function (e) {
     if (req !== sampleReq) return;
     box.innerHTML = "<div class='muted small'>Образец не собрался: " + esc(e.error || "не вышло") +
@@ -4552,6 +4660,7 @@ function loadSample() {
    вызовы в отдельную очередь, чтобы не задерживать нажатое человеком.
    Ошибки глотаем молча: это фон, доберём в следующий раз. */
 function prewarmSpeakFor(q, skipName) {
+  if (document.documentElement.classList.contains("pwa")) return;
   if (!q) return;
   (function next(i) {
     if (i >= SCHEMES.length) return;
@@ -4565,6 +4674,7 @@ function prewarmSpeakFor(q, skipName) {
   })(0);
 }
 function prewarmGrammar() {
+  if (document.documentElement.classList.contains("pwa")) return;
   // Тот же список и те же индексы, что видит экран грамматики: seed уровня
   // плюс нагенерённые темы. Свой пересчёт разъехался бы с именем кэша урока.
   loadPack("grammar").then(function (topics) {
@@ -4655,6 +4765,15 @@ function recAgain() {
   recReset();
 }
 function analyzeSpeech() {
+  if (document.documentElement.classList.contains("pwa")) {
+    const box = el("sttStatus");
+    box.classList.remove("hidden");
+    box.innerHTML = "<b>Самопроверка записи</b><p>Прослушай запись и сравни с образцом выше: ответил ли на вопрос, " +
+      "назвал ли причину и пример? Автоматического разбора аудиофайла на телефоне нет.</p>" +
+      "<button class='btn mt' id='phoneSpeakDone'>Я прослушал и сравнил</button>";
+    el("phoneSpeakDone").onclick = function () { autoMark("speak"); toast("Практика говорения отмечена"); };
+    return;
+  }
   const btn = el("sttBtn");
   btn.disabled = true;
   el("sttStatus").classList.remove("hidden");
@@ -4666,6 +4785,27 @@ function analyzeSpeech() {
   }).catch(function (e) {
     el("sttStatus").innerHTML = "<span class='err'>" + esc(e.error || "не вышло") + "</span>";
   }).finally(function () { btn.disabled = false; });
+}
+async function checkPhoneSpeech() {
+  const sample = S.phoneSample;
+  if (!sample?.full) { toast("Сначала выбери вопрос с готовым образцом", "warn"); return; }
+  const expected = sample.full.match(/[^.!?]+[.!?]?/)?.[0]?.trim() || sample.full;
+  const question = S.lastQ;
+  const btn = el("phoneSpeechBtn"), box = el("phoneSpeechResult");
+  btn.disabled = true;
+  box.classList.remove("hidden");
+  box.textContent = "Скажи: " + expected;
+  try {
+    const heard = await call("speech.check");
+    const score = await call("speech.score", {expected:expected, heard:heard.text});
+    if (S.lastQ !== question || S.phoneSample !== sample) return;
+    box.textContent = "Образец: " + expected + "\nРаспознано: " + heard.text +
+      "\nСовпадение слов: " + score.score + "%. " + score.claim;
+  } catch (e) {
+    if (S.lastQ === question && S.phoneSample === sample) box.textContent = e.error || "Речь не распозналась. Запись и переслушивание доступны ниже.";
+  } finally {
+    btn.disabled = !S.phoneSample?.full;
+  }
 }
 function showSpeakResult(transcript, fb) {
   el("sttStatus").classList.add("hidden");
@@ -4922,18 +5062,35 @@ function openLesson(t, i) {
   chip.style.display = c ? "" : "none";
   if (c) chip.textContent = "повторение, раз " + ((c.streak || 0) + 1);
   S.lesson = {topic: t.topic};
+  const lesson = S.lesson;
+  const level = S.state.level;
+  if (document.documentElement.classList.contains("pwa")) {
+    // The shipped package is versioned by the service worker. A previous
+    // IndexedDB lesson must not hide corrections in a new content release.
+    call("ai.grammarLesson", {level: level, topic: t.topic}).then(function (lsn) {
+      if (S.lesson === lesson) showLesson(lsn);
+    }).catch(function (e) {
+      if (S.lesson === lesson) el("lessonText").textContent = e.error || "Учебный пакет не загрузился.";
+    });
+    return;
+  }
   // lesson2: уроки старого образца («поверхностные и топорные», жалоба 23.07)
   // лежат в lesson_* и НЕ подсовываются, новые генерятся по новому промпту
   // со сквозным образом, историей и контраст-примерами.
   const rel = "cache/gen/lesson2_" + (S.state.level || "") + "_" + i + ".json";
   call("store.load", {rel: rel}).then(function (r) {
+    if (S.lesson !== lesson) return;
     if (r.data && (r.data.image || r.data.rule)) { showLesson(r.data); return; }
-    call("ai.grammarLesson", {level: S.state.level, topic: t.topic}).then(function (lsn) {
+    call("ai.grammarLesson", {level: level, topic: t.topic}).then(function (lsn) {
+      if (S.lesson !== lesson) return;
       call("store.save", {rel: rel, data: lsn});
       showLesson(lsn);
     }).catch(function (e) {
+      if (S.lesson !== lesson) return;
       el("lessonText").innerHTML = "<span class='err'>" + esc(e.error || "урок не пришёл") + "</span>";
     });
+  }).catch(function (e) {
+    if (S.lesson === lesson) el("lessonText").textContent = e.error || "Не удалось открыть сохранённый урок.";
   });
 }
 /// Урок рисуется разделами: картинка-образ, правило, отличие от русского,
@@ -4941,6 +5098,7 @@ function openLesson(t, i) {
 /// сплошной `explain`, поэтому его тоже показываем как есть.
 function showLesson(lsn) {
   S.lesson.data = lsn;
+  el("gExerciseHint").textContent = lsn.instruction || "Впиши в пропуск слово из скобок в нужной форме. Нужна только вставка, не всё предложение.";
   const box = el("lessonText");
   const secs = [
     ["image", "Представь себе"],
@@ -4994,13 +5152,16 @@ function showLesson(lsn) {
     q.className = "q";
     q.innerHTML = esc((i + 1) + ". " + ex.q).replace(/_{2,}/g, "<b class='gap'>___</b>");
     const inp = document.createElement("input");
-    inp.placeholder = "форма глагола";
+    inp.placeholder = "ответ в пропуск";
+    inp.setAttribute("aria-label", "Ответ на упражнение " + (i + 1));
     const btn = document.createElement("button");
     btn.className = "btn sm"; btn.textContent = "Проверить"; btn.style.marginLeft = "8px";
     const verdict = document.createElement("span");
     verdict.className = "verdict";
     btn.onclick = function () {
-      const ok = inp.value.trim().toLowerCase() === String(ex.a || "").trim().toLowerCase();
+      const normalize = function (s) { return String(s).trim().toLowerCase().replace(/[’‘]/g, "'").replace(/\s+/g, " "); };
+      const accepted = [ex.a].concat(ex.accepted || []).map(normalize);
+      const ok = accepted.includes(normalize(inp.value));
       verdict.textContent = ok ? "✓ верно" : "✗ правильно: " + ex.a + (ex.hint ? " (" + ex.hint + ")" : "");
       verdict.style.color = ok ? "var(--ok)" : "var(--danger)";
     };
@@ -5011,6 +5172,7 @@ function showLesson(lsn) {
 /// Оценка темы теми же четырьмя кнопками, что и слова: срок следующего
 /// повторения считает то же ядро, значит правило одно на всё приложение.
 function renderGrammarGrades() {
+  const lesson = S.lesson;
   const c = gcard(S.lesson.topic) || {};
   const box = el("gGrades");
   function draw(p) {
@@ -5023,7 +5185,7 @@ function renderGrammarGrades() {
   }
   draw({});
   call("srsPreview", {streak: c.streak || 0, ease: c.ease, interval: c.interval})
-    .then(function (p) { if (S.lesson && gcardKey(S.lesson.topic)) draw(p); })
+    .then(function (p) { if (S.lesson === lesson) draw(p); })
     .catch(function () {});
 }
 function gradeBtnG(key, label, days) {
@@ -5051,6 +5213,7 @@ function gradeGrammar(g) {
     }).catch(function (e) { toast(e.error || "не вышло", "bad"); });
 }
 function closeLesson() {
+  S.lesson = null;
   el("gLesson").classList.add("hidden");
   el("gList").classList.remove("hidden");
 }
@@ -5607,7 +5770,8 @@ function renderReconLineResult(li) {
     html += "<div class='muted small mt'>Фраза собрана слово в слово.</div>";
   }
   html += "<div class='row mt wrap'>" +
-    "<button class='btn sm' onclick='reconCanISay(" + li + ")'>А можно так сказать?</button>" +
+    "<button class='btn sm' onclick='reconCanISay(" + li + ")'>" +
+    (document.documentElement.classList.contains("pwa") ? "Сверить с оригиналом" : "А можно так сказать?") + "</button>" +
     "<button class='btn sm ghost' onclick='reconToNotebook(" + li + ")'>Потерянное — в тетрадку</button>" +
     "<span class='muted small'>" + (r.kept || 0) + " из " + (r.total || 0) + " слов удержано</span>" +
     "</div><div id='rsay" + li + "'></div>";
@@ -5624,6 +5788,12 @@ function reconCanISay(li) {
   box.innerHTML = "<div class='muted small mt'><span class='spin'></span> спрашиваю…</div>";
   call("ai.canISay", {mine: mine, original: R.lines[li].en, level: S.state.level || "B1"})
     .then(function (r) {
+      if (r.mode === "comparison") {
+        box.textContent = r.identical ? "Слова совпадают с оригиналом."
+          : "Твой вариант отличается от оригинала. Отличия сами по себе не означают ошибку. " +
+            "Смысл и естественность без ИИ не проверены. Оригинал: " + r.original;
+        return;
+      }
       box.innerHTML = "<div class='mt'><b>" + (r.ok ? "Так сказать можно." : "Так обычно не говорят.") +
         "</b> " + esc(r.why || "") + "</div>" +
         (r.natural ? "<div class='mt'><span class='muted small'>Как сказал бы носитель:</span> " +

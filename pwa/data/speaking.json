@@ -1,0 +1,412 @@
+{
+  "A1": {
+    "What is your name and where are you from?": {
+      "en": "My name is Alex. I am from a small town.",
+      "ru": "Меня зовут Алекс. Я из маленького города."
+    },
+    "What do you do every morning?": {
+      "en": "I have breakfast every morning. Then I walk to work.",
+      "ru": "Каждое утро я завтракаю. Потом иду на работу пешком."
+    },
+    "What is your favorite food?": {
+      "en": "My favourite food is rice with vegetables. It is simple and tasty.",
+      "ru": "Больше всего я люблю рис с овощами. Это просто и вкусно."
+    },
+    "Do you like coffee or tea?": {
+      "en": "I like tea. I drink it with breakfast.",
+      "ru": "Мне нравится чай. Я пью его за завтраком."
+    },
+    "What time do you wake up?": {
+      "en": "I wake up at seven. I have breakfast at half past seven.",
+      "ru": "Я просыпаюсь в семь. Завтракаю в половине восьмого."
+    },
+    "What is your favorite day of the week?": {
+      "en": "My favourite day is Saturday. I have time for my friends.",
+      "ru": "Из всех дней недели мне больше всего нравится суббота. У меня есть время для друзей."
+    },
+    "What do you do in the evening?": {
+      "en": "In the evening, I cook dinner and read. Sometimes I watch a film.",
+      "ru": "Вечером я готовлю ужин и читаю. Иногда смотрю фильм."
+    },
+    "Do you have a pet?": {
+      "en": "Yes, I have a cat. Her name is Luna.",
+      "ru": "Да, у меня есть кошка. Её зовут Луна."
+    },
+    "What is the weather like today?": {
+      "en": "It is sunny today. It is warm outside.",
+      "ru": "Сегодня солнечно. На улице тепло."
+    },
+    "What do you usually eat for breakfast?": {
+      "en": "I usually eat eggs and bread for breakfast. I also drink tea.",
+      "ru": "На завтрак я обычно ем яйца и хлеб. Ещё пью чай."
+    },
+    "Do you like your city?": {
+      "en": "Yes, I like my city. There is a nice park near my home.",
+      "ru": "Да, мне нравится мой город. Рядом с домом есть хороший парк."
+    },
+    "What is your favorite color and why?": {
+      "en": "My favourite colour is blue. It reminds me of the sea.",
+      "ru": "Больше всего мне нравится синий цвет. Он напоминает мне море."
+    },
+    "What do you do on Sunday?": {
+      "en": "On Sunday, I visit my family. We have lunch together.",
+      "ru": "В воскресенье я навещаю семью. Мы вместе обедаем."
+    },
+    "Do you like music? What music?": {
+      "en": "Yes, I like music. I listen to pop music on the bus.",
+      "ru": "Да, мне нравится музыка. В автобусе я слушаю поп-музыку."
+    },
+    "What is your favorite season?": {
+      "en": "My favourite season is spring. I like the flowers and warm days.",
+      "ru": "Больше всего из времён года мне нравится весна. Мне нравятся цветы и тёплые дни."
+    },
+    "Do you walk or drive to work?": {
+      "en": "I walk to work. My office is near my home.",
+      "ru": "Я хожу на работу пешком. Мой офис рядом с домом."
+    },
+    "What do you watch on TV or YouTube?": {
+      "en": "I watch cooking videos on YouTube. They help me make new meals.",
+      "ru": "На YouTube я смотрю видео о готовке. Они помогают мне готовить новые блюда."
+    },
+    "Do you like to cook?": {
+      "en": "Yes, I like to cook. I often make soup for my family.",
+      "ru": "Да, я люблю готовить. Я часто готовлю суп для семьи."
+    },
+    "What is near your house?": {
+      "en": "There is a shop near my house. There is also a small park.",
+      "ru": "Рядом с моим домом есть магазин. Ещё есть маленький парк."
+    },
+    "What makes you happy?": {
+      "en": "Spending time with my friends makes me happy. We laugh a lot together.",
+      "ru": "Время с друзьями делает меня счастливым. Вместе мы много смеёмся."
+    }
+  },
+  "A2": {
+    "What did you do yesterday evening?": {
+      "en": "Yesterday evening I cooked dinner and watched a film. After that, I called a friend.",
+      "ru": "Вчера вечером я приготовил ужин и посмотрел фильм. После этого позвонил другу."
+    },
+    "Why is it important to learn English?": {
+      "en": "English helps me talk to people from other countries. For example, I can ask for directions when I travel.",
+      "ru": "Английский помогает мне общаться с людьми из других стран. Например, в поездке я могу спросить дорогу."
+    },
+    "What is your typical working day like?": {
+      "en": "I start work at nine and finish at six. At lunchtime, I usually go for a short walk.",
+      "ru": "Я начинаю работать в девять и заканчиваю в шесть. В обед обычно немного гуляю."
+    },
+    "Where do you want to travel and why?": {
+      "en": "I want to visit Italy because I like its food and old buildings. I would like to spend a few days in Rome.",
+      "ru": "Я хочу посетить Италию, потому что мне нравятся её еда и старинные здания. Хотелось бы провести несколько дней в Риме."
+    },
+    "Why is coffee better than tea, or is it?": {
+      "en": "I prefer tea because coffee sometimes keeps me awake. However, I enjoy a small coffee with friends.",
+      "ru": "Я предпочитаю чай, потому что иногда после кофе не могу заснуть. Но с друзьями люблю выпить небольшую чашку кофе."
+    },
+    "What do you usually do on weekends?": {
+      "en": "On weekends, I usually visit my family or meet friends. If the weather is good, we go to the park.",
+      "ru": "По выходным я обычно навещаю семью или встречаюсь с друзьями. Если погода хорошая, мы идём в парк."
+    },
+    "What food from your country should everyone try?": {
+      "en": "I think visitors should try the traditional bread from my country. It tastes especially good when it is fresh.",
+      "ru": "Думаю, гостям стоит попробовать традиционный хлеб моей страны. Он особенно вкусен свежим."
+    },
+    "Do you prefer summer or winter? Why?": {
+      "en": "I prefer summer because I enjoy being outside. I can walk in the evening without a heavy coat.",
+      "ru": "Я предпочитаю лето, потому что люблю проводить время на улице. Можно гулять вечером без тяжёлого пальто."
+    },
+    "What was the best day of last month?": {
+      "en": "The best day of last month was my friend's birthday. We cooked together and talked for hours.",
+      "ru": "Лучшим днём прошлого месяца был день рождения друга. Мы вместе готовили и разговаривали несколько часов."
+    },
+    "Why do people like watching videos more than reading?": {
+      "en": "Videos can be easier to follow because we see pictures and hear voices. But I prefer reading when I need to think carefully.",
+      "ru": "За видео бывает легче следить, потому что мы видим картинки и слышим голоса. Но когда нужно хорошо подумать, я предпочитаю чтение."
+    },
+    "What new thing do you want to learn this year?": {
+      "en": "This year, I want to learn how to swim. I am going to take lessons at a local pool.",
+      "ru": "В этом году я хочу научиться плавать. Собираюсь брать уроки в местном бассейне."
+    },
+    "Is it better to live in a city or in a village? Why?": {
+      "en": "I prefer living in a city because there are more services nearby. For example, I can walk to the library.",
+      "ru": "Я предпочитаю жить в городе, потому что рядом больше нужных мест. Например, до библиотеки можно дойти пешком."
+    },
+    "What app on your phone do you use most? Why?": {
+      "en": "I use my map app most because I often visit new places. It helps me find the right bus.",
+      "ru": "Чаще всего я пользуюсь картами, потому что часто бываю в новых местах. Они помогают найти нужный автобус."
+    },
+    "Why is sport important for health?": {
+      "en": "I think regular exercise is important because it helps me feel more energetic. I usually choose walking because it is easy to fit into my day.",
+      "ru": "Считаю регулярные упражнения важными, потому что с ними чувствую себя бодрее. Обычно выбираю ходьбу: для неё легко найти время."
+    },
+    "What did you buy recently? Was it a good idea?": {
+      "en": "I recently bought a backpack. It was a good choice because I use it every day.",
+      "ru": "Недавно я купил рюкзак. Это был удачный выбор, потому что я пользуюсь им каждый день."
+    },
+    "Who in your family are you most similar to?": {
+      "en": "I am most similar to my sister because we both enjoy quiet evenings. We also like the same books.",
+      "ru": "Больше всего я похож на сестру, потому что мы оба любим спокойные вечера. Ещё нам нравятся одни и те же книги."
+    },
+    "What is your plan for tomorrow?": {
+      "en": "Tomorrow I am going to finish my work early. Then I will meet a friend for dinner.",
+      "ru": "Завтра я собираюсь закончить работу пораньше. Потом встречусь с другом за ужином."
+    },
+    "Why do people keep pets?": {
+      "en": "I think people keep pets because they enjoy their company. My neighbour, for example, loves walking her dog.",
+      "ru": "Думаю, люди заводят питомцев, потому что им приятно быть рядом с ними. Например, моя соседка любит гулять с собакой."
+    },
+    "What place in your country do you recommend to visit?": {
+      "en": "I recommend visiting the mountains in my country. The views are beautiful, and there are paths for short walks.",
+      "ru": "Рекомендую посетить горы в моей стране. Там красивые виды и есть тропы для недолгих прогулок."
+    },
+    "What makes a good friend?": {
+      "en": "A good friend listens and keeps promises. For example, they call when they say they will.",
+      "ru": "Хороший друг слушает и держит обещания. Например, звонит, когда обещал."
+    }
+  },
+  "B1": {
+    "Why is it important to exercise regularly?": {
+      "en": "I think regular exercise helps me feel better and manage stress. For example, a short walk after work gives me time to relax.",
+      "ru": "Думаю, регулярные упражнения помогают мне лучше себя чувствовать и справляться со стрессом. Например, короткая прогулка после работы даёт время расслабиться."
+    },
+    "Is it better to work from home or in an office? Why?": {
+      "en": "I prefer working from home when I need to concentrate. However, meeting colleagues in the office is useful for discussing new ideas.",
+      "ru": "Я предпочитаю работать из дома, когда нужно сосредоточиться. Но встречаться с коллегами в офисе полезно для обсуждения новых идей."
+    },
+    "Why do so many people want to move to big cities?": {
+      "en": "Many people move to big cities to find work and education. I would still consider the cost of housing before moving.",
+      "ru": "Многие переезжают в большие города ради работы и образования. Но перед переездом я бы всё равно учёл стоимость жилья."
+    },
+    "What habit changed your life for the better?": {
+      "en": "Planning the next day each evening helped me become more organised. For example, I no longer spend the morning deciding what to do first.",
+      "ru": "Планирование следующего дня по вечерам помогло мне стать организованнее. Например, теперь утром я не трачу время на выбор первого дела."
+    },
+    "Should children use smartphones? Why or why not?": {
+      "en": "I think children can use smartphones with clear limits and adult support. For example, families can agree to put phones away during meals.",
+      "ru": "Думаю, дети могут пользоваться смартфонами с понятными ограничениями и поддержкой взрослых. Например, семья может договориться убирать телефоны во время еды."
+    },
+    "Why is learning a language easier when you enjoy the process?": {
+      "en": "When I enjoy a language activity, I want to return to it. For example, an interesting video encourages me to look up new words.",
+      "ru": "Когда занятие языком мне нравится, хочется к нему возвращаться. Например, интересное видео побуждает искать значения новых слов."
+    },
+    "What would you do if you had one free month?": {
+      "en": "If I had a free month, I would travel slowly through one region. I would spend time talking to local people instead of visiting too many cities.",
+      "ru": "Если бы у меня был свободный месяц, я бы без спешки путешествовал по одному региону. Общался бы с местными, а не старался посетить как можно больше городов."
+    },
+    "Is money the most important thing in a job?": {
+      "en": "Money matters, but it is not the only thing I consider in a job. A supportive manager and reasonable working hours are important to me too.",
+      "ru": "Деньги важны, но при выборе работы я учитываю не только их. Для меня также важны поддержка руководителя и разумный рабочий график."
+    },
+    "Why do people procrastinate, in your opinion?": {
+      "en": "I sometimes procrastinate when a task feels too big or unclear. Starting with one small action helps me make progress.",
+      "ru": "Иногда я откладываю дело, если оно кажется слишком большим или непонятным. Одно небольшое действие помогает сдвинуться с места."
+    },
+    "What technology do you think will change our lives most?": {
+      "en": "I think better translation tools could change how we communicate. However, I would still learn languages to understand people more directly.",
+      "ru": "Думаю, улучшенные инструменты перевода могут изменить наше общение. Но я бы всё равно учил языки, чтобы понимать людей напрямую."
+    },
+    "Is it better to plan everything or to be spontaneous?": {
+      "en": "I prefer to plan the important things and leave room for surprises. On a trip, for example, I book accommodation but keep some afternoons free.",
+      "ru": "Я предпочитаю планировать важное и оставлять место неожиданностям. Например, в поездке бронирую жильё, но некоторые дни после обеда оставляю свободными."
+    },
+    "Why do some people love mornings and others hate them?": {
+      "en": "People have different routines and preferences. I enjoy mornings when I have slept well and do not need to rush.",
+      "ru": "У людей разные привычки и предпочтения. Мне нравятся утра, когда я выспался и не нужно спешить."
+    },
+    "What book, film or video influenced you recently?": {
+      "en": "A documentary about everyday waste made me think about my habits. Since watching it, I have tried to repair things before replacing them.",
+      "ru": "Документальный фильм о бытовых отходах заставил меня задуматься о привычках. После просмотра я стараюсь чинить вещи, прежде чем заменять их."
+    },
+    "Should everyone learn to cook? Why?": {
+      "en": "I think basic cooking is a useful skill because it gives people more choice. Even knowing a few simple meals can help on a busy day.",
+      "ru": "Думаю, основы готовки полезны, потому что дают больше выбора. Даже несколько простых блюд выручат в загруженный день."
+    },
+    "Why is it hard to keep new year resolutions?": {
+      "en": "Resolutions can be hard to keep when they are too vague or ambitious. I find a small weekly goal easier than a dramatic promise for the whole year.",
+      "ru": "Обещания себе бывает трудно выполнить, если они расплывчатые или слишком амбициозные. Мне проще следовать небольшой цели на неделю, чем громкому обещанию на весь год."
+    },
+    "What advice would you give to yourself five years ago?": {
+      "en": "I would tell my younger self to ask questions sooner. Trying to solve everything alone sometimes wasted time that a short conversation could have saved.",
+      "ru": "Я бы посоветовал себе в прошлом раньше задавать вопросы. Пытаясь разобраться во всём один, я иногда терял время, которое мог сэкономить короткий разговор."
+    },
+    "Is social media good or bad for society?": {
+      "en": "Social media helps me stay in touch, but it can also distract me. I try to choose who I follow and limit how often I check it.",
+      "ru": "Соцсети помогают поддерживать связь, но могут отвлекать. Я стараюсь выбирать подписки и ограничивать частоту проверок."
+    },
+    "Why do people enjoy travelling so much?": {
+      "en": "I enjoy travelling because unfamiliar places make me notice everyday things. Even buying breakfast can become a chance to learn something new.",
+      "ru": "Мне нравится путешествовать: в незнакомых местах я замечаю повседневные вещи. Даже покупка завтрака может стать поводом узнать что-то новое."
+    },
+    "What skill will be most useful in ten years?": {
+      "en": "I think learning how to learn will remain useful. Tools may change, but being able to ask good questions helps in many situations.",
+      "ru": "Думаю, умение учиться останется полезным. Инструменты могут измениться, но умение задавать хорошие вопросы помогает во многих ситуациях."
+    },
+    "Is it important to make mistakes when you learn something?": {
+      "en": "Mistakes can help me learn when I understand what went wrong. For example, correcting one repeated error is more useful than simply feeling embarrassed.",
+      "ru": "Ошибки помогают учиться, когда я понимаю, что пошло не так. Например, исправить повторяющуюся ошибку полезнее, чем просто стыдиться её."
+    }
+  },
+  "B2": {
+    "To what extent does our environment shape our personality?": {
+      "en": "Our environment influences the opportunities and habits we develop, but it does not determine everything. Two people in similar circumstances may still respond very differently.",
+      "ru": "Окружение влияет на наши возможности и привычки, но определяет не всё. Два человека в похожих условиях могут реагировать совсем по-разному."
+    },
+    "Should companies allow a four-day working week? Why?": {
+      "en": "I would support a trial of a four-day week if workload and service quality were monitored. Simply compressing the same pressure into fewer days might not help employees.",
+      "ru": "Я бы поддержал пробный переход на четырёхдневную неделю с контролем нагрузки и качества работы. Простое сжатие той же нагрузки в меньшее число дней может не помочь сотрудникам."
+    },
+    "Why do smart people sometimes make bad decisions?": {
+      "en": "Intelligence does not remove pressure, emotion or missing information. I would judge a decision by the evidence available at the time, not only by its outcome.",
+      "ru": "Интеллект не устраняет давление, эмоции или недостаток информации. Я бы оценивал решение по доступным тогда данным, а не только по результату."
+    },
+    "Is remote work making us more or less productive as a society?": {
+      "en": "Remote work can support focused tasks, while some collaboration benefits from meeting in person. I would measure outcomes for each team instead of assuming one arrangement suits everyone.",
+      "ru": "Удалённая работа помогает сосредоточиться, а некоторые совместные задачи выигрывают от личных встреч. Я бы измерял результаты каждой команды, а не считал один формат подходящим всем."
+    },
+    "Should universities be free for everyone?": {
+      "en": "I support making university education accessible, but funding must be sustainable. Grants and support for living costs may matter as much as tuition fees.",
+      "ru": "Я поддерживаю доступность высшего образования, но финансирование должно быть устойчивым. Гранты и помощь с расходами на жизнь могут быть не менее важны, чем плата за обучение."
+    },
+    "Why do people trust influencers more than experts sometimes?": {
+      "en": "An influencer may feel familiar and approachable, which can make advice persuasive. I would still check relevant expertise and evidence before relying on a recommendation.",
+      "ru": "Блогер может казаться знакомым и понятным, из-за чего его советы убеждают. Но прежде чем следовать рекомендации, я бы проверил компетентность и доказательства."
+    },
+    "Is artificial intelligence more of an opportunity or a threat?": {
+      "en": "I see artificial intelligence as both an opportunity and a source of risk. Its value depends on how a particular system is used, tested and supervised.",
+      "ru": "Я вижу в искусственном интеллекте и возможности, и риски. Его ценность зависит от того, как конкретную систему применяют, проверяют и контролируют."
+    },
+    "What role should failure play in education?": {
+      "en": "Failure should provide useful feedback rather than become a label for a student. A chance to revise an answer can turn a poor result into further learning.",
+      "ru": "Неудача должна давать полезную обратную связь, а не становиться ярлыком для ученика. Возможность исправить ответ может превратить слабый результат в обучение."
+    },
+    "Why is it so difficult to change other people's opinions?": {
+      "en": "Opinions are often connected to identity and personal experience. I would start by understanding the other person's concerns rather than trying to win an argument.",
+      "ru": "Мнения часто связаны с самоощущением и личным опытом. Я бы сначала постарался понять опасения собеседника, а не победить в споре."
+    },
+    "Should cities restrict cars in their centers?": {
+      "en": "I support reducing unnecessary car traffic if practical alternatives are available. Restrictions should account for residents, deliveries and people who cannot easily use public transport.",
+      "ru": "Я поддерживаю сокращение необязательных поездок на машине, если есть удобные альтернативы. Ограничения должны учитывать жителей, доставку и тех, кому трудно пользоваться общественным транспортом."
+    },
+    "Does travel really broaden the mind, or is it just entertainment?": {
+      "en": "Travel can broaden the mind when people engage with unfamiliar perspectives. However, visiting a new place does not automatically mean understanding it.",
+      "ru": "Путешествия могут расширять кругозор, когда человек знакомится с непривычными взглядами. Но посещение нового места не означает автоматического понимания его жизни."
+    },
+    "Why do some habits stick while others fade away?": {
+      "en": "Habits are easier for me to keep when they fit an existing routine. For example, I read a page after breakfast instead of waiting for an ideal free hour.",
+      "ru": "Мне легче сохранять привычки, когда они встроены в обычный распорядок. Например, я читаю страницу после завтрака, а не жду идеального свободного часа."
+    },
+    "Is it better to be a specialist or a generalist today?": {
+      "en": "I would aim for depth in one area and enough breadth to collaborate. The best balance depends on the work rather than on a universal career rule.",
+      "ru": "Я бы стремился к глубоким знаниям в одной области и достаточному кругозору для совместной работы. Лучший баланс зависит от задач, а не от универсального карьерного правила."
+    },
+    "How has streaming changed the way we consume culture?": {
+      "en": "Streaming gives me more control over when I watch, but the amount of choice can be distracting. I sometimes miss choosing one programme and giving it my full attention.",
+      "ru": "Онлайн-просмотр даёт мне больше свободы во времени, но обилие выбора отвлекает. Иногда мне не хватает привычки выбрать одну передачу и уделить ей всё внимание."
+    },
+    "Should schools teach financial literacy instead of some classic subjects?": {
+      "en": "Financial literacy deserves space in school, but I would not frame every subject as a rival. Practical examples could be included in existing mathematics or social studies lessons.",
+      "ru": "Финансовой грамотности стоит уделять место в школе, но я бы не противопоставлял предметы друг другу. Практические примеры можно включить в математику или обществознание."
+    },
+    "Why do people work long hours even when they do not have to?": {
+      "en": "Some people may feel that long hours demonstrate commitment, even when extra time adds little value. I would prefer clear priorities and realistic expectations over rewarding visible busyness.",
+      "ru": "Некоторые считают долгий рабочий день признаком преданности делу, даже когда дополнительное время почти не приносит пользы. Я предпочёл бы ясные приоритеты и реалистичные ожидания поощрению показной занятости."
+    },
+    "Is privacy becoming a luxury in the digital age?": {
+      "en": "Protecting privacy can require knowledge, time and access to better services. I think basic privacy protections should not depend entirely on an individual's resources.",
+      "ru": "Для защиты приватности могут требоваться знания, время и доступ к более качественным сервисам. Думаю, базовая защита не должна полностью зависеть от ресурсов отдельного человека."
+    },
+    "What makes some teams successful while others fail?": {
+      "en": "Successful teams need clear goals and the ability to discuss problems honestly. Skilled people can still struggle when responsibilities are unclear or disagreement is discouraged.",
+      "ru": "Успешным командам нужны ясные цели и возможность честно обсуждать проблемы. Даже опытным людям трудно работать при неясных обязанностях или запрете на несогласие."
+    },
+    "Should governments regulate social media platforms?": {
+      "en": "I support clear rules for transparency and accountability, with safeguards against excessive control. Regulation should address specific harms rather than simply silence unpopular views.",
+      "ru": "Я поддерживаю понятные правила прозрачности и ответственности с защитой от чрезмерного контроля. Регулирование должно касаться конкретного вреда, а не просто подавлять непопулярные взгляды."
+    },
+    "Why do we often value things more after we lose them?": {
+      "en": "Losing something can reveal benefits we previously took for granted. I try to notice those benefits earlier, although that is not always easy in a busy routine.",
+      "ru": "Потеря может показать преимущества, которые мы раньше принимали как должное. Я стараюсь замечать их заранее, хотя в повседневной суете это не всегда легко."
+    }
+  },
+  "C1": {
+    "Is meritocracy a fair ideal or a convenient myth?": {
+      "en": "Meritocracy is appealing as an aspiration, but assessing merit without considering unequal opportunities can be misleading. I would distinguish rewarding achievement from assuming that every outcome is deserved.",
+      "ru": "Меритократия привлекательна как стремление, но оценка заслуг без учёта неравных возможностей может вводить в заблуждение. Я бы различал поощрение достижений и предположение, что любой результат заслужен."
+    },
+    "To what degree should free speech protect offensive opinions?": {
+      "en": "Free speech should protect robust disagreement, including views that cause offence. However, drawing boundaries requires careful attention to specific harms and the risk of arbitrary enforcement.",
+      "ru": "Свобода слова должна защищать серьёзные разногласия, в том числе оскорбительные для кого-то мнения. Но границы требуют внимательного отношения к конкретному вреду и риску произвольного применения правил."
+    },
+    "Does constant connectivity erode our capacity for deep thought?": {
+      "en": "Constant connectivity can fragment my attention when I leave every channel open. I find that protecting uninterrupted time is more useful than treating technology itself as the enemy.",
+      "ru": "Постоянная связь дробит моё внимание, если я держу открытыми все каналы общения. Полезнее защищать время без отвлечений, чем считать врагом сами технологии."
+    },
+    "Should economic growth remain the primary measure of progress?": {
+      "en": "Economic growth is informative, but it cannot capture every aspect of progress. I would also consider health, distribution, environmental costs and people's capacity to shape their own lives.",
+      "ru": "Экономический рост даёт полезную информацию, но не отражает все стороны прогресса. Я бы также учитывал здоровье, распределение благ, экологические издержки и возможности людей влиять на свою жизнь."
+    },
+    "Is nostalgia a healthy emotion or a trap that distorts the past?": {
+      "en": "Nostalgia can sustain a sense of continuity, yet it may also filter out past difficulties. I would treat it as a perspective to examine rather than reliable evidence that life used to be better.",
+      "ru": "Ностальгия поддерживает ощущение преемственности, но может скрывать прошлые трудности. Я бы относился к ней как к взгляду для осмысления, а не доказательству того, что раньше было лучше."
+    },
+    "Can universal basic income realistically replace welfare systems?": {
+      "en": "Universal basic income may simplify some support, but replacing all welfare would raise difficult questions about unequal needs. I would want to examine funding, housing costs and disability support before reaching a conclusion.",
+      "ru": "Базовый доход может упростить некоторые виды поддержки, но замена всей системы помощи ставит сложные вопросы о разных потребностях. До вывода я бы изучил финансирование, стоимость жилья и поддержку людей с инвалидностью."
+    },
+    "Does language shape the way we perceive reality?": {
+      "en": "Language can guide what we habitually notice and how we describe experience. I would be cautious, however, about claiming that it fixes the limits of what a person can think.",
+      "ru": "Язык может направлять привычное внимание и способы описания опыта. Однако я бы осторожно относился к утверждению, что он определяет пределы мысли человека."
+    },
+    "Is the pursuit of happiness a meaningful life goal or a marketing slogan?": {
+      "en": "Happiness can be a meaningful concern, but pursuing a permanent emotional state seems unrealistic. I find purpose, relationships and worthwhile activity more useful guides than a promise of constant satisfaction.",
+      "ru": "Счастье может быть значимой целью, но погоня за постоянным эмоциональным состоянием кажется нереалистичной. Мне полезнее ориентироваться на смысл, отношения и достойные занятия, чем на обещание непрерывного удовлетворения."
+    },
+    "Should scientific research ever be restricted on ethical grounds?": {
+      "en": "Some research warrants restrictions when the potential harm is serious and consent or safeguards are inadequate. The challenge is to make those decisions transparent and proportionate without suppressing inquiry merely because it is uncomfortable.",
+      "ru": "Некоторые исследования требуют ограничений при серьёзном потенциальном вреде и недостаточном согласии или защите. Важно принимать такие решения прозрачно и соразмерно, не подавляя исследование лишь из-за неудобства темы."
+    },
+    "Why do institutions decay, and can that decay be reversed?": {
+      "en": "Institutions may weaken when incentives drift away from their stated purpose and accountability becomes superficial. Reversing that process would require more than replacing a few individuals; the underlying rules also deserve scrutiny.",
+      "ru": "Институты могут ослабевать, когда стимулы отходят от заявленной цели, а подотчётность становится формальной. Для исправления недостаточно заменить нескольких людей: нужно изучить и сами правила."
+    },
+    "Is globalization reversing, and what would that mean for ordinary people?": {
+      "en": "I would hesitate to describe globalisation as moving uniformly in one direction. Trade, technology and migration can change differently, so the consequences for ordinary people depend on the sector and place involved.",
+      "ru": "Я бы не спешил описывать глобализацию как движение в одном направлении. Торговля, технологии и миграция меняются по-разному, поэтому последствия зависят от отрасли и места."
+    },
+    "Do we overestimate willpower and underestimate environment in self-improvement?": {
+      "en": "Willpower matters, but relying on it alone makes improvement unnecessarily fragile. Changing the environment, such as removing a recurring distraction, can make the desired action easier to repeat.",
+      "ru": "Сила воли важна, но опора только на неё делает изменения слишком ненадёжными. Изменение среды, например устранение постоянного отвлекающего фактора, облегчает повторение нужного действия."
+    },
+    "Should algorithms be allowed to make decisions about people's lives?": {
+      "en": "Algorithms can assist decisions, but consequential uses require accountability, meaningful review and a way to challenge errors. I would not assume that automation is fair simply because it applies the same procedure repeatedly.",
+      "ru": "Алгоритмы могут помогать принимать решения, но при серьёзных последствиях нужны ответственность, содержательная проверка и возможность оспорить ошибку. Я бы не считал автоматизацию справедливой лишь потому, что она повторяет одну процедуру."
+    },
+    "Is modern work culture compatible with genuine creativity?": {
+      "en": "Creative work needs both sustained attention and opportunities to exchange ideas. A culture dominated by constant responsiveness can undermine the first, even while claiming to encourage innovation.",
+      "ru": "Для творчества нужны и устойчивое внимание, и обмен идеями. Культура постоянной готовности отвечать может подрывать первое, даже заявляя о поддержке новаторства."
+    },
+    "What responsibilities do wealthy nations have toward poorer ones?": {
+      "en": "Wealthy nations should consider both their capacity to help and the effects of their own policies. I would favour partnerships that strengthen local decision-making rather than assistance designed mainly around donors' preferences.",
+      "ru": "Богатым странам стоит учитывать и возможности помочь, и последствия собственных решений. Я бы предпочёл партнёрства, усиливающие самостоятельность местных участников, помощи преимущественно под предпочтения доноров."
+    },
+    "Is the decline of traditional media a net gain or loss for democracy?": {
+      "en": "The decline of traditional media can open space for new voices while weakening some forms of professional scrutiny. Whether democracy gains depends partly on what replaces those institutions and how trustworthy information is sustained.",
+      "ru": "Ослабление традиционных СМИ может дать место новым голосам и одновременно ослабить профессиональную проверку. Результат для демократии отчасти зависит от замены этих институтов и поддержки достоверной информации."
+    },
+    "Can cities be designed to make people happier, or is that naive?": {
+      "en": "Urban design cannot guarantee happiness, but it can reduce avoidable friction in everyday life. Safe routes, accessible services and places to meet may help, provided residents have a meaningful say in the choices.",
+      "ru": "Городской дизайн не гарантирует счастье, но может уменьшить повседневные трудности. Безопасные маршруты, доступные услуги и места для встреч могут помочь, если жители участвуют в решениях."
+    },
+    "Why do conspiracy theories flourish in times of uncertainty?": {
+      "en": "Conspiracy theories may offer a simple explanation and a sense of agency when events feel confusing. I would respond with careful evidence and respect for the person's concerns without validating unsupported claims.",
+      "ru": "Теории заговора могут давать простое объяснение и ощущение контроля, когда события непонятны. Я бы отвечал проверенными данными и уважением к опасениям человека, не подтверждая недоказанные утверждения."
+    },
+    "Is lifelong learning an inspiring ideal or a symptom of economic anxiety?": {
+      "en": "Lifelong learning can be enriching when people have time, choice and support. It becomes less inspiring when presented as an endless obligation to remain economically useful without corresponding security.",
+      "ru": "Обучение всю жизнь обогащает, когда есть время, выбор и поддержка. Оно меньше вдохновляет, если подаётся как бесконечная обязанность оставаться полезным экономике без соответствующих гарантий."
+    },
+    "Does art still have the power to change society?": {
+      "en": "Art can shift attention and make unfamiliar experiences emotionally accessible. Its influence is rarely a simple chain from one work to one reform, but that does not make it insignificant.",
+      "ru": "Искусство может направлять внимание и делать незнакомый опыт эмоционально понятным. Его влияние редко сводится к прямой цепочке от произведения к реформе, но это не делает его незначительным."
+    }
+  }
+}

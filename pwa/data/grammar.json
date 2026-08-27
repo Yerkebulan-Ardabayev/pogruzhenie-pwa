@@ -1,0 +1,3667 @@
+{
+  "A1": {
+    "To be: am / is / are": {
+      "rule": "В настоящем: I am, he/she/it is, you/we/they are. В вопросе am/is/are ставится перед подлежащим; not идёт после глагола.",
+      "vsru": "В русском «я дома» обходится без глагола. В английском нужен am: I am at home.",
+      "examples": [
+        {
+          "en": "I am ready.",
+          "ru": "Я готов."
+        },
+        {
+          "en": "My sister is at home.",
+          "ru": "Моя сестра дома."
+        },
+        {
+          "en": "We are students.",
+          "ru": "Мы студенты."
+        },
+        {
+          "en": "Are you tired?",
+          "ru": "Ты устал?"
+        },
+        {
+          "en": "It is not cold today.",
+          "ru": "Сегодня не холодно."
+        },
+        {
+          "en": "Am I in the right room?",
+          "ru": "Я в нужной комнате?"
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I ___ ready.",
+          "a": "am",
+          "accepted": [],
+          "hint": "В настоящем: I am, he/she/it is, you/we/they are. В вопросе am/is/are ставится перед подлежащим; not идёт после глагола."
+        },
+        {
+          "q": "My sister ___ at home.",
+          "a": "is",
+          "accepted": [],
+          "hint": "В настоящем: I am, he/she/it is, you/we/they are. В вопросе am/is/are ставится перед подлежащим; not идёт после глагола."
+        },
+        {
+          "q": "We ___ students.",
+          "a": "are",
+          "accepted": [],
+          "hint": "В настоящем: I am, he/she/it is, you/we/they are. В вопросе am/is/are ставится перед подлежащим; not идёт после глагола."
+        },
+        {
+          "q": "___ you tired?",
+          "a": "Are",
+          "accepted": [],
+          "hint": "В настоящем: I am, he/she/it is, you/we/they are. В вопросе am/is/are ставится перед подлежащим; not идёт после глагола."
+        },
+        {
+          "q": "It ___ not cold today.",
+          "a": "is",
+          "accepted": [],
+          "hint": "В настоящем: I am, he/she/it is, you/we/they are. В вопросе am/is/are ставится перед подлежащим; not идёт после глагола."
+        },
+        {
+          "q": "___ I in the right room?",
+          "a": "Am",
+          "accepted": [],
+          "hint": "В настоящем: I am, he/she/it is, you/we/they are. В вопросе am/is/are ставится перед подлежащим; not идёт после глагола."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "To be: am / is / are"
+    },
+    "Present Simple: I work / he works": {
+      "rule": "Для привычек используй Present Simple. После he/she/it в утверждении обычно добавляется -s. После does/doesn't нужна начальная форма.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "She works in a shop.",
+          "ru": "Она работает в магазине."
+        },
+        {
+          "en": "I study English every day.",
+          "ru": "Я учу английский каждый день."
+        },
+        {
+          "en": "He does not like onions.",
+          "ru": "Он не любит лук."
+        },
+        {
+          "en": "They play football on Sundays.",
+          "ru": "Они играют в футбол по воскресеньям."
+        },
+        {
+          "en": "My brother watches TV after dinner.",
+          "ru": "Мой брат смотрит телевизор после ужина."
+        },
+        {
+          "en": "The bus leaves at eight every morning.",
+          "ru": "Автобус отправляется в восемь каждое утро."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "She ___ in a shop. (work)",
+          "a": "works",
+          "accepted": [],
+          "hint": "Для привычек используй Present Simple. После he/she/it в утверждении обычно добавляется -s. После does/doesn't нужна начальная форма."
+        },
+        {
+          "q": "I ___ English every day. (study)",
+          "a": "study",
+          "accepted": [],
+          "hint": "Для привычек используй Present Simple. После he/she/it в утверждении обычно добавляется -s. После does/doesn't нужна начальная форма."
+        },
+        {
+          "q": "He ___ not like onions.",
+          "a": "does",
+          "accepted": [],
+          "hint": "Для привычек используй Present Simple. После he/she/it в утверждении обычно добавляется -s. После does/doesn't нужна начальная форма."
+        },
+        {
+          "q": "They ___ football on Sundays. (play)",
+          "a": "play",
+          "accepted": [],
+          "hint": "Для привычек используй Present Simple. После he/she/it в утверждении обычно добавляется -s. После does/doesn't нужна начальная форма."
+        },
+        {
+          "q": "My brother ___ TV after dinner. (watch)",
+          "a": "watches",
+          "accepted": [],
+          "hint": "Для привычек используй Present Simple. После he/she/it в утверждении обычно добавляется -s. После does/doesn't нужна начальная форма."
+        },
+        {
+          "q": "The bus ___ at eight every morning. (leave)",
+          "a": "leaves",
+          "accepted": [],
+          "hint": "Для привычек используй Present Simple. После he/she/it в утверждении обычно добавляется -s. После does/doesn't нужна начальная форма."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Present Simple: I work / he works"
+    },
+    "Артикли a / an / the": {
+      "rule": "A/an вводит один неспецифический исчисляемый предмет: an перед гласным звуком, a перед согласным. The указывает на уже понятный собеседникам предмет.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I need an umbrella.",
+          "ru": "Мне нужен зонт."
+        },
+        {
+          "en": "She is a doctor.",
+          "ru": "Она врач."
+        },
+        {
+          "en": "I bought a book. The book is about birds.",
+          "ru": "Я купил книгу. Эта книга о птицах."
+        },
+        {
+          "en": "He is a university student.",
+          "ru": "Он студент университета."
+        },
+        {
+          "en": "We waited for an hour.",
+          "ru": "Мы ждали час."
+        },
+        {
+          "en": "Please close the door next to you.",
+          "ru": "Пожалуйста, закрой дверь рядом с собой."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I need ___ umbrella.",
+          "a": "an",
+          "accepted": [],
+          "hint": "A/an вводит один неспецифический исчисляемый предмет: an перед гласным звуком, a перед согласным. The указывает на уже понятный собеседникам предмет."
+        },
+        {
+          "q": "She is ___ doctor.",
+          "a": "a",
+          "accepted": [],
+          "hint": "A/an вводит один неспецифический исчисляемый предмет: an перед гласным звуком, a перед согласным. The указывает на уже понятный собеседникам предмет."
+        },
+        {
+          "q": "I bought a book. ___ book is about birds.",
+          "a": "The",
+          "accepted": [],
+          "hint": "A/an вводит один неспецифический исчисляемый предмет: an перед гласным звуком, a перед согласным. The указывает на уже понятный собеседникам предмет."
+        },
+        {
+          "q": "He is ___ university student.",
+          "a": "a",
+          "accepted": [],
+          "hint": "A/an вводит один неспецифический исчисляемый предмет: an перед гласным звуком, a перед согласным. The указывает на уже понятный собеседникам предмет."
+        },
+        {
+          "q": "We waited for ___ hour.",
+          "a": "an",
+          "accepted": [],
+          "hint": "A/an вводит один неспецифический исчисляемый предмет: an перед гласным звуком, a перед согласным. The указывает на уже понятный собеседникам предмет."
+        },
+        {
+          "q": "Please close ___ door next to you.",
+          "a": "the",
+          "accepted": [],
+          "hint": "A/an вводит один неспецифический исчисляемый предмет: an перед гласным звуком, a перед согласным. The указывает на уже понятный собеседникам предмет."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Артикли a / an / the"
+    },
+    "Множественное число существительных": {
+      "rule": "Обычно множественное число образуется через -s, после s/sh/ch/x через -es. У слов вроде child и mouse особая форма. После согласной + y: city → cities.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "One cat, two cats.",
+          "ru": "Одна кошка, две кошки."
+        },
+        {
+          "en": "One box, three boxes.",
+          "ru": "Одна коробка, три коробки."
+        },
+        {
+          "en": "One city, many cities.",
+          "ru": "Один город, много городов."
+        },
+        {
+          "en": "One child, two children.",
+          "ru": "Один ребёнок, двое детей."
+        },
+        {
+          "en": "One mouse, two mice.",
+          "ru": "Одна мышь, две мыши."
+        },
+        {
+          "en": "One woman, three women.",
+          "ru": "Одна женщина, три женщины."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "One cat, two ___. (cat)",
+          "a": "cats",
+          "accepted": [],
+          "hint": "Обычно множественное число образуется через -s, после s/sh/ch/x через -es. У слов вроде child и mouse особая форма. После согласной + y: city → cities."
+        },
+        {
+          "q": "One box, three ___. (box)",
+          "a": "boxes",
+          "accepted": [],
+          "hint": "Обычно множественное число образуется через -s, после s/sh/ch/x через -es. У слов вроде child и mouse особая форма. После согласной + y: city → cities."
+        },
+        {
+          "q": "One city, many ___. (city)",
+          "a": "cities",
+          "accepted": [],
+          "hint": "Обычно множественное число образуется через -s, после s/sh/ch/x через -es. У слов вроде child и mouse особая форма. После согласной + y: city → cities."
+        },
+        {
+          "q": "One child, two ___. (child)",
+          "a": "children",
+          "accepted": [],
+          "hint": "Обычно множественное число образуется через -s, после s/sh/ch/x через -es. У слов вроде child и mouse особая форма. После согласной + y: city → cities."
+        },
+        {
+          "q": "One mouse, two ___. (mouse)",
+          "a": "mice",
+          "accepted": [],
+          "hint": "Обычно множественное число образуется через -s, после s/sh/ch/x через -es. У слов вроде child и mouse особая форма. После согласной + y: city → cities."
+        },
+        {
+          "q": "One woman, three ___. (woman)",
+          "a": "women",
+          "accepted": [],
+          "hint": "Обычно множественное число образуется через -s, после s/sh/ch/x через -es. У слов вроде child и mouse особая форма. После согласной + y: city → cities."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Множественное число существительных"
+    },
+    "Местоимения: I, me, my, mine": {
+      "rule": "I/he/we используются как подлежащее; me/him/us как дополнение после глагола или предлога. My/her/our стоят перед существительным, mine/hers/ours заменяют всю группу с существительным.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I am a student.",
+          "ru": "Я студент."
+        },
+        {
+          "en": "Please help me.",
+          "ru": "Пожалуйста, помоги мне."
+        },
+        {
+          "en": "This is my bag, and it belongs to me.",
+          "ru": "Это моя сумка, она принадлежит мне."
+        },
+        {
+          "en": "This bag belongs to me. It is mine.",
+          "ru": "Эта сумка принадлежит мне. Она моя."
+        },
+        {
+          "en": "Anna is here. I can see her.",
+          "ru": "Анна здесь. Я её вижу."
+        },
+        {
+          "en": "We need help. Please call us.",
+          "ru": "Нам нужна помощь. Пожалуйста, позвони нам."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "___ am a student.",
+          "a": "I",
+          "accepted": [],
+          "hint": "I/he/we используются как подлежащее; me/him/us как дополнение после глагола или предлога. My/her/our стоят перед существительным, mine/hers/ours заменяют всю группу с существительным."
+        },
+        {
+          "q": "Please help ___.",
+          "a": "me",
+          "accepted": [],
+          "hint": "I/he/we используются как подлежащее; me/him/us как дополнение после глагола или предлога. My/her/our стоят перед существительным, mine/hers/ours заменяют всю группу с существительным."
+        },
+        {
+          "q": "This is ___ bag, and it belongs to me.",
+          "a": "my",
+          "accepted": [],
+          "hint": "I/he/we используются как подлежащее; me/him/us как дополнение после глагола или предлога. My/her/our стоят перед существительным, mine/hers/ours заменяют всю группу с существительным."
+        },
+        {
+          "q": "This bag belongs to me. It is ___.",
+          "a": "mine",
+          "accepted": [],
+          "hint": "I/he/we используются как подлежащее; me/him/us как дополнение после глагола или предлога. My/her/our стоят перед существительным, mine/hers/ours заменяют всю группу с существительным."
+        },
+        {
+          "q": "Anna is here. I can see ___.",
+          "a": "her",
+          "accepted": [],
+          "hint": "I/he/we используются как подлежащее; me/him/us как дополнение после глагола или предлога. My/her/our стоят перед существительным, mine/hers/ours заменяют всю группу с существительным."
+        },
+        {
+          "q": "We need help. Please call ___.",
+          "a": "us",
+          "accepted": [],
+          "hint": "I/he/we используются как подлежащее; me/him/us как дополнение после глагола или предлога. My/her/our стоят перед существительным, mine/hers/ours заменяют всю группу с существительным."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Местоимения: I, me, my, mine"
+    },
+    "There is / there are": {
+      "rule": "There is вводит один предмет или неисчисляемое количество; there are вводит несколько предметов. В вопросе: Is there…? / Are there…?",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "There is a lamp on the desk.",
+          "ru": "На столе есть лампа."
+        },
+        {
+          "en": "There are three lamps in the room.",
+          "ru": "В комнате три лампы."
+        },
+        {
+          "en": "Is there any milk?",
+          "ru": "Есть молоко?"
+        },
+        {
+          "en": "Are there any shops nearby?",
+          "ru": "Рядом есть магазины?"
+        },
+        {
+          "en": "There is not enough water.",
+          "ru": "Воды недостаточно."
+        },
+        {
+          "en": "There are two people outside.",
+          "ru": "Снаружи два человека."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "There ___ a lamp on the desk.",
+          "a": "is",
+          "accepted": [],
+          "hint": "There is вводит один предмет или неисчисляемое количество; there are вводит несколько предметов. В вопросе: Is there…? / Are there…?"
+        },
+        {
+          "q": "There ___ three lamps in the room.",
+          "a": "are",
+          "accepted": [],
+          "hint": "There is вводит один предмет или неисчисляемое количество; there are вводит несколько предметов. В вопросе: Is there…? / Are there…?"
+        },
+        {
+          "q": "___ there any milk?",
+          "a": "Is",
+          "accepted": [],
+          "hint": "There is вводит один предмет или неисчисляемое количество; there are вводит несколько предметов. В вопросе: Is there…? / Are there…?"
+        },
+        {
+          "q": "___ there any shops nearby?",
+          "a": "Are",
+          "accepted": [],
+          "hint": "There is вводит один предмет или неисчисляемое количество; there are вводит несколько предметов. В вопросе: Is there…? / Are there…?"
+        },
+        {
+          "q": "There ___ not enough water.",
+          "a": "is",
+          "accepted": [],
+          "hint": "There is вводит один предмет или неисчисляемое количество; there are вводит несколько предметов. В вопросе: Is there…? / Are there…?"
+        },
+        {
+          "q": "There ___ two people outside.",
+          "a": "are",
+          "accepted": [],
+          "hint": "There is вводит один предмет или неисчисляемое количество; there are вводит несколько предметов. В вопросе: Is there…? / Are there…?"
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "There is / there are"
+    },
+    "Can / can't": {
+      "rule": "После can/can't глагол стоит без to и без -s. Can выражает умение или возможность. Для вопроса поставь can перед подлежащим.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "She can swim very well.",
+          "ru": "Она умеет очень хорошо плавать."
+        },
+        {
+          "en": "Can you help me?",
+          "ru": "Можешь мне помочь?"
+        },
+        {
+          "en": "I cannot speak Japanese. I have never learned it.",
+          "ru": "Я не умею говорить по-японски. Я никогда его не учил."
+        },
+        {
+          "en": "He can play the piano.",
+          "ru": "Он умеет играть на пианино."
+        },
+        {
+          "en": "We can meet tomorrow.",
+          "ru": "Мы можем встретиться завтра."
+        },
+        {
+          "en": "Can your dog run fast?",
+          "ru": "Твоя собака умеет быстро бегать?"
+        }
+      ],
+      "exercises": [
+        {
+          "q": "She can ___ very well. (swim)",
+          "a": "swim",
+          "accepted": [],
+          "hint": "После can/can't глагол стоит без to и без -s. Can выражает умение или возможность. Для вопроса поставь can перед подлежащим."
+        },
+        {
+          "q": "___ you help me?",
+          "a": "Can",
+          "accepted": [],
+          "hint": "После can/can't глагол стоит без to и без -s. Can выражает умение или возможность. Для вопроса поставь can перед подлежащим."
+        },
+        {
+          "q": "I ___ speak Japanese. I have never learned it.",
+          "a": "cannot",
+          "accepted": [
+            "can't"
+          ],
+          "hint": "После can/can't глагол стоит без to и без -s. Can выражает умение или возможность. Для вопроса поставь can перед подлежащим."
+        },
+        {
+          "q": "He ___ play the piano.",
+          "a": "can",
+          "accepted": [],
+          "hint": "После can/can't глагол стоит без to и без -s. Can выражает умение или возможность. Для вопроса поставь can перед подлежащим."
+        },
+        {
+          "q": "We can ___ tomorrow. (meet)",
+          "a": "meet",
+          "accepted": [],
+          "hint": "После can/can't глагол стоит без to и без -s. Can выражает умение или возможность. Для вопроса поставь can перед подлежащим."
+        },
+        {
+          "q": "Can your dog ___ fast? (run)",
+          "a": "run",
+          "accepted": [],
+          "hint": "После can/can't глагол стоит без to и без -s. Can выражает умение или возможность. Для вопроса поставь can перед подлежащим."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Can / can't"
+    },
+    "Предлоги места: in, on, at, under": {
+      "rule": "In описывает нахождение внутри, on на поверхности, under под чем-то. At часто указывает на точку или место деятельности: at home, at work.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "The keys are in the drawer.",
+          "ru": "Ключи внутри ящика."
+        },
+        {
+          "en": "The picture is on the wall.",
+          "ru": "Картина на стене."
+        },
+        {
+          "en": "The cat is under the table.",
+          "ru": "Кот под столом."
+        },
+        {
+          "en": "I am at home.",
+          "ru": "Я дома."
+        },
+        {
+          "en": "She is at work.",
+          "ru": "Она на работе."
+        },
+        {
+          "en": "The milk is in the fridge.",
+          "ru": "Молоко в холодильнике."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "The keys are ___ the drawer.",
+          "a": "in",
+          "accepted": [],
+          "hint": "In описывает нахождение внутри, on на поверхности, under под чем-то. At часто указывает на точку или место деятельности: at home, at work."
+        },
+        {
+          "q": "The picture is ___ the wall.",
+          "a": "on",
+          "accepted": [],
+          "hint": "In описывает нахождение внутри, on на поверхности, under под чем-то. At часто указывает на точку или место деятельности: at home, at work."
+        },
+        {
+          "q": "The cat is ___ the table.",
+          "a": "under",
+          "accepted": [],
+          "hint": "In описывает нахождение внутри, on на поверхности, under под чем-то. At часто указывает на точку или место деятельности: at home, at work."
+        },
+        {
+          "q": "I am ___ home.",
+          "a": "at",
+          "accepted": [],
+          "hint": "In описывает нахождение внутри, on на поверхности, under под чем-то. At часто указывает на точку или место деятельности: at home, at work."
+        },
+        {
+          "q": "She is ___ work.",
+          "a": "at",
+          "accepted": [],
+          "hint": "In описывает нахождение внутри, on на поверхности, under под чем-то. At часто указывает на точку или место деятельности: at home, at work."
+        },
+        {
+          "q": "The milk is ___ the fridge.",
+          "a": "in",
+          "accepted": [],
+          "hint": "In описывает нахождение внутри, on на поверхности, under под чем-то. At часто указывает на точку или место деятельности: at home, at work."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Предлоги места: in, on, at, under"
+    },
+    "Вопросы: do / does": {
+      "rule": "Вопрос с обычным глаголом в Present Simple: Do I/you/we/they…? Does he/she/it…? После does глагол без -s. С be вспомогательный do не нужен.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "Do you like music?",
+          "ru": "Тебе нравится музыка?"
+        },
+        {
+          "en": "Does she work here?",
+          "ru": "Она здесь работает?"
+        },
+        {
+          "en": "Where does he live?",
+          "ru": "Где он живёт?"
+        },
+        {
+          "en": "What time do they start?",
+          "ru": "Во сколько они начинают?"
+        },
+        {
+          "en": "Does your brother have a car?",
+          "ru": "У твоего брата есть машина?"
+        },
+        {
+          "en": "Why do you study English?",
+          "ru": "Почему ты учишь английский?"
+        }
+      ],
+      "exercises": [
+        {
+          "q": "___ you like music?",
+          "a": "Do",
+          "accepted": [],
+          "hint": "Вопрос с обычным глаголом в Present Simple: Do I/you/we/they…? Does he/she/it…? После does глагол без -s. С be вспомогательный do не нужен."
+        },
+        {
+          "q": "___ she work here?",
+          "a": "Does",
+          "accepted": [],
+          "hint": "Вопрос с обычным глаголом в Present Simple: Do I/you/we/they…? Does he/she/it…? После does глагол без -s. С be вспомогательный do не нужен."
+        },
+        {
+          "q": "Where ___ he live?",
+          "a": "does",
+          "accepted": [],
+          "hint": "Вопрос с обычным глаголом в Present Simple: Do I/you/we/they…? Does he/she/it…? После does глагол без -s. С be вспомогательный do не нужен."
+        },
+        {
+          "q": "What time ___ they start? (do)",
+          "a": "do",
+          "accepted": [],
+          "hint": "Вопрос с обычным глаголом в Present Simple: Do I/you/we/they…? Does he/she/it…? После does глагол без -s. С be вспомогательный do не нужен."
+        },
+        {
+          "q": "Does your brother ___ a car? (have)",
+          "a": "have",
+          "accepted": [],
+          "hint": "Вопрос с обычным глаголом в Present Simple: Do I/you/we/they…? Does he/she/it…? После does глагол без -s. С be вспомогательный do не нужен."
+        },
+        {
+          "q": "Why ___ you study English? (do)",
+          "a": "do",
+          "accepted": [],
+          "hint": "Вопрос с обычным глаголом в Present Simple: Do I/you/we/they…? Does he/she/it…? После does глагол без -s. С be вспомогательный do не нужен."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Вопросы: do / does"
+    },
+    "Have got / has got": {
+      "rule": "Have got/has got означает обладание в настоящем. I/you/we/they have got; he/she/it has got. Вопрос: Have you got…? Отрицание: haven't/hasn't got.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I have got a bicycle.",
+          "ru": "У меня есть велосипед."
+        },
+        {
+          "en": "She has got two brothers.",
+          "ru": "У неё два брата."
+        },
+        {
+          "en": "Have you got a pen?",
+          "ru": "У тебя есть ручка?"
+        },
+        {
+          "en": "Has he got a ticket?",
+          "ru": "У него есть билет?"
+        },
+        {
+          "en": "They have not got a car.",
+          "ru": "У них нет машины."
+        },
+        {
+          "en": "My phone has got a good camera.",
+          "ru": "У моего телефона хорошая камера."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I ___ got a bicycle. (have)",
+          "a": "have",
+          "accepted": [],
+          "hint": "Have got/has got означает обладание в настоящем. I/you/we/they have got; he/she/it has got. Вопрос: Have you got…? Отрицание: haven't/hasn't got."
+        },
+        {
+          "q": "She ___ got two brothers.",
+          "a": "has",
+          "accepted": [],
+          "hint": "Have got/has got означает обладание в настоящем. I/you/we/they have got; he/she/it has got. Вопрос: Have you got…? Отрицание: haven't/hasn't got."
+        },
+        {
+          "q": "___ you got a pen?",
+          "a": "Have",
+          "accepted": [],
+          "hint": "Have got/has got означает обладание в настоящем. I/you/we/they have got; he/she/it has got. Вопрос: Have you got…? Отрицание: haven't/hasn't got."
+        },
+        {
+          "q": "___ he got a ticket?",
+          "a": "Has",
+          "accepted": [],
+          "hint": "Have got/has got означает обладание в настоящем. I/you/we/they have got; he/she/it has got. Вопрос: Have you got…? Отрицание: haven't/hasn't got."
+        },
+        {
+          "q": "They ___ not got a car. (have)",
+          "a": "have",
+          "accepted": [],
+          "hint": "Have got/has got означает обладание в настоящем. I/you/we/they have got; he/she/it has got. Вопрос: Have you got…? Отрицание: haven't/hasn't got."
+        },
+        {
+          "q": "My phone ___ got a good camera.",
+          "a": "has",
+          "accepted": [],
+          "hint": "Have got/has got означает обладание в настоящем. I/you/we/they have got; he/she/it has got. Вопрос: Have you got…? Отрицание: haven't/hasn't got."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Have got / has got"
+    }
+  },
+  "A2": {
+    "Past Simple: правильные и неправильные глаголы": {
+      "rule": "Past Simple описывает события в завершённом прошлом. В утверждении нужен -ed или вторая форма, после did/didn't начальная форма.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "Yesterday I went to the park.",
+          "ru": "Вчера я ходил в парк."
+        },
+        {
+          "en": "She called her friend last night.",
+          "ru": "Она позвонила подруге вчера вечером."
+        },
+        {
+          "en": "We watched a film on Saturday.",
+          "ru": "В субботу мы посмотрели фильм."
+        },
+        {
+          "en": "Did you read the message?",
+          "ru": "Ты прочитал сообщение?"
+        },
+        {
+          "en": "He did not have breakfast.",
+          "ru": "Он не завтракал."
+        },
+        {
+          "en": "They came home at nine yesterday.",
+          "ru": "Вчера они пришли домой в девять."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "Yesterday I ___ to the park. (go)",
+          "a": "went",
+          "accepted": [],
+          "hint": "Past Simple описывает события в завершённом прошлом. В утверждении нужен -ed или вторая форма, после did/didn't начальная форма."
+        },
+        {
+          "q": "She ___ her friend last night. (call)",
+          "a": "called",
+          "accepted": [],
+          "hint": "Past Simple описывает события в завершённом прошлом. В утверждении нужен -ed или вторая форма, после did/didn't начальная форма."
+        },
+        {
+          "q": "We ___ a film on Saturday. (watch)",
+          "a": "watched",
+          "accepted": [],
+          "hint": "Past Simple описывает события в завершённом прошлом. В утверждении нужен -ed или вторая форма, после did/didn't начальная форма."
+        },
+        {
+          "q": "Did you ___ the message? (read)",
+          "a": "read",
+          "accepted": [],
+          "hint": "Past Simple описывает события в завершённом прошлом. В утверждении нужен -ed или вторая форма, после did/didn't начальная форма."
+        },
+        {
+          "q": "He did not ___ breakfast. (have)",
+          "a": "have",
+          "accepted": [],
+          "hint": "Past Simple описывает события в завершённом прошлом. В утверждении нужен -ed или вторая форма, после did/didn't начальная форма."
+        },
+        {
+          "q": "They ___ home at nine yesterday. (come)",
+          "a": "came",
+          "accepted": [],
+          "hint": "Past Simple описывает события в завершённом прошлом. В утверждении нужен -ed или вторая форма, после did/didn't начальная форма."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Past Simple: правильные и неправильные глаголы"
+    },
+    "Present Continuous против Present Simple": {
+      "rule": "Present Simple описывает привычку; am/is/are + -ing действие в процессе сейчас. Глаголы состояния, например know, обычно не используют в Continuous.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "Look! It is raining outside.",
+          "ru": "Смотри! На улице идёт дождь."
+        },
+        {
+          "en": "She drinks tea every morning.",
+          "ru": "Она пьёт чай каждое утро."
+        },
+        {
+          "en": "Be quiet. The baby is sleeping.",
+          "ru": "Тише. Ребёнок спит."
+        },
+        {
+          "en": "I know the answer.",
+          "ru": "Я знаю ответ."
+        },
+        {
+          "en": "We usually eat at home.",
+          "ru": "Обычно мы едим дома."
+        },
+        {
+          "en": "They are cooking dinner right now.",
+          "ru": "Они сейчас готовят ужин."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "Look! It ___ outside. (rain)",
+          "a": "is raining",
+          "accepted": [],
+          "hint": "Present Simple описывает привычку; am/is/are + -ing действие в процессе сейчас. Глаголы состояния, например know, обычно не используют в Continuous."
+        },
+        {
+          "q": "She ___ tea every morning. (drink)",
+          "a": "drinks",
+          "accepted": [],
+          "hint": "Present Simple описывает привычку; am/is/are + -ing действие в процессе сейчас. Глаголы состояния, например know, обычно не используют в Continuous."
+        },
+        {
+          "q": "Be quiet. The baby ___. (sleep)",
+          "a": "is sleeping",
+          "accepted": [],
+          "hint": "Present Simple описывает привычку; am/is/are + -ing действие в процессе сейчас. Глаголы состояния, например know, обычно не используют в Continuous."
+        },
+        {
+          "q": "I ___ the answer. (know)",
+          "a": "know",
+          "accepted": [],
+          "hint": "Present Simple описывает привычку; am/is/are + -ing действие в процессе сейчас. Глаголы состояния, например know, обычно не используют в Continuous."
+        },
+        {
+          "q": "We usually ___ at home. (eat)",
+          "a": "eat",
+          "accepted": [],
+          "hint": "Present Simple описывает привычку; am/is/are + -ing действие в процессе сейчас. Глаголы состояния, например know, обычно не используют в Continuous."
+        },
+        {
+          "q": "They ___ dinner right now. (cook)",
+          "a": "are cooking",
+          "accepted": [],
+          "hint": "Present Simple описывает привычку; am/is/are + -ing действие в процессе сейчас. Глаголы состояния, например know, обычно не используют в Continuous."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Present Continuous против Present Simple"
+    },
+    "Future: will и be going to": {
+      "rule": "Will часто используется для решения в момент речи или обещания. Be going to для намерения или прогноза по видимым признакам. В некоторых контекстах возможны обе формы.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I promise I will call you tonight.",
+          "ru": "Обещаю, я позвоню тебе сегодня вечером."
+        },
+        {
+          "en": "Look at those dark clouds. It is going to rain.",
+          "ru": "Похоже, скоро пойдёт дождь: вон тёмные тучи."
+        },
+        {
+          "en": "We have a plan. We are going to move in June.",
+          "ru": "У нас есть план. Мы собираемся переехать в июне."
+        },
+        {
+          "en": "The phone is ringing. I will answer it.",
+          "ru": "Звонит телефон. Я отвечу."
+        },
+        {
+          "en": "She is going to start a new course.",
+          "ru": "Она собирается начать новый курс."
+        },
+        {
+          "en": "Will you help me tomorrow?",
+          "ru": "Ты поможешь мне завтра?"
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I promise I ___ call you tonight.",
+          "a": "will",
+          "accepted": [
+            "'ll"
+          ],
+          "hint": "Will часто используется для решения в момент речи или обещания. Be going to для намерения или прогноза по видимым признакам. В некоторых контекстах возможны обе формы."
+        },
+        {
+          "q": "Look at those dark clouds. It ___ rain.",
+          "a": "is going to",
+          "accepted": [
+            "will"
+          ],
+          "hint": "Will часто используется для решения в момент речи или обещания. Be going to для намерения или прогноза по видимым признакам. В некоторых контекстах возможны обе формы."
+        },
+        {
+          "q": "We have a plan. We ___ move in June.",
+          "a": "are going to",
+          "accepted": [
+            "will"
+          ],
+          "hint": "Will часто используется для решения в момент речи или обещания. Be going to для намерения или прогноза по видимым признакам. В некоторых контекстах возможны обе формы."
+        },
+        {
+          "q": "The phone is ringing. I ___ answer it.",
+          "a": "will",
+          "accepted": [
+            "'ll"
+          ],
+          "hint": "Will часто используется для решения в момент речи или обещания. Be going to для намерения или прогноза по видимым признакам. В некоторых контекстах возможны обе формы."
+        },
+        {
+          "q": "She is going to ___ a new course. (start)",
+          "a": "start",
+          "accepted": [],
+          "hint": "Will часто используется для решения в момент речи или обещания. Be going to для намерения или прогноза по видимым признакам. В некоторых контекстах возможны обе формы."
+        },
+        {
+          "q": "Will you ___ me tomorrow? (help)",
+          "a": "help",
+          "accepted": [],
+          "hint": "Will часто используется для решения в момент речи или обещания. Be going to для намерения или прогноза по видимым признакам. В некоторых контекстах возможны обе формы."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Future: will и be going to"
+    },
+    "Степени сравнения: bigger, the biggest": {
+      "rule": "Короткие прилагательные обычно получают -er/-est; длинные используют more/most. После сравнения часто стоит than. Good → better → best.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "My room is bigger than yours.",
+          "ru": "Моя комната больше твоей."
+        },
+        {
+          "en": "This is the tallest building in town.",
+          "ru": "Это самое высокое здание в городе."
+        },
+        {
+          "en": "This book is more interesting than that one.",
+          "ru": "Эта книга интереснее той."
+        },
+        {
+          "en": "Today is better than yesterday.",
+          "ru": "Сегодня лучше, чем вчера."
+        },
+        {
+          "en": "It is the most expensive hotel here.",
+          "ru": "Это самый дорогой отель здесь."
+        },
+        {
+          "en": "Her bag is heavier than mine.",
+          "ru": "Её сумка тяжелее моей."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "My room is ___ than yours. (big)",
+          "a": "bigger",
+          "accepted": [],
+          "hint": "Короткие прилагательные обычно получают -er/-est; длинные используют more/most. После сравнения часто стоит than. Good → better → best."
+        },
+        {
+          "q": "This is the ___ building in town. (tall)",
+          "a": "tallest",
+          "accepted": [],
+          "hint": "Короткие прилагательные обычно получают -er/-est; длинные используют more/most. После сравнения часто стоит than. Good → better → best."
+        },
+        {
+          "q": "This book is ___ interesting than that one.",
+          "a": "more",
+          "accepted": [],
+          "hint": "Короткие прилагательные обычно получают -er/-est; длинные используют more/most. После сравнения часто стоит than. Good → better → best."
+        },
+        {
+          "q": "Today is ___ than yesterday. (good)",
+          "a": "better",
+          "accepted": [],
+          "hint": "Короткие прилагательные обычно получают -er/-est; длинные используют more/most. После сравнения часто стоит than. Good → better → best."
+        },
+        {
+          "q": "It is the ___ expensive hotel here.",
+          "a": "most",
+          "accepted": [],
+          "hint": "Короткие прилагательные обычно получают -er/-est; длинные используют more/most. После сравнения часто стоит than. Good → better → best."
+        },
+        {
+          "q": "Her bag is ___ than mine. (heavy)",
+          "a": "heavier",
+          "accepted": [],
+          "hint": "Короткие прилагательные обычно получают -er/-est; длинные используют more/most. После сравнения часто стоит than. Good → better → best."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Степени сравнения: bigger, the biggest"
+    },
+    "Модальные: must, should, have to": {
+      "rule": "Must/have to выражают необходимость, should совет. Mustn't означает запрет, don't have to отсутствие необходимости. После модального глагола нужен инфинитив без to.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "You must not smoke here. It is forbidden.",
+          "ru": "Здесь нельзя курить. Это запрещено."
+        },
+        {
+          "en": "You do not have to pay. It is free.",
+          "ru": "Платить не нужно. Это бесплатно."
+        },
+        {
+          "en": "You look tired. You should rest.",
+          "ru": "Ты выглядишь уставшим. Тебе стоит отдохнуть."
+        },
+        {
+          "en": "She has to wear a uniform at work.",
+          "ru": "Ей приходится носить форму на работе."
+        },
+        {
+          "en": "We must arrive on time.",
+          "ru": "Мы должны прибыть вовремя."
+        },
+        {
+          "en": "Should I see a doctor?",
+          "ru": "Мне стоит обратиться к врачу?"
+        }
+      ],
+      "exercises": [
+        {
+          "q": "You ___ not smoke here. It is forbidden.",
+          "a": "must",
+          "accepted": [],
+          "hint": "Must/have to выражают необходимость, should совет. Mustn't означает запрет, don't have to отсутствие необходимости. После модального глагола нужен инфинитив без to."
+        },
+        {
+          "q": "You do not ___ to pay. It is free. (have)",
+          "a": "have",
+          "accepted": [],
+          "hint": "Must/have to выражают необходимость, should совет. Mustn't означает запрет, don't have to отсутствие необходимости. После модального глагола нужен инфинитив без to."
+        },
+        {
+          "q": "You look tired. You ___ rest.",
+          "a": "should",
+          "accepted": [],
+          "hint": "Must/have to выражают необходимость, should совет. Mustn't означает запрет, don't have to отсутствие необходимости. После модального глагола нужен инфинитив без to."
+        },
+        {
+          "q": "She ___ to wear a uniform at work.",
+          "a": "has",
+          "accepted": [],
+          "hint": "Must/have to выражают необходимость, should совет. Mustn't означает запрет, don't have to отсутствие необходимости. После модального глагола нужен инфинитив без to."
+        },
+        {
+          "q": "We must ___ on time. (arrive)",
+          "a": "arrive",
+          "accepted": [],
+          "hint": "Must/have to выражают необходимость, should совет. Mustn't означает запрет, don't have to отсутствие необходимости. После модального глагола нужен инфинитив без to."
+        },
+        {
+          "q": "Should I ___ a doctor? (see)",
+          "a": "see",
+          "accepted": [],
+          "hint": "Must/have to выражают необходимость, should совет. Mustn't означает запрет, don't have to отсутствие необходимости. После модального глагола нужен инфинитив без to."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Модальные: must, should, have to"
+    },
+    "Countable и uncountable: some, any, much, many": {
+      "rule": "Many используется с исчисляемым множественным, much с неисчисляемым. Some обычно в утверждении, any часто в вопросе и отрицании. В предложении и просьбе возможен some.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "How many chairs do we need?",
+          "ru": "Сколько стульев нам нужно?"
+        },
+        {
+          "en": "How much water is left?",
+          "ru": "Сколько воды осталось?"
+        },
+        {
+          "en": "There is some milk in the fridge.",
+          "ru": "В холодильнике есть немного молока."
+        },
+        {
+          "en": "We do not have any eggs.",
+          "ru": "У нас нет яиц."
+        },
+        {
+          "en": "Would you like some tea?",
+          "ru": "Хочешь чаю?"
+        },
+        {
+          "en": "Are there any apples left?",
+          "ru": "Остались яблоки?"
+        }
+      ],
+      "exercises": [
+        {
+          "q": "How ___ chairs do we need?",
+          "a": "many",
+          "accepted": [],
+          "hint": "Many используется с исчисляемым множественным, much с неисчисляемым. Some обычно в утверждении, any часто в вопросе и отрицании. В предложении и просьбе возможен some."
+        },
+        {
+          "q": "How ___ water is left?",
+          "a": "much",
+          "accepted": [],
+          "hint": "Many используется с исчисляемым множественным, much с неисчисляемым. Some обычно в утверждении, any часто в вопросе и отрицании. В предложении и просьбе возможен some."
+        },
+        {
+          "q": "There is ___ milk in the fridge.",
+          "a": "some",
+          "accepted": [],
+          "hint": "Many используется с исчисляемым множественным, much с неисчисляемым. Some обычно в утверждении, any часто в вопросе и отрицании. В предложении и просьбе возможен some."
+        },
+        {
+          "q": "We do not have ___ eggs.",
+          "a": "any",
+          "accepted": [],
+          "hint": "Many используется с исчисляемым множественным, much с неисчисляемым. Some обычно в утверждении, any часто в вопросе и отрицании. В предложении и просьбе возможен some."
+        },
+        {
+          "q": "Would you like ___ tea?",
+          "a": "some",
+          "accepted": [
+            "any"
+          ],
+          "hint": "Many используется с исчисляемым множественным, much с неисчисляемым. Some обычно в утверждении, any часто в вопросе и отрицании. В предложении и просьбе возможен some."
+        },
+        {
+          "q": "Are there ___ apples left?",
+          "a": "any",
+          "accepted": [
+            "some"
+          ],
+          "hint": "Many используется с исчисляемым множественным, much с неисчисляемым. Some обычно в утверждении, any часто в вопросе и отрицании. В предложении и просьбе возможен some."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Countable и uncountable: some, any, much, many"
+    },
+    "Past Continuous: I was working": {
+      "rule": "Past Continuous: was/were + -ing. Это процесс в определённый момент прошлого. Короткое событие на его фоне часто выражается Past Simple.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "At eight last night I was cooking dinner.",
+          "ru": "Вчера в восемь вечера я готовил ужин."
+        },
+        {
+          "en": "They were sleeping when I arrived.",
+          "ru": "Когда я пришёл, они спали."
+        },
+        {
+          "en": "She was reading when the phone rang.",
+          "ru": "Она читала, когда зазвонил телефон."
+        },
+        {
+          "en": "What were you doing at noon?",
+          "ru": "Что ты делал в полдень?"
+        },
+        {
+          "en": "He was not listening when I spoke.",
+          "ru": "Он не слушал, когда я говорил."
+        },
+        {
+          "en": "We were walking home when it started to rain.",
+          "ru": "Мы шли домой, когда начался дождь."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "At eight last night I ___ dinner. (cook)",
+          "a": "was cooking",
+          "accepted": [],
+          "hint": "Past Continuous: was/were + -ing. Это процесс в определённый момент прошлого. Короткое событие на его фоне часто выражается Past Simple."
+        },
+        {
+          "q": "They ___ when I arrived. (sleep)",
+          "a": "were sleeping",
+          "accepted": [],
+          "hint": "Past Continuous: was/were + -ing. Это процесс в определённый момент прошлого. Короткое событие на его фоне часто выражается Past Simple."
+        },
+        {
+          "q": "She was reading when the phone ___. (ring)",
+          "a": "rang",
+          "accepted": [],
+          "hint": "Past Continuous: was/were + -ing. Это процесс в определённый момент прошлого. Короткое событие на его фоне часто выражается Past Simple."
+        },
+        {
+          "q": "What ___ you doing at noon?",
+          "a": "were",
+          "accepted": [],
+          "hint": "Past Continuous: was/were + -ing. Это процесс в определённый момент прошлого. Короткое событие на его фоне часто выражается Past Simple."
+        },
+        {
+          "q": "He ___ not listening when I spoke.",
+          "a": "was",
+          "accepted": [],
+          "hint": "Past Continuous: was/were + -ing. Это процесс в определённый момент прошлого. Короткое событие на его фоне часто выражается Past Simple."
+        },
+        {
+          "q": "We ___ home when it started to rain. (walk)",
+          "a": "were walking",
+          "accepted": [],
+          "hint": "Past Continuous: was/were + -ing. Это процесс в определённый момент прошлого. Короткое событие на его фоне часто выражается Past Simple."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Past Continuous: I was working"
+    },
+    "Present Perfect: I have done": {
+      "rule": "Present Perfect: have/has + третья форма. Он связывает прошлое с настоящим: опыт, актуальный результат, период до сих пор. Не соединяй его с завершённым временем вроде yesterday.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I have never been to Canada.",
+          "ru": "Я никогда не был в Канаде."
+        },
+        {
+          "en": "She has lost her keys.",
+          "ru": "Она потеряла ключи."
+        },
+        {
+          "en": "We have seen this film before.",
+          "ru": "Мы уже видели этот фильм."
+        },
+        {
+          "en": "Have you finished your homework yet?",
+          "ru": "Ты уже закончил домашнюю работу?"
+        },
+        {
+          "en": "He has not read the book yet.",
+          "ru": "Он ещё не прочитал книгу."
+        },
+        {
+          "en": "They have lived here since May.",
+          "ru": "Они живут здесь с мая."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I have never ___ to Canada. (be)",
+          "a": "been",
+          "accepted": [],
+          "hint": "Present Perfect: have/has + третья форма. Он связывает прошлое с настоящим: опыт, актуальный результат, период до сих пор. Не соединяй его с завершённым временем вроде yesterday."
+        },
+        {
+          "q": "She has ___ her keys. (lose)",
+          "a": "lost",
+          "accepted": [],
+          "hint": "Present Perfect: have/has + третья форма. Он связывает прошлое с настоящим: опыт, актуальный результат, период до сих пор. Не соединяй его с завершённым временем вроде yesterday."
+        },
+        {
+          "q": "We have ___ this film before. (see)",
+          "a": "seen",
+          "accepted": [],
+          "hint": "Present Perfect: have/has + третья форма. Он связывает прошлое с настоящим: опыт, актуальный результат, период до сих пор. Не соединяй его с завершённым временем вроде yesterday."
+        },
+        {
+          "q": "Have you ___ your homework yet? (finish)",
+          "a": "finished",
+          "accepted": [],
+          "hint": "Present Perfect: have/has + третья форма. Он связывает прошлое с настоящим: опыт, актуальный результат, период до сих пор. Не соединяй его с завершённым временем вроде yesterday."
+        },
+        {
+          "q": "He has not ___ the book yet. (read)",
+          "a": "read",
+          "accepted": [],
+          "hint": "Present Perfect: have/has + третья форма. Он связывает прошлое с настоящим: опыт, актуальный результат, период до сих пор. Не соединяй его с завершённым временем вроде yesterday."
+        },
+        {
+          "q": "They have ___ here since May. (live)",
+          "a": "lived",
+          "accepted": [
+            "been living"
+          ],
+          "hint": "Present Perfect: have/has + третья форма. Он связывает прошлое с настоящим: опыт, актуальный результат, период до сих пор. Не соединяй его с завершённым временем вроде yesterday."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Present Perfect: I have done"
+    },
+    "Наречия частоты: always, usually, never": {
+      "rule": "Наречие частоты обычно стоит перед смысловым глаголом, но после be: I often walk; she is always early. Never уже содержит отрицание.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I never drink coffee at night.",
+          "ru": "Я никогда не пью кофе на ночь."
+        },
+        {
+          "en": "She is always on time.",
+          "ru": "Она всегда приходит вовремя."
+        },
+        {
+          "en": "We usually go to the park on Sundays.",
+          "ru": "Обычно мы ходим в парк по воскресеньям."
+        },
+        {
+          "en": "He often helps his neighbours.",
+          "ru": "Он часто помогает соседям."
+        },
+        {
+          "en": "They are sometimes tired after work.",
+          "ru": "Иногда они устают после работы."
+        },
+        {
+          "en": "I have never seen snow.",
+          "ru": "Я никогда не видел снега."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I ___ drink coffee at night.",
+          "a": "never",
+          "accepted": [],
+          "hint": "Наречие частоты обычно стоит перед смысловым глаголом, но после be: I often walk; she is always early. Never уже содержит отрицание."
+        },
+        {
+          "q": "She is ___ on time.",
+          "a": "always",
+          "accepted": [],
+          "hint": "Наречие частоты обычно стоит перед смысловым глаголом, но после be: I often walk; she is always early. Never уже содержит отрицание."
+        },
+        {
+          "q": "We ___ go to the park on Sundays.",
+          "a": "usually",
+          "accepted": [],
+          "hint": "Наречие частоты обычно стоит перед смысловым глаголом, но после be: I often walk; she is always early. Never уже содержит отрицание."
+        },
+        {
+          "q": "He ___ helps his neighbours.",
+          "a": "often",
+          "accepted": [],
+          "hint": "Наречие частоты обычно стоит перед смысловым глаголом, но после be: I often walk; she is always early. Never уже содержит отрицание."
+        },
+        {
+          "q": "They are ___ tired after work.",
+          "a": "sometimes",
+          "accepted": [],
+          "hint": "Наречие частоты обычно стоит перед смысловым глаголом, но после be: I often walk; she is always early. Never уже содержит отрицание."
+        },
+        {
+          "q": "I have ___ seen snow.",
+          "a": "never",
+          "accepted": [],
+          "hint": "Наречие частоты обычно стоит перед смысловым глаголом, но после be: I often walk; she is always early. Never уже содержит отрицание."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Наречия частоты: always, usually, never"
+    },
+    "Предлоги времени: in, on, at": {
+      "rule": "At используется с точным временем; on с днём или датой; in с месяцем, годом или частью дня. Устойчивые сочетания: at night, in the morning.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "The lesson starts at nine.",
+          "ru": "Урок начинается в девять."
+        },
+        {
+          "en": "We meet on Monday.",
+          "ru": "Мы встречаемся в понедельник."
+        },
+        {
+          "en": "My birthday is in July.",
+          "ru": "Мой день рождения в июле."
+        },
+        {
+          "en": "She was born in 1998.",
+          "ru": "Она родилась в 1998 году."
+        },
+        {
+          "en": "I read in the evening.",
+          "ru": "Я читаю вечером."
+        },
+        {
+          "en": "It is quiet at night.",
+          "ru": "Ночью тихо."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "The lesson starts ___ nine.",
+          "a": "at",
+          "accepted": [],
+          "hint": "At используется с точным временем; on с днём или датой; in с месяцем, годом или частью дня. Устойчивые сочетания: at night, in the morning."
+        },
+        {
+          "q": "We meet ___ Monday.",
+          "a": "on",
+          "accepted": [],
+          "hint": "At используется с точным временем; on с днём или датой; in с месяцем, годом или частью дня. Устойчивые сочетания: at night, in the morning."
+        },
+        {
+          "q": "My birthday is ___ July.",
+          "a": "in",
+          "accepted": [],
+          "hint": "At используется с точным временем; on с днём или датой; in с месяцем, годом или частью дня. Устойчивые сочетания: at night, in the morning."
+        },
+        {
+          "q": "She was born ___ 1998.",
+          "a": "in",
+          "accepted": [],
+          "hint": "At используется с точным временем; on с днём или датой; in с месяцем, годом или частью дня. Устойчивые сочетания: at night, in the morning."
+        },
+        {
+          "q": "I read ___ the evening.",
+          "a": "in",
+          "accepted": [],
+          "hint": "At используется с точным временем; on с днём или датой; in с месяцем, годом или частью дня. Устойчивые сочетания: at night, in the morning."
+        },
+        {
+          "q": "It is quiet ___ night.",
+          "a": "at",
+          "accepted": [],
+          "hint": "At используется с точным временем; on с днём или датой; in с месяцем, годом или частью дня. Устойчивые сочетания: at night, in the morning."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Предлоги времени: in, on, at"
+    }
+  },
+  "B1": {
+    "Present Perfect против Past Simple": {
+      "rule": "Present Perfect связывает прошлое с настоящим: have/has + V3. Past Simple описывает завершённое прошлое: V2 или -ed. Yesterday/last week задают завершённое время. Past Simple возможен и без явной даты, если время ясно из контекста. Already/just сами по себе не запрещают Past Simple, особенно в американском английском.",
+      "vsru": "Русское прошедшее не показывает эту разницу отдельной формой. Спрашивай: я говорю об опыте/результате к настоящему моменту или рассказываю о завершённом прошлом?",
+      "examples": [
+        {
+          "en": "She called me at nine yesterday.",
+          "ru": "Она позвонила мне вчера в девять."
+        },
+        {
+          "en": "We visited that museum in 2022.",
+          "ru": "Мы посетили тот музей в 2022 году."
+        },
+        {
+          "en": "I have never been to that city.",
+          "ru": "Я никогда не был в том городе."
+        },
+        {
+          "en": "He lost his wallet last Friday.",
+          "ru": "Он потерял кошелёк в прошлую пятницу."
+        },
+        {
+          "en": "Have you finished the report yet?",
+          "ru": "Ты уже закончил отчёт?"
+        },
+        {
+          "en": "I met her when I lived in London.",
+          "ru": "Я познакомился с ней, когда жил в Лондоне."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "She ___ me at nine yesterday. (call)",
+          "a": "called",
+          "accepted": [],
+          "hint": "Present Perfect связывает прошлое с настоящим: have/has + V3. Past Simple описывает завершённое прошлое: V2 или -ed. Yesterday/last week задают завершённое время. Past Simple возможен и без явной даты, если время ясно из контекста. Already/just сами по себе не запрещают Past Simple, особенно в американском английском."
+        },
+        {
+          "q": "We ___ that museum in 2022. (visit)",
+          "a": "visited",
+          "accepted": [],
+          "hint": "Present Perfect связывает прошлое с настоящим: have/has + V3. Past Simple описывает завершённое прошлое: V2 или -ed. Yesterday/last week задают завершённое время. Past Simple возможен и без явной даты, если время ясно из контекста. Already/just сами по себе не запрещают Past Simple, особенно в американском английском."
+        },
+        {
+          "q": "I have never ___ to that city. (be)",
+          "a": "been",
+          "accepted": [],
+          "hint": "Present Perfect связывает прошлое с настоящим: have/has + V3. Past Simple описывает завершённое прошлое: V2 или -ed. Yesterday/last week задают завершённое время. Past Simple возможен и без явной даты, если время ясно из контекста. Already/just сами по себе не запрещают Past Simple, особенно в американском английском."
+        },
+        {
+          "q": "He ___ his wallet last Friday. (lose)",
+          "a": "lost",
+          "accepted": [],
+          "hint": "Present Perfect связывает прошлое с настоящим: have/has + V3. Past Simple описывает завершённое прошлое: V2 или -ed. Yesterday/last week задают завершённое время. Past Simple возможен и без явной даты, если время ясно из контекста. Already/just сами по себе не запрещают Past Simple, особенно в американском английском."
+        },
+        {
+          "q": "Have you ___ the report yet? (finish)",
+          "a": "finished",
+          "accepted": [],
+          "hint": "Present Perfect связывает прошлое с настоящим: have/has + V3. Past Simple описывает завершённое прошлое: V2 или -ed. Yesterday/last week задают завершённое время. Past Simple возможен и без явной даты, если время ясно из контекста. Already/just сами по себе не запрещают Past Simple, особенно в американском английском."
+        },
+        {
+          "q": "I ___ her when I lived in London. (meet)",
+          "a": "met",
+          "accepted": [],
+          "hint": "Present Perfect связывает прошлое с настоящим: have/has + V3. Past Simple описывает завершённое прошлое: V2 или -ed. Yesterday/last week задают завершённое время. Past Simple возможен и без явной даты, если время ясно из контекста. Already/just сами по себе не запрещают Past Simple, особенно в американском английском."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Present Perfect против Past Simple"
+    },
+    "Present Perfect Continuous": {
+      "rule": "Have/has been + -ing подчёркивает длительность процесса до настоящего или недавнюю деятельность с видимым результатом. For задаёт длительность, since начало. Глаголы состояния обычно требуют простой формы.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I have been waiting for two hours.",
+          "ru": "Я жду уже два часа."
+        },
+        {
+          "en": "She has been working since eight.",
+          "ru": "Она работает с восьми."
+        },
+        {
+          "en": "We have been learning English since May.",
+          "ru": "Мы учим английский с мая."
+        },
+        {
+          "en": "It has been raining for three days.",
+          "ru": "Дождь идёт три дня."
+        },
+        {
+          "en": "He has been running; he is out of breath.",
+          "ru": "Он бегал, он запыхался."
+        },
+        {
+          "en": "They have known each other for years.",
+          "ru": "Они знают друг друга много лет."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I have been ___ for two hours. (wait)",
+          "a": "waiting",
+          "accepted": [],
+          "hint": "Have/has been + -ing подчёркивает длительность процесса до настоящего или недавнюю деятельность с видимым результатом. For задаёт длительность, since начало. Глаголы состояния обычно требуют простой формы."
+        },
+        {
+          "q": "She has ___ working since eight. (be)",
+          "a": "been",
+          "accepted": [],
+          "hint": "Have/has been + -ing подчёркивает длительность процесса до настоящего или недавнюю деятельность с видимым результатом. For задаёт длительность, since начало. Глаголы состояния обычно требуют простой формы."
+        },
+        {
+          "q": "We have been learning English ___ May.",
+          "a": "since",
+          "accepted": [],
+          "hint": "Have/has been + -ing подчёркивает длительность процесса до настоящего или недавнюю деятельность с видимым результатом. For задаёт длительность, since начало. Глаголы состояния обычно требуют простой формы."
+        },
+        {
+          "q": "It has been raining ___ three days.",
+          "a": "for",
+          "accepted": [],
+          "hint": "Have/has been + -ing подчёркивает длительность процесса до настоящего или недавнюю деятельность с видимым результатом. For задаёт длительность, since начало. Глаголы состояния обычно требуют простой формы."
+        },
+        {
+          "q": "He ___ been running; he is out of breath.",
+          "a": "has",
+          "accepted": [],
+          "hint": "Have/has been + -ing подчёркивает длительность процесса до настоящего или недавнюю деятельность с видимым результатом. For задаёт длительность, since начало. Глаголы состояния обычно требуют простой формы."
+        },
+        {
+          "q": "They have ___ each other for years. (know)",
+          "a": "known",
+          "accepted": [],
+          "hint": "Have/has been + -ing подчёркивает длительность процесса до настоящего или недавнюю деятельность с видимым результатом. For задаёт длительность, since начало. Глаголы состояния обычно требуют простой формы."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Present Perfect Continuous"
+    },
+    "Условные предложения 0, 1, 2 типа": {
+      "rule": "Нулевой тип описывает закономерность: if + Present, Present. Первый реальное будущее: if + Present, will + глагол. Второй воображаемую ситуацию: if + Past, would + глагол.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "If you heat ice, it melts.",
+          "ru": "Если нагревать лёд, он тает."
+        },
+        {
+          "en": "If it rains tomorrow, we will stay home.",
+          "ru": "Если завтра пойдёт дождь, мы останемся дома."
+        },
+        {
+          "en": "If I had more time, I would learn Italian.",
+          "ru": "Если бы у меня было больше времени, я бы учил итальянский."
+        },
+        {
+          "en": "If she arrives early tomorrow, we will leave together.",
+          "ru": "Если завтра она придёт рано, мы уйдём вместе."
+        },
+        {
+          "en": "If I were you, I would apologise.",
+          "ru": "На твоём месте я бы извинился."
+        },
+        {
+          "en": "Plants die if they do not get water.",
+          "ru": "Растения погибают, если не получают воду."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "If you heat ice, it ___. (melt)",
+          "a": "melts",
+          "accepted": [],
+          "hint": "Нулевой тип описывает закономерность: if + Present, Present. Первый реальное будущее: if + Present, will + глагол. Второй воображаемую ситуацию: if + Past, would + глагол."
+        },
+        {
+          "q": "If it rains tomorrow, we ___ stay home.",
+          "a": "will",
+          "accepted": [],
+          "hint": "Нулевой тип описывает закономерность: if + Present, Present. Первый реальное будущее: if + Present, will + глагол. Второй воображаемую ситуацию: if + Past, would + глагол."
+        },
+        {
+          "q": "If I had more time, I ___ learn Italian.",
+          "a": "would",
+          "accepted": [],
+          "hint": "Нулевой тип описывает закономерность: if + Present, Present. Первый реальное будущее: if + Present, will + глагол. Второй воображаемую ситуацию: if + Past, would + глагол."
+        },
+        {
+          "q": "If she ___ early tomorrow, we will leave together. (arrive)",
+          "a": "arrives",
+          "accepted": [],
+          "hint": "Нулевой тип описывает закономерность: if + Present, Present. Первый реальное будущее: if + Present, will + глагол. Второй воображаемую ситуацию: if + Past, would + глагол."
+        },
+        {
+          "q": "If I ___ you, I would apologise.",
+          "a": "were",
+          "accepted": [
+            "was"
+          ],
+          "hint": "Нулевой тип описывает закономерность: if + Present, Present. Первый реальное будущее: if + Present, will + глагол. Второй воображаемую ситуацию: if + Past, would + глагол."
+        },
+        {
+          "q": "Plants die if they ___ not get water. (do)",
+          "a": "do",
+          "accepted": [],
+          "hint": "Нулевой тип описывает закономерность: if + Present, Present. Первый реальное будущее: if + Present, will + глагол. Второй воображаемую ситуацию: if + Past, would + глагол."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Условные предложения 0, 1, 2 типа"
+    },
+    "Пассивный залог: is made, was built": {
+      "rule": "Пассив: be в нужном времени + третья форма. The bridge was built. Исполнитель при необходимости вводится через by. Не каждый глагол можно так использовать: нужно действие над объектом.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "This chair is made of wood.",
+          "ru": "Этот стул сделан из дерева."
+        },
+        {
+          "en": "The bridge was built in 1980.",
+          "ru": "Мост построили в 1980 году."
+        },
+        {
+          "en": "The rooms are cleaned every day.",
+          "ru": "Комнаты убирают каждый день."
+        },
+        {
+          "en": "The letter was written by my sister.",
+          "ru": "Письмо написала моя сестра."
+        },
+        {
+          "en": "The window has been broken.",
+          "ru": "Окно разбили."
+        },
+        {
+          "en": "The results will be announced tomorrow.",
+          "ru": "Результаты объявят завтра."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "This chair is ___ of wood. (make)",
+          "a": "made",
+          "accepted": [],
+          "hint": "Пассив: be в нужном времени + третья форма. The bridge was built. Исполнитель при необходимости вводится через by. Не каждый глагол можно так использовать: нужно действие над объектом."
+        },
+        {
+          "q": "The bridge was ___ in 1980. (build)",
+          "a": "built",
+          "accepted": [],
+          "hint": "Пассив: be в нужном времени + третья форма. The bridge was built. Исполнитель при необходимости вводится через by. Не каждый глагол можно так использовать: нужно действие над объектом."
+        },
+        {
+          "q": "The rooms ___ cleaned every day.",
+          "a": "are",
+          "accepted": [],
+          "hint": "Пассив: be в нужном времени + третья форма. The bridge was built. Исполнитель при необходимости вводится через by. Не каждый глагол можно так использовать: нужно действие над объектом."
+        },
+        {
+          "q": "The letter was written ___ my sister.",
+          "a": "by",
+          "accepted": [],
+          "hint": "Пассив: be в нужном времени + третья форма. The bridge was built. Исполнитель при необходимости вводится через by. Не каждый глагол можно так использовать: нужно действие над объектом."
+        },
+        {
+          "q": "The window has been ___. (break)",
+          "a": "broken",
+          "accepted": [],
+          "hint": "Пассив: be в нужном времени + третья форма. The bridge was built. Исполнитель при необходимости вводится через by. Не каждый глагол можно так использовать: нужно действие над объектом."
+        },
+        {
+          "q": "The results will ___ announced tomorrow.",
+          "a": "be",
+          "accepted": [],
+          "hint": "Пассив: be в нужном времени + третья форма. The bridge was built. Исполнитель при необходимости вводится через by. Не каждый глагол можно так использовать: нужно действие над объектом."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Пассивный залог: is made, was built"
+    },
+    "Reported speech: he said that": {
+      "rule": "При пересказе с said/told время часто сдвигается назад: am → was, have done → had done, will → would. Если факт всё ещё верен, сдвиг не всегда обязателен. В косвенном вопросе обычный порядок слов.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "Yesterday she said that she was tired that day.",
+          "ru": "Вчера она сказала, что в тот день устала."
+        },
+        {
+          "en": "He told me that he was busy.",
+          "ru": "Он сказал мне, что занят."
+        },
+        {
+          "en": "She asked where I lived.",
+          "ru": "Она спросила, где я живу."
+        },
+        {
+          "en": "He said he would call the following day.",
+          "ru": "Он сказал, что позвонит на следующий день."
+        },
+        {
+          "en": "She asked if I wanted tea.",
+          "ru": "Она спросила, хочу ли я чаю."
+        },
+        {
+          "en": "They told us to wait outside.",
+          "ru": "Они велели нам подождать снаружи."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "Yesterday she said that she ___ tired that day.",
+          "a": "was",
+          "accepted": [],
+          "hint": "При пересказе с said/told время часто сдвигается назад: am → was, have done → had done, will → would. Если факт всё ещё верен, сдвиг не всегда обязателен. В косвенном вопросе обычный порядок слов."
+        },
+        {
+          "q": "He told ___ that he was busy.",
+          "a": "me",
+          "accepted": [],
+          "hint": "При пересказе с said/told время часто сдвигается назад: am → was, have done → had done, will → would. Если факт всё ещё верен, сдвиг не всегда обязателен. В косвенном вопросе обычный порядок слов."
+        },
+        {
+          "q": "She asked where I ___. (live)",
+          "a": "lived",
+          "accepted": [
+            "live"
+          ],
+          "hint": "При пересказе с said/told время часто сдвигается назад: am → was, have done → had done, will → would. Если факт всё ещё верен, сдвиг не всегда обязателен. В косвенном вопросе обычный порядок слов."
+        },
+        {
+          "q": "He said he ___ call the following day.",
+          "a": "would",
+          "accepted": [],
+          "hint": "При пересказе с said/told время часто сдвигается назад: am → was, have done → had done, will → would. Если факт всё ещё верен, сдвиг не всегда обязателен. В косвенном вопросе обычный порядок слов."
+        },
+        {
+          "q": "She asked ___ I wanted tea.",
+          "a": "if",
+          "accepted": [
+            "whether"
+          ],
+          "hint": "При пересказе с said/told время часто сдвигается назад: am → was, have done → had done, will → would. Если факт всё ещё верен, сдвиг не всегда обязателен. В косвенном вопросе обычный порядок слов."
+        },
+        {
+          "q": "They told us ___ wait outside.",
+          "a": "to",
+          "accepted": [],
+          "hint": "При пересказе с said/told время часто сдвигается назад: am → was, have done → had done, will → would. Если факт всё ещё верен, сдвиг не всегда обязателен. В косвенном вопросе обычный порядок слов."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Reported speech: he said that"
+    },
+    "Герундий и инфинитив: stop doing против stop to do": {
+      "rule": "Stop doing: прекратить действие. Stop to do: прервать другое дело, чтобы что-то сделать. После enjoy нужен -ing, после decide инфинитив с to.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "He stopped smoking last year.",
+          "ru": "В прошлом году он бросил курить."
+        },
+        {
+          "en": "We stopped to drink some water.",
+          "ru": "Мы остановились, чтобы попить воды."
+        },
+        {
+          "en": "She enjoys reading books.",
+          "ru": "Ей нравится читать книги."
+        },
+        {
+          "en": "I decided to find a new job.",
+          "ru": "Я решил найти новую работу."
+        },
+        {
+          "en": "Please remember to lock the door when you leave.",
+          "ru": "Не забудь запереть дверь, когда будешь уходить."
+        },
+        {
+          "en": "I remember meeting her for the first time.",
+          "ru": "Я помню, как впервые встретил её."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "He stopped ___ last year. (smoke)",
+          "a": "smoking",
+          "accepted": [],
+          "hint": "Stop doing: прекратить действие. Stop to do: прервать другое дело, чтобы что-то сделать. После enjoy нужен -ing, после decide инфинитив с to."
+        },
+        {
+          "q": "We stopped ___ some water. (drink)",
+          "a": "to drink",
+          "accepted": [],
+          "hint": "Stop doing: прекратить действие. Stop to do: прервать другое дело, чтобы что-то сделать. После enjoy нужен -ing, после decide инфинитив с to."
+        },
+        {
+          "q": "She enjoys ___ books. (read)",
+          "a": "reading",
+          "accepted": [],
+          "hint": "Stop doing: прекратить действие. Stop to do: прервать другое дело, чтобы что-то сделать. После enjoy нужен -ing, после decide инфинитив с to."
+        },
+        {
+          "q": "I decided ___ a new job. (find)",
+          "a": "to find",
+          "accepted": [],
+          "hint": "Stop doing: прекратить действие. Stop to do: прервать другое дело, чтобы что-то сделать. После enjoy нужен -ing, после decide инфинитив с to."
+        },
+        {
+          "q": "Please remember ___ the door when you leave. (lock)",
+          "a": "to lock",
+          "accepted": [],
+          "hint": "Stop doing: прекратить действие. Stop to do: прервать другое дело, чтобы что-то сделать. После enjoy нужен -ing, после decide инфинитив с to."
+        },
+        {
+          "q": "I remember ___ her for the first time. (meet)",
+          "a": "meeting",
+          "accepted": [],
+          "hint": "Stop doing: прекратить действие. Stop to do: прервать другое дело, чтобы что-то сделать. После enjoy нужен -ing, после decide инфинитив с to."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Герундий и инфинитив: stop doing против stop to do"
+    },
+    "Relative clauses: who, which, that": {
+      "rule": "Who относится к людям, which к вещам, that может заменять их в определяющей части. Whose выражает принадлежность. После запятой в добавочной информации that не используется.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "The woman who lives next door is a doctor.",
+          "ru": "Женщина, которая живёт по соседству, врач."
+        },
+        {
+          "en": "This is the book that I told you about.",
+          "ru": "Это книга, о которой я тебе говорил."
+        },
+        {
+          "en": "My bike, which is quite old, still works.",
+          "ru": "Мой велосипед, который довольно старый, всё ещё ездит."
+        },
+        {
+          "en": "I know a man whose daughter is a pilot.",
+          "ru": "Я знаю мужчину, чья дочь работает пилотом."
+        },
+        {
+          "en": "This is the cafe where we met.",
+          "ru": "Это кафе, где мы познакомились."
+        },
+        {
+          "en": "Anna, who works with me, is on holiday.",
+          "ru": "Анна, которая работает со мной, в отпуске."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "The woman ___ lives next door is a doctor.",
+          "a": "who",
+          "accepted": [
+            "that"
+          ],
+          "hint": "Who относится к людям, which к вещам, that может заменять их в определяющей части. Whose выражает принадлежность. После запятой в добавочной информации that не используется."
+        },
+        {
+          "q": "This is the book ___ I told you about.",
+          "a": "that",
+          "accepted": [
+            "which"
+          ],
+          "hint": "Who относится к людям, which к вещам, that может заменять их в определяющей части. Whose выражает принадлежность. После запятой в добавочной информации that не используется."
+        },
+        {
+          "q": "My bike, ___ is quite old, still works.",
+          "a": "which",
+          "accepted": [],
+          "hint": "Who относится к людям, which к вещам, that может заменять их в определяющей части. Whose выражает принадлежность. После запятой в добавочной информации that не используется."
+        },
+        {
+          "q": "I know a man ___ daughter is a pilot.",
+          "a": "whose",
+          "accepted": [],
+          "hint": "Who относится к людям, which к вещам, that может заменять их в определяющей части. Whose выражает принадлежность. После запятой в добавочной информации that не используется."
+        },
+        {
+          "q": "This is the cafe ___ we met.",
+          "a": "where",
+          "accepted": [],
+          "hint": "Who относится к людям, which к вещам, that может заменять их в определяющей части. Whose выражает принадлежность. После запятой в добавочной информации that не используется."
+        },
+        {
+          "q": "Anna, ___ works with me, is on holiday.",
+          "a": "who",
+          "accepted": [],
+          "hint": "Who относится к людям, which к вещам, that может заменять их в определяющей части. Whose выражает принадлежность. После запятой в добавочной информации that не используется."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Relative clauses: who, which, that"
+    },
+    "used to и would": {
+      "rule": "Used to + начальная форма описывает прошлую привычку или состояние, которого больше нет. Would подходит для повторявшихся действий при уже понятном прошлом, обычно не для состояний. Be used to + -ing значит «быть привыкшим».",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I used to live by the sea.",
+          "ru": "Раньше я жил у моря."
+        },
+        {
+          "en": "She used to be very shy.",
+          "ru": "Раньше она была очень застенчивой."
+        },
+        {
+          "en": "Every summer, my grandfather would take us fishing.",
+          "ru": "Каждое лето дедушка брал нас на рыбалку."
+        },
+        {
+          "en": "Did you use to play tennis?",
+          "ru": "Ты раньше играл в теннис?"
+        },
+        {
+          "en": "I am used to getting up early.",
+          "ru": "Я привык рано вставать."
+        },
+        {
+          "en": "He did not use to like coffee.",
+          "ru": "Раньше он не любил кофе."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I used ___ live by the sea.",
+          "a": "to",
+          "accepted": [],
+          "hint": "Used to + начальная форма описывает прошлую привычку или состояние, которого больше нет. Would подходит для повторявшихся действий при уже понятном прошлом, обычно не для состояний. Be used to + -ing значит «быть привыкшим»."
+        },
+        {
+          "q": "She used to ___ very shy.",
+          "a": "be",
+          "accepted": [],
+          "hint": "Used to + начальная форма описывает прошлую привычку или состояние, которого больше нет. Would подходит для повторявшихся действий при уже понятном прошлом, обычно не для состояний. Be used to + -ing значит «быть привыкшим»."
+        },
+        {
+          "q": "Every summer, my grandfather ___ take us fishing.",
+          "a": "would",
+          "accepted": [
+            "used to"
+          ],
+          "hint": "Used to + начальная форма описывает прошлую привычку или состояние, которого больше нет. Would подходит для повторявшихся действий при уже понятном прошлом, обычно не для состояний. Be used to + -ing значит «быть привыкшим»."
+        },
+        {
+          "q": "Did you ___ to play tennis?",
+          "a": "use",
+          "accepted": [],
+          "hint": "Used to + начальная форма описывает прошлую привычку или состояние, которого больше нет. Would подходит для повторявшихся действий при уже понятном прошлом, обычно не для состояний. Be used to + -ing значит «быть привыкшим»."
+        },
+        {
+          "q": "I am used to ___ up early. (get)",
+          "a": "getting",
+          "accepted": [],
+          "hint": "Used to + начальная форма описывает прошлую привычку или состояние, которого больше нет. Would подходит для повторявшихся действий при уже понятном прошлом, обычно не для состояний. Be used to + -ing значит «быть привыкшим»."
+        },
+        {
+          "q": "He did not ___ to like coffee.",
+          "a": "use",
+          "accepted": [],
+          "hint": "Used to + начальная форма описывает прошлую привычку или состояние, которого больше нет. Would подходит для повторявшихся действий при уже понятном прошлом, обычно не для состояний. Be used to + -ing значит «быть привыкшим»."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "used to и would"
+    },
+    "Past Perfect: I had finished": {
+      "rule": "Past Perfect: had + третья форма, событие раньше другого момента прошлого. Если порядок и так ясен, Past Simple часто достаточен; здесь отрабатываем именно had + V3.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "When I arrived, they had already left.",
+          "ru": "Когда я приехал, они уже ушли."
+        },
+        {
+          "en": "She had finished before the meeting began.",
+          "ru": "Она закончила до начала встречи."
+        },
+        {
+          "en": "I had never tried that dish before.",
+          "ru": "Раньше я никогда не пробовал это блюдо."
+        },
+        {
+          "en": "He could not pay because he had forgotten his wallet.",
+          "ru": "Он не мог заплатить, потому что забыл кошелёк."
+        },
+        {
+          "en": "Had you met him before that day?",
+          "ru": "Ты встречал его до того дня?"
+        },
+        {
+          "en": "They had not heard the news yet.",
+          "ru": "Они ещё не слышали новость к тому моменту."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "When I arrived, they had already ___. (leave)",
+          "a": "left",
+          "accepted": [],
+          "hint": "Past Perfect: had + третья форма, событие раньше другого момента прошлого. Если порядок и так ясен, Past Simple часто достаточен; здесь отрабатываем именно had + V3."
+        },
+        {
+          "q": "She ___ finished before the meeting began.",
+          "a": "had",
+          "accepted": [],
+          "hint": "Past Perfect: had + третья форма, событие раньше другого момента прошлого. Если порядок и так ясен, Past Simple часто достаточен; здесь отрабатываем именно had + V3."
+        },
+        {
+          "q": "I had never ___ that dish before. (try)",
+          "a": "tried",
+          "accepted": [],
+          "hint": "Past Perfect: had + третья форма, событие раньше другого момента прошлого. Если порядок и так ясен, Past Simple часто достаточен; здесь отрабатываем именно had + V3."
+        },
+        {
+          "q": "He could not pay because he had ___ his wallet. (forget)",
+          "a": "forgotten",
+          "accepted": [],
+          "hint": "Past Perfect: had + третья форма, событие раньше другого момента прошлого. Если порядок и так ясен, Past Simple часто достаточен; здесь отрабатываем именно had + V3."
+        },
+        {
+          "q": "Had you ___ him before that day? (meet)",
+          "a": "met",
+          "accepted": [],
+          "hint": "Past Perfect: had + третья форма, событие раньше другого момента прошлого. Если порядок и так ясен, Past Simple часто достаточен; здесь отрабатываем именно had + V3."
+        },
+        {
+          "q": "They had not ___ the news yet. (hear)",
+          "a": "heard",
+          "accepted": [],
+          "hint": "Past Perfect: had + третья форма, событие раньше другого момента прошлого. Если порядок и так ясен, Past Simple часто достаточен; здесь отрабатываем именно had + V3."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Past Perfect: I had finished"
+    },
+    "Модальные вероятности: might, could, must be": {
+      "rule": "Must be выражает уверенный вывод по признакам; might/could/may возможность; can't be уверенный вывод о невозможности. Это степень уверенности, а не точная вероятность.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "She must be at home; all her lights are on.",
+          "ru": "Она, должно быть, дома: у неё горит весь свет."
+        },
+        {
+          "en": "It might rain later; I am not sure.",
+          "ru": "Позже, возможно, пойдёт дождь, я не уверен."
+        },
+        {
+          "en": "That cannot be Anna; she is abroad.",
+          "ru": "Это не может быть Анна: она за границей."
+        },
+        {
+          "en": "He must be tired after that journey.",
+          "ru": "Он, должно быть, устал после той поездки."
+        },
+        {
+          "en": "They might know the answer.",
+          "ru": "Возможно, они знают ответ."
+        },
+        {
+          "en": "She could be working late tonight.",
+          "ru": "Возможно, сегодня она работает допоздна."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "She ___ be at home; all her lights are on.",
+          "a": "must",
+          "accepted": [],
+          "hint": "Must be выражает уверенный вывод по признакам; might/could/may возможность; can't be уверенный вывод о невозможности. Это степень уверенности, а не точная вероятность."
+        },
+        {
+          "q": "It ___ rain later; I am not sure.",
+          "a": "might",
+          "accepted": [
+            "may",
+            "could"
+          ],
+          "hint": "Must be выражает уверенный вывод по признакам; might/could/may возможность; can't be уверенный вывод о невозможности. Это степень уверенности, а не точная вероятность."
+        },
+        {
+          "q": "That ___ be Anna; she is abroad.",
+          "a": "cannot",
+          "accepted": [
+            "can't"
+          ],
+          "hint": "Must be выражает уверенный вывод по признакам; might/could/may возможность; can't be уверенный вывод о невозможности. Это степень уверенности, а не точная вероятность."
+        },
+        {
+          "q": "He must ___ tired after that journey.",
+          "a": "be",
+          "accepted": [],
+          "hint": "Must be выражает уверенный вывод по признакам; might/could/may возможность; can't be уверенный вывод о невозможности. Это степень уверенности, а не точная вероятность."
+        },
+        {
+          "q": "They might ___ the answer. (know)",
+          "a": "know",
+          "accepted": [],
+          "hint": "Must be выражает уверенный вывод по признакам; might/could/may возможность; can't be уверенный вывод о невозможности. Это степень уверенности, а не точная вероятность."
+        },
+        {
+          "q": "She could ___ working late tonight.",
+          "a": "be",
+          "accepted": [],
+          "hint": "Must be выражает уверенный вывод по признакам; might/could/may возможность; can't be уверенный вывод о невозможности. Это степень уверенности, а не точная вероятность."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Модальные вероятности: might, could, must be"
+    }
+  },
+  "B2": {
+    "Условные 3 типа и mixed conditionals": {
+      "rule": "Третий тип: if + had + V3, would have + V3 для нереального прошлого. В смешанном типе прошлое условие может иметь нынешний результат: would + глагол.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "If I had known, I would have helped.",
+          "ru": "Если бы я знал, я бы помог."
+        },
+        {
+          "en": "If she had left earlier, she would have caught the train.",
+          "ru": "Если бы она вышла раньше, она бы успела на поезд."
+        },
+        {
+          "en": "If I had studied medicine, I would be a doctor now.",
+          "ru": "Если бы я изучал медицину, я был бы врачом сейчас."
+        },
+        {
+          "en": "If he had listened, he would not have failed.",
+          "ru": "Если бы он слушал, он бы не провалился."
+        },
+        {
+          "en": "We would have stayed if the weather had been better.",
+          "ru": "Мы бы остались, если бы погода была лучше."
+        },
+        {
+          "en": "If I were more careful, I would not have made that mistake.",
+          "ru": "Если бы я был внимательнее, я бы не совершил ту ошибку."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "If I had known, I ___ have helped.",
+          "a": "would",
+          "accepted": [],
+          "hint": "Третий тип: if + had + V3, would have + V3 для нереального прошлого. В смешанном типе прошлое условие может иметь нынешний результат: would + глагол."
+        },
+        {
+          "q": "If she had left earlier, she would have ___ the train. (catch)",
+          "a": "caught",
+          "accepted": [],
+          "hint": "Третий тип: if + had + V3, would have + V3 для нереального прошлого. В смешанном типе прошлое условие может иметь нынешний результат: would + глагол."
+        },
+        {
+          "q": "If I had studied medicine, I ___ be a doctor now.",
+          "a": "would",
+          "accepted": [],
+          "hint": "Третий тип: if + had + V3, would have + V3 для нереального прошлого. В смешанном типе прошлое условие может иметь нынешний результат: would + глагол."
+        },
+        {
+          "q": "If he ___ listened, he would not have failed.",
+          "a": "had",
+          "accepted": [],
+          "hint": "Третий тип: if + had + V3, would have + V3 для нереального прошлого. В смешанном типе прошлое условие может иметь нынешний результат: would + глагол."
+        },
+        {
+          "q": "We would have stayed if the weather had ___ better. (be)",
+          "a": "been",
+          "accepted": [],
+          "hint": "Третий тип: if + had + V3, would have + V3 для нереального прошлого. В смешанном типе прошлое условие может иметь нынешний результат: would + глагол."
+        },
+        {
+          "q": "If I were more careful, I would not have ___ that mistake. (make)",
+          "a": "made",
+          "accepted": [],
+          "hint": "Третий тип: if + had + V3, would have + V3 для нереального прошлого. В смешанном типе прошлое условие может иметь нынешний результат: would + глагол."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Условные 3 типа и mixed conditionals"
+    },
+    "Инверсия: never have I seen": {
+      "rule": "После начальных отрицательных или ограничительных оборотов часто нужна инверсия: Never have I…, Rarely does she… Если вспомогательного нет, добавь do/does/did.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "Never have I seen such a view.",
+          "ru": "Я никогда не видел такого вида."
+        },
+        {
+          "en": "Rarely does he arrive late.",
+          "ru": "Он редко опаздывает."
+        },
+        {
+          "en": "Not only did she apologise, but she also offered help.",
+          "ru": "Она не только извинилась, но и предложила помощь."
+        },
+        {
+          "en": "Hardly had we arrived when it began to snow.",
+          "ru": "Едва мы приехали, как пошёл снег."
+        },
+        {
+          "en": "No sooner had he sat down than the phone rang.",
+          "ru": "Не успел он сесть, как зазвонил телефон."
+        },
+        {
+          "en": "Under no circumstances should you open this door.",
+          "ru": "Ни при каких обстоятельствах не открывай эту дверь."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "Never ___ I seen such a view. (have)",
+          "a": "have",
+          "accepted": [
+            "had"
+          ],
+          "hint": "После начальных отрицательных или ограничительных оборотов часто нужна инверсия: Never have I…, Rarely does she… Если вспомогательного нет, добавь do/does/did."
+        },
+        {
+          "q": "Rarely ___ he arrive late.",
+          "a": "does",
+          "accepted": [],
+          "hint": "После начальных отрицательных или ограничительных оборотов часто нужна инверсия: Never have I…, Rarely does she… Если вспомогательного нет, добавь do/does/did."
+        },
+        {
+          "q": "Not only ___ she apologise, but she also offered help.",
+          "a": "did",
+          "accepted": [],
+          "hint": "После начальных отрицательных или ограничительных оборотов часто нужна инверсия: Never have I…, Rarely does she… Если вспомогательного нет, добавь do/does/did."
+        },
+        {
+          "q": "Hardly had we arrived ___ it began to snow.",
+          "a": "when",
+          "accepted": [],
+          "hint": "После начальных отрицательных или ограничительных оборотов часто нужна инверсия: Never have I…, Rarely does she… Если вспомогательного нет, добавь do/does/did."
+        },
+        {
+          "q": "No sooner had he sat down ___ the phone rang.",
+          "a": "than",
+          "accepted": [],
+          "hint": "После начальных отрицательных или ограничительных оборотов часто нужна инверсия: Never have I…, Rarely does she… Если вспомогательного нет, добавь do/does/did."
+        },
+        {
+          "q": "Under no circumstances ___ you open this door.",
+          "a": "should",
+          "accepted": [
+            "must"
+          ],
+          "hint": "После начальных отрицательных или ограничительных оборотов часто нужна инверсия: Never have I…, Rarely does she… Если вспомогательного нет, добавь do/does/did."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Инверсия: never have I seen"
+    },
+    "Cleft sentences: it was John who": {
+      "rule": "It is/was X who/that… выделяет X. What I need is… выделяет нужную информацию. Следи за смыслом: выделяется человек, время, причина или действие.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "It was Anna who found the keys.",
+          "ru": "Именно Анна нашла ключи."
+        },
+        {
+          "en": "What I need is a short break.",
+          "ru": "Мне нужен именно короткий перерыв."
+        },
+        {
+          "en": "It was yesterday that they arrived.",
+          "ru": "Они приехали именно вчера."
+        },
+        {
+          "en": "The person who called was my teacher.",
+          "ru": "Позвонил мой учитель."
+        },
+        {
+          "en": "What surprised me was his honesty.",
+          "ru": "Меня удивила его честность."
+        },
+        {
+          "en": "It is the cost that worries me.",
+          "ru": "Меня беспокоит именно стоимость."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "It was Anna ___ found the keys.",
+          "a": "who",
+          "accepted": [
+            "that"
+          ],
+          "hint": "It is/was X who/that… выделяет X. What I need is… выделяет нужную информацию. Следи за смыслом: выделяется человек, время, причина или действие."
+        },
+        {
+          "q": "What I need ___ a short break.",
+          "a": "is",
+          "accepted": [],
+          "hint": "It is/was X who/that… выделяет X. What I need is… выделяет нужную информацию. Следи за смыслом: выделяется человек, время, причина или действие."
+        },
+        {
+          "q": "It was yesterday ___ they arrived.",
+          "a": "that",
+          "accepted": [],
+          "hint": "It is/was X who/that… выделяет X. What I need is… выделяет нужную информацию. Следи за смыслом: выделяется человек, время, причина или действие."
+        },
+        {
+          "q": "The person ___ called was my teacher.",
+          "a": "who",
+          "accepted": [
+            "that"
+          ],
+          "hint": "It is/was X who/that… выделяет X. What I need is… выделяет нужную информацию. Следи за смыслом: выделяется человек, время, причина или действие."
+        },
+        {
+          "q": "What surprised me ___ his honesty.",
+          "a": "was",
+          "accepted": [],
+          "hint": "It is/was X who/that… выделяет X. What I need is… выделяет нужную информацию. Следи за смыслом: выделяется человек, время, причина или действие."
+        },
+        {
+          "q": "It is the cost ___ worries me.",
+          "a": "that",
+          "accepted": [
+            "which"
+          ],
+          "hint": "It is/was X who/that… выделяет X. What I need is… выделяет нужную информацию. Следи за смыслом: выделяется человек, время, причина или действие."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Cleft sentences: it was John who"
+    },
+    "Артикли в абстрактных и обобщающих значениях": {
+      "rule": "При общем значении множественные и неисчисляемые существительные часто идут без артикля. The ограничивает значение конкретным случаем. В этих заданиях знак «-» означает отсутствие артикля.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "Knowledge is valuable.",
+          "ru": "Знания ценны."
+        },
+        {
+          "en": "The knowledge she gained was useful.",
+          "ru": "Знания, которые она получила, оказались полезны."
+        },
+        {
+          "en": "Children need time to play.",
+          "ru": "Детям нужно время для игры."
+        },
+        {
+          "en": "The children in this photo are my cousins.",
+          "ru": "Дети на этой фотографии мои двоюродные братья и сёстры."
+        },
+        {
+          "en": "He gave me a useful piece of advice.",
+          "ru": "Он дал мне полезный совет."
+        },
+        {
+          "en": "Honesty matters to me.",
+          "ru": "Честность для меня важна."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "___ knowledge is valuable.",
+          "a": "-",
+          "accepted": [],
+          "hint": "При общем значении множественные и неисчисляемые существительные часто идут без артикля. The ограничивает значение конкретным случаем. В этих заданиях знак «-» означает отсутствие артикля."
+        },
+        {
+          "q": "___ knowledge she gained was useful.",
+          "a": "The",
+          "accepted": [],
+          "hint": "При общем значении множественные и неисчисляемые существительные часто идут без артикля. The ограничивает значение конкретным случаем. В этих заданиях знак «-» означает отсутствие артикля."
+        },
+        {
+          "q": "___ children need time to play.",
+          "a": "-",
+          "accepted": [],
+          "hint": "При общем значении множественные и неисчисляемые существительные часто идут без артикля. The ограничивает значение конкретным случаем. В этих заданиях знак «-» означает отсутствие артикля."
+        },
+        {
+          "q": "___ children in this photo are my cousins.",
+          "a": "The",
+          "accepted": [],
+          "hint": "При общем значении множественные и неисчисляемые существительные часто идут без артикля. The ограничивает значение конкретным случаем. В этих заданиях знак «-» означает отсутствие артикля."
+        },
+        {
+          "q": "He gave me ___ useful piece of advice.",
+          "a": "a",
+          "accepted": [],
+          "hint": "При общем значении множественные и неисчисляемые существительные часто идут без артикля. The ограничивает значение конкретным случаем. В этих заданиях знак «-» означает отсутствие артикля."
+        },
+        {
+          "q": "___ honesty matters to me.",
+          "a": "-",
+          "accepted": [],
+          "hint": "При общем значении множественные и неисчисляемые существительные часто идут без артикля. The ограничивает значение конкретным случаем. В этих заданиях знак «-» означает отсутствие артикля."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Артикли в абстрактных и обобщающих значениях"
+    },
+    "Модальные в прошлом: should have, must have, could have": {
+      "rule": "В этих заданиях modal + have + V3 относится к прошлому. Should have выражает совет или упрёк о несделанном; must have уверенный вывод; might/could have возможность.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "You should have told me earlier.",
+          "ru": "Тебе стоило сказать мне раньше."
+        },
+        {
+          "en": "She must have seen the message.",
+          "ru": "Она, должно быть, видела сообщение."
+        },
+        {
+          "en": "We could have taken a taxi.",
+          "ru": "Мы могли бы взять такси."
+        },
+        {
+          "en": "He cannot have travelled alone; he is only five.",
+          "ru": "Он не мог путешествовать один: ему всего пять."
+        },
+        {
+          "en": "They might have taken the wrong turn.",
+          "ru": "Возможно, они свернули не туда."
+        },
+        {
+          "en": "I should not have spent so much money.",
+          "ru": "Мне не стоило тратить столько денег."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "You should have ___ me earlier. (tell)",
+          "a": "told",
+          "accepted": [],
+          "hint": "В этих заданиях modal + have + V3 относится к прошлому. Should have выражает совет или упрёк о несделанном; must have уверенный вывод; might/could have возможность."
+        },
+        {
+          "q": "She must have ___ the message. (see)",
+          "a": "seen",
+          "accepted": [],
+          "hint": "В этих заданиях modal + have + V3 относится к прошлому. Should have выражает совет или упрёк о несделанном; must have уверенный вывод; might/could have возможность."
+        },
+        {
+          "q": "We could have ___ a taxi. (take)",
+          "a": "taken",
+          "accepted": [],
+          "hint": "В этих заданиях modal + have + V3 относится к прошлому. Should have выражает совет или упрёк о несделанном; must have уверенный вывод; might/could have возможность."
+        },
+        {
+          "q": "He cannot have ___ alone; he is only five. (travel)",
+          "a": "travelled",
+          "accepted": [
+            "traveled"
+          ],
+          "hint": "В этих заданиях modal + have + V3 относится к прошлому. Should have выражает совет или упрёк о несделанном; must have уверенный вывод; might/could have возможность."
+        },
+        {
+          "q": "They might have ___ the wrong turn. (take)",
+          "a": "taken",
+          "accepted": [],
+          "hint": "В этих заданиях modal + have + V3 относится к прошлому. Should have выражает совет или упрёк о несделанном; must have уверенный вывод; might/could have возможность."
+        },
+        {
+          "q": "I should not have ___ so much money. (spend)",
+          "a": "spent",
+          "accepted": [],
+          "hint": "В этих заданиях modal + have + V3 относится к прошлому. Should have выражает совет или упрёк о несделанном; must have уверенный вывод; might/could have возможность."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Модальные в прошлом: should have, must have, could have"
+    },
+    "Passive с инфинитивом: is said to be": {
+      "rule": "He is said to be… передаёт чужое сообщение. To have + V3 показывает более раннее действие. It is believed that… даёт тот же смысл другим порядком.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "She is said to be an excellent teacher.",
+          "ru": "Говорят, она отличный преподаватель."
+        },
+        {
+          "en": "He is believed to have left the country.",
+          "ru": "Считается, что он уехал из страны."
+        },
+        {
+          "en": "It is reported that the road is closed.",
+          "ru": "Сообщается, что дорога закрыта."
+        },
+        {
+          "en": "The painting is thought to be worth a fortune.",
+          "ru": "Считается, что картина стоит целое состояние."
+        },
+        {
+          "en": "They are expected to arrive soon.",
+          "ru": "Ожидается, что они скоро приедут."
+        },
+        {
+          "en": "The building is said to have been built in 1905.",
+          "ru": "Говорят, здание построили в 1905 году."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "She is said ___ be an excellent teacher.",
+          "a": "to",
+          "accepted": [],
+          "hint": "He is said to be… передаёт чужое сообщение. To have + V3 показывает более раннее действие. It is believed that… даёт тот же смысл другим порядком."
+        },
+        {
+          "q": "He is believed to have ___ the country. (leave)",
+          "a": "left",
+          "accepted": [],
+          "hint": "He is said to be… передаёт чужое сообщение. To have + V3 показывает более раннее действие. It is believed that… даёт тот же смысл другим порядком."
+        },
+        {
+          "q": "It is reported ___ the road is closed.",
+          "a": "that",
+          "accepted": [],
+          "hint": "He is said to be… передаёт чужое сообщение. To have + V3 показывает более раннее действие. It is believed that… даёт тот же смысл другим порядком."
+        },
+        {
+          "q": "The painting is thought to ___ worth a fortune.",
+          "a": "be",
+          "accepted": [],
+          "hint": "He is said to be… передаёт чужое сообщение. To have + V3 показывает более раннее действие. It is believed that… даёт тот же смысл другим порядком."
+        },
+        {
+          "q": "They are expected ___ arrive soon.",
+          "a": "to",
+          "accepted": [],
+          "hint": "He is said to be… передаёт чужое сообщение. To have + V3 показывает более раннее действие. It is believed that… даёт тот же смысл другим порядком."
+        },
+        {
+          "q": "The building is said to have been ___ in 1905. (build)",
+          "a": "built",
+          "accepted": [],
+          "hint": "He is said to be… передаёт чужое сообщение. To have + V3 показывает более раннее действие. It is believed that… даёт тот же смысл другим порядком."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Passive с инфинитивом: is said to be"
+    },
+    "Фразовые глаголы: разделяемые и нет": {
+      "rule": "У разделяемого фразового глагола местоимение идёт между частями: turn it off. У неразделяемого после всей конструкции: look after it. Порядок зависит от конкретного глагола.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "Please turn it off.",
+          "ru": "Пожалуйста, выключи это."
+        },
+        {
+          "en": "Who will look after the children?",
+          "ru": "Кто присмотрит за детьми?"
+        },
+        {
+          "en": "I need to look up this word.",
+          "ru": "Мне нужно найти это слово в словаре."
+        },
+        {
+          "en": "Please put it off. We will discuss it tomorrow.",
+          "ru": "Пожалуйста, отложи это. Мы обсудим это завтра."
+        },
+        {
+          "en": "She gets on with her colleagues.",
+          "ru": "Она ладит с коллегами."
+        },
+        {
+          "en": "We ran out of milk.",
+          "ru": "У нас закончилось молоко."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "Please turn ___ off.",
+          "a": "it",
+          "accepted": [
+            "this"
+          ],
+          "hint": "У разделяемого фразового глагола местоимение идёт между частями: turn it off. У неразделяемого после всей конструкции: look after it. Порядок зависит от конкретного глагола."
+        },
+        {
+          "q": "Who will look ___ the children?",
+          "a": "after",
+          "accepted": [],
+          "hint": "У разделяемого фразового глагола местоимение идёт между частями: turn it off. У неразделяемого после всей конструкции: look after it. Порядок зависит от конкретного глагола."
+        },
+        {
+          "q": "I need to look ___ this word.",
+          "a": "up",
+          "accepted": [],
+          "hint": "У разделяемого фразового глагола местоимение идёт между частями: turn it off. У неразделяемого после всей конструкции: look after it. Порядок зависит от конкретного глагола."
+        },
+        {
+          "q": "Please put it ___. We will discuss it tomorrow.",
+          "a": "off",
+          "accepted": [],
+          "hint": "У разделяемого фразового глагола местоимение идёт между частями: turn it off. У неразделяемого после всей конструкции: look after it. Порядок зависит от конкретного глагола."
+        },
+        {
+          "q": "She gets ___ with her colleagues.",
+          "a": "on",
+          "accepted": [
+            "along"
+          ],
+          "hint": "У разделяемого фразового глагола местоимение идёт между частями: turn it off. У неразделяемого после всей конструкции: look after it. Порядок зависит от конкретного глагола."
+        },
+        {
+          "q": "We ran ___ of milk.",
+          "a": "out",
+          "accepted": [],
+          "hint": "У разделяемого фразового глагола местоимение идёт между частями: turn it off. У неразделяемого после всей конструкции: look after it. Порядок зависит от конкретного глагола."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Фразовые глаголы: разделяемые и нет"
+    },
+    "Согласование времён в сложных предложениях": {
+      "rule": "В пересказе прошлого часто действует сдвиг времён. Но будущее после when/if обычно выражается настоящим: when she arrives. Согласование зависит от времени и смысла, а не механического сдвига каждого глагола.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I will call you when I arrive.",
+          "ru": "Я позвоню, когда приеду."
+        },
+        {
+          "en": "She said she would come the next day.",
+          "ru": "Она сказала, что придёт на следующий день."
+        },
+        {
+          "en": "I knew he had done the job before.",
+          "ru": "Я знал, что он раньше выполнял эту работу."
+        },
+        {
+          "en": "If it rains tomorrow, we will stay in.",
+          "ru": "Если завтра пойдёт дождь, мы останемся дома."
+        },
+        {
+          "en": "By the time we arrived, the film had started.",
+          "ru": "К нашему приходу фильм уже начался."
+        },
+        {
+          "en": "I will wait until she returns.",
+          "ru": "Я подожду, пока она вернётся."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I will call you when I ___. (arrive)",
+          "a": "arrive",
+          "accepted": [
+            "have arrived"
+          ],
+          "hint": "В пересказе прошлого часто действует сдвиг времён. Но будущее после when/if обычно выражается настоящим: when she arrives. Согласование зависит от времени и смысла, а не механического сдвига каждого глагола."
+        },
+        {
+          "q": "She said she ___ come the next day.",
+          "a": "would",
+          "accepted": [],
+          "hint": "В пересказе прошлого часто действует сдвиг времён. Но будущее после when/if обычно выражается настоящим: when she arrives. Согласование зависит от времени и смысла, а не механического сдвига каждого глагола."
+        },
+        {
+          "q": "I knew he had ___ the job before. (do)",
+          "a": "done",
+          "accepted": [],
+          "hint": "В пересказе прошлого часто действует сдвиг времён. Но будущее после when/if обычно выражается настоящим: when she arrives. Согласование зависит от времени и смысла, а не механического сдвига каждого глагола."
+        },
+        {
+          "q": "If it ___ tomorrow, we will stay in. (rain)",
+          "a": "rains",
+          "accepted": [
+            "is raining"
+          ],
+          "hint": "В пересказе прошлого часто действует сдвиг времён. Но будущее после when/if обычно выражается настоящим: when she arrives. Согласование зависит от времени и смысла, а не механического сдвига каждого глагола."
+        },
+        {
+          "q": "By the time we arrived, the film had ___. (start)",
+          "a": "started",
+          "accepted": [],
+          "hint": "В пересказе прошлого часто действует сдвиг времён. Но будущее после when/if обычно выражается настоящим: when she arrives. Согласование зависит от времени и смысла, а не механического сдвига каждого глагола."
+        },
+        {
+          "q": "I will wait until she ___. (return)",
+          "a": "returns",
+          "accepted": [
+            "has returned"
+          ],
+          "hint": "В пересказе прошлого часто действует сдвиг времён. Но будущее после when/if обычно выражается настоящим: when she arrives. Согласование зависит от времени и смысла, а не механического сдвига каждого глагола."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Согласование времён в сложных предложениях"
+    },
+    "Wish / if only": {
+      "rule": "Wish + Past выражает желание изменить настоящее; wish + had + V3 сожаление о прошлом. Wish + would обычно касается желаемого изменения поведения или ситуации.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I wish I had more free time.",
+          "ru": "Хотелось бы иметь больше свободного времени."
+        },
+        {
+          "en": "She wishes she had studied harder.",
+          "ru": "Она жалеет, что не училась усерднее."
+        },
+        {
+          "en": "If only I were taller.",
+          "ru": "Если бы я только был выше."
+        },
+        {
+          "en": "I wish you would stop interrupting.",
+          "ru": "Мне хотелось бы, чтобы ты перестал перебивать."
+        },
+        {
+          "en": "He wishes he had not said that.",
+          "ru": "Он жалеет, что сказал это."
+        },
+        {
+          "en": "If only we could afford a holiday.",
+          "ru": "Если бы мы могли позволить себе отпуск."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I wish I ___ more free time.",
+          "a": "had",
+          "accepted": [],
+          "hint": "Wish + Past выражает желание изменить настоящее; wish + had + V3 сожаление о прошлом. Wish + would обычно касается желаемого изменения поведения или ситуации."
+        },
+        {
+          "q": "She wishes she had ___ harder. (study)",
+          "a": "studied",
+          "accepted": [],
+          "hint": "Wish + Past выражает желание изменить настоящее; wish + had + V3 сожаление о прошлом. Wish + would обычно касается желаемого изменения поведения или ситуации."
+        },
+        {
+          "q": "If only I ___ taller.",
+          "a": "were",
+          "accepted": [
+            "was"
+          ],
+          "hint": "Wish + Past выражает желание изменить настоящее; wish + had + V3 сожаление о прошлом. Wish + would обычно касается желаемого изменения поведения или ситуации."
+        },
+        {
+          "q": "I wish you ___ stop interrupting.",
+          "a": "would",
+          "accepted": [],
+          "hint": "Wish + Past выражает желание изменить настоящее; wish + had + V3 сожаление о прошлом. Wish + would обычно касается желаемого изменения поведения или ситуации."
+        },
+        {
+          "q": "He wishes he had not ___ that. (say)",
+          "a": "said",
+          "accepted": [],
+          "hint": "Wish + Past выражает желание изменить настоящее; wish + had + V3 сожаление о прошлом. Wish + would обычно касается желаемого изменения поведения или ситуации."
+        },
+        {
+          "q": "If only we ___ afford a holiday.",
+          "a": "could",
+          "accepted": [],
+          "hint": "Wish + Past выражает желание изменить настоящее; wish + had + V3 сожаление о прошлом. Wish + would обычно касается желаемого изменения поведения или ситуации."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Wish / if only"
+    },
+    "Discourse markers: however, moreover, nevertheless": {
+      "rule": "However/nevertheless вводят контраст; moreover/furthermore добавление; therefore/consequently следствие. Это не союзы вроде but: между самостоятельными предложениями нужна подходящая пунктуация.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "It was raining. However, we went out.",
+          "ru": "Шёл дождь. Тем не менее мы вышли."
+        },
+        {
+          "en": "The plan is cheap. Moreover, it is easy to implement.",
+          "ru": "План дешёвый. Кроме того, его легко осуществить."
+        },
+        {
+          "en": "The road was closed. Therefore, we took another route.",
+          "ru": "Дорога была закрыта. Поэтому мы поехали другим путём."
+        },
+        {
+          "en": "The task was difficult; however, she completed it.",
+          "ru": "Задание было сложным, однако она его выполнила."
+        },
+        {
+          "en": "First, check the facts. Then, compare the options.",
+          "ru": "Сначала проверь факты. Затем сравни варианты."
+        },
+        {
+          "en": "In conclusion, we recommend a smaller trial.",
+          "ru": "В заключение мы рекомендуем более небольшой пробный запуск."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "It was raining. ___, we went out.",
+          "a": "However",
+          "accepted": [
+            "Nevertheless",
+            "Nonetheless",
+            "Still"
+          ],
+          "hint": "However/nevertheless вводят контраст; moreover/furthermore добавление; therefore/consequently следствие. Это не союзы вроде but: между самостоятельными предложениями нужна подходящая пунктуация."
+        },
+        {
+          "q": "The plan is cheap. ___, it is easy to implement.",
+          "a": "Moreover",
+          "accepted": [
+            "Furthermore",
+            "Additionally",
+            "Besides"
+          ],
+          "hint": "However/nevertheless вводят контраст; moreover/furthermore добавление; therefore/consequently следствие. Это не союзы вроде but: между самостоятельными предложениями нужна подходящая пунктуация."
+        },
+        {
+          "q": "The road was closed. ___, we took another route.",
+          "a": "Therefore",
+          "accepted": [
+            "Consequently",
+            "Thus",
+            "Hence"
+          ],
+          "hint": "However/nevertheless вводят контраст; moreover/furthermore добавление; therefore/consequently следствие. Это не союзы вроде but: между самостоятельными предложениями нужна подходящая пунктуация."
+        },
+        {
+          "q": "The task was difficult; ___, she completed it.",
+          "a": "however",
+          "accepted": [
+            "nevertheless",
+            "nonetheless",
+            "still"
+          ],
+          "hint": "However/nevertheless вводят контраст; moreover/furthermore добавление; therefore/consequently следствие. Это не союзы вроде but: между самостоятельными предложениями нужна подходящая пунктуация."
+        },
+        {
+          "q": "First, check the facts. ___, compare the options.",
+          "a": "Then",
+          "accepted": [
+            "Next",
+            "Second",
+            "Secondly"
+          ],
+          "hint": "However/nevertheless вводят контраст; moreover/furthermore добавление; therefore/consequently следствие. Это не союзы вроде but: между самостоятельными предложениями нужна подходящая пунктуация."
+        },
+        {
+          "q": "___ conclusion, we recommend a smaller trial.",
+          "a": "In",
+          "accepted": [],
+          "hint": "However/nevertheless вводят контраст; moreover/furthermore добавление; therefore/consequently следствие. Это не союзы вроде but: между самостоятельными предложениями нужна подходящая пунктуация."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Discourse markers: however, moreover, nevertheless"
+    }
+  },
+  "C1": {
+    "Nominalisation и академический стиль": {
+      "rule": "Nominalisation превращает действие или качество в существительное: decide → decision. Это может сжимать академический текст, но избыток таких форм скрывает исполнителя и делает речь тяжёлой.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "They decided to leave. Their decision surprised us.",
+          "ru": "Они решили уйти. Их решение нас удивило."
+        },
+        {
+          "en": "The process improved. The improvement was measurable.",
+          "ru": "Процесс улучшился. Улучшение можно было измерить."
+        },
+        {
+          "en": "We analysed the data. Our analysis revealed a pattern.",
+          "ru": "Мы проанализировали данные. Наш анализ выявил закономерность."
+        },
+        {
+          "en": "The team failed. The failure had several causes.",
+          "ru": "Команда потерпела неудачу. У неудачи было несколько причин."
+        },
+        {
+          "en": "The company expanded. Its expansion created jobs.",
+          "ru": "Компания расширилась. Её расширение создало рабочие места."
+        },
+        {
+          "en": "They refused to comment. Their refusal attracted attention.",
+          "ru": "Они отказались комментировать. Их отказ привлёк внимание."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "They decided to leave. Their ___ surprised us. (decide)",
+          "a": "decision",
+          "accepted": [],
+          "hint": "Nominalisation превращает действие или качество в существительное: decide → decision. Это может сжимать академический текст, но избыток таких форм скрывает исполнителя и делает речь тяжёлой."
+        },
+        {
+          "q": "The process improved. The ___ was measurable. (improve)",
+          "a": "improvement",
+          "accepted": [],
+          "hint": "Nominalisation превращает действие или качество в существительное: decide → decision. Это может сжимать академический текст, но избыток таких форм скрывает исполнителя и делает речь тяжёлой."
+        },
+        {
+          "q": "We analysed the data. Our ___ revealed a pattern. (analyse)",
+          "a": "analysis",
+          "accepted": [],
+          "hint": "Nominalisation превращает действие или качество в существительное: decide → decision. Это может сжимать академический текст, но избыток таких форм скрывает исполнителя и делает речь тяжёлой."
+        },
+        {
+          "q": "The team failed. The ___ had several causes. (fail)",
+          "a": "failure",
+          "accepted": [],
+          "hint": "Nominalisation превращает действие или качество в существительное: decide → decision. Это может сжимать академический текст, но избыток таких форм скрывает исполнителя и делает речь тяжёлой."
+        },
+        {
+          "q": "The company expanded. Its ___ created jobs. (expand)",
+          "a": "expansion",
+          "accepted": [],
+          "hint": "Nominalisation превращает действие или качество в существительное: decide → decision. Это может сжимать академический текст, но избыток таких форм скрывает исполнителя и делает речь тяжёлой."
+        },
+        {
+          "q": "They refused to comment. Their ___ attracted attention. (refuse)",
+          "a": "refusal",
+          "accepted": [],
+          "hint": "Nominalisation превращает действие или качество в существительное: decide → decision. Это может сжимать академический текст, но избыток таких форм скрывает исполнителя и делает речь тяжёлой."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Nominalisation и академический стиль"
+    },
+    "Тонкие оттенки перфектных форм": {
+      "rule": "Perfect Simple часто подчёркивает результат или число выполненных действий; Perfect Continuous процесс и длительность. Оба могут относиться к продолжающемуся периоду. Глаголы состояния обычно не берут Continuous.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I have written three reports today.",
+          "ru": "Сегодня я написал три отчёта."
+        },
+        {
+          "en": "I have been writing reports all morning.",
+          "ru": "Я пишу отчёты всё утро."
+        },
+        {
+          "en": "She has known him since childhood.",
+          "ru": "Она знает его с детства."
+        },
+        {
+          "en": "By noon tomorrow, we will have finished the work.",
+          "ru": "К полудню завтра мы закончим работу."
+        },
+        {
+          "en": "By June, she will have been working here for a decade.",
+          "ru": "К июню она будет работать здесь десять лет."
+        },
+        {
+          "en": "He had been waiting for hours before help arrived.",
+          "ru": "Он ждал несколько часов, прежде чем пришла помощь."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I have ___ three reports today. (write)",
+          "a": "written",
+          "accepted": [],
+          "hint": "Perfect Simple часто подчёркивает результат или число выполненных действий; Perfect Continuous процесс и длительность. Оба могут относиться к продолжающемуся периоду. Глаголы состояния обычно не берут Continuous."
+        },
+        {
+          "q": "I have been ___ reports all morning. (write)",
+          "a": "writing",
+          "accepted": [],
+          "hint": "Perfect Simple часто подчёркивает результат или число выполненных действий; Perfect Continuous процесс и длительность. Оба могут относиться к продолжающемуся периоду. Глаголы состояния обычно не берут Continuous."
+        },
+        {
+          "q": "She has ___ him since childhood. (know)",
+          "a": "known",
+          "accepted": [],
+          "hint": "Perfect Simple часто подчёркивает результат или число выполненных действий; Perfect Continuous процесс и длительность. Оба могут относиться к продолжающемуся периоду. Глаголы состояния обычно не берут Continuous."
+        },
+        {
+          "q": "By noon tomorrow, we will have ___ the work. (finish)",
+          "a": "finished",
+          "accepted": [],
+          "hint": "Perfect Simple часто подчёркивает результат или число выполненных действий; Perfect Continuous процесс и длительность. Оба могут относиться к продолжающемуся периоду. Глаголы состояния обычно не берут Continuous."
+        },
+        {
+          "q": "By June, she will have been ___ here for a decade. (work)",
+          "a": "working",
+          "accepted": [],
+          "hint": "Perfect Simple часто подчёркивает результат или число выполненных действий; Perfect Continuous процесс и длительность. Оба могут относиться к продолжающемуся периоду. Глаголы состояния обычно не берут Continuous."
+        },
+        {
+          "q": "He had been ___ for hours before help arrived. (wait)",
+          "a": "waiting",
+          "accepted": [],
+          "hint": "Perfect Simple часто подчёркивает результат или число выполненных действий; Perfect Continuous процесс и длительность. Оба могут относиться к продолжающемуся периоду. Глаголы состояния обычно не берут Continuous."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Тонкие оттенки перфектных форм"
+    },
+    "Subjunctive: I suggest that he be": {
+      "rule": "В формальном mandative subjunctive после suggest/insist/essential + that стоит базовая форма: he be, she attend. В британском английском также обычна конструкция should + глагол.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I suggest that he be present.",
+          "ru": "Я предлагаю, чтобы он присутствовал."
+        },
+        {
+          "en": "It is essential that she arrive on time.",
+          "ru": "Необходимо, чтобы она пришла вовремя."
+        },
+        {
+          "en": "They insisted that the document be signed immediately.",
+          "ru": "Они потребовали, чтобы документ подписали немедленно."
+        },
+        {
+          "en": "We recommend that every applicant keep a copy.",
+          "ru": "Мы рекомендуем каждому заявителю сохранить копию."
+        },
+        {
+          "en": "It is vital that no one leave the room.",
+          "ru": "Крайне важно, чтобы никто не выходил из комнаты."
+        },
+        {
+          "en": "The rule requires that each member wear a badge.",
+          "ru": "Правило требует, чтобы каждый участник носил значок."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I suggest that he ___ present.",
+          "a": "be",
+          "accepted": [
+            "should be"
+          ],
+          "hint": "В формальном mandative subjunctive после suggest/insist/essential + that стоит базовая форма: he be, she attend. В британском английском также обычна конструкция should + глагол."
+        },
+        {
+          "q": "It is essential that she ___ on time. (arrive)",
+          "a": "arrive",
+          "accepted": [
+            "should arrive"
+          ],
+          "hint": "В формальном mandative subjunctive после suggest/insist/essential + that стоит базовая форма: he be, she attend. В британском английском также обычна конструкция should + глагол."
+        },
+        {
+          "q": "They insisted that the document ___ signed immediately.",
+          "a": "be",
+          "accepted": [
+            "should be"
+          ],
+          "hint": "В формальном mandative subjunctive после suggest/insist/essential + that стоит базовая форма: he be, she attend. В британском английском также обычна конструкция should + глагол."
+        },
+        {
+          "q": "We recommend that every applicant ___ a copy. (keep)",
+          "a": "keep",
+          "accepted": [
+            "should keep"
+          ],
+          "hint": "В формальном mandative subjunctive после suggest/insist/essential + that стоит базовая форма: he be, she attend. В британском английском также обычна конструкция should + глагол."
+        },
+        {
+          "q": "It is vital that no one ___ the room. (leave)",
+          "a": "leave",
+          "accepted": [
+            "should leave"
+          ],
+          "hint": "В формальном mandative subjunctive после suggest/insist/essential + that стоит базовая форма: he be, she attend. В британском английском также обычна конструкция should + глагол."
+        },
+        {
+          "q": "The rule requires that each member ___ a badge. (wear)",
+          "a": "wear",
+          "accepted": [
+            "should wear"
+          ],
+          "hint": "В формальном mandative subjunctive после suggest/insist/essential + that стоит базовая форма: he be, she attend. В британском английском также обычна конструкция should + глагол."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Subjunctive: I suggest that he be"
+    },
+    "Ellipsis и substitution": {
+      "rule": "Ellipsis опускает понятные слова; substitution заменяет их через do, so, one/ones. Выбор заменителя зависит от того, что повторяется: действие, утверждение или существительное.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "I enjoyed the talk, and so did she.",
+          "ru": "Мне понравилось выступление, и ей тоже."
+        },
+        {
+          "en": "Will it rain? I hope not.",
+          "ru": "Будет дождь? Надеюсь, нет."
+        },
+        {
+          "en": "I need a pen. Do you have one?",
+          "ru": "Мне нужна ручка. У тебя есть?"
+        },
+        {
+          "en": "She said she would help, and she did so.",
+          "ru": "Она сказала, что поможет, и помогла."
+        },
+        {
+          "en": "He has never been there. Neither have I.",
+          "ru": "Он никогда там не был. Я тоже."
+        },
+        {
+          "en": "Which shoes? The black ones.",
+          "ru": "Какие туфли? Чёрные."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "I enjoyed the talk, and so ___ she.",
+          "a": "did",
+          "accepted": [],
+          "hint": "Ellipsis опускает понятные слова; substitution заменяет их через do, so, one/ones. Выбор заменителя зависит от того, что повторяется: действие, утверждение или существительное."
+        },
+        {
+          "q": "Will it rain? I hope ___.",
+          "a": "not",
+          "accepted": [],
+          "hint": "Ellipsis опускает понятные слова; substitution заменяет их через do, so, one/ones. Выбор заменителя зависит от того, что повторяется: действие, утверждение или существительное."
+        },
+        {
+          "q": "I need a pen. Do you have ___?",
+          "a": "one",
+          "accepted": [],
+          "hint": "Ellipsis опускает понятные слова; substitution заменяет их через do, so, one/ones. Выбор заменителя зависит от того, что повторяется: действие, утверждение или существительное."
+        },
+        {
+          "q": "She said she would help, and she ___ so.",
+          "a": "did",
+          "accepted": [],
+          "hint": "Ellipsis опускает понятные слова; substitution заменяет их через do, so, one/ones. Выбор заменителя зависит от того, что повторяется: действие, утверждение или существительное."
+        },
+        {
+          "q": "He has never been there. Neither ___ I. (have)",
+          "a": "have",
+          "accepted": [],
+          "hint": "Ellipsis опускает понятные слова; substitution заменяет их через do, so, one/ones. Выбор заменителя зависит от того, что повторяется: действие, утверждение или существительное."
+        },
+        {
+          "q": "Which shoes? The black ___.",
+          "a": "ones",
+          "accepted": [],
+          "hint": "Ellipsis опускает понятные слова; substitution заменяет их через do, so, one/ones. Выбор заменителя зависит от того, что повторяется: действие, утверждение или существительное."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Ellipsis и substitution"
+    },
+    "Хеджирование: it would appear that": {
+      "rule": "Hedging смягчает степень уверенности: may, appears to, tends to, evidence suggests. Смягчение не заменяет доказательства и не должно скрывать известный факт.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "The result appears to support our hypothesis.",
+          "ru": "Результат, по-видимому, поддерживает нашу гипотезу."
+        },
+        {
+          "en": "It would appear that the effect is temporary.",
+          "ru": "Похоже, эффект временный."
+        },
+        {
+          "en": "The evidence suggests that further work is needed.",
+          "ru": "Данные позволяют предположить, что нужна дальнейшая работа."
+        },
+        {
+          "en": "This may be explained by the small sample.",
+          "ru": "Это может объясняться малой выборкой."
+        },
+        {
+          "en": "Participants tend to prefer shorter tasks.",
+          "ru": "Участники склонны предпочитать короткие задания."
+        },
+        {
+          "en": "The findings should be interpreted with caution.",
+          "ru": "Результаты следует трактовать осторожно."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "The result appears ___ support our hypothesis.",
+          "a": "to",
+          "accepted": [],
+          "hint": "Hedging смягчает степень уверенности: may, appears to, tends to, evidence suggests. Смягчение не заменяет доказательства и не должно скрывать известный факт."
+        },
+        {
+          "q": "It would appear ___ the effect is temporary.",
+          "a": "that",
+          "accepted": [],
+          "hint": "Hedging смягчает степень уверенности: may, appears to, tends to, evidence suggests. Смягчение не заменяет доказательства и не должно скрывать известный факт."
+        },
+        {
+          "q": "The evidence ___ that further work is needed. (suggest)",
+          "a": "suggests",
+          "accepted": [
+            "indicates"
+          ],
+          "hint": "Hedging смягчает степень уверенности: may, appears to, tends to, evidence suggests. Смягчение не заменяет доказательства и не должно скрывать известный факт."
+        },
+        {
+          "q": "This ___ be explained by the small sample.",
+          "a": "may",
+          "accepted": [
+            "might",
+            "could"
+          ],
+          "hint": "Hedging смягчает степень уверенности: may, appears to, tends to, evidence suggests. Смягчение не заменяет доказательства и не должно скрывать известный факт."
+        },
+        {
+          "q": "Participants tend ___ prefer shorter tasks.",
+          "a": "to",
+          "accepted": [],
+          "hint": "Hedging смягчает степень уверенности: may, appears to, tends to, evidence suggests. Смягчение не заменяет доказательства и не должно скрывать известный факт."
+        },
+        {
+          "q": "The findings should be interpreted with ___. (caution)",
+          "a": "caution",
+          "accepted": [],
+          "hint": "Hedging смягчает степень уверенности: may, appears to, tends to, evidence suggests. Смягчение не заменяет доказательства и не должно скрывать известный факт."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Хеджирование: it would appear that"
+    },
+    "Коллокации высокой частотности": {
+      "rule": "Collocation это привычное сочетание слов: make a decision, do research, heavy rain. Перевод отдельного слова не гарантирует естественное сочетание. Учи всю группу в контексте.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "We need to make a decision.",
+          "ru": "Нам нужно принять решение."
+        },
+        {
+          "en": "They will do research into the problem.",
+          "ru": "Они проведут исследование проблемы."
+        },
+        {
+          "en": "She paid close attention to the details.",
+          "ru": "Она уделила пристальное внимание деталям."
+        },
+        {
+          "en": "We reached an agreement after several meetings.",
+          "ru": "После нескольких встреч мы достигли соглашения."
+        },
+        {
+          "en": "He takes responsibility for the outcome.",
+          "ru": "Он берёт ответственность за результат."
+        },
+        {
+          "en": "The storm brought heavy rain.",
+          "ru": "Буря принесла сильный дождь."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "We need to ___ a decision. (make)",
+          "a": "make",
+          "accepted": [],
+          "hint": "Collocation это привычное сочетание слов: make a decision, do research, heavy rain. Перевод отдельного слова не гарантирует естественное сочетание. Учи всю группу в контексте."
+        },
+        {
+          "q": "They will ___ research into the problem. (do)",
+          "a": "do",
+          "accepted": [
+            "conduct",
+            "carry out"
+          ],
+          "hint": "Collocation это привычное сочетание слов: make a decision, do research, heavy rain. Перевод отдельного слова не гарантирует естественное сочетание. Учи всю группу в контексте."
+        },
+        {
+          "q": "She paid close ___ to the details.",
+          "a": "attention",
+          "accepted": [],
+          "hint": "Collocation это привычное сочетание слов: make a decision, do research, heavy rain. Перевод отдельного слова не гарантирует естественное сочетание. Учи всю группу в контексте."
+        },
+        {
+          "q": "We reached an ___ after several meetings.",
+          "a": "agreement",
+          "accepted": [],
+          "hint": "Collocation это привычное сочетание слов: make a decision, do research, heavy rain. Перевод отдельного слова не гарантирует естественное сочетание. Учи всю группу в контексте."
+        },
+        {
+          "q": "He takes ___ for the outcome.",
+          "a": "responsibility",
+          "accepted": [],
+          "hint": "Collocation это привычное сочетание слов: make a decision, do research, heavy rain. Перевод отдельного слова не гарантирует естественное сочетание. Учи всю группу в контексте."
+        },
+        {
+          "q": "The storm brought ___ rain.",
+          "a": "heavy",
+          "accepted": [],
+          "hint": "Collocation это привычное сочетание слов: make a decision, do research, heavy rain. Перевод отдельного слова не гарантирует естественное сочетание. Учи всю группу в контексте."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Коллокации высокой частотности"
+    },
+    "Fronting и порядок слов для акцента": {
+      "rule": "Fronting выносит тему или контраст в начало: This part, I understand. Не любое вынесение требует инверсии. После начальных отрицательных ограничителей она часто нужна.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "This part, I understand. The rest is unclear.",
+          "ru": "Эту часть я понимаю. Остальное неясно."
+        },
+        {
+          "en": "On the wall hung a large portrait.",
+          "ru": "На стене висел большой портрет."
+        },
+        {
+          "en": "Only then did I understand the problem.",
+          "ru": "Только тогда я понял проблему."
+        },
+        {
+          "en": "Never before had she faced such pressure.",
+          "ru": "Никогда раньше она не сталкивалась с таким давлением."
+        },
+        {
+          "en": "The red one, I want. The blue one can stay.",
+          "ru": "Мне нужен красный. Синий можно оставить."
+        },
+        {
+          "en": "At the end of the road stands an old church.",
+          "ru": "В конце дороги стоит старая церковь."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "This part, I ___. The rest is unclear. (understand)",
+          "a": "understand",
+          "accepted": [],
+          "hint": "Fronting выносит тему или контраст в начало: This part, I understand. Не любое вынесение требует инверсии. После начальных отрицательных ограничителей она часто нужна."
+        },
+        {
+          "q": "On the wall ___ a large portrait. (hang)",
+          "a": "hung",
+          "accepted": [
+            "was"
+          ],
+          "hint": "Fronting выносит тему или контраст в начало: This part, I understand. Не любое вынесение требует инверсии. После начальных отрицательных ограничителей она часто нужна."
+        },
+        {
+          "q": "Only then ___ I understand the problem.",
+          "a": "did",
+          "accepted": [],
+          "hint": "Fronting выносит тему или контраст в начало: This part, I understand. Не любое вынесение требует инверсии. После начальных отрицательных ограничителей она часто нужна."
+        },
+        {
+          "q": "Never before ___ she faced such pressure.",
+          "a": "had",
+          "accepted": [
+            "has"
+          ],
+          "hint": "Fronting выносит тему или контраст в начало: This part, I understand. Не любое вынесение требует инверсии. После начальных отрицательных ограничителей она часто нужна."
+        },
+        {
+          "q": "The red one, I ___. The blue one can stay. (want)",
+          "a": "want",
+          "accepted": [],
+          "hint": "Fronting выносит тему или контраст в начало: This part, I understand. Не любое вынесение требует инверсии. После начальных отрицательных ограничителей она часто нужна."
+        },
+        {
+          "q": "At the end of the road ___ an old church. (stand)",
+          "a": "stands",
+          "accepted": [
+            "is"
+          ],
+          "hint": "Fronting выносит тему или контраст в начало: This part, I understand. Не любое вынесение требует инверсии. После начальных отрицательных ограничителей она часто нужна."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Fronting и порядок слов для акцента"
+    },
+    "Participle clauses: having finished": {
+      "rule": "Participle clause обычно относится к тому же субъекту, что и главная часть. Having + V3 показывает предшествование; being + V3 пассивный процесс. Избегай висящего причастия с чужим субъектом.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "Having finished the report, she went home.",
+          "ru": "Закончив отчёт, она пошла домой."
+        },
+        {
+          "en": "Walking along the beach, I found a shell.",
+          "ru": "Гуляя по пляжу, я нашёл ракушку."
+        },
+        {
+          "en": "Explained in simple terms, the idea is clear.",
+          "ru": "Если объяснить простыми словами, идея понятна."
+        },
+        {
+          "en": "Not knowing the answer, he remained silent.",
+          "ru": "Не зная ответа, он промолчал."
+        },
+        {
+          "en": "Having been repaired, the machine worked again.",
+          "ru": "После ремонта машина снова заработала."
+        },
+        {
+          "en": "Used carefully, these tools can last for years.",
+          "ru": "При аккуратном использовании эти инструменты служат годами."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "___ finished the report, she went home.",
+          "a": "Having",
+          "accepted": [],
+          "hint": "Participle clause обычно относится к тому же субъекту, что и главная часть. Having + V3 показывает предшествование; being + V3 пассивный процесс. Избегай висящего причастия с чужим субъектом."
+        },
+        {
+          "q": "___ along the beach, I found a shell. (walk)",
+          "a": "Walking",
+          "accepted": [],
+          "hint": "Participle clause обычно относится к тому же субъекту, что и главная часть. Having + V3 показывает предшествование; being + V3 пассивный процесс. Избегай висящего причастия с чужим субъектом."
+        },
+        {
+          "q": "___ in simple terms, the idea is clear. (explain)",
+          "a": "Explained",
+          "accepted": [],
+          "hint": "Participle clause обычно относится к тому же субъекту, что и главная часть. Having + V3 показывает предшествование; being + V3 пассивный процесс. Избегай висящего причастия с чужим субъектом."
+        },
+        {
+          "q": "Not ___ the answer, he remained silent. (know)",
+          "a": "knowing",
+          "accepted": [],
+          "hint": "Participle clause обычно относится к тому же субъекту, что и главная часть. Having + V3 показывает предшествование; being + V3 пассивный процесс. Избегай висящего причастия с чужим субъектом."
+        },
+        {
+          "q": "Having been ___, the machine worked again. (repair)",
+          "a": "repaired",
+          "accepted": [],
+          "hint": "Participle clause обычно относится к тому же субъекту, что и главная часть. Having + V3 показывает предшествование; being + V3 пассивный процесс. Избегай висящего причастия с чужим субъектом."
+        },
+        {
+          "q": "___ carefully, these tools can last for years. (use)",
+          "a": "Used",
+          "accepted": [],
+          "hint": "Participle clause обычно относится к тому же субъекту, что и главная часть. Having + V3 показывает предшествование; being + V3 пассивный процесс. Избегай висящего причастия с чужим субъектом."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Participle clauses: having finished"
+    },
+    "Идиоматичность против буквальности": {
+      "rule": "Естественная фраза часто не совпадает с буквальным переводом: make sense, keep in touch, be worth doing. Устойчивые обороты нужно проверять целиком и с нужным регистром.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "That explanation makes sense.",
+          "ru": "Это объяснение имеет смысл."
+        },
+        {
+          "en": "Let us keep in touch.",
+          "ru": "Давай оставаться на связи."
+        },
+        {
+          "en": "This book is worth reading.",
+          "ru": "Эту книгу стоит прочитать."
+        },
+        {
+          "en": "I am looking forward to meeting you.",
+          "ru": "Я с нетерпением жду встречи с вами."
+        },
+        {
+          "en": "It is up to you.",
+          "ru": "Решать тебе."
+        },
+        {
+          "en": "We need to take this into account.",
+          "ru": "Нам нужно это учесть."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "That explanation makes ___.",
+          "a": "sense",
+          "accepted": [],
+          "hint": "Естественная фраза часто не совпадает с буквальным переводом: make sense, keep in touch, be worth doing. Устойчивые обороты нужно проверять целиком и с нужным регистром."
+        },
+        {
+          "q": "Let us keep in ___. (touch)",
+          "a": "touch",
+          "accepted": [],
+          "hint": "Естественная фраза часто не совпадает с буквальным переводом: make sense, keep in touch, be worth doing. Устойчивые обороты нужно проверять целиком и с нужным регистром."
+        },
+        {
+          "q": "This book is worth ___. (read)",
+          "a": "reading",
+          "accepted": [],
+          "hint": "Естественная фраза часто не совпадает с буквальным переводом: make sense, keep in touch, be worth doing. Устойчивые обороты нужно проверять целиком и с нужным регистром."
+        },
+        {
+          "q": "I am looking ___ to meeting you.",
+          "a": "forward",
+          "accepted": [],
+          "hint": "Естественная фраза часто не совпадает с буквальным переводом: make sense, keep in touch, be worth doing. Устойчивые обороты нужно проверять целиком и с нужным регистром."
+        },
+        {
+          "q": "It is up ___ you.",
+          "a": "to",
+          "accepted": [],
+          "hint": "Естественная фраза часто не совпадает с буквальным переводом: make sense, keep in touch, be worth doing. Устойчивые обороты нужно проверять целиком и с нужным регистром."
+        },
+        {
+          "q": "We need to take this into ___.",
+          "a": "account",
+          "accepted": [
+            "consideration"
+          ],
+          "hint": "Естественная фраза часто не совпадает с буквальным переводом: make sense, keep in touch, be worth doing. Устойчивые обороты нужно проверять целиком и с нужным регистром."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Идиоматичность против буквальности"
+    },
+    "Регистр: formal, neutral, informal": {
+      "rule": "Регистр зависит от адресата и ситуации. Informal: ask for, help, put off; более формально: request, assist, postpone. Формальное слово не делает письмо автоматически лучше.",
+      "vsru": "Сначала определи смысл, затем выбери английскую конструкцию. Не переводи русские окончания по одному.",
+      "examples": [
+        {
+          "en": "Formal: I would like to request further information.",
+          "ru": "Я хотел бы запросить дополнительную информацию."
+        },
+        {
+          "en": "Neutral: Can you help me with this?",
+          "ru": "Можешь помочь мне с этим?"
+        },
+        {
+          "en": "Formal: We regret to inform you that the event is cancelled.",
+          "ru": "С сожалением сообщаем вам об отмене мероприятия."
+        },
+        {
+          "en": "Informal: Thanks for getting back to me.",
+          "ru": "Спасибо, что ответил мне."
+        },
+        {
+          "en": "Formal: Please do not hesitate to contact us.",
+          "ru": "Пожалуйста, обращайтесь к нам при необходимости."
+        },
+        {
+          "en": "Neutral: We need to put off the meeting until Friday.",
+          "ru": "Нам нужно отложить встречу до пятницы."
+        }
+      ],
+      "exercises": [
+        {
+          "q": "Formal: I would like to ___ further information. (request)",
+          "a": "request",
+          "accepted": [],
+          "hint": "Регистр зависит от адресата и ситуации. Informal: ask for, help, put off; более формально: request, assist, postpone. Формальное слово не делает письмо автоматически лучше."
+        },
+        {
+          "q": "Neutral: Can you ___ me with this? (help)",
+          "a": "help",
+          "accepted": [],
+          "hint": "Регистр зависит от адресата и ситуации. Informal: ask for, help, put off; более формально: request, assist, postpone. Формальное слово не делает письмо автоматически лучше."
+        },
+        {
+          "q": "Formal: We regret to ___ you that the event is cancelled. (inform)",
+          "a": "inform",
+          "accepted": [],
+          "hint": "Регистр зависит от адресата и ситуации. Informal: ask for, help, put off; более формально: request, assist, postpone. Формальное слово не делает письмо автоматически лучше."
+        },
+        {
+          "q": "Informal: Thanks for getting ___ to me.",
+          "a": "back",
+          "accepted": [],
+          "hint": "Регистр зависит от адресата и ситуации. Informal: ask for, help, put off; более формально: request, assist, postpone. Формальное слово не делает письмо автоматически лучше."
+        },
+        {
+          "q": "Formal: Please do not ___ to contact us. (hesitate)",
+          "a": "hesitate",
+          "accepted": [],
+          "hint": "Регистр зависит от адресата и ситуации. Informal: ask for, help, put off; более формально: request, assist, postpone. Формальное слово не делает письмо автоматически лучше."
+        },
+        {
+          "q": "Neutral: We need to put ___ the meeting until Friday.",
+          "a": "off",
+          "accepted": [],
+          "hint": "Регистр зависит от адресата и ситуации. Informal: ask for, help, put off; более формально: request, assist, postpone. Формальное слово не делает письмо автоматически лучше."
+        }
+      ],
+      "offline": true,
+      "instruction": "Впиши недостающие слова по смыслу перевода. Если в скобках дано слово, используй его в нужной форме. Для номинализации образуй существительное. Нужна только вставка, не всё предложение. В относительных предложениях вставь именно местоимение. Для нулевого артикля введи -.",
+      "title": "Регистр: formal, neutral, informal"
+    }
+  }
+}
