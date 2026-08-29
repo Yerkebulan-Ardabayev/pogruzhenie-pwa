@@ -1576,8 +1576,11 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
           </div>
           <div class="row mt wrap">
             <button class="btn" onclick="saveLessonSchedule()">Сохранить расписание</button>
-            <button class="btn pri" onclick="downloadLessonCalendar()">Добавить в Календарь</button>
+            <button class="btn pri" onclick="downloadLessonCalendar()">Скачать для Календаря (.ics)</button>
           </div>
+          <div class="muted small mt" id="lessonCalendarHelp">На iPhone после скачивания открой
+            <b>Файлы</b> → <b>Загрузки</b> → <b>pogruzhenie-lesson.ics</b> и подтверди добавление события.
+            Контакту ничего отправлять не нужно.</div>
           <div class="muted small mt" id="lessonScheduleNote"></div>
         </div>
         <div class="card" data-native-only>
@@ -6520,20 +6523,21 @@ async function downloadLessonCalendar() {
   const schedule = lessonSchedule();
   const text = buildLessonCalendar(schedule, new Date());
   window.lastLessonCalendarForTest = text;
-  const file = new File([text], "pogruzhenie-lesson.ics", {type:"text/calendar"});
+  const file = new Blob([text], {type:"text/calendar;charset=utf-8"});
   try {
-    if (navigator.canShare?.({files:[file]})) {
-      await navigator.share({title:"Расписание уроков Погружения", files:[file]});
-    } else {
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(file);
-      link.download = file.name;
-      link.click();
-      setTimeout(function () { URL.revokeObjectURL(link.href); }, 1000);
-    }
-    toast("Открой файл и добавь повторяющийся урок в Календарь");
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(file);
+    link.href = url;
+    link.download = "pogruzhenie-lesson.ics";
+    link.rel = "noopener";
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 30000);
+    toast("Файл .ics сохранён. Открой его в «Файлы» и подтверди добавление");
   } catch (e) {
-    if (e?.name !== "AbortError") toast("Не получилось передать событие в Календарь", "bad");
+    toast("Не получилось скачать файл Календаря", "bad");
   }
 }
 function renderSettings() {
