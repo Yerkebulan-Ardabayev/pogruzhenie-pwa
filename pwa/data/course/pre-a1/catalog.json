@@ -14,6 +14,1102 @@
     "speechCheck": "browser-recognition-plus-word-match",
     "speechCheckClaim": "Проверяет, распознались ли целевые слова. Не оценивает акцент или интонацию."
   },
+  "checkpoints": [
+    {
+      "id": "child-hello-checkpoint",
+      "audience": "child",
+      "unit": "hello",
+      "unitOrder": 1,
+      "title": "Проверка темы: Привет и имя",
+      "canDo": "Могу поздороваться, назвать своё имя и спросить имя другого человека",
+      "tasks": [
+        {
+          "id": "child-hello-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Hello!",
+          "answer": "Привет!",
+          "options": [
+            "Привет!",
+            "Меня зовут ...",
+            "Как тебя зовут?"
+          ]
+        },
+        {
+          "id": "child-hello-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "My name is ...",
+          "answer": "Меня зовут ...",
+          "options": [
+            "Меня зовут ...",
+            "Привет!",
+            "Как тебя зовут?"
+          ]
+        },
+        {
+          "id": "child-hello-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Как тебя зовут?",
+          "promptEn": "",
+          "expected": "What is your name?",
+          "accepted": [
+            "What's your name?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-instructions-checkpoint",
+      "audience": "child",
+      "unit": "instructions",
+      "unitOrder": 2,
+      "title": "Проверка темы: Делаю по команде",
+      "canDo": "Понимаю и выполняю пять простых команд на английском",
+      "tasks": [
+        {
+          "id": "child-instructions-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Stand up.",
+          "answer": "Встань.",
+          "options": [
+            "Встань.",
+            "Сядь.",
+            "Посмотри."
+          ]
+        },
+        {
+          "id": "child-instructions-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "Sit down.",
+          "answer": "Сядь.",
+          "options": [
+            "Сядь.",
+            "Встань.",
+            "Посмотри."
+          ]
+        },
+        {
+          "id": "child-instructions-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Посмотри.",
+          "promptEn": "",
+          "expected": "Look.",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "child-numbers-colours-checkpoint",
+      "audience": "child",
+      "unit": "numbers-colours",
+      "unitOrder": 3,
+      "title": "Проверка темы: Числа и цвета",
+      "canDo": "Могу назвать несколько чисел и цветов вокруг себя",
+      "tasks": [
+        {
+          "id": "child-numbers-colours-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "One, two, three.",
+          "answer": "Один, два, три.",
+          "options": [
+            "Один, два, три.",
+            "Это синее.",
+            "Я вижу красное."
+          ]
+        },
+        {
+          "id": "child-numbers-colours-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "It is blue.",
+          "answer": "Это синее.",
+          "options": [
+            "Это синее.",
+            "Один, два, три.",
+            "Я вижу красное."
+          ]
+        },
+        {
+          "id": "child-numbers-colours-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Я вижу красное.",
+          "promptEn": "",
+          "expected": "I see red.",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "child-animals-checkpoint",
+      "audience": "child",
+      "unit": "animals",
+      "unitOrder": 4,
+      "title": "Проверка темы: Животные",
+      "canDo": "Могу назвать знакомое животное и сказать, какое мне нравится",
+      "tasks": [
+        {
+          "id": "child-animals-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "It is a cat.",
+          "answer": "Это кошка.",
+          "options": [
+            "Это кошка.",
+            "Это собака.",
+            "Это корова."
+          ]
+        },
+        {
+          "id": "child-animals-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "It is a dog.",
+          "answer": "Это собака.",
+          "options": [
+            "Это собака.",
+            "Это кошка.",
+            "Это корова."
+          ]
+        },
+        {
+          "id": "child-animals-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Это корова.",
+          "promptEn": "",
+          "expected": "It is a cow.",
+          "accepted": [
+            "It's a cow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-family-checkpoint",
+      "audience": "child",
+      "unit": "family",
+      "unitOrder": 5,
+      "title": "Проверка темы: Моя семья",
+      "canDo": "Могу показать членов семьи и сказать, кто это",
+      "tasks": [
+        {
+          "id": "child-family-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "This is my mum.",
+          "answer": "Это моя мама.",
+          "options": [
+            "Это моя мама.",
+            "Это мой папа.",
+            "У меня есть сестра."
+          ]
+        },
+        {
+          "id": "child-family-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "This is my dad.",
+          "answer": "Это мой папа.",
+          "options": [
+            "Это мой папа.",
+            "Это моя мама.",
+            "У меня есть сестра."
+          ]
+        },
+        {
+          "id": "child-family-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: У меня есть сестра.",
+          "promptEn": "",
+          "expected": "I have a sister.",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "child-food-checkpoint",
+      "audience": "child",
+      "unit": "food",
+      "unitOrder": 6,
+      "title": "Проверка темы: Еда, нравится или нет",
+      "canDo": "Могу сказать, какая еда мне нравится, и спросить другого человека",
+      "tasks": [
+        {
+          "id": "child-food-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "I like apples.",
+          "answer": "Мне нравятся яблоки.",
+          "options": [
+            "Мне нравятся яблоки.",
+            "Мне не нравится брокколи.",
+            "Тебе нравится пицца?"
+          ]
+        },
+        {
+          "id": "child-food-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "I do not like broccoli.",
+          "answer": "Мне не нравится брокколи.",
+          "options": [
+            "Мне не нравится брокколи.",
+            "Мне нравятся яблоки.",
+            "Тебе нравится пицца?"
+          ]
+        },
+        {
+          "id": "child-food-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Тебе нравится пицца?",
+          "promptEn": "",
+          "expected": "Do you like pizza?",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "child-routine-checkpoint",
+      "audience": "child",
+      "unit": "routine",
+      "unitOrder": 7,
+      "title": "Проверка темы: Мой день",
+      "canDo": "Могу назвать несколько действий своего обычного дня",
+      "tasks": [
+        {
+          "id": "child-routine-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "I wake up.",
+          "answer": "Я просыпаюсь.",
+          "options": [
+            "Я просыпаюсь.",
+            "Я умываюсь.",
+            "Я завтракаю."
+          ]
+        },
+        {
+          "id": "child-routine-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "I wash my face.",
+          "answer": "Я умываюсь.",
+          "options": [
+            "Я умываюсь.",
+            "Я просыпаюсь.",
+            "Я завтракаю."
+          ]
+        },
+        {
+          "id": "child-routine-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Я завтракаю.",
+          "promptEn": "",
+          "expected": "I eat breakfast.",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "child-days-time-checkpoint",
+      "audience": "child",
+      "unit": "days-time",
+      "unitOrder": 8,
+      "title": "Проверка темы: Дни и время",
+      "canDo": "Могу назвать сегодняшний день и спросить время",
+      "tasks": [
+        {
+          "id": "child-days-time-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Today is Monday.",
+          "answer": "Сегодня понедельник.",
+          "options": [
+            "Сегодня понедельник.",
+            "Какой сегодня день?",
+            "Который час?"
+          ]
+        },
+        {
+          "id": "child-days-time-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "What day is it?",
+          "answer": "Какой сегодня день?",
+          "options": [
+            "Какой сегодня день?",
+            "Сегодня понедельник.",
+            "Который час?"
+          ]
+        },
+        {
+          "id": "child-days-time-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Который час?",
+          "promptEn": "",
+          "expected": "What time is it?",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "adult-hello-checkpoint",
+      "audience": "adult",
+      "unit": "hello",
+      "unitOrder": 1,
+      "title": "Проверка темы: Знакомство",
+      "canDo": "Могу поздороваться, представиться и вежливо закончить знакомство",
+      "tasks": [
+        {
+          "id": "adult-hello-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Hello, I am ...",
+          "answer": "Здравствуйте, я ...",
+          "options": [
+            "Здравствуйте, я ...",
+            "Как вас зовут?",
+            "Приятно познакомиться."
+          ]
+        },
+        {
+          "id": "adult-hello-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "What is your name?",
+          "answer": "Как вас зовут?",
+          "options": [
+            "Как вас зовут?",
+            "Здравствуйте, я ...",
+            "Приятно познакомиться."
+          ]
+        },
+        {
+          "id": "adult-hello-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Приятно познакомиться.",
+          "promptEn": "",
+          "expected": "Nice to meet you.",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "adult-contact-checkpoint",
+      "audience": "adult",
+      "unit": "contact",
+      "unitOrder": 2,
+      "title": "Проверка темы: Имя и контакты",
+      "canDo": "Могу продиктовать имя, телефон и электронную почту",
+      "tasks": [
+        {
+          "id": "adult-contact-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "How do you spell your name?",
+          "answer": "Как пишется ваше имя по буквам?",
+          "options": [
+            "Как пишется ваше имя по буквам?",
+            "Мой номер телефона ...",
+            "Моя электронная почта ..."
+          ]
+        },
+        {
+          "id": "adult-contact-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "My phone number is ...",
+          "answer": "Мой номер телефона ...",
+          "options": [
+            "Мой номер телефона ...",
+            "Как пишется ваше имя по буквам?",
+            "Моя электронная почта ..."
+          ]
+        },
+        {
+          "id": "adult-contact-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Моя электронная почта ...",
+          "promptEn": "",
+          "expected": "My email is ...",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "adult-time-date-checkpoint",
+      "audience": "adult",
+      "unit": "time-date",
+      "unitOrder": 3,
+      "title": "Проверка темы: Время и дата",
+      "canDo": "Могу спросить время и назвать простой день или час",
+      "tasks": [
+        {
+          "id": "adult-time-date-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "What time is it?",
+          "answer": "Который час?",
+          "options": [
+            "Который час?",
+            "Сейчас девять часов.",
+            "Сегодня понедельник."
+          ]
+        },
+        {
+          "id": "adult-time-date-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "It is nine o'clock.",
+          "answer": "Сейчас девять часов.",
+          "options": [
+            "Сейчас девять часов.",
+            "Который час?",
+            "Сегодня понедельник."
+          ]
+        },
+        {
+          "id": "adult-time-date-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Сегодня понедельник.",
+          "promptEn": "",
+          "expected": "Today is Monday.",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "adult-family-checkpoint",
+      "audience": "adult",
+      "unit": "family",
+      "unitOrder": 4,
+      "title": "Проверка темы: Семья и люди",
+      "canDo": "Могу коротко рассказать о своей семье",
+      "tasks": [
+        {
+          "id": "adult-family-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "This is my family.",
+          "answer": "Это моя семья.",
+          "options": [
+            "Это моя семья.",
+            "У меня один ребёнок.",
+            "Это мой муж."
+          ]
+        },
+        {
+          "id": "adult-family-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "I have one child.",
+          "answer": "У меня один ребёнок.",
+          "options": [
+            "У меня один ребёнок.",
+            "Это моя семья.",
+            "Это мой муж."
+          ]
+        },
+        {
+          "id": "adult-family-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Это мой муж.",
+          "promptEn": "",
+          "expected": "This is my husband.",
+          "accepted": [
+            "This is my wife"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-cafe-checkpoint",
+      "audience": "adult",
+      "unit": "cafe",
+      "unitOrder": 5,
+      "title": "Проверка темы: Заказ в кафе",
+      "canDo": "Могу сделать простой заказ и спросить цену",
+      "tasks": [
+        {
+          "id": "adult-cafe-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "I would like a coffee, please.",
+          "answer": "Я бы хотел кофе, пожалуйста.",
+          "options": [
+            "Я бы хотел кофе, пожалуйста.",
+            "Можно мне воду, пожалуйста?",
+            "Сколько это стоит?"
+          ]
+        },
+        {
+          "id": "adult-cafe-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "Can I have water, please?",
+          "answer": "Можно мне воду, пожалуйста?",
+          "options": [
+            "Можно мне воду, пожалуйста?",
+            "Я бы хотел кофе, пожалуйста.",
+            "Сколько это стоит?"
+          ]
+        },
+        {
+          "id": "adult-cafe-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Сколько это стоит?",
+          "promptEn": "",
+          "expected": "How much is it?",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "adult-directions-checkpoint",
+      "audience": "adult",
+      "unit": "directions",
+      "unitOrder": 6,
+      "title": "Проверка темы: Как пройти",
+      "canDo": "Могу спросить дорогу и понять три простых указания",
+      "tasks": [
+        {
+          "id": "adult-directions-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Excuse me, where is the station?",
+          "answer": "Извините, где станция?",
+          "options": [
+            "Извините, где станция?",
+            "Идите прямо.",
+            "Поверните налево."
+          ]
+        },
+        {
+          "id": "adult-directions-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "Go straight.",
+          "answer": "Идите прямо.",
+          "options": [
+            "Идите прямо.",
+            "Извините, где станция?",
+            "Поверните налево."
+          ]
+        },
+        {
+          "id": "adult-directions-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Поверните налево.",
+          "promptEn": "",
+          "expected": "Turn left.",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "adult-routine-work-checkpoint",
+      "audience": "adult",
+      "unit": "routine-work",
+      "unitOrder": 7,
+      "title": "Проверка темы: День и работа",
+      "canDo": "Могу назвать несколько действий своего рабочего дня",
+      "tasks": [
+        {
+          "id": "adult-routine-work-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "I work in ...",
+          "answer": "Я работаю в ...",
+          "options": [
+            "Я работаю в ...",
+            "Я начинаю в девять.",
+            "Я обедаю в час."
+          ]
+        },
+        {
+          "id": "adult-routine-work-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "I start at nine.",
+          "answer": "Я начинаю в девять.",
+          "options": [
+            "Я начинаю в девять.",
+            "Я работаю в ...",
+            "Я обедаю в час."
+          ]
+        },
+        {
+          "id": "adult-routine-work-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Я обедаю в час.",
+          "promptEn": "",
+          "expected": "I have lunch at one.",
+          "accepted": []
+        }
+      ]
+    },
+    {
+      "id": "adult-help-plans-checkpoint",
+      "audience": "adult",
+      "unit": "help-plans",
+      "unitOrder": 8,
+      "title": "Проверка темы: Помощь и простой план",
+      "canDo": "Могу попросить о помощи, переспросить и договориться на завтра",
+      "tasks": [
+        {
+          "id": "adult-help-plans-listen",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Can you help me, please?",
+          "answer": "Вы можете мне помочь?",
+          "options": [
+            "Вы можете мне помочь?",
+            "Я не понимаю.",
+            "Повторите, пожалуйста."
+          ]
+        },
+        {
+          "id": "adult-help-plans-read",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "I do not understand.",
+          "answer": "Я не понимаю.",
+          "options": [
+            "Я не понимаю.",
+            "Вы можете мне помочь?",
+            "Повторите, пожалуйста."
+          ]
+        },
+        {
+          "id": "adult-help-plans-speak",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Повторите, пожалуйста.",
+          "promptEn": "",
+          "expected": "Could you repeat, please?",
+          "accepted": []
+        }
+      ]
+    }
+  ],
+  "exitAssessment": {
+    "passRule": "two-of-three-per-skill-all-five-skills",
+    "profiles": [
+      {
+        "audience": "child",
+        "title": "Проверка готовности к A1",
+        "claim": "Показывает готовность начинать A1. Это не официальный экзамен или сертификат CEFR.",
+        "skills": [
+          {
+            "id": "listening",
+            "title": "Слушание",
+            "tasks": [
+              {
+                "id": "child-exit-listening-1",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "Hello!",
+                "answer": "Привет!",
+                "options": [
+                  "Привет!",
+                  "Меня зовут ...",
+                  "Как тебя зовут?"
+                ]
+              },
+              {
+                "id": "child-exit-listening-2",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "Stand up.",
+                "answer": "Встань.",
+                "options": [
+                  "Встань.",
+                  "Сядь.",
+                  "Посмотри."
+                ]
+              },
+              {
+                "id": "child-exit-listening-3",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "What time is it?",
+                "answer": "Который час?",
+                "options": [
+                  "Который час?",
+                  "Сегодня понедельник.",
+                  "Какой сегодня день?"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "reading",
+            "title": "Чтение",
+            "tasks": [
+              {
+                "id": "child-exit-reading-1",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "It is a cat.",
+                "answer": "Это кошка.",
+                "options": [
+                  "Это кошка.",
+                  "Это собака.",
+                  "Это корова."
+                ]
+              },
+              {
+                "id": "child-exit-reading-2",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "This is my family.",
+                "answer": "Это моя семья.",
+                "options": [
+                  "Это моя семья.",
+                  "Это моя мама.",
+                  "Это мой папа."
+                ]
+              },
+              {
+                "id": "child-exit-reading-3",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "Do you like pizza?",
+                "answer": "Тебе нравится пицца?",
+                "options": [
+                  "Тебе нравится пицца?",
+                  "Мне нравятся яблоки.",
+                  "Мне не нравится брокколи."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "spokenInteraction",
+            "title": "Диалог",
+            "tasks": [
+              {
+                "id": "child-exit-interaction-1",
+                "skill": "spokenInteraction",
+                "type": "audio-response",
+                "promptRu": "Ответь на вопрос, назвав имя",
+                "promptEn": "What is your name?",
+                "expected": "My name is Sam.",
+                "accepted": [
+                  "I am Sam.",
+                  "I'm Sam."
+                ]
+              },
+              {
+                "id": "child-exit-interaction-2",
+                "skill": "spokenInteraction",
+                "type": "audio-response",
+                "promptRu": "Ответь утвердительно",
+                "promptEn": "Do you like pizza?",
+                "expected": "Yes, I do.",
+                "accepted": [
+                  "Yes I do"
+                ]
+              },
+              {
+                "id": "child-exit-interaction-3",
+                "skill": "spokenInteraction",
+                "type": "audio-response",
+                "promptRu": "Ответь, назвав день",
+                "promptEn": "What day is it?",
+                "expected": "Today is Monday.",
+                "accepted": []
+              }
+            ]
+          },
+          {
+            "id": "spokenProduction",
+            "title": "Устная речь",
+            "tasks": [
+              {
+                "id": "child-exit-production-1",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptRu": "Поздоровайся",
+                "promptEn": "",
+                "expected": "Hello!",
+                "accepted": [
+                  "Hi!"
+                ]
+              },
+              {
+                "id": "child-exit-production-2",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptRu": "Скажи: Мне нравятся собаки",
+                "promptEn": "",
+                "expected": "I like dogs.",
+                "accepted": []
+              },
+              {
+                "id": "child-exit-production-3",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptRu": "Скажи: Это моя семья",
+                "promptEn": "",
+                "expected": "This is my family.",
+                "accepted": []
+              }
+            ]
+          },
+          {
+            "id": "writing",
+            "title": "Письмо",
+            "tasks": [
+              {
+                "id": "child-exit-writing-1",
+                "skill": "writing",
+                "type": "write",
+                "promptRu": "Напиши: Меня зовут Сэм",
+                "expected": "My name is Sam.",
+                "accepted": [
+                  "I am Sam.",
+                  "I'm Sam."
+                ]
+              },
+              {
+                "id": "child-exit-writing-2",
+                "skill": "writing",
+                "type": "write",
+                "promptRu": "Напиши: Это кошка",
+                "expected": "It is a cat.",
+                "accepted": [
+                  "It's a cat."
+                ]
+              },
+              {
+                "id": "child-exit-writing-3",
+                "skill": "writing",
+                "type": "write",
+                "promptRu": "Напиши: Я вижу красное",
+                "expected": "I see red.",
+                "accepted": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "audience": "adult",
+        "title": "Проверка готовности к A1",
+        "claim": "Показывает готовность начинать A1. Это не официальный экзамен или сертификат CEFR.",
+        "skills": [
+          {
+            "id": "listening",
+            "title": "Слушание",
+            "tasks": [
+              {
+                "id": "adult-exit-listening-1",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "My phone number is ...",
+                "answer": "Мой номер телефона ...",
+                "options": [
+                  "Мой номер телефона ...",
+                  "Как пишется ваше имя по буквам?",
+                  "Моя электронная почта ..."
+                ]
+              },
+              {
+                "id": "adult-exit-listening-2",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "The meeting is at ten.",
+                "answer": "Встреча в десять.",
+                "options": [
+                  "Встреча в десять.",
+                  "Который час?",
+                  "Сейчас девять часов."
+                ]
+              },
+              {
+                "id": "adult-exit-listening-3",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "Go straight.",
+                "answer": "Идите прямо.",
+                "options": [
+                  "Идите прямо.",
+                  "Извините, где станция?",
+                  "Поверните налево."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "reading",
+            "title": "Чтение",
+            "tasks": [
+              {
+                "id": "adult-exit-reading-1",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "How much is it?",
+                "answer": "Сколько это стоит?",
+                "options": [
+                  "Сколько это стоит?",
+                  "Я бы хотел кофе, пожалуйста.",
+                  "Можно мне воду, пожалуйста?"
+                ]
+              },
+              {
+                "id": "adult-exit-reading-2",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "We live in Kazakhstan.",
+                "answer": "Мы живём в Казахстане.",
+                "options": [
+                  "Мы живём в Казахстане.",
+                  "Это моя семья.",
+                  "У меня один ребёнок."
+                ]
+              },
+              {
+                "id": "adult-exit-reading-3",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "I do not understand.",
+                "answer": "Я не понимаю.",
+                "options": [
+                  "Я не понимаю.",
+                  "Вы можете мне помочь?",
+                  "Повторите, пожалуйста."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "spokenInteraction",
+            "title": "Диалог",
+            "tasks": [
+              {
+                "id": "adult-exit-interaction-1",
+                "skill": "spokenInteraction",
+                "type": "audio-response",
+                "promptRu": "Ответь на вопрос, назвав имя",
+                "promptEn": "What is your name?",
+                "expected": "My name is Sam.",
+                "accepted": [
+                  "Hello, I am Sam.",
+                  "I'm Sam."
+                ]
+              },
+              {
+                "id": "adult-exit-interaction-2",
+                "skill": "spokenInteraction",
+                "type": "audio-response",
+                "promptRu": "Попроси повторить",
+                "promptEn": "Sorry, I did not hear you.",
+                "expected": "Could you repeat, please?",
+                "accepted": [
+                  "Please repeat."
+                ]
+              },
+              {
+                "id": "adult-exit-interaction-3",
+                "skill": "spokenInteraction",
+                "type": "audio-response",
+                "promptRu": "Согласись встретиться завтра",
+                "promptEn": "Can we meet tomorrow?",
+                "expected": "Let us meet tomorrow.",
+                "accepted": [
+                  "Let's meet tomorrow."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "spokenProduction",
+            "title": "Устная речь",
+            "tasks": [
+              {
+                "id": "adult-exit-production-1",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptRu": "Представься",
+                "promptEn": "",
+                "expected": "Hello, I am Sam.",
+                "accepted": [
+                  "Hello, I'm Sam."
+                ]
+              },
+              {
+                "id": "adult-exit-production-2",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptRu": "Спроси, где станция",
+                "promptEn": "",
+                "expected": "Excuse me, where is the station?",
+                "accepted": []
+              },
+              {
+                "id": "adult-exit-production-3",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptRu": "Попроси о помощи",
+                "promptEn": "",
+                "expected": "Can you help me, please?",
+                "accepted": []
+              }
+            ]
+          },
+          {
+            "id": "writing",
+            "title": "Письмо",
+            "tasks": [
+              {
+                "id": "adult-exit-writing-1",
+                "skill": "writing",
+                "type": "write",
+                "promptRu": "Напиши: Мой номер телефона 123",
+                "expected": "My phone number is 123.",
+                "accepted": []
+              },
+              {
+                "id": "adult-exit-writing-2",
+                "skill": "writing",
+                "type": "write",
+                "promptRu": "Напиши: Встреча в десять",
+                "expected": "The meeting is at ten.",
+                "accepted": []
+              },
+              {
+                "id": "adult-exit-writing-3",
+                "skill": "writing",
+                "type": "write",
+                "promptRu": "Напиши: Мы живём в Казахстане",
+                "expected": "We live in Kazakhstan.",
+                "accepted": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "lessons": [
     {
       "id": "child-hello-01",

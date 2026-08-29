@@ -697,6 +697,43 @@ audio{width:100%; margin-top:12px}
 .speechresult.again{border-color:var(--danger)}
 .speechprivacy{font-size:12px; color:var(--ink3); margin-top:10px; line-height:1.45}
 .lessonfinish{display:flex; gap:10px; align-items:center; justify-content:flex-end; flex-wrap:wrap}
+.coursegate{position:relative; overflow:hidden; border-color:var(--acc); background:
+  linear-gradient(135deg,var(--acc-soft),transparent 58%),var(--card)}
+.coursegate:before{content:""; position:absolute; width:120px; height:120px; border:1px solid var(--line2);
+  border-radius:50%; right:-42px; top:-58px; opacity:.55}
+.gategrid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-top:14px}
+.gatestep{padding:10px; border:1px solid var(--line); border-radius:12px; color:var(--ink3); font-size:12px}
+.gatestep.done{border-color:var(--good); color:var(--good); background:rgba(52,196,124,.08)}
+.assessmenthead{position:relative; overflow:hidden; padding:22px; border:2px solid var(--acc)}
+.assessmenthead .stamp{font-size:11px; letter-spacing:.11em; text-transform:uppercase; color:var(--acc)}
+.assessmentskills{display:flex; gap:7px; flex-wrap:wrap; margin-top:14px}
+.assessskill{padding:7px 10px; border-radius:999px; border:1px solid var(--line); color:var(--ink3); font-size:12px}
+.assessskill.on{border-color:var(--acc); color:var(--ink); background:var(--acc-soft)}
+.assessskill.done{border-color:var(--good); color:var(--good)}
+.assesstask{min-height:250px; display:flex; flex-direction:column; justify-content:center; gap:14px}
+.assessprompt{font-size:21px; line-height:1.42; max-width:700px}
+.assesschoices{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px}
+.assesschoice{min-height:58px; padding:13px 15px; border:1px solid var(--line2); border-radius:13px;
+  background:var(--card2); color:var(--ink); text-align:left; font:inherit; cursor:pointer}
+.assesschoice:hover{border-color:var(--acc)}
+.assesschoice.good{border-color:var(--good); background:rgba(52,196,124,.1)}
+.assesschoice.bad{border-color:var(--danger); background:rgba(235,91,105,.08)}
+.assessresult{padding:14px; border-radius:13px; border:1px solid var(--line); background:var(--card2)}
+.assessresult.good{border-color:var(--good)}
+.assessresult.again{border-color:var(--amber)}
+.skillreport{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; margin:16px 0}
+.skillreport>div{padding:13px 9px; border:1px solid var(--line); border-radius:12px; text-align:center; font-size:12px}
+.skillreport>div.good{border-color:var(--good); color:var(--good)}
+.skillreport>div.again{border-color:var(--amber); color:var(--amber)}
+.schedulebox{border-color:var(--line2); background:linear-gradient(135deg,rgba(67,200,224,.07),transparent 55%),var(--card)}
+.daypicker{display:grid; grid-template-columns:repeat(7,minmax(44px,1fr)); gap:7px; margin:12px 0}
+.daypick{min-height:44px; border-radius:12px; border:1px solid var(--line); background:var(--card2); color:var(--ink3); cursor:pointer}
+.daypick.on{border-color:var(--acc); background:var(--acc-soft); color:var(--ink); font-weight:700}
+.schedulefields{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px}
+.schedulefield{display:flex; flex-direction:column; gap:6px; color:var(--ink3); font-size:12px}
+.schedulefield input,.schedulefield select{min-height:44px}
+html[data-audience="child"] .assessmenthead{background:linear-gradient(135deg,#17364a,#122636); border-color:#55c7c1}
+html[data-audience="adult"] .assessmenthead{background:linear-gradient(135deg,#18251f,#12241c); border-color:#8ea982}
 html[data-audience="child"] #s-course .coursehero{background:#17364a; border-color:#55c7c1}
 html[data-audience="child"] #s-course .courseunit:nth-child(4n+1){border-color:#55c7c1}
 html[data-audience="child"] #s-course .courseunit:nth-child(4n+2){border-color:#e9b85b}
@@ -841,6 +878,9 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
   .passlist{grid-template-columns:1fr}
   .passbtn{min-height:50px}
   .lessonfinish .btn{width:100%}
+  .gategrid,.assesschoices,.skillreport,.schedulefields{grid-template-columns:1fr}
+  .daypicker{grid-template-columns:repeat(4,minmax(44px,1fr))}
+  .assesstask{min-height:220px}
   html[data-level="PRE_A1"] #side{height:calc(62px + env(safe-area-inset-bottom));
     grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:54px}
   html[data-level="PRE_A1"] #main{padding-bottom:0}
@@ -944,6 +984,7 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
             </div>
           </div>
           <div class="card hidden" id="courseDue"></div>
+          <div class="card coursegate hidden" id="courseGate"></div>
           <div class="courseunits" id="courseUnits"></div>
         </div>
         <div id="courseLesson" class="hidden">
@@ -993,6 +1034,20 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
             <span class="muted small" id="courseFinishHint">Сначала выполни активное задание.</span>
             <button class="btn pri" id="courseFinishBtn" onclick="courseComplete()">Урок готов</button>
           </div>
+        </div>
+        <div id="courseAssessment" class="hidden">
+          <div class="row mb wrap">
+            <button class="btn ghost" onclick="courseAssessmentBack()">← Карта курса</button>
+            <span style="flex:1"></span>
+            <span class="chip" id="assessmentCounter"></span>
+          </div>
+          <div class="card assessmenthead">
+            <div class="stamp" id="assessmentStamp">Контрольная точка</div>
+            <h2 id="assessmentTitle">Проверка темы</h2>
+            <div class="muted" id="assessmentLead"></div>
+            <div class="assessmentskills" id="assessmentSkills"></div>
+          </div>
+          <div class="card assesstask" id="assessmentTask"></div>
         </div>
       </section>
 
@@ -1493,6 +1548,38 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
           <div class="lvlbtns" id="lvlBtns"></div>
           <div class="muted small mt">«С нуля · Pre-A1» открывает отдельный пошаговый курс. От A1 и выше остаётся полный план погружения.</div>
         </div>
+        <div class="card schedulebox">
+          <h2>Начало уроков</h2>
+          <div class="muted small">Выбери удобное расписание. По умолчанию урок начинается с понедельника по субботу в 20:00,
+            Календарь напомнит за 10 минут и в момент начала.</div>
+          <div class="daypicker" id="lessonDays"></div>
+          <div class="schedulefields">
+            <label class="schedulefield">Время урока
+              <input id="lessonTime" type="time" value="20:00">
+            </label>
+            <label class="schedulefield">Напомнить заранее
+              <select id="lessonLead">
+                <option value="0">не напоминать заранее</option>
+                <option value="5">за 5 минут</option>
+                <option value="10">за 10 минут</option>
+                <option value="15">за 15 минут</option>
+                <option value="30">за 30 минут</option>
+                <option value="60">за 1 час</option>
+              </select>
+            </label>
+            <label class="schedulefield">В момент начала
+              <select id="lessonAtStart">
+                <option value="1">напомнить</option>
+                <option value="0">не напоминать</option>
+              </select>
+            </label>
+          </div>
+          <div class="row mt wrap">
+            <button class="btn" onclick="saveLessonSchedule()">Сохранить расписание</button>
+            <button class="btn pri" onclick="downloadLessonCalendar()">Добавить в Календарь</button>
+          </div>
+          <div class="muted small mt" id="lessonScheduleNote"></div>
+        </div>
         <div class="card" data-native-only>
           <h2>Библиотека: ролики и тексты заранее</h2>
           <div class="muted small mb">Приложение само обходит твои каналы, забирает свежие ролики
@@ -1629,7 +1716,7 @@ let S = {
   video: null, rec: {timer: null, secs: 0, path: "", b64: ""},
   lastQ: "", lesson: null, curText: null, schemeTab: 0, recon: null,
   course: {catalog: null, loading: null, lessons: [], lesson: null, speechIndex: 0,
-    taskDone: false, speechDone: false, recOn: false, recPath: ""},
+    taskDone: false, speechDone: false, recOn: false, recPath: "", assessment: null},
 };
 const LEVELS = ["PRE_A1", "A1", "A2", "B1", "B2", "C1"];
 function levelLabel(level) { return level === "PRE_A1" ? "С нуля · Pre-A1" : level; }
@@ -1838,11 +1925,25 @@ function renderFoundationToday() {
   loadFoundationCourse().then(function () {
     const completed = foundationCompleted();
     const next = S.course.lessons.find(function (lesson) { return !completed[lesson.id]; });
-    el("foundationTodayTitle").textContent = next ? next.title : "Маршрут Pre-A1 пройден";
-    el("foundationTodayText").textContent = next
-      ? next.canDo
-      : "Все 24 микроурока завершены. Открывай курс и возвращайся к урокам на повторение.";
-    el("foundationTodayProgress").textContent = Object.keys(completed).length + " из " + S.course.lessons.length + " уроков";
+    const groups = courseUnitGroups();
+    const pending = groups.find(function (group) {
+      return completedLessonsInGroup(group) === group.lessons.length && !checkpointPassed(group.unit);
+    });
+    const lessonsDone = Object.keys(completed).length;
+    const pointsDone = courseCheckpoints().filter(function (item) { return foundationState().checkpoints[item.id]?.passed; }).length;
+    if (pending) {
+      el("foundationTodayTitle").textContent = "Закрепи тему: " + String(pending.lessons[0].title).split(":")[0];
+      el("foundationTodayText").textContent = "Три коротких действия откроют следующую тему.";
+    } else if (lessonsDone === S.course.lessons.length && allCourseCheckpointsPassed()) {
+      el("foundationTodayTitle").textContent = exitReady() ? "Можно начинать A1" : "Проверим готовность к A1";
+      el("foundationTodayText").textContent = exitReady()
+        ? "Пять навыков готовы. Открой результат и выбери следующий шаг."
+        : "Слушание, чтение, диалог, устная речь и письмо без экзаменационного таймера.";
+    } else {
+      el("foundationTodayTitle").textContent = next ? next.title : "Заверши контрольные точки";
+      el("foundationTodayText").textContent = next ? next.canDo : "Пройденные уроки остаются доступными на карте.";
+    }
+    el("foundationTodayProgress").textContent = lessonsDone + " из " + S.course.lessons.length + " уроков · " + pointsDone + " из 8 тем";
   }).catch(function () {
     el("foundationTodayTitle").textContent = "Курс пока не загрузился";
     el("foundationTodayText").textContent = "Проверь соединение и открой приложение ещё раз.";
@@ -1983,10 +2084,13 @@ function addFilmPhrase() {
 
 /* ───────────────────── курс с нуля, Pre-A1 ────────────────── */
 function foundationState() {
-  if (!S.state.foundation) S.state.foundation = {completed: {}, progress: {}, review: {}};
+  if (!S.state.foundation) S.state.foundation = {completed: {}, progress: {}, review: {}, checkpoints: {}, exitAssessment: {skills: {}}};
   if (!S.state.foundation.completed) S.state.foundation.completed = {};
   if (!S.state.foundation.progress) S.state.foundation.progress = {};
   if (!S.state.foundation.review) S.state.foundation.review = {};
+  if (!S.state.foundation.checkpoints) S.state.foundation.checkpoints = {};
+  if (!S.state.foundation.exitAssessment) S.state.foundation.exitAssessment = {skills: {}};
+  if (!S.state.foundation.exitAssessment.skills) S.state.foundation.exitAssessment.skills = {};
   return S.state.foundation;
 }
 function foundationCompleted() { return foundationState().completed; }
@@ -2008,7 +2112,9 @@ function loadFoundationCourse() {
     const all = catalog.lessons || [];
     const child = all.filter(function (lesson) { return lesson.audience === "child"; }).length;
     const adult = all.filter(function (lesson) { return lesson.audience === "adult"; }).length;
-    if (catalog.level !== "PRE_A1" || child !== 24 || adult !== 24) {
+    const checkpoints = catalog.checkpoints || [];
+    const profiles = catalog.exitAssessment?.profiles || [];
+    if (catalog.level !== "PRE_A1" || child !== 24 || adult !== 24 || checkpoints.length !== 16 || profiles.length !== 2) {
       throw {error: "курс повреждён: ожидается по 24 урока для ребёнка и взрослого"};
     }
     S.course.catalog = catalog;
@@ -2033,10 +2139,54 @@ function courseUnitGroups() {
   groups.forEach(function (group) { group.lessons.sort(function (a, b) { return a.encounter - b.encounter; }); });
   return groups;
 }
+function courseCheckpoints() {
+  const audience = S.state.audience || "adult";
+  return (S.course.catalog?.checkpoints || []).filter(function (item) { return item.audience === audience; });
+}
+function courseCheckpoint(unit) {
+  return courseCheckpoints().find(function (item) { return item.unit === unit; });
+}
+function checkpointState(id) {
+  const all = foundationState().checkpoints;
+  if (!all[id]) all[id] = {passed: false, attempts: 0, results: {}};
+  if (!all[id].results) all[id].results = {};
+  return all[id];
+}
+function checkpointPassed(unit) {
+  const item = courseCheckpoint(unit);
+  return !!(item && foundationState().checkpoints[item.id]?.passed);
+}
+function courseExitProfile() {
+  const audience = S.state.audience || "adult";
+  return (S.course.catalog?.exitAssessment?.profiles || []).find(function (item) { return item.audience === audience; });
+}
+function allCourseCheckpointsPassed() {
+  const points = courseCheckpoints();
+  return points.length === 8 && points.every(function (item) { return foundationState().checkpoints[item.id]?.passed; });
+}
+function exitSkillState(id) {
+  const exit = foundationState().exitAssessment;
+  if (!exit.skills[id]) exit.skills[id] = {results: {}, passed: false, attempts: 0};
+  if (!exit.skills[id].results) exit.skills[id].results = {};
+  return exit.skills[id];
+}
+function exitReady() {
+  const profile = courseExitProfile();
+  return !!(profile && profile.skills.every(function (skill) { return exitSkillState(skill.id).passed; }));
+}
+function completedLessonsInGroup(group) {
+  const completed = foundationCompleted();
+  return group.lessons.filter(function (lesson) { return completed[lesson.id]; }).length;
+}
+function groupUnlocked(group, groups) {
+  return groups.filter(function (item) { return item.order < group.order; })
+    .every(function (item) { return checkpointPassed(item.unit); });
+}
 function renderCourseHome() {
   if (!S.course.catalog) return;
   el("courseHome").classList.remove("hidden");
   el("courseLesson").classList.add("hidden");
+  el("courseAssessment").classList.add("hidden");
   const child = (S.state.audience || "adult") === "child";
   el("courseHeroTitle").textContent = child ? "Твоя английская история начинается здесь" : "Практический английский с самого начала";
   el("courseHeroLead").textContent = child
@@ -2070,19 +2220,57 @@ function renderCourseHome() {
     dueBox.appendChild(row);
   }
 
-  const current = S.course.lessons.find(function (lesson) { return !completed[lesson.id]; });
+  const groups = courseUnitGroups();
+  const gate = el("courseGate");
+  const pendingCheckpoint = groups.find(function (group) {
+    return completedLessonsInGroup(group) === group.lessons.length && !checkpointPassed(group.unit);
+  });
+  const allLessonsDone = count === S.course.lessons.length;
+  const passedCount = courseCheckpoints().filter(function (item) { return foundationState().checkpoints[item.id]?.passed; }).length;
+  gate.classList.remove("hidden");
+  if (pendingCheckpoint) {
+    const point = courseCheckpoint(pendingCheckpoint.unit);
+    gate.innerHTML = "<div class='courselabel'>Контрольная точка · " + passedCount + " из 8</div>" +
+      "<h2>Закрепи тему перед следующим шагом</h2><div class='muted'>Три коротких действия: услышать, прочитать и сказать без подсказки.</div>" +
+      "<div class='row mt wrap'><button class='btn pri' id='courseGateAction'>Проверить тему →</button>" +
+      "<span class='muted small'>Попытки не ограничены, серия дней не пострадает.</span></div>";
+    el("courseGateAction").onclick = function () { courseOpenCheckpoint(point.id); };
+  } else if (allLessonsDone && allCourseCheckpointsPassed()) {
+    const ready = exitReady();
+    gate.innerHTML = "<div class='courselabel'>Финал маршрута · 8 из 8 тем</div>" +
+      "<h2>" + (ready ? "Основа закреплена" : "Проверим готовность к A1") + "</h2>" +
+      "<div class='muted'>" + (ready
+        ? "Пять навыков готовы. Это рекомендация начать A1, а не официальный сертификат CEFR."
+        : "Пять коротких блоков: слушание, чтение, диалог, устная речь и письмо.") + "</div>" +
+      "<div class='row mt wrap'><button class='btn pri' id='courseGateAction'>" + (ready ? "Посмотреть результат →" : "Начать проверку →") + "</button></div>";
+    el("courseGateAction").onclick = courseOpenExitAssessment;
+  } else {
+    const next = S.course.lessons.find(function (lesson) { return !completed[lesson.id]; });
+    gate.innerHTML = "<div class='courselabel'>Маршрут Pre-A1</div><h2>" + esc(next ? next.title : "Все уроки завершены") + "</h2>" +
+      "<div class='muted'>" + esc(next ? next.canDo : "Заверши контрольные точки тем.") + "</div>" +
+      "<div class='gategrid'><div class='gatestep done'>" + count + " / 24 урока</div>" +
+      "<div class='gatestep " + (passedCount ? "done" : "") + "'>" + passedCount + " / 8 тем</div>" +
+      "<div class='gatestep'>Дальше: " + (next ? "короткий урок" : "проверка темы") + "</div></div>";
+  }
   const box = el("courseUnits");
   box.innerHTML = "";
-  courseUnitGroups().forEach(function (group) {
-    const done = group.lessons.filter(function (lesson) { return completed[lesson.id]; }).length;
+  groups.forEach(function (group) {
+    const done = completedLessonsInGroup(group);
     const next = group.lessons.find(function (lesson) { return !completed[lesson.id]; }) || group.lessons[group.lessons.length - 1];
+    const unlocked = groupUnlocked(group, groups);
+    const needsCheckpoint = done === group.lessons.length && !checkpointPassed(group.unit);
+    const passed = checkpointPassed(group.unit);
     const button = document.createElement("button");
-    button.className = "courseunit" + (current && next.id === current.id ? " current" : "");
-    button.innerHTML = "<span class='coursecount'>" + done + "/3</span>" +
+    button.className = "courseunit" + (needsCheckpoint && unlocked ? " current" : "") + (!unlocked ? " locked" : "");
+    button.disabled = !unlocked;
+    button.innerHTML = "<span class='coursecount'>" + (passed ? "✓ тема" : done + "/3") + "</span>" +
       "<div class='courseicon'>" + esc(next.chunks[0].icon || "🌱") + "</div>" +
       "<span class='coursetitle'>" + esc(String(next.title).split(":")[0]) + "</span>" +
-      "<span class='coursecan'>" + esc(next.canDo) + "</span>";
-    button.onclick = function () { courseOpen(next.id); };
+      "<span class='coursecan'>" + esc(!unlocked ? "Сначала заверши предыдущую тему" : needsCheckpoint ? "Проверить тему" : next.canDo) + "</span>";
+    button.onclick = function () {
+      if (needsCheckpoint) courseOpenCheckpoint(courseCheckpoint(group.unit).id);
+      else courseOpen(next.id);
+    };
     box.appendChild(button);
   });
 }
@@ -2325,19 +2513,21 @@ function updateCourseFinish() {
   const lesson = S.course.lesson;
   if (!lesson) return;
   const progress = foundationLessonProgress(lesson.id);
-  const ready = !!progress.taskDone || !!progress.speechDone;
+  const ready = !!progress.taskDone && !!progress.speechDone;
   el("courseFinishBtn").disabled = !ready;
   const passCount = Object.keys(progress.passes || {}).filter(function (key) { return progress.passes[key]; }).length;
   el("courseFinishHint").textContent = ready
-    ? "Активное задание выполнено. Просмотров отмечено: " + passCount + " из 3."
-    : "Сначала выбери смысл или попробуй сказать целевую фразу.";
+    ? "Задание и речевая попытка выполнены. Просмотров отмечено: " + passCount + " из 3."
+    : !progress.taskDone
+      ? "Сначала выполни активное задание, затем скажи фразу вслух."
+      : "Теперь скажи фразу вслух или запиши себя и переслушай.";
 }
 function courseComplete() {
   const lesson = S.course.lesson;
   if (!lesson) return;
   const progress = foundationLessonProgress(lesson.id);
-  if (!progress.taskDone && !progress.speechDone) {
-    toast("Сначала выполни активное задание", "warn");
+  if (!progress.taskDone || !progress.speechDone) {
+    toast(!progress.taskDone ? "Сначала выполни активное задание" : "Сначала сделай речевую попытку", "warn");
     return;
   }
   const f = foundationState();
@@ -2352,6 +2542,341 @@ function courseComplete() {
   saveWords();
   toast("Урок завершён. Фразы вернутся на повторение завтра.");
   courseBack();
+}
+
+const ASSESS_SKILL_LABELS = {
+  listening:"Слушание", reading:"Чтение", spokenInteraction:"Диалог",
+  spokenProduction:"Устная речь", writing:"Письмо",
+};
+function courseOpenCheckpoint(id) {
+  const point = courseCheckpoints().find(function (item) { return item.id === id; });
+  if (!point) { toast("Контрольная точка не найдена", "bad"); return; }
+  const state = checkpointState(point.id);
+  state.attempts = (state.attempts || 0) + 1;
+  if (!state.startedAt) state.startedAt = Date.now();
+  const first = point.tasks.findIndex(function (task) { return !state.results[task.id]?.passed; });
+  S.course.assessment = {mode:"checkpoint", definition:point, taskIndex:Math.max(0, first)};
+  saveState();
+  showCourseAssessment();
+}
+function courseOpenExitAssessment() {
+  const profile = courseExitProfile();
+  if (!profile) { toast("Итоговая проверка не найдена", "bad"); return; }
+  const exit = foundationState().exitAssessment;
+  if (!exit.startedAt) exit.startedAt = Date.now();
+  exit.attempts = (exit.attempts || 0) + 1;
+  const pending = profile.skills.find(function (skill) {
+    return Object.keys(exitSkillState(skill.id).results).length < skill.tasks.length;
+  });
+  S.course.assessment = {mode:"exit", definition:profile, skillId:pending?.id || "", taskIndex:0};
+  saveState();
+  showCourseAssessment();
+}
+function showCourseAssessment() {
+  el("courseHome").classList.add("hidden");
+  el("courseLesson").classList.add("hidden");
+  el("courseAssessment").classList.remove("hidden");
+  renderCourseAssessment();
+  el("scene").scrollTop = 0;
+}
+function courseAssessmentBack() {
+  S.course.assessment = null;
+  renderCourseHome();
+  el("scene").scrollTop = 0;
+}
+function assessmentOptions(task) {
+  const options = (task.options || []).slice();
+  if (options.length < 2) return options;
+  const shift = Array.from(String(task.id || "")).reduce(function (sum, char) { return sum + char.charCodeAt(0); }, 0) % options.length;
+  return options.slice(shift).concat(options.slice(0, shift));
+}
+function assessmentCurrent() {
+  const assess = S.course.assessment;
+  if (!assess) return null;
+  if (assess.mode === "checkpoint") {
+    return {task:assess.definition.tasks[assess.taskIndex], skill:null};
+  }
+  const skill = assess.definition.skills.find(function (item) { return item.id === assess.skillId; });
+  if (!skill) return null;
+  const state = exitSkillState(skill.id);
+  const index = skill.tasks.findIndex(function (task) { return state.results[task.id] === undefined; });
+  assess.taskIndex = index < 0 ? skill.tasks.length : index;
+  return {task:skill.tasks[assess.taskIndex], skill:skill};
+}
+function renderAssessmentSkills() {
+  const assess = S.course.assessment;
+  const box = el("assessmentSkills");
+  box.innerHTML = "";
+  if (assess.mode === "checkpoint") {
+    assess.definition.tasks.forEach(function (task, index) {
+      const state = checkpointState(assess.definition.id);
+      const chip = document.createElement("span");
+      chip.className = "assessskill" + (state.results[task.id]?.passed ? " done" : index === assess.taskIndex ? " on" : "");
+      chip.textContent = (index + 1) + ". " + (ASSESS_SKILL_LABELS[task.skill] || task.skill);
+      box.appendChild(chip);
+    });
+    return;
+  }
+  assess.definition.skills.forEach(function (skill) {
+    const state = exitSkillState(skill.id);
+    const chip = document.createElement("span");
+    chip.className = "assessskill" + (state.passed ? " done" : skill.id === assess.skillId ? " on" : "");
+    chip.textContent = (state.passed ? "✓ " : "") + skill.title;
+    box.appendChild(chip);
+  });
+}
+function renderCourseAssessment() {
+  const assess = S.course.assessment;
+  if (!assess) { courseAssessmentBack(); return; }
+  el("assessmentStamp").textContent = assess.mode === "checkpoint" ? "Контрольная точка темы" : "Финал Pre-A1";
+  el("assessmentTitle").textContent = assess.definition.title;
+  el("assessmentLead").textContent = assess.mode === "checkpoint"
+    ? "Без таймера и штрафов. Ошибся, повтори конкретное действие и продолжай."
+    : assess.definition.claim;
+  renderAssessmentSkills();
+  if (assess.mode === "checkpoint" && checkpointState(assess.definition.id).passed) {
+    renderCheckpointComplete();
+    return;
+  }
+  const current = assessmentCurrent();
+  if (!current || !current.task) {
+    if (assess.mode === "exit") renderExitSummary();
+    else renderCheckpointComplete();
+    return;
+  }
+  const task = current.task;
+  const total = assess.mode === "checkpoint" ? assess.definition.tasks.length : current.skill.tasks.length;
+  el("assessmentCounter").textContent = (assess.taskIndex + 1) + " / " + total;
+  const box = el("assessmentTask");
+  box.className = "card assesstask";
+  box.innerHTML = "";
+  const label = document.createElement("div");
+  label.className = "courselabel";
+  label.textContent = ASSESS_SKILL_LABELS[task.skill] || task.skill;
+  box.appendChild(label);
+  if (task.type === "audio-choice") {
+    box.insertAdjacentHTML("beforeend", "<div class='assessprompt'>Послушай фразу и выбери её смысл. Текст специально скрыт.</div>" +
+      "<div><button class='btn pri' onclick='courseAssessmentHear()'>🔊 Послушать фразу</button></div><div class='assesschoices' id='assessmentChoices'></div>");
+    renderAssessmentChoices(task);
+  } else if (task.type === "text-choice") {
+    box.insertAdjacentHTML("beforeend", "<div class='muted small'>Прочитай без перевода</div><div class='assessprompt'>" + esc(task.promptEn) +
+      "</div><div class='assesschoices' id='assessmentChoices'></div>");
+    renderAssessmentChoices(task);
+  } else if (task.type === "speech" || task.type === "audio-response") {
+    let html = "<div class='assessprompt'>" + esc(task.promptRu) + "</div>";
+    if (task.type === "audio-response") html += "<div><button class='btn' onclick='courseAssessmentHear()'>🔊 Послушать вопрос</button></div>";
+    html += "<div class='row wrap'><button class='btn pri' id='assessmentSpeakBtn' onclick='courseAssessmentSpeak()'>🎙 Сказать и проверить</button>" +
+      "<button class='btn ghost' onclick='courseAssessmentShowSelfCheck()'>Сравнить самому</button></div><div id='assessmentFeedback'></div>";
+    box.insertAdjacentHTML("beforeend", html);
+  } else if (task.type === "write") {
+    box.insertAdjacentHTML("beforeend", "<div class='assessprompt'>" + esc(task.promptRu) + "</div>" +
+      "<input id='assessmentWrite' autocomplete='off' autocapitalize='sentences' placeholder='Напиши по-английски'>" +
+      "<div><button class='btn pri' onclick='courseAssessmentWrite()'>Проверить ответ</button></div><div id='assessmentFeedback'></div>");
+    el("assessmentWrite").addEventListener("keydown", function (event) { if (event.key === "Enter") courseAssessmentWrite(); });
+  }
+}
+function renderAssessmentChoices(task) {
+  const box = el("assessmentChoices");
+  assessmentOptions(task).forEach(function (option) {
+    const button = document.createElement("button");
+    button.className = "assesschoice";
+    button.textContent = option;
+    button.onclick = function () { courseAssessmentChoice(button, option === task.answer); };
+    box.appendChild(button);
+  });
+}
+function courseAssessmentHear() {
+  const current = assessmentCurrent();
+  const text = current?.task?.promptEn || "";
+  if (!text) return;
+  call("speak", {text:text, lang:"en-US"}).catch(function (e) { toast(e.error || "озвучка не сработала", "bad"); });
+}
+function courseAssessmentChoice(button, good) {
+  const choices = el("assessmentChoices");
+  choices.querySelectorAll("button").forEach(function (node) { node.disabled = true; });
+  button.classList.add(good ? "good" : "bad");
+  courseAssessmentRecord(good, {method:"choice"});
+}
+function courseAssessmentSpeak() {
+  const current = assessmentCurrent();
+  const task = current?.task;
+  if (!task) return;
+  if (S.tools.mode !== "pwa") { courseAssessmentShowSelfCheck(); return; }
+  const button = el("assessmentSpeakBtn");
+  button.disabled = true;
+  el("assessmentFeedback").innerHTML = "<div class='assessresult'><span class='spin'></span> Слушаю один короткий ответ…</div>";
+  call("speech.check").then(function (heard) {
+    const alternatives = heard.alternatives?.length ? heard.alternatives : [{transcript:heard.text || ""}];
+    return Promise.all(alternatives.map(function (item) {
+      return call("speech.score", {expected:task.expected, accepted:task.accepted || [], heard:item.transcript});
+    }));
+  }).then(function (scores) {
+    scores.sort(function (a, b) { return b.score - a.score; });
+    const best = scores[0];
+    courseAssessmentRecord(best.score >= 80, {method:"speech", score:best.score, heard:best.heard});
+  }).catch(function (e) {
+    el("assessmentFeedback").innerHTML = "<div class='assessresult again'><b>Автопроверка недоступна.</b><div class='mt'>" + esc(e.error || "Речь не распозналась") +
+      "</div><button class='btn mt' onclick='courseAssessmentShowSelfCheck()'>Сравнить самому</button></div>";
+  }).finally(function () { button.disabled = false; });
+}
+function courseAssessmentShowSelfCheck() {
+  const task = assessmentCurrent()?.task;
+  if (!task) return;
+  const box = el("assessmentFeedback");
+  if (!box) return;
+  box.innerHTML = "<div class='assessresult'><div class='muted small'>Послушай образец, произнеси ещё раз и сравни слова.</div>" +
+    "<div class='assessprompt mt'>" + esc(task.expected) + "</div><div class='row mt wrap'>" +
+    "<button class='btn' onclick='courseAssessmentHearExpected()'>🔊 Образец</button>" +
+    "<button class='btn pri' onclick='courseAssessmentManualPass()'>Я произнёс и сравнил</button></div>" +
+    "<div class='muted small mt'>Это ручная самопроверка, не автоматическая оценка произношения.</div></div>";
+}
+function courseAssessmentHearExpected() {
+  const task = assessmentCurrent()?.task;
+  if (task) call("speak", {text:task.expected, lang:"en-US"}).catch(function () {});
+}
+function courseAssessmentManualPass() { courseAssessmentRecord(true, {method:"selfCheck", selfChecked:true}); }
+function normalizedAssessmentText(value) {
+  return String(value || "").toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, " ").replace(/\s+/g, " ").trim();
+}
+function courseAssessmentWrite() {
+  const task = assessmentCurrent()?.task;
+  const value = el("assessmentWrite")?.value || "";
+  if (!value.trim()) { toast("Сначала напиши короткий ответ", "warn"); return; }
+  const accepted = [task.expected].concat(task.accepted || []).map(normalizedAssessmentText);
+  courseAssessmentRecord(accepted.includes(normalizedAssessmentText(value)), {method:"writing", answer:value});
+}
+function courseAssessmentRecord(passed, detail) {
+  const assess = S.course.assessment;
+  const current = assessmentCurrent();
+  if (!assess || !current?.task) return;
+  const result = Object.assign({passed:!!passed, at:Date.now()}, detail || {});
+  if (assess.mode === "checkpoint") {
+    const state = checkpointState(assess.definition.id);
+    state.results[current.task.id] = result;
+    if (passed) {
+      const allPassed = assess.definition.tasks.every(function (task) { return state.results[task.id]?.passed; });
+      if (allPassed) {
+        state.passed = true;
+        state.completedAt = Date.now();
+      } else {
+        assess.taskIndex = assess.definition.tasks.findIndex(function (task) { return !state.results[task.id]?.passed; });
+      }
+    }
+  } else {
+    const state = exitSkillState(current.skill.id);
+    state.results[current.task.id] = result;
+    const done = Object.keys(state.results).length === current.skill.tasks.length;
+    if (done) {
+      state.passed = current.skill.tasks.filter(function (task) { return state.results[task.id]?.passed; }).length >= 2;
+      state.completedAt = Date.now();
+      const next = assess.definition.skills.find(function (skill) {
+        return Object.keys(exitSkillState(skill.id).results).length < skill.tasks.length;
+      });
+      assess.skillId = next?.id || "";
+    }
+  }
+  saveState();
+  renderAssessmentFeedback(passed);
+}
+function renderAssessmentFeedback(passed) {
+  const assess = S.course.assessment;
+  const box = el("assessmentTask");
+  if (assess.mode === "checkpoint" && !passed) {
+    box.innerHTML = "<div class='assessresult again'><h2>Пока не закрепилось</h2>" +
+      "<div class='muted'>Посмотри на правильную опору, затем попробуй это действие ещё раз. Остальная тема не сбрасывается.</div>" +
+      "<button class='btn pri mt' onclick='courseAssessmentRetryTask()'>Повторить действие</button></div>";
+    return;
+  }
+  box.innerHTML = "<div class='assessresult " + (passed ? "good" : "again") + "'><h2>" + (passed ? "Получилось" : "Запишем как слабое место") + "</h2>" +
+    "<div class='muted'>" + (passed ? "Ответ сохранён, идём дальше." : "Заверши остальные задания. Потом приложение предложит повторить только этот навык.") + "</div>" +
+    "<button class='btn pri mt' onclick='courseAssessmentContinue()'>Продолжить →</button></div>";
+}
+function courseAssessmentRetryTask() {
+  const assess = S.course.assessment;
+  const task = assessmentCurrent()?.task;
+  if (assess?.mode === "checkpoint" && task) delete checkpointState(assess.definition.id).results[task.id];
+  renderCourseAssessment();
+  el("scene").scrollTop = 0;
+}
+function courseAssessmentContinue() {
+  renderCourseAssessment();
+  el("scene").scrollTop = 0;
+}
+function renderCheckpointComplete() {
+  el("assessmentCounter").textContent = "готово";
+  renderAssessmentSkills();
+  el("assessmentTask").innerHTML = "<div class='assessresult good'><div class='courselabel'>Тема закреплена</div>" +
+    "<h2>Следующая глава открыта</h2><div class='muted'>Фразы останутся в повторении, а на карте курса доступна следующая тема.</div>" +
+    "<button class='btn pri mt' onclick='courseAssessmentBack()'>Вернуться к маршруту →</button></div>";
+}
+function renderExitSummary() {
+  const profile = courseExitProfile();
+  const exit = foundationState().exitAssessment;
+  const complete = profile.skills.every(function (skill) { return Object.keys(exitSkillState(skill.id).results).length === skill.tasks.length; });
+  const ready = complete && profile.skills.every(function (skill) { return exitSkillState(skill.id).passed; });
+  exit.readyForA1 = ready;
+  if (complete) exit.completedAt = Date.now();
+  saveState();
+  el("assessmentCounter").textContent = complete ? "результат" : "продолжение";
+  renderAssessmentSkills();
+  let report = "<div class='skillreport'>";
+  profile.skills.forEach(function (skill) {
+    const state = exitSkillState(skill.id);
+    const done = Object.keys(state.results).length;
+    const good = skill.tasks.filter(function (task) { return state.results[task.id]?.passed; }).length;
+    report += "<div class='" + (state.passed ? "good" : done === skill.tasks.length ? "again" : "") + "'><b>" + esc(skill.title) + "</b><br>" + good + " / 3</div>";
+  });
+  report += "</div>";
+  let actions = "";
+  if (ready) {
+    actions = "<button class='btn pri' onclick='courseStartA1()'>Начать A1 →</button>" +
+      "<button class='btn ghost' onclick='courseAssessmentBack()'>Остаться на повторении</button>";
+  } else if (complete) {
+    actions = profile.skills.filter(function (skill) { return !exitSkillState(skill.id).passed; }).map(function (skill) {
+      return "<button class='btn' onclick=\"courseRetryExitSkill('" + esc(skill.id) + "')\">Повторить: " + esc(skill.title) + "</button>";
+    }).join("");
+  } else {
+    actions = "<button class='btn pri' onclick='courseResumeExit()'>Продолжить проверку →</button>";
+  }
+  el("assessmentTask").innerHTML = "<div class='courselabel'>Профиль навыков</div><h2>" +
+    (ready ? "Готов начинать A1" : complete ? "Нужно укрепить отдельные навыки" : "Проверка ещё не закончена") + "</h2>" +
+    "<div class='muted'>" + (ready
+      ? "Все пять практических навыков готовы. Это рекомендация приложения, не официальный экзамен или сертификат CEFR."
+      : "Общий процент не скрывает слабое место. Пройденные навыки сохраняются.") + "</div>" + report +
+    "<div class='row wrap'>" + actions + "</div>";
+}
+function courseResumeExit() {
+  const profile = courseExitProfile();
+  const next = profile.skills.find(function (skill) { return Object.keys(exitSkillState(skill.id).results).length < skill.tasks.length; });
+  S.course.assessment.skillId = next?.id || "";
+  renderCourseAssessment();
+  el("scene").scrollTop = 0;
+}
+function courseRetryExitSkill(id) {
+  const state = exitSkillState(id);
+  state.results = {};
+  state.passed = false;
+  state.attempts = (state.attempts || 0) + 1;
+  S.course.assessment.skillId = id;
+  saveState();
+  renderCourseAssessment();
+  el("scene").scrollTop = 0;
+}
+function courseStartA1() {
+  if (!exitReady()) { toast("Сначала заверши проверку пяти навыков", "warn"); return; }
+  const f = foundationState();
+  f.transition = {to:"A1", at:Date.now()};
+  S.state.level = "A1";
+  S.state.course = "";
+  S.packs = {};
+  S.curText = null;
+  S.course.assessment = null;
+  applyLearnerMode();
+  saveState();
+  toast("A1 открыт. Прогресс Pre-A1 и повторения сохранены.");
+  go("today");
+  newQuestion();
+  renderRead();
 }
 function courseOpenSource() {
   const url = S.course.lesson?.video?.sourceUrl;
@@ -5882,6 +6407,135 @@ function reconSave() {
 }
 
 /* ────────────────────────── настройки ──────────────────────── */
+const DEFAULT_LESSON_SCHEDULE = {days:[1,2,3,4,5,6], time:"20:00", leadMinutes:10, atStart:true, updatedAt:0};
+const SCHEDULE_DAY_NAMES = ["Пн","Вт","Ср","Чт","Пт","Сб","Вс"];
+const SCHEDULE_ICS_DAYS = ["MO","TU","WE","TH","FR","SA","SU"];
+function lessonSchedule() {
+  const raw = S.state.lessonSchedule || {};
+  const days = Array.isArray(raw.days) ? raw.days.map(Number).filter(function (day) { return day >= 1 && day <= 7; }) : [];
+  S.state.lessonSchedule = {
+    days:days.length ? Array.from(new Set(days)).sort(function (a,b) { return a-b; }) : DEFAULT_LESSON_SCHEDULE.days.slice(),
+    time:/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(String(raw.time || "")) ? String(raw.time) : DEFAULT_LESSON_SCHEDULE.time,
+    leadMinutes:[0,5,10,15,30,60].includes(Number(raw.leadMinutes)) ? Number(raw.leadMinutes) : DEFAULT_LESSON_SCHEDULE.leadMinutes,
+    atStart:raw.atStart === undefined ? DEFAULT_LESSON_SCHEDULE.atStart : !!raw.atStart,
+    updatedAt:Number(raw.updatedAt) || 0,
+  };
+  return S.state.lessonSchedule;
+}
+function renderLessonSchedule() {
+  const schedule = lessonSchedule();
+  const box = el("lessonDays");
+  if (!box) return;
+  box.innerHTML = "";
+  SCHEDULE_DAY_NAMES.forEach(function (name, index) {
+    const day = index + 1;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "daypick" + (schedule.days.includes(day) ? " on" : "");
+    button.textContent = name;
+    button.setAttribute("aria-pressed", schedule.days.includes(day) ? "true" : "false");
+    button.onclick = function () { toggleLessonDay(day); };
+    box.appendChild(button);
+  });
+  el("lessonTime").value = schedule.time;
+  el("lessonLead").value = String(schedule.leadMinutes);
+  el("lessonAtStart").value = schedule.atStart ? "1" : "0";
+  const names = schedule.days.map(function (day) { return SCHEDULE_DAY_NAMES[day - 1]; }).join(", ");
+  el("lessonScheduleNote").textContent = names + " · " + schedule.time +
+    (schedule.leadMinutes ? " · за " + schedule.leadMinutes + " мин" : "") +
+    (schedule.atStart ? " · в момент начала" : "") +
+    ". После изменения заново добавь событие в Календарь. Автоматизация Codex настраивается отдельно.";
+}
+function captureLessonScheduleForm() {
+  const schedule = lessonSchedule();
+  schedule.time = el("lessonTime")?.value || schedule.time;
+  schedule.leadMinutes = Number(el("lessonLead")?.value ?? schedule.leadMinutes);
+  schedule.atStart = (el("lessonAtStart")?.value ?? (schedule.atStart ? "1" : "0")) === "1";
+  return schedule;
+}
+function toggleLessonDay(day) {
+  const schedule = captureLessonScheduleForm();
+  if (schedule.days.includes(day)) {
+    if (schedule.days.length === 1) { toast("Оставь хотя бы один день урока", "warn"); return; }
+    schedule.days = schedule.days.filter(function (value) { return value !== day; });
+  } else {
+    schedule.days.push(day);
+    schedule.days.sort(function (a,b) { return a-b; });
+  }
+  renderLessonSchedule();
+}
+function saveLessonSchedule(silent) {
+  const schedule = captureLessonScheduleForm();
+  if (!schedule.days.length) { toast("Выбери хотя бы один день", "warn"); return false; }
+  if (!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(schedule.time)) { toast("Проверь время начала урока", "warn"); return false; }
+  schedule.updatedAt = Date.now();
+  S.state.lessonSchedule = schedule;
+  saveState();
+  renderLessonSchedule();
+  if (!silent) toast("Расписание сохранено на этом устройстве");
+  return true;
+}
+function padCalendar(value) { return String(value).padStart(2,"0"); }
+function calendarLocalStamp(date) {
+  return date.getFullYear() + padCalendar(date.getMonth()+1) + padCalendar(date.getDate()) + "T" +
+    padCalendar(date.getHours()) + padCalendar(date.getMinutes()) + "00";
+}
+function calendarUtcStamp(date) {
+  return date.getUTCFullYear() + padCalendar(date.getUTCMonth()+1) + padCalendar(date.getUTCDate()) + "T" +
+    padCalendar(date.getUTCHours()) + padCalendar(date.getUTCMinutes()) + padCalendar(date.getUTCSeconds()) + "Z";
+}
+function calendarEscape(value) {
+  return String(value).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n");
+}
+function firstLessonOccurrence(schedule, now) {
+  const parts = schedule.time.split(":").map(Number);
+  for (let offset=0; offset<8; offset+=1) {
+    const date = new Date(now.getFullYear(), now.getMonth(), now.getDate()+offset, parts[0], parts[1], 0, 0);
+    const isoDay = date.getDay() === 0 ? 7 : date.getDay();
+    if (schedule.days.includes(isoDay) && date > now) return date;
+  }
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, parts[0], parts[1], 0, 0);
+}
+function buildLessonCalendar(schedule, now) {
+  const start = firstLessonOccurrence(schedule, now || new Date());
+  const finish = new Date(start.getTime() + 30*60*1000);
+  const days = schedule.days.map(function (day) { return SCHEDULE_ICS_DAYS[day-1]; }).join(",");
+  const lines = [
+    "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Pogruzhenie//Lesson Schedule//RU", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    "BEGIN:VEVENT", "UID:pogruzhenie-lesson@local", "DTSTAMP:" + calendarUtcStamp(now || new Date()),
+    "DTSTART:" + calendarLocalStamp(start), "DTEND:" + calendarLocalStamp(finish),
+    "RRULE:FREQ=WEEKLY;BYDAY=" + days,
+    "SUMMARY:" + calendarEscape("Погружение: урок английского"),
+    "DESCRIPTION:" + calendarEscape("Пора заниматься английским. Открыть: https://yerkebulan-ardabayev.github.io/pogruzhenie-pwa/"),
+    "URL:https://yerkebulan-ardabayev.github.io/pogruzhenie-pwa/",
+  ];
+  if (schedule.leadMinutes > 0) lines.push("BEGIN:VALARM","ACTION:DISPLAY","TRIGGER:-PT" + schedule.leadMinutes + "M","DESCRIPTION:Через " + schedule.leadMinutes + " минут начинается урок","END:VALARM");
+  if (schedule.atStart) lines.push("BEGIN:VALARM","ACTION:DISPLAY","TRIGGER:PT0M","DESCRIPTION:Пора начинать урок английского","END:VALARM");
+  lines.push("END:VEVENT","END:VCALENDAR","");
+  return lines.join("\r\n");
+}
+window.buildLessonCalendar = buildLessonCalendar;
+async function downloadLessonCalendar() {
+  if (!saveLessonSchedule(true)) return;
+  const schedule = lessonSchedule();
+  const text = buildLessonCalendar(schedule, new Date());
+  window.lastLessonCalendarForTest = text;
+  const file = new File([text], "pogruzhenie-lesson.ics", {type:"text/calendar"});
+  try {
+    if (navigator.canShare?.({files:[file]})) {
+      await navigator.share({title:"Расписание уроков Погружения", files:[file]});
+    } else {
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(file);
+      link.download = file.name;
+      link.click();
+      setTimeout(function () { URL.revokeObjectURL(link.href); }, 1000);
+    }
+    toast("Открой файл и добавь повторяющийся урок в Календарь");
+  } catch (e) {
+    if (e?.name !== "AbortError") toast("Не получилось передать событие в Календарь", "bad");
+  }
+}
 function renderSettings() {
   const lb = el("lvlBtns");
   lb.innerHTML = "";
@@ -5904,6 +6558,7 @@ function renderSettings() {
   renderToken();
   renderLibrarySettings();
   renderSeriesSettings();
+  renderLessonSchedule();
 }
 
 function renderSeriesSettings() {
@@ -6210,6 +6865,7 @@ function init() {
     S.words = (rs[2].data && rs[2].data.list) || [];
     S.tools = rs[3];
     PASS = rs[4];
+    lessonSchedule();
     if (!S.state.channels || !S.state.channels.length) {
       call("seed", {name: "channels"}).then(function (r) {
         S.state.channels = r.data || [];

@@ -6,6 +6,7 @@ const STORE_NAME = "records";
 const DAY_MS = 24 * 60 * 60 * 1000;
 const KEEP_KEYS = [
   "level", "audience", "course", "theme", "channels", "onboarded", "volume", "muted", "rate", "videoSize",
+  "lessonSchedule",
 ];
 const STORE_ROOTS = ["writing/", "speaking/", "cache/gen/"];
 
