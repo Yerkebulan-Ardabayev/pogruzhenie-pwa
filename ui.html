@@ -116,6 +116,7 @@ input:focus, textarea:focus, select:focus{border-color:var(--acc)}
   display:inline-flex; align-items:center; gap:8px;
   background:var(--bg2); border:1px solid var(--line2); border-radius:10px;
   padding:8px 15px; font-weight:600; font-size:13.5px; color:var(--ink);
+  text-decoration:none;
 }
 .btn:hover{border-color:var(--acc); color:var(--acc)}
 .btn.pri{background:var(--acc); border-color:var(--acc); color:var(--acc-ink)}
@@ -334,6 +335,9 @@ input[type="range"]:focus{outline:none}
 }
 #homeMarks .btn{white-space:nowrap}
 #ownLink input{width:100%}
+#twoSubPhrases{width:100%; min-height:92px; resize:vertical}
+#twoSubCard .twosub-source{align-items:flex-start}
+#twoSubCard .twosub-source>div:first-child{flex:1; min-width:220px}
 
 /* ─── Проходы разбора: 1 без текста → 2 английский → 3 комбо ─── */
 .passsteps{display:flex; gap:4px; align-items:center}
@@ -1077,6 +1081,36 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
           <div class="muted small mt">Порядок обязательный: следующий проход открывается, когда дослушал
             предыдущий (85% достаточно). Кроме разбора, ещё 1-2 видео в день просто смотри целиком:
             привыкать к звучанию.</div>
+        </div>
+        <div class="card" id="twoSubCard">
+          <div class="row wrap twosub-source">
+            <div>
+              <h2>2SUB: фильм с двойными субтитрами</h2>
+              <div class="muted small">Фильм открывается полноценной отдельной страницей. Поэтому на 2SUB
+                остаются вход, полноэкранный режим, английские и русские субтитры, повтор фразы,
+                словарь, AI-переводчик, скорость, качество и Picture in Picture.</div>
+            </div>
+            <div class="row wrap">
+              <a class="btn pri" id="twoSubFilmLink"
+                 href="https://2sub.movie/film/the-shawshank-redemption-1994/#watch"
+                 target="_blank" rel="noopener noreferrer">▶ Продолжить «Побег из Шоушенка»</a>
+              <a class="btn" id="twoSubCatalogLink" href="https://2sub.movie/catalog/films/"
+                 target="_blank" rel="noopener noreferrer">Каталог 2SUB ↗</a>
+            </div>
+          </div>
+          <div class="sep" style="height:1px;background:var(--line);margin:16px 0"></div>
+          <b>После просмотра: закрепи сцену</b>
+          <div class="muted small mb">Вставь от одной до трёх строк. Формат строки:
+            <b>English phrase | Русский смысл</b>. Перевод после черты можно оставить пустым,
+            но с ним третий круг «Реконструкции» будет полезнее.</div>
+          <textarea id="twoSubPhrases" rows="4"
+            placeholder="You strike me as a remorseless man. | Вы производите впечатление безжалостного человека.&#10;Sit down. | Садитесь."></textarea>
+          <div class="row mt wrap">
+            <button class="btn pri" onclick="twoSubSave()">Сохранить и отметить просмотр</button>
+            <button class="btn" id="twoSubReconBtn" onclick="twoSubStartRecon()" disabled>В Реконструкцию</button>
+            <button class="btn" id="twoSubRetellBtn" onclick="twoSubStartRetell()" disabled>🎙 Пересказать вслух</button>
+          </div>
+          <div class="muted small mt" id="twoSubStatus">После сохранения фразы появятся в тетрадке и станут доступны для активной практики.</div>
         </div>
         <div class="card hidden" id="resumeCard"></div>
         <div class="row mb wrap" id="homeBtns">
@@ -2912,11 +2946,118 @@ function toggleVidPick() {
 function renderListenHome() {
   renderResume();
   renderMarks();
+  renderTwoSubSession();
   if (document.documentElement.classList.contains("pwa")) {
     el("vidPick").classList.remove("hidden");
     el("pickBtn").textContent = "🎬 Скрыть список";
     renderPhoneVideos();
   }
+}
+
+const TWO_SUB_FILM = {
+  title: "Побег из Шоушенка",
+  englishTitle: "The Shawshank Redemption",
+  url: "https://2sub.movie/film/the-shawshank-redemption-1994/#watch",
+};
+function twoSubSessions() {
+  if (!Array.isArray(S.state.twoSubSessions)) S.state.twoSubSessions = [];
+  return S.state.twoSubSessions;
+}
+function twoSubCurrentSession() {
+  return twoSubSessions().find(function (session) {
+    return session.date === todayKey() && session.url === TWO_SUB_FILM.url;
+  }) || null;
+}
+function twoSubLatestSession() {
+  return twoSubCurrentSession() || twoSubSessions().find(function (session) {
+    return session.url === TWO_SUB_FILM.url;
+  }) || null;
+}
+function twoSubParsePhrases(raw) {
+  return String(raw || "").split("\n").map(function (row) {
+    const parts = row.split("|");
+    return {en: (parts.shift() || "").trim(), ru: parts.join("|").trim()};
+  }).filter(function (pair) { return pair.en; });
+}
+function renderTwoSubSession() {
+  const input = el("twoSubPhrases");
+  if (!input) return;
+  const session = twoSubCurrentSession();
+  if (session && document.activeElement !== input) {
+    input.value = (session.phrases || []).map(function (pair) {
+      return pair.en + (pair.ru ? " | " + pair.ru : "");
+    }).join("\n");
+  }
+  const ready = !!(session && session.phrases && session.phrases.length);
+  el("twoSubReconBtn").disabled = !ready;
+  el("twoSubRetellBtn").disabled = !ready;
+  el("twoSubStatus").textContent = ready
+    ? "Сегодня сохранено: " + session.phrases.length + " " +
+      plural(session.phrases.length, "фраза", "фразы", "фраз") +
+      ". Повторное сохранение обновит сессию и не увеличит счётчик просмотров."
+    : "После сохранения фразы появятся в тетрадке и станут доступны для активной практики.";
+}
+function twoSubSave() {
+  const phrases = twoSubParsePhrases(el("twoSubPhrases").value);
+  if (!phrases.length) {
+    toast("Вставь хотя бы одну английскую фразу из просмотренной сцены", "warn");
+    return;
+  }
+  if (phrases.length > 3) {
+    toast("Оставь не больше трёх фраз: их нужно активно разобрать, а не собрать списком", "warn");
+    return;
+  }
+  const sessions = twoSubSessions();
+  const existing = twoSubCurrentSession();
+  const session = {
+    id: existing ? existing.id : String(Date.now()),
+    date: todayKey(), title: TWO_SUB_FILM.title, url: TWO_SUB_FILM.url,
+    phrases: phrases, retellStarted: !!(existing && existing.retellStarted),
+    updatedAt: Date.now(),
+  };
+  if (existing) {
+    sessions[sessions.indexOf(existing)] = session;
+  } else {
+    sessions.unshift(session);
+    if (sessions.length > 20) sessions.length = 20;
+    markWatched();
+  }
+  phrases.forEach(function (pair) {
+    addWord(pair.en, pair.ru, "2SUB · " + TWO_SUB_FILM.title, "2sub");
+  });
+  saveState();
+  renderTwoSubSession();
+  toast(existing ? "Сессию 2SUB обновил, повторно просмотр не засчитывал"
+    : "Сессию сохранил: просмотр отмечен, фразы в тетрадке");
+}
+function twoSubStartRecon() {
+  const session = twoSubLatestSession();
+  if (!session || !session.phrases || !session.phrases.length) {
+    toast("Сначала сохрани 1-3 фразы после просмотра", "warn");
+    return;
+  }
+  go("recon");
+  reconOpen({
+    key: "2sub:" + session.id,
+    title: "2SUB · " + session.title,
+    lines: session.phrases.map(function (pair) { return {en: pair.en, ru: pair.ru}; }),
+  });
+}
+function twoSubStartRetell() {
+  const session = twoSubLatestSession();
+  if (!session || !session.phrases || !session.phrases.length) {
+    toast("Сначала сохрани 1-3 фразы после просмотра", "warn");
+    return;
+  }
+  session.retellStarted = true;
+  session.updatedAt = Date.now();
+  saveState();
+  S.speakNoSample = true;
+  S.lastQ = "Retell one scene from The Shawshank Redemption in 3-5 sentences. " +
+    "Say who was there, what happened, and why it mattered. Do not add details you did not see.";
+  go("speak");
+  el("sQuestion").textContent = S.lastQ;
+  stab(1);
 }
 async function renderPhoneVideos() {
   const box = el("phoneVideoCards");
@@ -5142,6 +5283,16 @@ let sampleReq = 0;
 function loadSample() {
   if (!S.lastQ) return;                    // вопрос ещё не выбран (старт окна)
   const box = el("sampleBox");
+  if (S.speakNoSample) {
+    S.phoneSample = null;
+    el("phoneSpeechBtn").disabled = true;
+    el("phoneSpeechResult").classList.add("hidden");
+    box.classList.remove("hidden");
+    box.innerHTML = "<div class='muted small mb'>Своими словами, без готового образца:</div>" +
+      "<div class='corrected'>Опирайся на 5W: кто был в сцене, что произошло, где или когда это было и почему это важно." +
+      "<div class='muted small mt'>Говори только о том, что увидел, не добавляй деталей ради красивого ответа.</div></div>";
+    return;
+  }
   const req = ++sampleReq;
   S.phoneSample = null;
   el("phoneSpeechBtn").disabled = true;
@@ -5224,6 +5375,7 @@ function prewarmGrammar() {
 }
 
 function newQuestion() {
+  S.speakNoSample = false;
   takeFromPack("questions", function (q) {
     S.lastQ = q || "Why is it important to learn English?";
     el("sQuestion").textContent = S.lastQ;
