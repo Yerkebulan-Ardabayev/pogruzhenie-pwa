@@ -1,0 +1,3968 @@
+{
+  "version": 1,
+  "releaseId": "LEARNING-UPDATE-2026-09-rc1",
+  "course": "a1-v1",
+  "level": "A1",
+  "generatedAt": "2026-09-06",
+  "lessonsPerAudience": 18,
+  "checkpointsPerAudience": 6,
+  "lessons": [
+    {
+      "id": "child-a1-entry-01",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "entry",
+      "unitOrder": 1,
+      "encounter": 1,
+      "order": 1,
+      "title": "Знакомство в классе: Вхожу в ситуацию",
+      "canDo": "Могу представиться и задать два вопроса",
+      "minutes": 12,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Hello, my name is Anna.",
+          "ru": "Привет, меня зовут Анна.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "introduce-self"
+          }
+        },
+        {
+          "en": "What is your name?",
+          "ru": "Как тебя зовут?",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I am eleven years old.",
+          "ru": "Мне одиннадцать лет.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": true
+    },
+    {
+      "id": "child-a1-entry-02",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "entry",
+      "unitOrder": 1,
+      "encounter": 2,
+      "order": 2,
+      "title": "Знакомство в классе: Тренируюсь",
+      "canDo": "Могу представиться и задать два вопроса",
+      "minutes": 12,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Hello, my name is Anna.",
+          "ru": "Привет, меня зовут Анна.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "introduce-self"
+          }
+        },
+        {
+          "en": "What is your name?",
+          "ru": "Как тебя зовут?",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I am eleven years old.",
+          "ru": "Мне одиннадцать лет.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-entry-03",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "entry",
+      "unitOrder": 1,
+      "encounter": 3,
+      "order": 3,
+      "title": "Знакомство в классе: Действую сам",
+      "canDo": "Могу представиться и задать два вопроса",
+      "minutes": 12,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Hello, my name is Anna.",
+          "ru": "Привет, меня зовут Анна.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "introduce-self"
+          }
+        },
+        {
+          "en": "What is your name?",
+          "ru": "Как тебя зовут?",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I am eleven years old.",
+          "ru": "Мне одиннадцать лет.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу представиться и задать два вопроса. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-school-01",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "school",
+      "unitOrder": 2,
+      "encounter": 1,
+      "order": 4,
+      "title": "Школьный день: Вхожу в ситуацию",
+      "canDo": "Могу рассказать о своём школьном дне",
+      "minutes": 12,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I go to school at eight.",
+          "ru": "Я иду в школу в восемь.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "en": "My favourite subject is English.",
+          "ru": "Мой любимый предмет английский.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "We have lunch at one.",
+          "ru": "Мы обедаем в час.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-school-02",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "school",
+      "unitOrder": 2,
+      "encounter": 2,
+      "order": 5,
+      "title": "Школьный день: Тренируюсь",
+      "canDo": "Могу рассказать о своём школьном дне",
+      "minutes": 12,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I go to school at eight.",
+          "ru": "Я иду в школу в восемь.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "en": "My favourite subject is English.",
+          "ru": "Мой любимый предмет английский.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "We have lunch at one.",
+          "ru": "Мы обедаем в час.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-school-03",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "school",
+      "unitOrder": 2,
+      "encounter": 3,
+      "order": 6,
+      "title": "Школьный день: Действую сам",
+      "canDo": "Могу рассказать о своём школьном дне",
+      "minutes": 12,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I go to school at eight.",
+          "ru": "Я иду в школу в восемь.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "en": "My favourite subject is English.",
+          "ru": "Мой любимый предмет английский.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "We have lunch at one.",
+          "ru": "Мы обедаем в час.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу рассказать о своём школьном дне. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-food-01",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "food",
+      "unitOrder": 3,
+      "encounter": 1,
+      "order": 7,
+      "title": "Еда и покупки: Вхожу в ситуацию",
+      "canDo": "Могу выбрать еду и спросить цену",
+      "minutes": 12,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I would like an apple, please.",
+          "ru": "Я хочу яблоко, пожалуйста.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "How much is it?",
+          "ru": "Сколько это стоит?",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I do not like onions.",
+          "ru": "Мне не нравится лук.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-food-02",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "food",
+      "unitOrder": 3,
+      "encounter": 2,
+      "order": 8,
+      "title": "Еда и покупки: Тренируюсь",
+      "canDo": "Могу выбрать еду и спросить цену",
+      "minutes": 12,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I would like an apple, please.",
+          "ru": "Я хочу яблоко, пожалуйста.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "How much is it?",
+          "ru": "Сколько это стоит?",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I do not like onions.",
+          "ru": "Мне не нравится лук.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-food-03",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "food",
+      "unitOrder": 3,
+      "encounter": 3,
+      "order": 9,
+      "title": "Еда и покупки: Действую сам",
+      "canDo": "Могу выбрать еду и спросить цену",
+      "minutes": 12,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I would like an apple, please.",
+          "ru": "Я хочу яблоко, пожалуйста.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "How much is it?",
+          "ru": "Сколько это стоит?",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I do not like onions.",
+          "ru": "Мне не нравится лук.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу выбрать еду и спросить цену. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-town-01",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "town",
+      "unitOrder": 4,
+      "encounter": 1,
+      "order": 10,
+      "title": "Город и дорога: Вхожу в ситуацию",
+      "canDo": "Могу спросить дорогу и понять ответ",
+      "minutes": 12,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Where is the library?",
+          "ru": "Где библиотека?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Go straight and turn left.",
+          "ru": "Иди прямо и поверни налево.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "It is next to the school.",
+          "ru": "Она рядом со школой.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-town-02",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "town",
+      "unitOrder": 4,
+      "encounter": 2,
+      "order": 11,
+      "title": "Город и дорога: Тренируюсь",
+      "canDo": "Могу спросить дорогу и понять ответ",
+      "minutes": 12,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Where is the library?",
+          "ru": "Где библиотека?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Go straight and turn left.",
+          "ru": "Иди прямо и поверни налево.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "It is next to the school.",
+          "ru": "Она рядом со школой.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-town-03",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "town",
+      "unitOrder": 4,
+      "encounter": 3,
+      "order": 12,
+      "title": "Город и дорога: Действую сам",
+      "canDo": "Могу спросить дорогу и понять ответ",
+      "minutes": 12,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Where is the library?",
+          "ru": "Где библиотека?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Go straight and turn left.",
+          "ru": "Иди прямо и поверни налево.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "It is next to the school.",
+          "ru": "Она рядом со школой.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу спросить дорогу и понять ответ. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-plans-01",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "plans",
+      "unitOrder": 5,
+      "encounter": 1,
+      "order": 13,
+      "title": "Друзья и планы: Вхожу в ситуацию",
+      "canDo": "Могу пригласить и согласовать время",
+      "minutes": 12,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Would you like to play after school?",
+          "ru": "Хочешь поиграть после школы?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Yes, sure.",
+          "ru": "Да, конечно.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "accept-meeting"
+          }
+        },
+        {
+          "en": "Let us meet on Saturday at three.",
+          "ru": "Давай встретимся в субботу в три.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-plans-02",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "plans",
+      "unitOrder": 5,
+      "encounter": 2,
+      "order": 14,
+      "title": "Друзья и планы: Тренируюсь",
+      "canDo": "Могу пригласить и согласовать время",
+      "minutes": 12,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Would you like to play after school?",
+          "ru": "Хочешь поиграть после школы?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Yes, sure.",
+          "ru": "Да, конечно.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "accept-meeting"
+          }
+        },
+        {
+          "en": "Let us meet on Saturday at three.",
+          "ru": "Давай встретимся в субботу в три.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-plans-03",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "plans",
+      "unitOrder": 5,
+      "encounter": 3,
+      "order": 15,
+      "title": "Друзья и планы: Действую сам",
+      "canDo": "Могу пригласить и согласовать время",
+      "minutes": 12,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Would you like to play after school?",
+          "ru": "Хочешь поиграть после школы?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Yes, sure.",
+          "ru": "Да, конечно.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "accept-meeting"
+          }
+        },
+        {
+          "en": "Let us meet on Saturday at three.",
+          "ru": "Давай встретимся в субботу в три.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу пригласить и согласовать время. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-project-01",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "project",
+      "unitOrder": 6,
+      "encounter": 1,
+      "order": 16,
+      "title": "Мой мини проект: Вхожу в ситуацию",
+      "canDo": "Могу прочитать, понять, рассказать и улучшить короткий текст",
+      "minutes": 12,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "This is my school day.",
+          "ru": "Это мой школьный день.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "First, I have English.",
+          "ru": "Сначала у меня английский.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I like it because we speak together.",
+          "ru": "Мне нравится, потому что мы говорим вместе.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-project-02",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "project",
+      "unitOrder": 6,
+      "encounter": 2,
+      "order": 17,
+      "title": "Мой мини проект: Тренируюсь",
+      "canDo": "Могу прочитать, понять, рассказать и улучшить короткий текст",
+      "minutes": 12,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "This is my school day.",
+          "ru": "Это мой школьный день.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "First, I have English.",
+          "ru": "Сначала у меня английский.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I like it because we speak together.",
+          "ru": "Мне нравится, потому что мы говорим вместе.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "child-a1-project-03",
+      "audience": "child",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "project",
+      "unitOrder": 6,
+      "encounter": 3,
+      "order": 18,
+      "title": "Мой мини проект: Действую сам",
+      "canDo": "Могу прочитать, понять, рассказать и улучшить короткий текст",
+      "minutes": 12,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "This is my school day.",
+          "ru": "Это мой школьный день.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "First, I have English.",
+          "ru": "Сначала у меня английский.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I like it because we speak together.",
+          "ru": "Мне нравится, потому что мы говорим вместе.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу прочитать, понять, рассказать и улучшить короткий текст. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-entry-01",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "entry",
+      "unitOrder": 1,
+      "encounter": 1,
+      "order": 1,
+      "title": "Знакомство и контакты: Вхожу в ситуацию",
+      "canDo": "Могу представиться и обменяться контактами",
+      "minutes": 15,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Hello, my name is Anna.",
+          "ru": "Здравствуйте, меня зовут Анна.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "introduce-self"
+          }
+        },
+        {
+          "en": "I work in Almaty.",
+          "ru": "Я работаю в Алматы.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "My phone number is 123.",
+          "ru": "Мой номер телефона 123.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": true
+    },
+    {
+      "id": "adult-a1-entry-02",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "entry",
+      "unitOrder": 1,
+      "encounter": 2,
+      "order": 2,
+      "title": "Знакомство и контакты: Тренируюсь",
+      "canDo": "Могу представиться и обменяться контактами",
+      "minutes": 15,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Hello, my name is Anna.",
+          "ru": "Здравствуйте, меня зовут Анна.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "introduce-self"
+          }
+        },
+        {
+          "en": "I work in Almaty.",
+          "ru": "Я работаю в Алматы.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "My phone number is 123.",
+          "ru": "Мой номер телефона 123.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-entry-03",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "entry",
+      "unitOrder": 1,
+      "encounter": 3,
+      "order": 3,
+      "title": "Знакомство и контакты: Действую сам",
+      "canDo": "Могу представиться и обменяться контактами",
+      "minutes": 15,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Hello, my name is Anna.",
+          "ru": "Здравствуйте, меня зовут Анна.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "introduce-self"
+          }
+        },
+        {
+          "en": "I work in Almaty.",
+          "ru": "Я работаю в Алматы.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "My phone number is 123.",
+          "ru": "Мой номер телефона 123.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу представиться и обменяться контактами. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-routine-01",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "routine",
+      "unitOrder": 2,
+      "encounter": 1,
+      "order": 4,
+      "title": "Обычный день: Вхожу в ситуацию",
+      "canDo": "Могу описать свой день и время",
+      "minutes": 15,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I start work at nine.",
+          "ru": "Я начинаю работу в девять.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "en": "I usually have lunch at one.",
+          "ru": "Обычно я обедаю в час.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "en": "I do not work on Sunday.",
+          "ru": "Я не работаю в воскресенье.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-routine-02",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "routine",
+      "unitOrder": 2,
+      "encounter": 2,
+      "order": 5,
+      "title": "Обычный день: Тренируюсь",
+      "canDo": "Могу описать свой день и время",
+      "minutes": 15,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I start work at nine.",
+          "ru": "Я начинаю работу в девять.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "en": "I usually have lunch at one.",
+          "ru": "Обычно я обедаю в час.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "en": "I do not work on Sunday.",
+          "ru": "Я не работаю в воскресенье.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-routine-03",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "routine",
+      "unitOrder": 2,
+      "encounter": 3,
+      "order": 6,
+      "title": "Обычный день: Действую сам",
+      "canDo": "Могу описать свой день и время",
+      "minutes": 15,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I start work at nine.",
+          "ru": "Я начинаю работу в девять.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "en": "I usually have lunch at one.",
+          "ru": "Обычно я обедаю в час.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "en": "I do not work on Sunday.",
+          "ru": "Я не работаю в воскресенье.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу описать свой день и время. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-service-01",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "service",
+      "unitOrder": 3,
+      "encounter": 1,
+      "order": 7,
+      "title": "Кафе и магазин: Вхожу в ситуацию",
+      "canDo": "Могу сделать заказ и решить простую проблему",
+      "minutes": 15,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I would like a coffee, please.",
+          "ru": "Я бы хотел кофе, пожалуйста.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "How much is it?",
+          "ru": "Сколько это стоит?",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "This is not my order.",
+          "ru": "Это не мой заказ.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-service-02",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "service",
+      "unitOrder": 3,
+      "encounter": 2,
+      "order": 8,
+      "title": "Кафе и магазин: Тренируюсь",
+      "canDo": "Могу сделать заказ и решить простую проблему",
+      "minutes": 15,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I would like a coffee, please.",
+          "ru": "Я бы хотел кофе, пожалуйста.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "How much is it?",
+          "ru": "Сколько это стоит?",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "This is not my order.",
+          "ru": "Это не мой заказ.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-service-03",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "service",
+      "unitOrder": 3,
+      "encounter": 3,
+      "order": 9,
+      "title": "Кафе и магазин: Действую сам",
+      "canDo": "Могу сделать заказ и решить простую проблему",
+      "minutes": 15,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "I would like a coffee, please.",
+          "ru": "Я бы хотел кофе, пожалуйста.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "How much is it?",
+          "ru": "Сколько это стоит?",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "This is not my order.",
+          "ru": "Это не мой заказ.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу сделать заказ и решить простую проблему. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-travel-01",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "travel",
+      "unitOrder": 4,
+      "encounter": 1,
+      "order": 10,
+      "title": "Город и поездка: Вхожу в ситуацию",
+      "canDo": "Могу спросить дорогу и уточнить время",
+      "minutes": 15,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Excuse me, where is the station?",
+          "ru": "Извините, где станция?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Go straight and turn right.",
+          "ru": "Идите прямо и поверните направо.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "The train leaves at seven.",
+          "ru": "Поезд отправляется в семь.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-travel-02",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "travel",
+      "unitOrder": 4,
+      "encounter": 2,
+      "order": 11,
+      "title": "Город и поездка: Тренируюсь",
+      "canDo": "Могу спросить дорогу и уточнить время",
+      "minutes": 15,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Excuse me, where is the station?",
+          "ru": "Извините, где станция?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Go straight and turn right.",
+          "ru": "Идите прямо и поверните направо.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "The train leaves at seven.",
+          "ru": "Поезд отправляется в семь.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-travel-03",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "travel",
+      "unitOrder": 4,
+      "encounter": 3,
+      "order": 12,
+      "title": "Город и поездка: Действую сам",
+      "canDo": "Могу спросить дорогу и уточнить время",
+      "minutes": 15,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Excuse me, where is the station?",
+          "ru": "Извините, где станция?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Go straight and turn right.",
+          "ru": "Идите прямо и поверните направо.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "The train leaves at seven.",
+          "ru": "Поезд отправляется в семь.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу спросить дорогу и уточнить время. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-plans-01",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "plans",
+      "unitOrder": 5,
+      "encounter": 1,
+      "order": 13,
+      "title": "Помощь и планы: Вхожу в ситуацию",
+      "canDo": "Могу попросить помощь и договориться о встрече",
+      "minutes": 15,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Could you help me, please?",
+          "ru": "Вы можете мне помочь?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Yes, sure.",
+          "ru": "Да, конечно.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "accept-meeting"
+          }
+        },
+        {
+          "en": "Let us meet on Saturday at ten.",
+          "ru": "Давайте встретимся в субботу в десять.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-plans-02",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "plans",
+      "unitOrder": 5,
+      "encounter": 2,
+      "order": 14,
+      "title": "Помощь и планы: Тренируюсь",
+      "canDo": "Могу попросить помощь и договориться о встрече",
+      "minutes": 15,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Could you help me, please?",
+          "ru": "Вы можете мне помочь?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Yes, sure.",
+          "ru": "Да, конечно.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "accept-meeting"
+          }
+        },
+        {
+          "en": "Let us meet on Saturday at ten.",
+          "ru": "Давайте встретимся в субботу в десять.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-plans-03",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "plans",
+      "unitOrder": 5,
+      "encounter": 3,
+      "order": 15,
+      "title": "Помощь и планы: Действую сам",
+      "canDo": "Могу попросить помощь и договориться о встрече",
+      "minutes": 15,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Could you help me, please?",
+          "ru": "Вы можете мне помочь?",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "Yes, sure.",
+          "ru": "Да, конечно.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "accept-meeting"
+          }
+        },
+        {
+          "en": "Let us meet on Saturday at ten.",
+          "ru": "Давайте встретимся в субботу в десять.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу попросить помощь и договориться о встрече. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-project-01",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "project",
+      "unitOrder": 6,
+      "encounter": 1,
+      "order": 16,
+      "title": "Практическая история: Вхожу в ситуацию",
+      "canDo": "Могу понять, рассказать и улучшить короткую историю",
+      "minutes": 15,
+      "instruction": "Послушай фразы и выбери смысл без подсказки.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Yesterday I missed my bus.",
+          "ru": "Вчера я пропустил автобус.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I called my colleague.",
+          "ru": "Я позвонил коллеге.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "We met at the office at ten.",
+          "ru": "Мы встретились в офисе в десять.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "meaning",
+        "targetIndex": 0,
+        "method": "recognition"
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-project-02",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "project",
+      "unitOrder": 6,
+      "encounter": 2,
+      "order": 17,
+      "title": "Практическая история: Тренируюсь",
+      "canDo": "Могу понять, рассказать и улучшить короткую историю",
+      "minutes": 15,
+      "instruction": "Проведи короткий диалог из трёх связанных реплик без показа ответа.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Yesterday I missed my bus.",
+          "ru": "Вчера я пропустил автобус.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I called my colleague.",
+          "ru": "Я позвонил коллеге.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "We met at the office at ten.",
+          "ru": "Мы встретились в офисе в десять.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "dialogue",
+        "targetIndex": 0,
+        "method": "multi-turn-speaking",
+        "dialogueTurns": [
+          {
+            "promptRu": "Реплика 1. Начни разговор.",
+            "targetIndex": 0
+          },
+          {
+            "promptRu": "Реплика 2. Ответь собеседнику.",
+            "targetIndex": 1
+          },
+          {
+            "promptRu": "Реплика 3. Заверши обмен.",
+            "targetIndex": 2
+          }
+        ]
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    },
+    {
+      "id": "adult-a1-project-03",
+      "audience": "adult",
+      "level": "A1",
+      "course": "a1-v1",
+      "unit": "project",
+      "unitOrder": 6,
+      "encounter": 3,
+      "order": 18,
+      "title": "Практическая история: Действую сам",
+      "canDo": "Могу понять, рассказать и улучшить короткую историю",
+      "minutes": 15,
+      "instruction": "Напиши собственный ответ, получи ограниченную обратную связь и улучши черновик.",
+      "videoTask": "Нажми на динамик, выполни действие, затем ответь без готового текста.",
+      "video": null,
+      "chunks": [
+        {
+          "en": "Yesterday I missed my bus.",
+          "ru": "Вчера я пропустил автобус.",
+          "icon": "💬",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "I called my colleague.",
+          "ru": "Я позвонил коллеге.",
+          "icon": "👂",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "en": "We met at the office at ten.",
+          "ru": "Мы встретились в офисе в десять.",
+          "icon": "✍️",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        }
+      ],
+      "activeTask": {
+        "type": "writing-revision",
+        "targetIndex": 2,
+        "method": "own-draft-feedback-revision",
+        "writingPrompt": "Могу понять, рассказать и улучшить короткую историю. Напиши 2-3 собственных связанных предложения.",
+        "minWords": 8
+      },
+      "reviewAfterDays": [
+        1,
+        3,
+        7
+      ],
+      "isEntry": false
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "child-a1-entry-checkpoint",
+      "audience": "child",
+      "unit": "entry",
+      "unitOrder": 1,
+      "title": "Проверка темы Знакомство в классе",
+      "canDo": "Могу представиться и задать два вопроса",
+      "tasks": [
+        {
+          "id": "child-a1-entry-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Hello, my name is Anna.",
+          "promptRu": "Без подсказки: Привет, меня зовут Анна.",
+          "expected": "Hello, my name is Anna.",
+          "accepted": [],
+          "rule": {
+            "intent": "introduce-self"
+          },
+          "answer": "Привет, меня зовут Анна.",
+          "options": [
+            "Привет, меня зовут Анна.",
+            "Как тебя зовут?",
+            "Мне одиннадцать лет."
+          ]
+        },
+        {
+          "id": "child-a1-entry-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "What is your name?",
+          "promptRu": "Без подсказки: Как тебя зовут?",
+          "expected": "What is your name?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Как тебя зовут?",
+          "options": [
+            "Как тебя зовут?",
+            "Мне одиннадцать лет.",
+            "Привет, меня зовут Анна."
+          ]
+        },
+        {
+          "id": "child-a1-entry-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "I am eleven years old.",
+          "promptRu": "Без подсказки: Мне одиннадцать лет.",
+          "expected": "I am eleven years old.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "id": "child-a1-entry-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "Hello, my name is Anna.",
+          "promptRu": "Без подсказки: Привет, меня зовут Анна.",
+          "expected": "Hello, my name is Anna.",
+          "accepted": [],
+          "rule": {
+            "intent": "introduce-self"
+          }
+        },
+        {
+          "id": "child-a1-entry-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "What is your name?",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "What is your name?",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "Hello, my name is Anna.",
+            "What is your name?",
+            "I am eleven years old."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-a1-school-checkpoint",
+      "audience": "child",
+      "unit": "school",
+      "unitOrder": 2,
+      "title": "Проверка темы Школьный день",
+      "canDo": "Могу рассказать о своём школьном дне",
+      "tasks": [
+        {
+          "id": "child-a1-school-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "I go to school at eight.",
+          "promptRu": "Без подсказки: Я иду в школу в восемь.",
+          "expected": "I go to school at eight.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          },
+          "answer": "Я иду в школу в восемь.",
+          "options": [
+            "Я иду в школу в восемь.",
+            "Мой любимый предмет английский.",
+            "Мы обедаем в час."
+          ]
+        },
+        {
+          "id": "child-a1-school-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "My favourite subject is English.",
+          "promptRu": "Без подсказки: Мой любимый предмет английский.",
+          "expected": "My favourite subject is English.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Мой любимый предмет английский.",
+          "options": [
+            "Мой любимый предмет английский.",
+            "Мы обедаем в час.",
+            "Я иду в школу в восемь."
+          ]
+        },
+        {
+          "id": "child-a1-school-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "We have lunch at one.",
+          "promptRu": "Без подсказки: Мы обедаем в час.",
+          "expected": "We have lunch at one.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "id": "child-a1-school-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "I go to school at eight.",
+          "promptRu": "Без подсказки: Я иду в школу в восемь.",
+          "expected": "I go to school at eight.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "id": "child-a1-school-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "My favourite subject is English.",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "My favourite subject is English.",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "I go to school at eight.",
+            "My favourite subject is English.",
+            "We have lunch at one."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-a1-food-checkpoint",
+      "audience": "child",
+      "unit": "food",
+      "unitOrder": 3,
+      "title": "Проверка темы Еда и покупки",
+      "canDo": "Могу выбрать еду и спросить цену",
+      "tasks": [
+        {
+          "id": "child-a1-food-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "I would like an apple, please.",
+          "promptRu": "Без подсказки: Я хочу яблоко, пожалуйста.",
+          "expected": "I would like an apple, please.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Я хочу яблоко, пожалуйста.",
+          "options": [
+            "Я хочу яблоко, пожалуйста.",
+            "Сколько это стоит?",
+            "Мне не нравится лук."
+          ]
+        },
+        {
+          "id": "child-a1-food-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "How much is it?",
+          "promptRu": "Без подсказки: Сколько это стоит?",
+          "expected": "How much is it?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Сколько это стоит?",
+          "options": [
+            "Сколько это стоит?",
+            "Мне не нравится лук.",
+            "Я хочу яблоко, пожалуйста."
+          ]
+        },
+        {
+          "id": "child-a1-food-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "I do not like onions.",
+          "promptRu": "Без подсказки: Мне не нравится лук.",
+          "expected": "I do not like onions.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "child-a1-food-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "I would like an apple, please.",
+          "promptRu": "Без подсказки: Я хочу яблоко, пожалуйста.",
+          "expected": "I would like an apple, please.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "child-a1-food-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "How much is it?",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "How much is it?",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "I would like an apple, please.",
+            "How much is it?",
+            "I do not like onions."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-a1-town-checkpoint",
+      "audience": "child",
+      "unit": "town",
+      "unitOrder": 4,
+      "title": "Проверка темы Город и дорога",
+      "canDo": "Могу спросить дорогу и понять ответ",
+      "tasks": [
+        {
+          "id": "child-a1-town-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Where is the library?",
+          "promptRu": "Без подсказки: Где библиотека?",
+          "expected": "Where is the library?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Где библиотека?",
+          "options": [
+            "Где библиотека?",
+            "Иди прямо и поверни налево.",
+            "Она рядом со школой."
+          ]
+        },
+        {
+          "id": "child-a1-town-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "Go straight and turn left.",
+          "promptRu": "Без подсказки: Иди прямо и поверни налево.",
+          "expected": "Go straight and turn left.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Иди прямо и поверни налево.",
+          "options": [
+            "Иди прямо и поверни налево.",
+            "Она рядом со школой.",
+            "Где библиотека?"
+          ]
+        },
+        {
+          "id": "child-a1-town-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "It is next to the school.",
+          "promptRu": "Без подсказки: Она рядом со школой.",
+          "expected": "It is next to the school.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "child-a1-town-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "Where is the library?",
+          "promptRu": "Без подсказки: Где библиотека?",
+          "expected": "Where is the library?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "child-a1-town-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "Go straight and turn left.",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "Go straight and turn left.",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "Where is the library?",
+            "Go straight and turn left.",
+            "It is next to the school."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-a1-plans-checkpoint",
+      "audience": "child",
+      "unit": "plans",
+      "unitOrder": 5,
+      "title": "Проверка темы Друзья и планы",
+      "canDo": "Могу пригласить и согласовать время",
+      "tasks": [
+        {
+          "id": "child-a1-plans-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Would you like to play after school?",
+          "promptRu": "Без подсказки: Хочешь поиграть после школы?",
+          "expected": "Would you like to play after school?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Хочешь поиграть после школы?",
+          "options": [
+            "Хочешь поиграть после школы?",
+            "Да, конечно.",
+            "Давай встретимся в субботу в три."
+          ]
+        },
+        {
+          "id": "child-a1-plans-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "Yes, sure.",
+          "promptRu": "Без подсказки: Да, конечно.",
+          "expected": "Yes, sure.",
+          "accepted": [],
+          "rule": {
+            "intent": "accept-meeting"
+          },
+          "answer": "Да, конечно.",
+          "options": [
+            "Да, конечно.",
+            "Давай встретимся в субботу в три.",
+            "Хочешь поиграть после школы?"
+          ]
+        },
+        {
+          "id": "child-a1-plans-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "Let us meet on Saturday at three.",
+          "promptRu": "Без подсказки: Давай встретимся в субботу в три.",
+          "expected": "Let us meet on Saturday at three.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "id": "child-a1-plans-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "Would you like to play after school?",
+          "promptRu": "Без подсказки: Хочешь поиграть после школы?",
+          "expected": "Would you like to play after school?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "child-a1-plans-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "Yes, sure.",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "Yes, sure.",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "Would you like to play after school?",
+            "Yes, sure.",
+            "Let us meet on Saturday at three."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "child-a1-project-checkpoint",
+      "audience": "child",
+      "unit": "project",
+      "unitOrder": 6,
+      "title": "Проверка темы Мой мини проект",
+      "canDo": "Могу прочитать, понять, рассказать и улучшить короткий текст",
+      "tasks": [
+        {
+          "id": "child-a1-project-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "This is my school day.",
+          "promptRu": "Без подсказки: Это мой школьный день.",
+          "expected": "This is my school day.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Это мой школьный день.",
+          "options": [
+            "Это мой школьный день.",
+            "Сначала у меня английский.",
+            "Мне нравится, потому что мы говорим вместе."
+          ]
+        },
+        {
+          "id": "child-a1-project-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "First, I have English.",
+          "promptRu": "Без подсказки: Сначала у меня английский.",
+          "expected": "First, I have English.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Сначала у меня английский.",
+          "options": [
+            "Сначала у меня английский.",
+            "Мне нравится, потому что мы говорим вместе.",
+            "Это мой школьный день."
+          ]
+        },
+        {
+          "id": "child-a1-project-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "I like it because we speak together.",
+          "promptRu": "Без подсказки: Мне нравится, потому что мы говорим вместе.",
+          "expected": "I like it because we speak together.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "child-a1-project-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "This is my school day.",
+          "promptRu": "Без подсказки: Это мой школьный день.",
+          "expected": "This is my school day.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "child-a1-project-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "First, I have English.",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "First, I have English.",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "This is my school day.",
+            "First, I have English.",
+            "I like it because we speak together."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-a1-entry-checkpoint",
+      "audience": "adult",
+      "unit": "entry",
+      "unitOrder": 1,
+      "title": "Проверка темы Знакомство и контакты",
+      "canDo": "Могу представиться и обменяться контактами",
+      "tasks": [
+        {
+          "id": "adult-a1-entry-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Hello, my name is Anna.",
+          "promptRu": "Без подсказки: Здравствуйте, меня зовут Анна.",
+          "expected": "Hello, my name is Anna.",
+          "accepted": [],
+          "rule": {
+            "intent": "introduce-self"
+          },
+          "answer": "Здравствуйте, меня зовут Анна.",
+          "options": [
+            "Здравствуйте, меня зовут Анна.",
+            "Я работаю в Алматы.",
+            "Мой номер телефона 123."
+          ]
+        },
+        {
+          "id": "adult-a1-entry-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "I work in Almaty.",
+          "promptRu": "Без подсказки: Я работаю в Алматы.",
+          "expected": "I work in Almaty.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Я работаю в Алматы.",
+          "options": [
+            "Я работаю в Алматы.",
+            "Мой номер телефона 123.",
+            "Здравствуйте, меня зовут Анна."
+          ]
+        },
+        {
+          "id": "adult-a1-entry-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "My phone number is 123.",
+          "promptRu": "Без подсказки: Мой номер телефона 123.",
+          "expected": "My phone number is 123.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "id": "adult-a1-entry-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "Hello, my name is Anna.",
+          "promptRu": "Без подсказки: Здравствуйте, меня зовут Анна.",
+          "expected": "Hello, my name is Anna.",
+          "accepted": [],
+          "rule": {
+            "intent": "introduce-self"
+          }
+        },
+        {
+          "id": "adult-a1-entry-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "I work in Almaty.",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "I work in Almaty.",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "Hello, my name is Anna.",
+            "I work in Almaty.",
+            "My phone number is 123."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-a1-routine-checkpoint",
+      "audience": "adult",
+      "unit": "routine",
+      "unitOrder": 2,
+      "title": "Проверка темы Обычный день",
+      "canDo": "Могу описать свой день и время",
+      "tasks": [
+        {
+          "id": "adult-a1-routine-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "I start work at nine.",
+          "promptRu": "Без подсказки: Я начинаю работу в девять.",
+          "expected": "I start work at nine.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          },
+          "answer": "Я начинаю работу в девять.",
+          "options": [
+            "Я начинаю работу в девять.",
+            "Обычно я обедаю в час.",
+            "Я не работаю в воскресенье."
+          ]
+        },
+        {
+          "id": "adult-a1-routine-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "I usually have lunch at one.",
+          "promptRu": "Без подсказки: Обычно я обедаю в час.",
+          "expected": "I usually have lunch at one.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          },
+          "answer": "Обычно я обедаю в час.",
+          "options": [
+            "Обычно я обедаю в час.",
+            "Я не работаю в воскресенье.",
+            "Я начинаю работу в девять."
+          ]
+        },
+        {
+          "id": "adult-a1-routine-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "I do not work on Sunday.",
+          "promptRu": "Без подсказки: Я не работаю в воскресенье.",
+          "expected": "I do not work on Sunday.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "id": "adult-a1-routine-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "I start work at nine.",
+          "promptRu": "Без подсказки: Я начинаю работу в девять.",
+          "expected": "I start work at nine.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "id": "adult-a1-routine-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "I usually have lunch at one.",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "I usually have lunch at one.",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "I start work at nine.",
+            "I usually have lunch at one.",
+            "I do not work on Sunday."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-a1-service-checkpoint",
+      "audience": "adult",
+      "unit": "service",
+      "unitOrder": 3,
+      "title": "Проверка темы Кафе и магазин",
+      "canDo": "Могу сделать заказ и решить простую проблему",
+      "tasks": [
+        {
+          "id": "adult-a1-service-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "I would like a coffee, please.",
+          "promptRu": "Без подсказки: Я бы хотел кофе, пожалуйста.",
+          "expected": "I would like a coffee, please.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Я бы хотел кофе, пожалуйста.",
+          "options": [
+            "Я бы хотел кофе, пожалуйста.",
+            "Сколько это стоит?",
+            "Это не мой заказ."
+          ]
+        },
+        {
+          "id": "adult-a1-service-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "How much is it?",
+          "promptRu": "Без подсказки: Сколько это стоит?",
+          "expected": "How much is it?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Сколько это стоит?",
+          "options": [
+            "Сколько это стоит?",
+            "Это не мой заказ.",
+            "Я бы хотел кофе, пожалуйста."
+          ]
+        },
+        {
+          "id": "adult-a1-service-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "This is not my order.",
+          "promptRu": "Без подсказки: Это не мой заказ.",
+          "expected": "This is not my order.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "adult-a1-service-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "I would like a coffee, please.",
+          "promptRu": "Без подсказки: Я бы хотел кофе, пожалуйста.",
+          "expected": "I would like a coffee, please.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "adult-a1-service-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "How much is it?",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "How much is it?",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "I would like a coffee, please.",
+            "How much is it?",
+            "This is not my order."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-a1-travel-checkpoint",
+      "audience": "adult",
+      "unit": "travel",
+      "unitOrder": 4,
+      "title": "Проверка темы Город и поездка",
+      "canDo": "Могу спросить дорогу и уточнить время",
+      "tasks": [
+        {
+          "id": "adult-a1-travel-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Excuse me, where is the station?",
+          "promptRu": "Без подсказки: Извините, где станция?",
+          "expected": "Excuse me, where is the station?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Извините, где станция?",
+          "options": [
+            "Извините, где станция?",
+            "Идите прямо и поверните направо.",
+            "Поезд отправляется в семь."
+          ]
+        },
+        {
+          "id": "adult-a1-travel-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "Go straight and turn right.",
+          "promptRu": "Без подсказки: Идите прямо и поверните направо.",
+          "expected": "Go straight and turn right.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Идите прямо и поверните направо.",
+          "options": [
+            "Идите прямо и поверните направо.",
+            "Поезд отправляется в семь.",
+            "Извините, где станция?"
+          ]
+        },
+        {
+          "id": "adult-a1-travel-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "The train leaves at seven.",
+          "promptRu": "Без подсказки: Поезд отправляется в семь.",
+          "expected": "The train leaves at seven.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "id": "adult-a1-travel-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "Excuse me, where is the station?",
+          "promptRu": "Без подсказки: Извините, где станция?",
+          "expected": "Excuse me, where is the station?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "adult-a1-travel-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "Go straight and turn right.",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "Go straight and turn right.",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "Excuse me, where is the station?",
+            "Go straight and turn right.",
+            "The train leaves at seven."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-a1-plans-checkpoint",
+      "audience": "adult",
+      "unit": "plans",
+      "unitOrder": 5,
+      "title": "Проверка темы Помощь и планы",
+      "canDo": "Могу попросить помощь и договориться о встрече",
+      "tasks": [
+        {
+          "id": "adult-a1-plans-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Could you help me, please?",
+          "promptRu": "Без подсказки: Вы можете мне помочь?",
+          "expected": "Could you help me, please?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Вы можете мне помочь?",
+          "options": [
+            "Вы можете мне помочь?",
+            "Да, конечно.",
+            "Давайте встретимся в субботу в десять."
+          ]
+        },
+        {
+          "id": "adult-a1-plans-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "Yes, sure.",
+          "promptRu": "Без подсказки: Да, конечно.",
+          "expected": "Yes, sure.",
+          "accepted": [],
+          "rule": {
+            "intent": "accept-meeting"
+          },
+          "answer": "Да, конечно.",
+          "options": [
+            "Да, конечно.",
+            "Давайте встретимся в субботу в десять.",
+            "Вы можете мне помочь?"
+          ]
+        },
+        {
+          "id": "adult-a1-plans-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "Let us meet on Saturday at ten.",
+          "promptRu": "Без подсказки: Давайте встретимся в субботу в десять.",
+          "expected": "Let us meet on Saturday at ten.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "id": "adult-a1-plans-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "Could you help me, please?",
+          "promptRu": "Без подсказки: Вы можете мне помочь?",
+          "expected": "Could you help me, please?",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "adult-a1-plans-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "Yes, sure.",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "Yes, sure.",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "Could you help me, please?",
+            "Yes, sure.",
+            "Let us meet on Saturday at ten."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-a1-project-checkpoint",
+      "audience": "adult",
+      "unit": "project",
+      "unitOrder": 6,
+      "title": "Проверка темы Практическая история",
+      "canDo": "Могу понять, рассказать и улучшить короткую историю",
+      "tasks": [
+        {
+          "id": "adult-a1-project-listening",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Yesterday I missed my bus.",
+          "promptRu": "Без подсказки: Вчера я пропустил автобус.",
+          "expected": "Yesterday I missed my bus.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Вчера я пропустил автобус.",
+          "options": [
+            "Вчера я пропустил автобус.",
+            "Я позвонил коллеге.",
+            "Мы встретились в офисе в десять."
+          ]
+        },
+        {
+          "id": "adult-a1-project-reading",
+          "skill": "reading",
+          "type": "text-choice",
+          "promptEn": "I called my colleague.",
+          "promptRu": "Без подсказки: Я позвонил коллеге.",
+          "expected": "I called my colleague.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          },
+          "answer": "Я позвонил коллеге.",
+          "options": [
+            "Я позвонил коллеге.",
+            "Мы встретились в офисе в десять.",
+            "Вчера я пропустил автобус."
+          ]
+        },
+        {
+          "id": "adult-a1-project-spokenInteraction",
+          "skill": "spokenInteraction",
+          "type": "speech",
+          "promptEn": "We met at the office at ten.",
+          "promptRu": "Без подсказки: Мы встретились в офисе в десять.",
+          "expected": "We met at the office at ten.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase",
+            "protectTime": true
+          }
+        },
+        {
+          "id": "adult-a1-project-spokenProduction",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptEn": "Yesterday I missed my bus.",
+          "promptRu": "Без подсказки: Вчера я пропустил автобус.",
+          "expected": "Yesterday I missed my bus.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
+        },
+        {
+          "id": "adult-a1-project-writing",
+          "skill": "writing",
+          "type": "structured-write",
+          "promptEn": "I called my colleague.",
+          "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+          "expected": "I called my colleague.",
+          "accepted": [],
+          "rule": {
+            "intent": "structured-write",
+            "minWords": 8
+          },
+          "forbiddenSamples": [
+            "Yesterday I missed my bus.",
+            "I called my colleague.",
+            "We met at the office at ten."
+          ]
+        }
+      ]
+    }
+  ],
+  "exitAssessment": {
+    "passRule": "two-of-three-per-skill-all-five-skills",
+    "profiles": [
+      {
+        "audience": "child",
+        "title": "Итог A1",
+        "claim": "Пять навыков проверяются отдельно. Самопроверка не закрывает навык.",
+        "skills": [
+          {
+            "id": "listening",
+            "title": "Слушание",
+            "tasks": [
+              {
+                "id": "child-a1-exit-listening-1",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "Hello, my name is Anna.",
+                "promptRu": "Выполни без подсказки: Привет, меня зовут Анна.",
+                "expected": "Hello, my name is Anna.",
+                "accepted": [],
+                "rule": {
+                  "intent": "introduce-self"
+                },
+                "answer": "Привет, меня зовут Анна.",
+                "options": [
+                  "Привет, меня зовут Анна.",
+                  "Мой любимый предмет английский.",
+                  "Мне не нравится лук."
+                ]
+              },
+              {
+                "id": "child-a1-exit-listening-2",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "What is your name?",
+                "promptRu": "Выполни без подсказки: Как тебя зовут?",
+                "expected": "What is your name?",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                },
+                "answer": "Как тебя зовут?",
+                "options": [
+                  "Как тебя зовут?",
+                  "Мы обедаем в час.",
+                  "Где библиотека?"
+                ]
+              },
+              {
+                "id": "child-a1-exit-listening-3",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "I am eleven years old.",
+                "promptRu": "Выполни без подсказки: Мне одиннадцать лет.",
+                "expected": "I am eleven years old.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase",
+                  "protectTime": true
+                },
+                "answer": "Мне одиннадцать лет.",
+                "options": [
+                  "Мне одиннадцать лет.",
+                  "Я хочу яблоко, пожалуйста.",
+                  "Иди прямо и поверни налево."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "reading",
+            "title": "Чтение",
+            "tasks": [
+              {
+                "id": "child-a1-exit-reading-1",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "I go to school at eight.",
+                "promptRu": "Выполни без подсказки: Я иду в школу в восемь.",
+                "expected": "I go to school at eight.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase",
+                  "protectTime": true
+                },
+                "answer": "Я иду в школу в восемь.",
+                "options": [
+                  "Я иду в школу в восемь.",
+                  "Мой любимый предмет английский.",
+                  "Мне не нравится лук."
+                ]
+              },
+              {
+                "id": "child-a1-exit-reading-2",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "My favourite subject is English.",
+                "promptRu": "Выполни без подсказки: Мой любимый предмет английский.",
+                "expected": "My favourite subject is English.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                },
+                "answer": "Мой любимый предмет английский.",
+                "options": [
+                  "Мой любимый предмет английский.",
+                  "Мы обедаем в час.",
+                  "Где библиотека?"
+                ]
+              },
+              {
+                "id": "child-a1-exit-reading-3",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "We have lunch at one.",
+                "promptRu": "Выполни без подсказки: Мы обедаем в час.",
+                "expected": "We have lunch at one.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase",
+                  "protectTime": true
+                },
+                "answer": "Мы обедаем в час.",
+                "options": [
+                  "Мы обедаем в час.",
+                  "Я хочу яблоко, пожалуйста.",
+                  "Иди прямо и поверни налево."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "spokenInteraction",
+            "title": "Диалог",
+            "tasks": [
+              {
+                "id": "child-a1-exit-spokenInteraction-1",
+                "skill": "spokenInteraction",
+                "type": "speech",
+                "promptEn": "I would like an apple, please.",
+                "promptRu": "Выполни без подсказки: Я хочу яблоко, пожалуйста.",
+                "expected": "I would like an apple, please.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              },
+              {
+                "id": "child-a1-exit-spokenInteraction-2",
+                "skill": "spokenInteraction",
+                "type": "speech",
+                "promptEn": "How much is it?",
+                "promptRu": "Выполни без подсказки: Сколько это стоит?",
+                "expected": "How much is it?",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              },
+              {
+                "id": "child-a1-exit-spokenInteraction-3",
+                "skill": "spokenInteraction",
+                "type": "speech",
+                "promptEn": "I do not like onions.",
+                "promptRu": "Выполни без подсказки: Мне не нравится лук.",
+                "expected": "I do not like onions.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              }
+            ]
+          },
+          {
+            "id": "spokenProduction",
+            "title": "Устная речь",
+            "tasks": [
+              {
+                "id": "child-a1-exit-spokenProduction-1",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptEn": "Where is the library?",
+                "promptRu": "Выполни без подсказки: Где библиотека?",
+                "expected": "Where is the library?",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              },
+              {
+                "id": "child-a1-exit-spokenProduction-2",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptEn": "Go straight and turn left.",
+                "promptRu": "Выполни без подсказки: Иди прямо и поверни налево.",
+                "expected": "Go straight and turn left.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              },
+              {
+                "id": "child-a1-exit-spokenProduction-3",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptEn": "It is next to the school.",
+                "promptRu": "Выполни без подсказки: Она рядом со школой.",
+                "expected": "It is next to the school.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              }
+            ]
+          },
+          {
+            "id": "writing",
+            "title": "Письмо",
+            "tasks": [
+              {
+                "id": "child-a1-exit-writing-1",
+                "skill": "writing",
+                "type": "structured-write",
+                "promptEn": "Would you like to play after school?",
+                "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+                "expected": "Would you like to play after school?",
+                "accepted": [],
+                "rule": {
+                  "intent": "structured-write",
+                  "minWords": 8
+                },
+                "forbiddenSamples": [
+                  "Hello, my name is Anna.",
+                  "What is your name?",
+                  "I am eleven years old.",
+                  "I go to school at eight.",
+                  "My favourite subject is English.",
+                  "We have lunch at one.",
+                  "I would like an apple, please.",
+                  "How much is it?",
+                  "I do not like onions.",
+                  "Where is the library?",
+                  "Go straight and turn left.",
+                  "It is next to the school.",
+                  "Would you like to play after school?",
+                  "Yes, sure.",
+                  "Let us meet on Saturday at three.",
+                  "This is my school day.",
+                  "First, I have English.",
+                  "I like it because we speak together."
+                ]
+              },
+              {
+                "id": "child-a1-exit-writing-2",
+                "skill": "writing",
+                "type": "structured-write",
+                "promptEn": "Yes, sure.",
+                "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+                "expected": "Yes, sure.",
+                "accepted": [],
+                "rule": {
+                  "intent": "structured-write",
+                  "minWords": 8
+                },
+                "forbiddenSamples": [
+                  "Hello, my name is Anna.",
+                  "What is your name?",
+                  "I am eleven years old.",
+                  "I go to school at eight.",
+                  "My favourite subject is English.",
+                  "We have lunch at one.",
+                  "I would like an apple, please.",
+                  "How much is it?",
+                  "I do not like onions.",
+                  "Where is the library?",
+                  "Go straight and turn left.",
+                  "It is next to the school.",
+                  "Would you like to play after school?",
+                  "Yes, sure.",
+                  "Let us meet on Saturday at three.",
+                  "This is my school day.",
+                  "First, I have English.",
+                  "I like it because we speak together."
+                ]
+              },
+              {
+                "id": "child-a1-exit-writing-3",
+                "skill": "writing",
+                "type": "structured-write",
+                "promptEn": "Let us meet on Saturday at three.",
+                "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+                "expected": "Let us meet on Saturday at three.",
+                "accepted": [],
+                "rule": {
+                  "intent": "structured-write",
+                  "minWords": 8
+                },
+                "forbiddenSamples": [
+                  "Hello, my name is Anna.",
+                  "What is your name?",
+                  "I am eleven years old.",
+                  "I go to school at eight.",
+                  "My favourite subject is English.",
+                  "We have lunch at one.",
+                  "I would like an apple, please.",
+                  "How much is it?",
+                  "I do not like onions.",
+                  "Where is the library?",
+                  "Go straight and turn left.",
+                  "It is next to the school.",
+                  "Would you like to play after school?",
+                  "Yes, sure.",
+                  "Let us meet on Saturday at three.",
+                  "This is my school day.",
+                  "First, I have English.",
+                  "I like it because we speak together."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "audience": "adult",
+        "title": "Итог A1",
+        "claim": "Пять навыков проверяются отдельно. Самопроверка не закрывает навык.",
+        "skills": [
+          {
+            "id": "listening",
+            "title": "Слушание",
+            "tasks": [
+              {
+                "id": "adult-a1-exit-listening-1",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "Hello, my name is Anna.",
+                "promptRu": "Выполни без подсказки: Здравствуйте, меня зовут Анна.",
+                "expected": "Hello, my name is Anna.",
+                "accepted": [],
+                "rule": {
+                  "intent": "introduce-self"
+                },
+                "answer": "Здравствуйте, меня зовут Анна.",
+                "options": [
+                  "Здравствуйте, меня зовут Анна.",
+                  "Обычно я обедаю в час.",
+                  "Это не мой заказ."
+                ]
+              },
+              {
+                "id": "adult-a1-exit-listening-2",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "I work in Almaty.",
+                "promptRu": "Выполни без подсказки: Я работаю в Алматы.",
+                "expected": "I work in Almaty.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                },
+                "answer": "Я работаю в Алматы.",
+                "options": [
+                  "Я работаю в Алматы.",
+                  "Я не работаю в воскресенье.",
+                  "Извините, где станция?"
+                ]
+              },
+              {
+                "id": "adult-a1-exit-listening-3",
+                "skill": "listening",
+                "type": "audio-choice",
+                "promptEn": "My phone number is 123.",
+                "promptRu": "Выполни без подсказки: Мой номер телефона 123.",
+                "expected": "My phone number is 123.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase",
+                  "protectTime": true
+                },
+                "answer": "Мой номер телефона 123.",
+                "options": [
+                  "Мой номер телефона 123.",
+                  "Я бы хотел кофе, пожалуйста.",
+                  "Идите прямо и поверните направо."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "reading",
+            "title": "Чтение",
+            "tasks": [
+              {
+                "id": "adult-a1-exit-reading-1",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "I start work at nine.",
+                "promptRu": "Выполни без подсказки: Я начинаю работу в девять.",
+                "expected": "I start work at nine.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase",
+                  "protectTime": true
+                },
+                "answer": "Я начинаю работу в девять.",
+                "options": [
+                  "Я начинаю работу в девять.",
+                  "Обычно я обедаю в час.",
+                  "Это не мой заказ."
+                ]
+              },
+              {
+                "id": "adult-a1-exit-reading-2",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "I usually have lunch at one.",
+                "promptRu": "Выполни без подсказки: Обычно я обедаю в час.",
+                "expected": "I usually have lunch at one.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase",
+                  "protectTime": true
+                },
+                "answer": "Обычно я обедаю в час.",
+                "options": [
+                  "Обычно я обедаю в час.",
+                  "Я не работаю в воскресенье.",
+                  "Извините, где станция?"
+                ]
+              },
+              {
+                "id": "adult-a1-exit-reading-3",
+                "skill": "reading",
+                "type": "text-choice",
+                "promptEn": "I do not work on Sunday.",
+                "promptRu": "Выполни без подсказки: Я не работаю в воскресенье.",
+                "expected": "I do not work on Sunday.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase",
+                  "protectTime": true
+                },
+                "answer": "Я не работаю в воскресенье.",
+                "options": [
+                  "Я не работаю в воскресенье.",
+                  "Я бы хотел кофе, пожалуйста.",
+                  "Идите прямо и поверните направо."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "spokenInteraction",
+            "title": "Диалог",
+            "tasks": [
+              {
+                "id": "adult-a1-exit-spokenInteraction-1",
+                "skill": "spokenInteraction",
+                "type": "speech",
+                "promptEn": "I would like a coffee, please.",
+                "promptRu": "Выполни без подсказки: Я бы хотел кофе, пожалуйста.",
+                "expected": "I would like a coffee, please.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              },
+              {
+                "id": "adult-a1-exit-spokenInteraction-2",
+                "skill": "spokenInteraction",
+                "type": "speech",
+                "promptEn": "How much is it?",
+                "promptRu": "Выполни без подсказки: Сколько это стоит?",
+                "expected": "How much is it?",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              },
+              {
+                "id": "adult-a1-exit-spokenInteraction-3",
+                "skill": "spokenInteraction",
+                "type": "speech",
+                "promptEn": "This is not my order.",
+                "promptRu": "Выполни без подсказки: Это не мой заказ.",
+                "expected": "This is not my order.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              }
+            ]
+          },
+          {
+            "id": "spokenProduction",
+            "title": "Устная речь",
+            "tasks": [
+              {
+                "id": "adult-a1-exit-spokenProduction-1",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptEn": "Excuse me, where is the station?",
+                "promptRu": "Выполни без подсказки: Извините, где станция?",
+                "expected": "Excuse me, where is the station?",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              },
+              {
+                "id": "adult-a1-exit-spokenProduction-2",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptEn": "Go straight and turn right.",
+                "promptRu": "Выполни без подсказки: Идите прямо и поверните направо.",
+                "expected": "Go straight and turn right.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase"
+                }
+              },
+              {
+                "id": "adult-a1-exit-spokenProduction-3",
+                "skill": "spokenProduction",
+                "type": "speech",
+                "promptEn": "The train leaves at seven.",
+                "promptRu": "Выполни без подсказки: Поезд отправляется в семь.",
+                "expected": "The train leaves at seven.",
+                "accepted": [],
+                "rule": {
+                  "intent": "closed-phrase",
+                  "protectTime": true
+                }
+              }
+            ]
+          },
+          {
+            "id": "writing",
+            "title": "Письмо",
+            "tasks": [
+              {
+                "id": "adult-a1-exit-writing-1",
+                "skill": "writing",
+                "type": "structured-write",
+                "promptEn": "Could you help me, please?",
+                "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+                "expected": "Could you help me, please?",
+                "accepted": [],
+                "rule": {
+                  "intent": "structured-write",
+                  "minWords": 8
+                },
+                "forbiddenSamples": [
+                  "Hello, my name is Anna.",
+                  "I work in Almaty.",
+                  "My phone number is 123.",
+                  "I start work at nine.",
+                  "I usually have lunch at one.",
+                  "I do not work on Sunday.",
+                  "I would like a coffee, please.",
+                  "How much is it?",
+                  "This is not my order.",
+                  "Excuse me, where is the station?",
+                  "Go straight and turn right.",
+                  "The train leaves at seven.",
+                  "Could you help me, please?",
+                  "Yes, sure.",
+                  "Let us meet on Saturday at ten.",
+                  "Yesterday I missed my bus.",
+                  "I called my colleague.",
+                  "We met at the office at ten."
+                ]
+              },
+              {
+                "id": "adult-a1-exit-writing-2",
+                "skill": "writing",
+                "type": "structured-write",
+                "promptEn": "Yes, sure.",
+                "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+                "expected": "Yes, sure.",
+                "accepted": [],
+                "rule": {
+                  "intent": "structured-write",
+                  "minWords": 8
+                },
+                "forbiddenSamples": [
+                  "Hello, my name is Anna.",
+                  "I work in Almaty.",
+                  "My phone number is 123.",
+                  "I start work at nine.",
+                  "I usually have lunch at one.",
+                  "I do not work on Sunday.",
+                  "I would like a coffee, please.",
+                  "How much is it?",
+                  "This is not my order.",
+                  "Excuse me, where is the station?",
+                  "Go straight and turn right.",
+                  "The train leaves at seven.",
+                  "Could you help me, please?",
+                  "Yes, sure.",
+                  "Let us meet on Saturday at ten.",
+                  "Yesterday I missed my bus.",
+                  "I called my colleague.",
+                  "We met at the office at ten."
+                ]
+              },
+              {
+                "id": "adult-a1-exit-writing-3",
+                "skill": "writing",
+                "type": "structured-write",
+                "promptEn": "Let us meet on Saturday at ten.",
+                "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
+                "expected": "Let us meet on Saturday at ten.",
+                "accepted": [],
+                "rule": {
+                  "intent": "structured-write",
+                  "minWords": 8
+                },
+                "forbiddenSamples": [
+                  "Hello, my name is Anna.",
+                  "I work in Almaty.",
+                  "My phone number is 123.",
+                  "I start work at nine.",
+                  "I usually have lunch at one.",
+                  "I do not work on Sunday.",
+                  "I would like a coffee, please.",
+                  "How much is it?",
+                  "This is not my order.",
+                  "Excuse me, where is the station?",
+                  "Go straight and turn right.",
+                  "The train leaves at seven.",
+                  "Could you help me, please?",
+                  "Yes, sure.",
+                  "Let us meet on Saturday at ten.",
+                  "Yesterday I missed my bus.",
+                  "I called my colleague.",
+                  "We met at the office at ten."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

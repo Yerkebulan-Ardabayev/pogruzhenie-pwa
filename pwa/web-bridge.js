@@ -1,6 +1,10 @@
 import {grammarLesson, speakingSample, writingHints, basicWritingCheck, onlineVideos} from "./offline-learning.js";
+import {LEARNING_SCHEMA_VERSION, RELEASE_ID, migrateLearningState, scoreLearningPhrase, validateBackupPayload} from "./learning-model.js";
 
 const DB_NAME = "pogruzhenie-pwa";
+// The record schema is versioned inside the `state` value. IndexedDB itself
+// stays at version 1 because no object store changed. This keeps the previous
+// published client able to open the same data during a code rollback.
 const DB_VERSION = 1;
 const STORE_NAME = "records";
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -677,8 +681,13 @@ function unavailable(feature) {
 export const bridge = {
   async call(cmd, args = {}) {
     switch (cmd) {
-      case "state.load": return {data: await readRecord("state", {})};
-      case "state.save": await writeRecord("state", args.data || {}); return {ok: true};
+      case "state.load": {
+        const before = await readRecord("state", {});
+        const data = migrateLearningState(before);
+        if (JSON.stringify(before) !== JSON.stringify(data)) await writeRecord("state", data);
+        return {data};
+      }
+      case "state.save": await writeRecord("state", migrateLearningState(args.data || {})); return {ok: true};
       case "words.load": return {data: await readRecord("words", {list: []})};
       case "words.save": await writeRecord("words", args.data || {list: []}); return {ok: true};
       case "store.load": {
@@ -701,7 +710,15 @@ export const bridge = {
       case "plan": {
         const day = Number(args.day) || mondayDay();
         if (day < 1 || day > 7) fail("нет такого дня недели");
-        return {blocks: planFor(day)};
+        let blocks = planFor(day);
+        if (args.audience === "child") {
+          blocks = blocks.filter((item) => !["film_parse", "film_full", "videos5"].includes(item.key));
+          blocks = blocks.map((item) => ({...item,
+            title:item.key === "write" ? "Написать 3-5 предложений и улучшить после проверки" : item.key === "speak" ? "Ответить вслух двумя связанными репликами" : item.title,
+            note:item.key === "video_watch" ? "Короткие возрастные видео из детского маршрута" : item.note,
+          }));
+        }
+        return {blocks};
       }
       case "streak": {
         const dates = new Set(args.dates || []);
@@ -748,15 +765,18 @@ export const bridge = {
       }
       case "seed": return {data: await loadSeed(String(args.name || ""))};
       case "course.load": {
-        const response = await fetch(new URL("data/course/pre-a1/catalog.json", import.meta.url));
-        if (!response.ok) fail("курс Pre-A1 не найден");
+        const level = String(args.level || "PRE_A1").toUpperCase();
+        const path = level === "A1" ? "data/course/a1/catalog.json" : "data/course/pre-a1/catalog.json";
+        const response = await fetch(new URL(path, import.meta.url));
+        if (!response.ok) fail(`курс ${level} не найден`);
         return {data: await response.json()};
       }
+      case "release.info": return {releaseId:RELEASE_ID, schemaVersion:LEARNING_SCHEMA_VERSION};
       case "tools": return {mode: "pwa", ytdlp: "", claude: "", whisper: "", hasToken: false};
       case "typing":
       case "theme": return {ok: true};
       case "zoom": {
-        if (args.dir === "in") pwaZoom = Math.min(150, pwaZoom + 10);
+        if (args.dir === "in") pwaZoom = Math.min(200, pwaZoom + 10);
         if (args.dir === "out") pwaZoom = Math.max(80, pwaZoom - 10);
         if (args.dir === "reset") pwaZoom = 100;
         document.body.style.zoom = `${pwaZoom / 100}`;
@@ -774,7 +794,7 @@ export const bridge = {
       case "limitStatus": return {blocked: false};
       case "speak": return speechSynthesisCall(String(args.text || ""), String(args.lang || "en-US"));
       case "speech.check": return recognizeSpeech();
-      case "speech.score": return scorePhrase(String(args.expected || ""), String(args.heard || ""), args.accepted || []);
+      case "speech.score": return scoreLearningPhrase(String(args.expected || ""), String(args.heard || ""), args.accepted || [], args.rule || {});
       case "rec.start": return startRecording();
       case "rec.stop": return stopRecording();
       case "rec.delete": recordings.delete(String(args.path || "")); return {ok: true};
@@ -830,7 +850,9 @@ export const bridge = {
     await window.flushPwaData?.();
     const payload = {
       format: "pogruzhenie-pwa-backup",
-      version: 1,
+      version: 2,
+      releaseId: RELEASE_ID,
+      schemaVersion: LEARNING_SCHEMA_VERSION,
       exportedAt: new Date().toISOString(),
       records: await allRecords(),
       writingDraft: localStorage.getItem("pogruzhenie-writing-draft") || "",
@@ -857,12 +879,11 @@ export const bridge = {
     } catch {
       fail("резервная копия не является JSON-файлом");
     }
-    if (payload?.format !== "pogruzhenie-pwa-backup" || payload.version !== 1 || !payload.records) {
-      fail("это не резервная копия PWA «Погружение»");
-    }
+    validateBackupPayload(payload);
     const allowed = Object.fromEntries(Object.entries(payload.records).filter(([key]) => (
       key === "state" || key === "words" || key.startsWith("store:") || key.startsWith("backup:")
     )));
+    if (allowed.state) allowed.state = migrateLearningState(allowed.state);
     await replaceRecords(allowed);
     localStorage.setItem("pogruzhenie-writing-draft", String(payload.writingDraft || ""));
     location.reload();
@@ -878,7 +899,10 @@ function installModeText() {
   if (matchMedia("(display-mode: standalone)").matches || navigator.standalone === true) {
     return "Открыто отдельным приложением. Обновления проверяются автоматически.";
   }
-  return "На iPhone: открой в Safari, нажми «Поделиться», затем «На экран Домой».";
+  const ua = navigator.userAgent || "";
+  if (/huawei|android/i.test(ua)) return "На Huawei или Android: открой меню браузера и выбери «Установить приложение» или «Добавить на главный экран».";
+  if (/iphone|ipad|ipod/i.test(ua)) return "На iPhone или iPad: открой в Safari, нажми «Поделиться», затем «На экран Домой».";
+  return "Открой меню браузера и выбери «Установить приложение» или «Добавить на главный экран».";
 }
 
 function updateIsSafe() {
@@ -915,27 +939,39 @@ async function registerServiceWorker() {
     return;
   }
   let hadController = Boolean(navigator.serviceWorker.controller);
-  let reloading = false;
-  const reload = async () => {
-    if (reloading) return;
-    reloading = true;
-    updatePwaStatus("Сохраняю данные и применяю обновление…");
-    await window.flushPwaData?.();
+  let applying = false;
+  let reloadStarted = false;
+  const reloadOnce = () => {
+    if (reloadStarted) return;
+    reloadStarted = true;
     location.reload();
+  };
+  const applyWaitingWorker = async (worker) => {
+    if (applying || !worker) return;
+    updatePwaStatus("Сохраняю данные и применяю обновление…");
+    try {
+      await window.flushPwaData?.();
+      applying = true;
+      worker.addEventListener("statechange", () => {
+        if (applying && worker.state === "activated") reloadOnce();
+      });
+      worker.postMessage({type:"APPLY_UPDATE"});
+    } catch (error) {
+      updatePwaStatus("Не удалось сохранить текущую работу. Обновление не применено.");
+      throw error;
+    }
+  };
+  const offerUpdate = (worker) => {
+    if (!worker || applying) return;
+    updatePwaStatus("Новая версия полностью загружена и ждёт подтверждения.");
+    showUpdateBanner(() => applyWaitingWorker(worker));
   };
   navigator.serviceWorker.addEventListener("controllerchange", () => {
     if (!hadController) {
       hadController = true;
       return;
     }
-    updatePwaStatus("Новая версия загружена. Прогресс сохранён.");
-    showUpdateBanner(reload);
-    const timer = setInterval(() => {
-      if (updateIsSafe()) {
-        clearInterval(timer);
-        reload();
-      }
-    }, 1000);
+    if (applying) reloadOnce();
   });
   try {
     const workerUrl = new URL("../sw.js", import.meta.url);
@@ -944,6 +980,16 @@ async function registerServiceWorker() {
       updateViaCache: "none",
     });
     updatePwaStatus(installModeText());
+    if (registration.waiting && navigator.serviceWorker.controller) offerUpdate(registration.waiting);
+    registration.addEventListener("updatefound", () => {
+      const installing = registration.installing;
+      if (!installing) return;
+      installing.addEventListener("statechange", () => {
+        if (installing.state === "installed" && navigator.serviceWorker.controller) {
+          offerUpdate(registration.waiting || installing);
+        }
+      });
+    });
     const check = () => {
       if (navigator.onLine) registration.update().catch(() => {});
     };
@@ -964,6 +1010,10 @@ function preparePwaPage() {
   document.documentElement.classList.add("pwa");
   const card = document.getElementById("pwaCard");
   if (card) card.classList.remove("hidden");
+  bridge.call("release.info").then((info) => {
+    const label = document.getElementById("releaseId");
+    if (label) label.textContent = `${info.releaseId} · схема ${info.schemaVersion}`;
+  }).catch(() => {});
   const listenNotice = document.getElementById("pwaListenNotice");
   if (listenNotice) listenNotice.classList.remove("hidden");
   const phoneVideos = document.getElementById("phoneVideos");

@@ -19,7 +19,13 @@ export async function grammarLesson({level, topic}) {
   const catalog = await dataFile("grammar");
   const lesson = catalog[level]?.[topic];
   if (!lesson) throw {error:"Для этой темы пока нет готового урока в пакете. Выбери другую тему.", code:"content-missing"};
-  return structuredClone(lesson);
+  const result = structuredClone(lesson);
+  result.exercises = (result.exercises || []).map((exercise, index, all) => ({
+    ...exercise,
+    evidence: exercise.evidence || (index >= Math.max(0, all.length - 2) ? "independent" : "practice"),
+  }));
+  result.independentRule = "Обе последние задачи нужно решить верно без подсказки. Самооценка отдельно определяет срок повторения.";
+  return result;
 }
 
 export async function speakingSample({level, question, scheme}) {

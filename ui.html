@@ -16,7 +16,7 @@
 :root, html[data-theme="night"]{
   --bg0:#060e16; --bg1:#0a1826; --bg2:#0f2233; --card:#0d1d2c; --card2:#122636;
   --line:#1d3448; --line2:#28455e;
-  --ink:#dcebf5; --ink2:#8fb0c4; --ink3:#5d7d92;
+  --ink:#dcebf5; --ink2:#9fc0d3; --ink3:#8aa8ba;
   --acc:#43c8e0; --acc-soft:rgba(67,200,224,.13); --acc-ink:#0b2430;
   --coral:#ff7a59; --coral-soft:rgba(255,122,89,.14);
   --amber:#e8b04b; --amber-soft:rgba(232,176,75,.14);
@@ -28,7 +28,7 @@
 html[data-theme="day"]{
   --bg0:#f4efe5; --bg1:#f8f4ec; --bg2:#efe8da; --card:#fdfaf3; --card2:#f3ecdf;
   --line:#ddd2bf; --line2:#c9bda6;
-  --ink:#1d3140; --ink2:#4c6474; --ink3:#7e94a3;
+  --ink:#1d3140; --ink2:#435d6d; --ink3:#526b7a;
   --acc:#0e7c96; --acc-soft:rgba(14,124,150,.10); --acc-ink:#eaf6f9;
   --coral:#d95b3c; --coral-soft:rgba(217,91,60,.12);
   --amber:#a8752a; --amber-soft:rgba(168,117,42,.13);
@@ -136,6 +136,7 @@ input:focus, textarea:focus, select:focus{border-color:var(--acc)}
 .small{font-size:12.5px}
 .err{color:var(--danger); font-size:13px; white-space:pre-wrap}
 .pwa-only{display:none}
+.mobile-more{display:none}
 html.pwa [data-native-only]{display:none!important}
 html.pwa .pwa-only{display:block}
 .pwa-update-banner{
@@ -814,16 +815,18 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
   #main{order:0; flex:1; height:auto; min-height:0; padding-bottom:0}
   #side{
     position:relative; z-index:90; order:1; flex:none;
-    width:100%; min-width:0; height:calc(124px + env(safe-area-inset-bottom));
+    width:100%; min-width:0; height:calc(62px + env(safe-area-inset-bottom));
     padding:5px max(5px,env(safe-area-inset-left)) env(safe-area-inset-bottom)
       max(5px,env(safe-area-inset-right));
-    display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:58px;
+    display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-auto-rows:54px;
     align-content:start; align-items:stretch; gap:2px; overflow:hidden;
     border-right:0; border-top:1px solid var(--line); background:var(--bg1);
     scrollbar-width:none; -webkit-overflow-scrolling:touch
   }
   #side::-webkit-scrollbar{display:none}
   #side .brand,#side .sep,#side .foot{display:none}
+  html:not([data-level="PRE_A1"]):not([data-level="A1"]) #side .advanced-nav{display:none!important}
+  html:not([data-level="PRE_A1"]):not([data-level="A1"]) #side .mobile-more{display:flex}
   #side .navb{
     flex:none; width:100%; min-width:0; min-height:54px; padding:4px 0;
     flex-direction:column; justify-content:center; gap:0; text-align:center; border-radius:12px
@@ -869,11 +872,11 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
   #gLesson>.card>.row h2{min-width:180px}
   .exrow input{width:min(100%,200px)}
   #wpop{left:10px!important; right:10px!important; top:auto!important;
-    bottom:calc(124px + env(safe-area-inset-bottom)); width:auto; max-width:none}
+    bottom:calc(70px + env(safe-area-inset-bottom)); width:auto; max-width:none}
   #overlay{align-items:flex-end; padding:0}
   #obox{width:100%; max-width:none; max-height:84dvh; overflow-y:auto;
     border-radius:20px 20px 0 0; padding-bottom:calc(18px + env(safe-area-inset-bottom))}
-  #toasts{left:10px; right:10px; bottom:calc(124px + env(safe-area-inset-bottom)); transform:none}
+  #toasts{left:10px; right:10px; bottom:calc(70px + env(safe-area-inset-bottom)); transform:none}
   .toast{max-width:none}
   .pwa-update-banner{left:10px; right:10px; align-items:flex-start}
   .courseunits,.phrasegrid{grid-template-columns:1fr}
@@ -885,12 +888,27 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
   .gategrid,.assesschoices,.skillreport,.schedulefields{grid-template-columns:1fr}
   .daypicker{grid-template-columns:repeat(4,minmax(44px,1fr))}
   .assesstask{min-height:220px}
-  html[data-level="PRE_A1"] #side{height:calc(62px + env(safe-area-inset-bottom));
+  html[data-level="PRE_A1"] #side,html[data-level="A1"] #side{height:calc(62px + env(safe-area-inset-bottom));
     grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:54px}
-  html[data-level="PRE_A1"] #main{padding-bottom:0}
-  html[data-level="PRE_A1"] #wpop,html[data-level="PRE_A1"] #toasts{
+  html[data-level="PRE_A1"] #main,html[data-level="A1"] #main{padding-bottom:0}
+  html[data-level="PRE_A1"] #wpop,html[data-level="PRE_A1"] #toasts,html[data-level="A1"] #wpop,html[data-level="A1"] #toasts{
     bottom:calc(70px + env(safe-area-inset-bottom))}
+  #courseLesson[data-step] .course-step{display:none}
+  #courseLesson[data-step="phrases"] #coursePhrasesCard,
+  #courseLesson[data-step="media"] #courseMediaCard,
+  #courseLesson[data-step="task"] #courseTaskCard,
+  #courseLesson[data-step="speech"] #courseSpeechCard,
+  #courseLesson[data-step="finish"] #courseFinishCard{display:block}
+  #courseStepNav{display:grid; grid-template-columns:repeat(5,minmax(44px,1fr)); gap:4px; position:sticky; top:0; z-index:5; background:var(--bg0); padding:4px 0 8px}
+  #courseStepNav button{min-height:44px; border:1px solid var(--line); border-radius:10px; font-size:12px}
+  #courseStepNav button.on{background:var(--acc); color:var(--acc-ink)}
 }
+@media (min-width: 601px) and (max-width: 1100px) {
+  #courseLesson{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  #courseLesson>.row,#courseLesson>.lessonhead,#courseStepNav,#courseFinishCard{grid-column:1/-1}
+  #courseLesson>.card{margin-bottom:0}
+}
+@media (min-width: 601px){#courseStepNav{display:none}}
 </style>
 </head>
 <body>
@@ -907,6 +925,7 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
     <button class="navb advanced-nav" title="Чтение" data-s="read"><span class="ic">📖</span><span class="t">Чтение</span><span class="k">⌘6</span></button>
     <button class="navb advanced-nav" title="Грамматика" data-s="grammar"><span class="ic">🧩</span><span class="t">Грамматика</span><span class="k">⌘7</span></button>
     <button class="navb advanced-nav" title="Реконструкция" data-s="recon"><span class="ic">🧠</span><span class="t">Реконструк<wbr>ция</span><span class="k">⌘8</span></button>
+    <button class="navb mobile-more" title="Практика" onclick="showPracticeMenu()"><span class="ic">⋯</span><span class="t">Практика</span></button>
     <div class="sep"></div>
     <button class="navb" title="Настройки" data-s="settings"><span class="ic">⚙️</span><span class="t">Настройки</span><span class="k">⌘9</span></button>
     <div class="foot" id="streakFoot">Серия: <b>0</b> дн.</div>
@@ -1003,11 +1022,12 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
             <div class="candobox"><b>После урока:</b> <span id="lessonCanDo"></span></div>
             <div class="muted small mt" id="lessonInstruction"></div>
           </div>
-          <div class="card">
+          <div id="courseStepNav"><button data-step="phrases" onclick="courseSetStep('phrases')">Фразы</button><button data-step="media" onclick="courseSetStep('media')">Слушаю</button><button data-step="task" onclick="courseSetStep('task')">Задание</button><button data-step="speech" onclick="courseSetStep('speech')">Говорю</button><button data-step="finish" onclick="courseSetStep('finish')">Готово</button></div>
+          <div class="card course-step" id="coursePhrasesCard">
             <div class="row mb wrap"><b>1. Подготовь фразы</b><span class="muted small">нажми 🔊, послушай и повтори</span></div>
             <div class="phrasegrid" id="lessonPhrases"></div>
           </div>
-          <div class="card">
+          <div class="card course-step" id="courseMediaCard">
             <div class="row mb wrap">
               <b>2. Посмотри онлайн</b>
               <span class="chip">нужен интернет</span>
@@ -1018,11 +1038,11 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
             <div class="passlist" id="coursePasses"></div>
             <div class="muted small mt" id="courseVideoTask"></div>
           </div>
-          <div class="card" id="courseTaskCard">
+          <div class="card course-step" id="courseTaskCard">
             <b>3. Вспомни без подсказки</b>
             <div id="courseTask"></div>
           </div>
-          <div class="card" id="courseSpeechCard">
+          <div class="card course-step" id="courseSpeechCard">
             <div class="row mb wrap"><b>4. Скажи вслух</b><span class="muted small">выбери фразу, послушай образец, затем говори</span></div>
             <div class="speechtargets" id="courseSpeechTargets"></div>
             <div class="row wrap">
@@ -1034,7 +1054,7 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
             <div id="courseSpeechResult" class="hidden"></div>
             <div class="speechprivacy">Проверка показывает, распознались ли нужные слова. Она не выставляет оценку акценту и интонации. Само «Погружение» не сохраняет и не публикует голос. Для распознавания Safari может использовать системную службу речи.</div>
           </div>
-          <div class="card lessonfinish">
+          <div class="card lessonfinish course-step" id="courseFinishCard">
             <span class="muted small" id="courseFinishHint">Сначала выполни активное задание.</span>
             <button class="btn pri" id="courseFinishBtn" onclick="courseComplete()">Урок готов</button>
           </div>
@@ -1331,6 +1351,11 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
           <div class="card">
             <h2 id="wErrorsTitle">Разбор ошибок</h2>
             <div id="wErrors"></div>
+            <div id="wRevision" class="hidden mt">
+              <div class="muted small mb">Шаг 2. Исправь текст сам после обратной связи. Сохранится исходник и новая версия.</div>
+              <textarea id="wRevisionText" lang="en" spellcheck="true" placeholder="Перепиши текст с учётом замечаний"></textarea>
+              <button class="btn pri mt" id="wRevisionBtn" onclick="saveWritingRevision()">Сохранить улучшенную версию</button>
+            </div>
           </div>
         </div>
       </section>
@@ -1547,19 +1572,17 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
       <!-- ══════════ НАСТРОЙКИ ══════════ -->
       <section class="screen" id="s-settings">
         <div class="card hidden pwa-only" id="pwaCard">
-          <h2>Приложение на iPhone</h2>
+          <h2>Приложение на телефоне и планшете</h2>
+          <div class="chip mb" id="releaseId">Версия определяется…</div>
           <div class="muted small mb" id="pwaUpdateStatus">Проверяю установку и обновления…</div>
-          <div class="muted small mb">Для отдельной иконки открой постоянный HTTPS-адрес в Safari:
-            <b>Поделиться</b> → <b>На экран Домой</b>. После этого «Погружение» открывается без интерфейса браузера.
-            Новая версия загружается автоматически, а прогресс и тетрадка остаются в IndexedDB этого iPhone.</div>
+          <div class="muted small mb">На iPhone используй Safari и пункт <b>На экран Домой</b>. На Huawei или другом Android открой меню браузера и выбери <b>Установить приложение</b> или <b>Добавить на главный экран</b>. Новая версия применяется только после подтверждённого сохранения, прогресс остаётся в IndexedDB устройства.</div>
           <div class="row wrap">
             <button class="btn pri" onclick="PogruzheniePWA.exportData().catch(function(e){toast(e.error||e.message||'копия не создалась','bad')})">Экспорт данных</button>
             <button class="btn" onclick="el('pwaImport').click()">Импорт данных</button>
             <input id="pwaImport" type="file" accept="application/json,.json" class="hidden"
               onchange="PogruzheniePWA.importFile(this.files[0]).catch(function(e){toast(e.error||e.message||'копия не прочиталась','bad')})">
           </div>
-          <div class="muted small mt">Автоматической синхронизации с Mac пока нет. Экспорт нужен как резервная копия
-            и для переноса прогресса на другой iPhone.</div>
+          <div class="muted small mt">Автоматической синхронизации между устройствами пока нет. Экспорт нужен как резервная копия и для переноса прогресса.</div>
         </div>
         <div class="card" id="tokenCard" data-native-only>
           <h2>Доступ к ИИ</h2>
@@ -1580,7 +1603,7 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
             <button class="btn" data-audience="adult" onclick="setAudience('adult')">👤 Взрослый</button>
           </div>
           <div class="lvlbtns" id="lvlBtns"></div>
-          <div class="muted small mt">«С нуля · Pre-A1» открывает отдельный пошаговый курс. От A1 и выше остаётся полный план погружения.</div>
+          <div class="muted small mt">Pre-A1 и A1 открывают отдельные пошаговые маршруты для ребёнка и взрослого. A2-C1 пока остаются банками практики и будут расширяться отдельными этапами.</div>
         </div>
         <div class="card schedulebox">
           <h2>Начало уроков</h2>
@@ -1754,9 +1777,40 @@ let S = {
   lastQ: "", lesson: null, curText: null, schemeTab: 0, recon: null,
   course: {catalog: null, loading: null, lessons: [], lesson: null, speechIndex: 0,
     taskDone: false, speechDone: false, recOn: false, recPath: "", assessment: null},
+  contextVersion: 0,
+  learningSessionId: "session-" + Date.now() + "-" + Math.random().toString(36).slice(2, 10),
 };
 const LEVELS = ["PRE_A1", "A1", "A2", "B1", "B2", "C1"];
 function levelLabel(level) { return level === "PRE_A1" ? "С нуля · Pre-A1" : level; }
+function migrateStateClient(raw) {
+  const state = raw && typeof raw === "object" && !Array.isArray(raw) ? raw : {};
+  const previous = Number(state.learningSchemaVersion) || 0;
+  ["foundation", "a1Course"].forEach(function (key) {
+    const course = state[key] && typeof state[key] === "object" ? state[key] : {};
+    course.completed ||= {}; course.progress ||= {}; course.review ||= {}; course.checkpoints ||= {};
+    course.exitAssessment ||= {skills:{}}; course.exitAssessment.skills ||= {}; course.attempts ||= []; course.objectives ||= {};
+    if (previous < 2) Object.keys(course.completed).forEach(function (lessonId) {
+      const completed = course.completed[lessonId];
+      if (!completed) return;
+      if (!completed || typeof completed !== "object") {
+        course.completed[lessonId] = {legacyCompleted:true, evidenceStatus:"legacy_unverified"};
+      } else if (!completed.evidenceStatus) {
+        completed.legacyCompleted = true;
+        completed.evidenceStatus = "legacy_unverified";
+      }
+    });
+    if (previous < 2) Object.values(course.checkpoints).forEach(function (point) {
+      if (point?.passed && !point.evidenceStatus) { point.legacyPassed = true; point.passed = false; point.evidenceStatus = "legacy_unverified"; }
+    });
+    if (previous < 2) Object.values(course.progress).forEach(function (progress) {
+      if (progress && (progress.taskDone || progress.speechDone) && !progress.evidenceStatus) progress.evidenceStatus = "legacy_unverified";
+    });
+    state[key] = course;
+  });
+  state.learningSchemaVersion = 2;
+  state.releaseId = "LEARNING-UPDATE-2026-09-rc1";
+  return state;
+}
 const MOD2SCREEN = {today:"today", listening:"listen", words:"words", writing:"write",
                     speaking:"speak", reading:"read", grammar:"grammar", recon:"recon"};
 const TIMED = {course:1, listen:1, words:1, write:1, speak:1, read:1, grammar:1, recon:1};
@@ -1782,25 +1836,50 @@ function ensureDay() {
   return S.state.days[k];
 }
 let saveT = null;
+let saveRevision = 0;
 function saveState() {
+  saveRevision += 1;
   clearTimeout(saveT);
   saveT = setTimeout(function () {
     call("state.save", {data: S.state}).catch(function (e) { toast("Состояние не сохранилось: " + e.error, "bad"); });
   }, 400);
 }
 let saveWT = null;
+let wordRevision = 0;
 function saveWords() {
+  wordRevision += 1;
   clearTimeout(saveWT);
   saveWT = setTimeout(function () {
     call("words.save", {data: {list: S.words}}).catch(function (e) { toast("Слова не сохранились: " + e.error, "bad"); });
   }, 400);
 }
+function persistStateNow() {
+  saveRevision += 1;
+  clearTimeout(saveT);
+  return call("state.save", {data: S.state}).then(function (result) {
+    const pending = [foundationState(), S.state.foundation, S.state.a1Course]
+      .filter(Boolean).flatMap(function (course) { return Array.isArray(course.attempts) ? course.attempts : []; })
+      .filter(function (attempt, index, all) { return attempt && !attempt.persistedAt && all.indexOf(attempt) === index; });
+    if (!pending.length) return result;
+    const confirmedAt = new Date().toISOString();
+    pending.forEach(function (attempt) { attempt.persistedAt = confirmedAt; });
+    return call("state.save", {data:S.state}).catch(function (error) {
+      pending.forEach(function (attempt) { attempt.persistedAt = null; });
+      throw error;
+    });
+  });
+}
+function persistWordsNow() {
+  wordRevision += 1;
+  clearTimeout(saveWT);
+  return call("words.save", {data: {list: S.words}});
+}
+function persistAllNow() {
+  return Promise.all([persistStateNow(), persistWordsNow()]);
+}
 function flushPwaData() {
   clearTimeout(saveT); clearTimeout(saveWT);
-  return Promise.all([
-    call("state.save", {data: S.state}),
-    call("words.save", {data: {list: S.words}}),
-  ]);
+  return Promise.all([persistStateNow(), persistWordsNow()]);
 }
 window.flushPwaData = flushPwaData;
 document.addEventListener("visibilitychange", function () {
@@ -1945,7 +2024,8 @@ const BLOCK_WHY_MOD = {
   grammar: "правило закрепляется",
   recon: "пассивное знание становится активным",
 };
-function isFoundation() { return S.state.level === "PRE_A1"; }
+function isFoundation() { return S.state.level === "PRE_A1" || S.state.level === "A1"; }
+function guidedLevel() { return S.state.level === "A1" ? "A1" : "PRE_A1"; }
 function applyLearnerMode() {
   const foundation = isFoundation();
   document.documentElement.dataset.level = S.state.level || "";
@@ -1956,12 +2036,20 @@ function applyLearnerMode() {
   document.querySelectorAll(".advanced-nav").forEach(function (node) {
     node.classList.toggle("hidden", foundation);
   });
+  const filmCard = el("twoSubCard");
+  if (filmCard) filmCard.classList.toggle("hidden", (S.state.audience || "adult") === "child");
   if (!foundation && S.screen === "course") go("today");
+}
+function showPracticeMenu() {
+  const items = [["listen","🎧 Аудирование"],["write","✍️ Письмо"],["speak","🎙 Говорение"],["read","📖 Чтение"],["grammar","🧩 Грамматика"],["recon","🧠 Реконструкция"]];
+  openOverlay("<h2>Практика</h2><div class='choicegrid'>" + items.map(function (item) {
+    return "<button class='choicebtn' onclick=\"closeOverlay();go('" + item[0] + "')\">" + item[1] + "</button>";
+  }).join("") + "</div><div class='muted small mt'>На экране пять основных направлений. Остальные упражнения собраны здесь.</div>");
 }
 function renderFoundationToday() {
   loadFoundationCourse().then(function () {
     const completed = foundationCompleted();
-    const next = S.course.lessons.find(function (lesson) { return !completed[lesson.id]; });
+    const next = S.course.lessons.find(function (lesson) { return !foundationLessonCompleted(lesson.id); });
     const groups = courseUnitGroups();
     const pending = groups.find(function (group) {
       return completedLessonsInGroup(group) === group.lessons.length && !checkpointPassed(group.unit);
@@ -1980,7 +2068,7 @@ function renderFoundationToday() {
       el("foundationTodayTitle").textContent = next ? next.title : "Заверши контрольные точки";
       el("foundationTodayText").textContent = next ? next.canDo : "Пройденные уроки остаются доступными на карте.";
     }
-    el("foundationTodayProgress").textContent = lessonsDone + " из " + S.course.lessons.length + " уроков · " + pointsDone + " из 8 тем";
+    el("foundationTodayProgress").textContent = lessonsDone + " из " + S.course.lessons.length + " уроков · " + pointsDone + " из " + courseCheckpoints().length + " тем";
   }).catch(function () {
     el("foundationTodayTitle").textContent = "Курс пока не загрузился";
     el("foundationTodayText").textContent = "Проверь соединение и открой приложение ещё раз.";
@@ -2121,38 +2209,93 @@ function addFilmPhrase() {
 
 /* ───────────────────── курс с нуля, Pre-A1 ────────────────── */
 function foundationState() {
-  if (!S.state.foundation) S.state.foundation = {completed: {}, progress: {}, review: {}, checkpoints: {}, exitAssessment: {skills: {}}};
-  if (!S.state.foundation.completed) S.state.foundation.completed = {};
-  if (!S.state.foundation.progress) S.state.foundation.progress = {};
-  if (!S.state.foundation.review) S.state.foundation.review = {};
-  if (!S.state.foundation.checkpoints) S.state.foundation.checkpoints = {};
-  if (!S.state.foundation.exitAssessment) S.state.foundation.exitAssessment = {skills: {}};
-  if (!S.state.foundation.exitAssessment.skills) S.state.foundation.exitAssessment.skills = {};
-  return S.state.foundation;
+  const key = guidedLevel() === "A1" ? "a1Course" : "foundation";
+  if (!S.state[key]) S.state[key] = {completed: {}, progress: {}, review: {}, checkpoints: {}, exitAssessment: {skills: {}}, attempts: [], objectives: {}};
+  if (!S.state[key].completed) S.state[key].completed = {};
+  if (!S.state[key].progress) S.state[key].progress = {};
+  if (!S.state[key].review) S.state[key].review = {};
+  if (!S.state[key].checkpoints) S.state[key].checkpoints = {};
+  if (!S.state[key].attempts) S.state[key].attempts = [];
+  if (!S.state[key].objectives) S.state[key].objectives = {};
+  if (!S.state[key].exitAssessment) S.state[key].exitAssessment = {skills: {}};
+  if (!S.state[key].exitAssessment.skills) S.state[key].exitAssessment.skills = {};
+  return S.state[key];
 }
 function foundationCompleted() { return foundationState().completed; }
+function foundationLessonCompleted(id) {
+  const value = foundationState().completed[id];
+  return Boolean(value) && value.evidenceStatus !== "legacy_unverified";
+}
 function foundationLessonProgress(id) {
   const f = foundationState();
-  if (!f.progress[id]) f.progress[id] = {passes: {}, taskDone: false, speechDone: false, attempts: 0, bestSpeech: 0};
+  if (!f.progress[id]) f.progress[id] = {passes: {}, taskDone: false, speechDone: false, attempts: 0, bestSpeech: 0, practice:{}, independent:{}, needsReview:false, currentAttemptId:""};
+  if (!f.progress[id].practice) f.progress[id].practice = {};
+  if (!f.progress[id].independent) f.progress[id].independent = {};
   return f.progress[id];
 }
+function recordLearningAttempt(targetId, outcome, source, detail) {
+  const f = foundationState();
+  const extra = detail || {};
+  const createdAt = new Date().toISOString();
+  const attempt = Object.assign({
+    id: "attempt-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8),
+    taskId: targetId,
+    targetId: targetId,
+    taskVersion: Number(extra.taskVersion || S.course.catalog?.version || 1),
+    audience: S.state.audience || "adult",
+    level: guidedLevel(),
+    sessionId: extra.sessionId || S.course.currentAttemptId || S.learningSessionId,
+    kind: extra.kind || "practice",
+    answer: extra.answer ?? extra.heard ?? null,
+    outcome: outcome,
+    assessmentSource: source,
+    source: source,
+    hintsUsed: Number(extra.hintsUsed || 0),
+    sampleShown: Boolean(extra.sampleShown || extra.sample),
+    createdAt: createdAt,
+    persistedAt: null,
+    at: Date.now(),
+  }, extra);
+  f.attempts.push(attempt);
+  if (f.attempts.length > 1000) f.attempts.splice(0, f.attempts.length - 1000);
+  const objective = Object.assign({practiced:0, withHelp:0, independent:0, needsReview:false, reviewerVerified:0}, f.objectives[targetId] || {});
+  objective.practiced += 1;
+  const helped = attempt.hintsUsed > 0 || attempt.sampleShown || source === "self";
+  if (outcome === "correct" && !helped) objective.independent += 1;
+  else if (outcome === "correct" && helped) objective.withHelp += 1;
+  if (source === "reviewer" && outcome === "correct") objective.reviewerVerified += 1;
+  objective.needsReview = outcome !== "correct";
+  objective.status = objective.needsReview ? "needs_review" : helped ? "with_help" : "independent";
+  Object.assign(objective, {lastOutcome:outcome, lastSource:source, lastAttemptId:attempt.id});
+  f.objectives[targetId] = objective;
+  return attempt;
+}
 function loadFoundationCourse() {
-  if (S.course.catalog) {
+  const level = guidedLevel();
+  const audienceAtRequest = S.state.audience || "adult";
+  const contextAtRequest = S.contextVersion;
+  if (S.course.catalog && S.course.catalog.level === level) {
     S.course.lessons = (S.course.catalog.lessons || []).filter(function (lesson) {
       return lesson.audience === (S.state.audience || "adult");
     });
     return Promise.resolve(S.course.catalog);
   }
   if (S.course.loading) return S.course.loading;
-  S.course.loading = call("course.load").then(function (r) {
+  S.course.loading = call("course.load", {level:level}).then(function (r) {
+    if (contextAtRequest !== S.contextVersion || level !== guidedLevel() || audienceAtRequest !== (S.state.audience || "adult")) {
+      throw {error:"Материал изменился после переключения. Загружаю выбранный маршрут.", code:"stale-context"};
+    }
     const catalog = r.data || {};
     const all = catalog.lessons || [];
     const child = all.filter(function (lesson) { return lesson.audience === "child"; }).length;
     const adult = all.filter(function (lesson) { return lesson.audience === "adult"; }).length;
     const checkpoints = catalog.checkpoints || [];
     const profiles = catalog.exitAssessment?.profiles || [];
-    if (catalog.level !== "PRE_A1" || child !== 24 || adult !== 24 || checkpoints.length !== 16 || profiles.length !== 2) {
-      throw {error: "курс повреждён: ожидается по 24 урока для ребёнка и взрослого"};
+    const expectedLessons = Number(catalog.lessonsPerAudience);
+    const expectedCheckpoints = Number(catalog.checkpointsPerAudience);
+    if (catalog.level !== level || !expectedLessons || child !== expectedLessons || adult !== expectedLessons ||
+        checkpoints.length !== expectedCheckpoints * 2 || profiles.length !== 2) {
+      throw {error: "курс повреждён: неверная структура маршрута " + level};
     }
     S.course.catalog = catalog;
     S.course.lessons = all.filter(function (lesson) {
@@ -2199,7 +2342,7 @@ function courseExitProfile() {
 }
 function allCourseCheckpointsPassed() {
   const points = courseCheckpoints();
-  return points.length === 8 && points.every(function (item) { return foundationState().checkpoints[item.id]?.passed; });
+  return points.length > 0 && points.every(function (item) { return foundationState().checkpoints[item.id]?.passed; });
 }
 function exitSkillState(id) {
   const exit = foundationState().exitAssessment;
@@ -2213,7 +2356,7 @@ function exitReady() {
 }
 function completedLessonsInGroup(group) {
   const completed = foundationCompleted();
-  return group.lessons.filter(function (lesson) { return completed[lesson.id]; }).length;
+  return group.lessons.filter(function (lesson) { return foundationLessonCompleted(lesson.id); }).length;
 }
 function groupUnlocked(group, groups) {
   return groups.filter(function (item) { return item.order < group.order; })
@@ -2225,12 +2368,12 @@ function renderCourseHome() {
   el("courseLesson").classList.add("hidden");
   el("courseAssessment").classList.add("hidden");
   const child = (S.state.audience || "adult") === "child";
-  el("courseHeroTitle").textContent = child ? "Твоя английская история начинается здесь" : "Практический английский с самого начала";
+  el("courseHeroTitle").textContent = guidedLevel() === "A1" ? (child ? "A1 для школы и жизни" : "Практический маршрут A1") : (child ? "Твоя английская история начинается здесь" : "Практический английский с самого начала");
   el("courseHeroLead").textContent = child
     ? "Один короткий урок: послушать, посмотреть, выбрать смысл и сказать самой. Ошибка не закрывает путь дальше."
     : "Короткие ситуации из жизни, ясная русская опора, затем собственная реплика без подсказки.";
   const completed = foundationCompleted();
-  const count = S.course.lessons.filter(function (lesson) { return completed[lesson.id]; }).length;
+  const count = S.course.lessons.filter(function (lesson) { return foundationLessonCompleted(lesson.id); }).length;
   el("courseProgressText").textContent = count + " / " + S.course.lessons.length;
   el("courseBar").style.width = Math.round(count * 100 / Math.max(1, S.course.lessons.length)) + "%";
 
@@ -2263,37 +2406,38 @@ function renderCourseHome() {
     return completedLessonsInGroup(group) === group.lessons.length && !checkpointPassed(group.unit);
   });
   const allLessonsDone = count === S.course.lessons.length;
+  const checkpointTotal = courseCheckpoints().length;
   const passedCount = courseCheckpoints().filter(function (item) { return foundationState().checkpoints[item.id]?.passed; }).length;
   gate.classList.remove("hidden");
   if (pendingCheckpoint) {
     const point = courseCheckpoint(pendingCheckpoint.unit);
-    gate.innerHTML = "<div class='courselabel'>Контрольная точка · " + passedCount + " из 8</div>" +
-      "<h2>Закрепи тему перед следующим шагом</h2><div class='muted'>Три коротких действия: услышать, прочитать и сказать без подсказки.</div>" +
+    gate.innerHTML = "<div class='courselabel'>Контрольная точка · " + passedCount + " из " + checkpointTotal + "</div>" +
+      "<h2>Закрепи тему перед следующим шагом</h2><div class='muted'>Навыки проверяются отдельными действиями без подсказки.</div>" +
       "<div class='row mt wrap'><button class='btn pri' id='courseGateAction'>Проверить тему →</button>" +
       "<span class='muted small'>Попытки не ограничены, серия дней не пострадает.</span></div>";
     el("courseGateAction").onclick = function () { courseOpenCheckpoint(point.id); };
   } else if (allLessonsDone && allCourseCheckpointsPassed()) {
     const ready = exitReady();
-    gate.innerHTML = "<div class='courselabel'>Финал маршрута · 8 из 8 тем</div>" +
-      "<h2>" + (ready ? "Основа закреплена" : "Проверим готовность к A1") + "</h2>" +
+    gate.innerHTML = "<div class='courselabel'>Финал маршрута · " + checkpointTotal + " из " + checkpointTotal + " тем</div>" +
+      "<h2>" + (ready ? "Основа закреплена" : (guidedLevel() === "A1" ? "Проверим результат A1" : "Проверим готовность к A1")) + "</h2>" +
       "<div class='muted'>" + (ready
-        ? "Пять навыков готовы. Это рекомендация начать A1, а не официальный сертификат CEFR."
+        ? (guidedLevel() === "A1" ? "Пять навыков A1 подтверждены отдельными действиями. A2-C1 остаются следующими этапами." : "Пять навыков готовы. Это рекомендация начать A1, а не официальный сертификат CEFR.")
         : "Пять коротких блоков: слушание, чтение, диалог, устная речь и письмо.") + "</div>" +
       "<div class='row mt wrap'><button class='btn pri' id='courseGateAction'>" + (ready ? "Посмотреть результат →" : "Начать проверку →") + "</button></div>";
     el("courseGateAction").onclick = courseOpenExitAssessment;
   } else {
-    const next = S.course.lessons.find(function (lesson) { return !completed[lesson.id]; });
-    gate.innerHTML = "<div class='courselabel'>Маршрут Pre-A1</div><h2>" + esc(next ? next.title : "Все уроки завершены") + "</h2>" +
+    const next = S.course.lessons.find(function (lesson) { return !foundationLessonCompleted(lesson.id); });
+    gate.innerHTML = "<div class='courselabel'>Маршрут " + guidedLevel().replace("PRE_A1", "Pre-A1") + "</div><h2>" + esc(next ? next.title : "Все уроки завершены") + "</h2>" +
       "<div class='muted'>" + esc(next ? next.canDo : "Заверши контрольные точки тем.") + "</div>" +
-      "<div class='gategrid'><div class='gatestep done'>" + count + " / 24 урока</div>" +
-      "<div class='gatestep " + (passedCount ? "done" : "") + "'>" + passedCount + " / 8 тем</div>" +
+      "<div class='gategrid'><div class='gatestep done'>" + count + " / " + S.course.lessons.length + " уроков</div>" +
+      "<div class='gatestep " + (passedCount ? "done" : "") + "'>" + passedCount + " / " + checkpointTotal + " тем</div>" +
       "<div class='gatestep'>Дальше: " + (next ? "короткий урок" : "проверка темы") + "</div></div>";
   }
   const box = el("courseUnits");
   box.innerHTML = "";
   groups.forEach(function (group) {
     const done = completedLessonsInGroup(group);
-    const next = group.lessons.find(function (lesson) { return !completed[lesson.id]; }) || group.lessons[group.lessons.length - 1];
+    const next = group.lessons.find(function (lesson) { return !foundationLessonCompleted(lesson.id); }) || group.lessons[group.lessons.length - 1];
     const unlocked = groupUnlocked(group, groups);
     const needsCheckpoint = done === group.lessons.length && !checkpointPassed(group.unit);
     const passed = checkpointPassed(group.unit);
@@ -2317,11 +2461,33 @@ function courseOpen(id) {
   S.course.lesson = lesson;
   S.course.speechIndex = lesson.activeTask?.targetIndex || 0;
   const progress = foundationLessonProgress(lesson.id);
-  S.course.taskDone = !!progress.taskDone;
-  S.course.speechDone = !!progress.speechDone;
+  const completed = foundationLessonCompleted(lesson.id);
+  const review = foundationState().review[lesson.id];
+  S.course.reviewDue = completed && Boolean(review) && Number(review.due || 0) <= Number(S.today.dayNumber || 0);
+  S.course.currentAttemptId = "lesson-session-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8);
+  // Every opening starts a new evidence session. Keep an unfinished writing
+  // draft for recovery, but never reuse its old completion evidence.
+  progress.taskDone = false;
+  progress.speechDone = false;
+  progress.speechVerified = false;
+  progress.taskAttemptId = "";
+  progress.speechAttemptId = "";
+  progress.dialogueResults = {};
+  progress.writingRevision = "";
+  if (completed) {
+    // A review is always a fresh comparable attempt. Historical flags stay in
+    // the attempt log but cannot unlock the current completion button.
+    progress.passes = {};
+    progress.writingDraft = "";
+    progress.writingFeedback = "";
+  }
+  progress.currentAttemptId = S.course.currentAttemptId;
+  S.course.taskDone = false;
+  S.course.speechDone = false;
   el("courseHome").classList.add("hidden");
   el("courseLesson").classList.remove("hidden");
   renderCourseLesson();
+  courseSetStep("phrases");
   el("scene").scrollTop = 0;
 }
 function courseBack() {
@@ -2330,6 +2496,15 @@ function courseBack() {
   S.course.recPath = "";
   el("courseVideo").innerHTML = "";
   renderCourseHome();
+}
+function courseSetStep(step) {
+  const root = el("courseLesson");
+  if (!root) return;
+  root.dataset.step = step;
+  root.querySelectorAll("#courseStepNav button").forEach(function (button) {
+    button.classList.toggle("on", button.dataset.step === step);
+  });
+  el("scene").scrollTop = 0;
 }
 function renderCourseLesson() {
   const lesson = S.course.lesson;
@@ -2351,15 +2526,19 @@ function renderCourseLesson() {
     card.querySelector("button").onclick = function () { courseSpeakPhrase(index); };
     phrases.appendChild(card);
   });
-  if (navigator.onLine === false) {
+  const video = lesson.video;
+  if (!video) {
+    el("courseVideo").innerHTML = "<div class='assessresult'>В этом уроке используется собственная озвучка фраз. Нажми 🔊 и выполни действие без внешнего видео.</div>";
+    el("courseMediaCard").querySelector("button[onclick='courseOpenSource()']").classList.add("hidden");
+  } else if (navigator.onLine === false) {
     el("courseVideo").innerHTML = "<div class='err' style='padding:18px'>Видео нужно смотреть при наличии интернета. Фразы, задания и повторение продолжают работать.</div>";
   } else {
-    const video = lesson.video || {};
+    el("courseMediaCard").querySelector("button[onclick='courseOpenSource()']").classList.remove("hidden");
     el("courseVideo").innerHTML = "<iframe title='" + esc(video.sourceTitle || "Учебное видео") +
       "' src='https://www.youtube-nocookie.com/embed/" + esc(video.id) +
       "?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en' allow='accelerometer; autoplay; encrypted-media; picture-in-picture' allowfullscreen></iframe>";
   }
-  const passText = ["1. Узнаю слова", "2. Смотрю с EN", "3. Повторяю вслух"];
+  const passText = lesson.video ? ["1. Узнаю слова", "2. Смотрю с EN", "3. Повторяю вслух"] : ["1. Слушаю", "2. Повторяю", "3. Отвечаю без подсказки"];
   const passes = el("coursePasses");
   passes.innerHTML = "";
   passText.forEach(function (text, index) {
@@ -2403,6 +2582,33 @@ function renderCourseTask() {
   const box = el("courseTask");
   box.innerHTML = "";
   const target = lesson.chunks[lesson.activeTask?.targetIndex || 0];
+  const progress = foundationLessonProgress(lesson.id);
+  if (lesson.activeTask?.type === "dialogue") {
+    const turns = lesson.activeTask.dialogueTurns || [];
+    const done = Object.keys(progress.dialogueResults || {}).length;
+    box.innerHTML = "<div class='mt'><b>Диалог из трёх реплик</b></div>" +
+      "<div class='muted small mt'>Отвечай по очереди. Готовый английский текст здесь не показывается.</div>" +
+      turns.map(function (turn, index) {
+        const complete = Boolean(progress.dialogueResults?.[index]);
+        return "<div class='setrow mt " + (complete ? "good" : index === done ? "on" : "") + "'><b>" +
+          (complete ? "✓ " : "") + esc(turn.promptRu) + "</b></div>";
+      }).join("") +
+      "<div class='muted small mt'>Текущая реплика: " + Math.min(done + 1, turns.length) + " из " + turns.length + ". Используй микрофон ниже.</div>";
+    S.course.speechIndex = turns[Math.min(done, Math.max(0, turns.length - 1))]?.targetIndex || 0;
+    return;
+  }
+  if (lesson.activeTask?.type === "writing-revision") {
+    const prompt = lesson.activeTask.writingPrompt || lesson.canDo;
+    const feedback = progress.writingFeedback || "";
+    box.innerHTML = "<div class='mt'><b>" + esc(prompt) + "</b></div>" +
+      "<div class='muted small mt'>Не копируй фразы сверху. Проверка видит только несколько базовых форм, а не смысл всего текста.</div>" +
+      "<textarea id='courseWritingDraft' rows='4' lang='en' spellcheck='true' placeholder='Мой собственный черновик…'>" + esc(progress.writingDraft || "") + "</textarea>" +
+      "<button class='btn pri mt' id='courseWritingCheckBtn' onclick='courseWritingCheck()'>Получить обратную связь</button>" +
+      (progress.writingDraft ? "<div class='assessresult mt'><b>Ограниченная обратная связь</b><div class='muted small mt'>" + esc(feedback) + "</div></div>" +
+        "<textarea id='courseWritingRevision' rows='4' lang='en' spellcheck='true' placeholder='Улучшенная версия…'>" + esc(progress.writingRevision || progress.writingDraft) + "</textarea>" +
+        "<button class='btn pri mt' onclick='courseWritingRevision()'>Сохранить улучшенную версию</button>" : "");
+    return;
+  }
   if (lesson.activeTask?.type === "speak") {
     box.innerHTML = "<div class='mt'>Закрой перевод и скажи: <b>" + esc(target.ru) +
       "</b>. Затем используй проверку речи ниже.</div>";
@@ -2430,36 +2636,114 @@ function renderCourseTask() {
   });
   box.appendChild(choices);
 }
+function courseWritingWordCount(value) {
+  return (String(value || "").match(/[A-Za-z0-9']+/g) || []).length;
+}
+function courseWritingCopiesSample(value, lesson) {
+  const normalized = normalizedAssessmentText(value);
+  return (lesson?.chunks || []).some(function (chunk) { return normalized === normalizedAssessmentText(chunk.en); });
+}
+async function courseWritingCheck() {
+  const lesson = S.course.lesson;
+  if (!lesson || lesson.activeTask?.type !== "writing-revision") return;
+  const value = el("courseWritingDraft")?.value.trim() || "";
+  const minWords = Number(lesson.activeTask.minWords || 8);
+  if (courseWritingWordCount(value) < minWords) { toast("Напиши не меньше " + minWords + " английских слов", "warn"); return; }
+  if (courseWritingCopiesSample(value, lesson)) { toast("Нужен собственный ответ, а не копия фразы урока", "warn"); return; }
+  const button = el("courseWritingCheckBtn");
+  button.disabled = true;
+  try {
+    const checked = await call("ai.checkWriting", {text:value, level:"A1"});
+    const progress = foundationLessonProgress(lesson.id);
+    progress.writingDraft = value;
+    progress.writingFeedback = (checked.errors || []).length
+      ? (checked.errors || []).map(function (item) { return item.was + " → " + item.fix + ". " + item.why; }).join(" ")
+      : checked.comment;
+    const attempt = recordLearningAttempt(lesson.id + ":writing:draft", "not_verified", "rule", {
+      answer:value, kind:"practice", sessionId:S.course.currentAttemptId, sampleShown:false,
+      feedbackScope:"basic-forms-only",
+    });
+    progress.lastAttemptId = attempt.id;
+    await persistStateNow();
+    renderCourseTask();
+  } catch (e) {
+    toast(e.error || "Обратная связь недоступна", "bad");
+  } finally { if (button?.isConnected) button.disabled = false; }
+}
+async function courseWritingRevision() {
+  const lesson = S.course.lesson;
+  if (!lesson || lesson.activeTask?.type !== "writing-revision") return;
+  const progress = foundationLessonProgress(lesson.id);
+  const value = el("courseWritingRevision")?.value.trim() || "";
+  const minWords = Number(lesson.activeTask.minWords || 8);
+  if (courseWritingWordCount(value) < minWords) { toast("В улучшенной версии нужно не меньше " + minWords + " слов", "warn"); return; }
+  if (normalizedAssessmentText(value) === normalizedAssessmentText(progress.writingDraft)) {
+    toast("Измени черновик с учётом обратной связи", "warn"); return;
+  }
+  if (courseWritingCopiesSample(value, lesson)) { toast("Сохрани собственный ответ, а не фразу урока", "warn"); return; }
+  progress.writingRevision = value;
+  const attempt = recordLearningAttempt(lesson.id + ":writing:revision", "not_verified", "self", {
+    answer:value, kind:"practice", sessionId:S.course.currentAttemptId, sampleShown:false,
+    revisedFromAttempt:true,
+  });
+  progress.practice.task = true;
+  progress.independent.task = false;
+  progress.taskDone = true;
+  progress.taskAttemptId = attempt.id;
+  progress.lastAttemptId = attempt.id;
+  progress.needsReview = true;
+  S.course.taskDone = true;
+  await persistStateNow();
+  updateCourseFinish();
+  toast("Черновик и улучшенная версия сохранены. Теперь выполни речевую попытку.");
+}
 function courseAnswer(button, good, choices) {
   choices.querySelectorAll("button").forEach(function (node) { node.disabled = true; });
   button.classList.add(good ? "good" : "bad");
+  const lesson = S.course.lesson;
+  const targetIndex = lesson?.activeTask?.targetIndex || 0;
+  const attempt = recordLearningAttempt((lesson?.id || "lesson") + ":task:" + targetIndex,
+    good ? "correct" : "incorrect", "rule", {answer:button.textContent || "", kind:foundationLessonCompleted(lesson.id) ? "review" : "practice",
+      sessionId:S.course.currentAttemptId, sampleShown:false});
+  const progress = foundationLessonProgress(lesson.id);
+  progress.practice.task = true;
+  progress.independent.task = good;
+  progress.lastAttemptId = attempt.id;
+  progress.taskAttemptId = attempt.id;
+  progress.needsReview = !good;
   if (good) {
     S.course.taskDone = true;
-    foundationLessonProgress(S.course.lesson.id).taskDone = true;
+    progress.taskDone = true;
     toast("Верно. Теперь скажи фразу вслух.");
   } else {
+    courseReviewFailure(lesson.id, attempt);
     toast("Пока нет. Послушай фразу ещё раз и попробуй без спешки.", "warn");
     setTimeout(renderCourseTask, 900);
   }
-  saveState();
+  persistStateNow().catch(function () {});
   updateCourseFinish();
 }
 function renderCourseSpeechTargets() {
   const box = el("courseSpeechTargets");
   box.innerHTML = "";
+  const dialogue = S.course.lesson?.activeTask?.type === "dialogue";
+  const turns = S.course.lesson?.activeTask?.dialogueTurns || [];
+  const progress = S.course.lesson ? foundationLessonProgress(S.course.lesson.id) : null;
+  const nextTurn = Object.keys(progress?.dialogueResults || {}).length;
   (S.course.lesson?.chunks || []).forEach(function (chunk, index) {
     const button = document.createElement("button");
     button.className = "speechtarget" + (index === S.course.speechIndex ? " on" : "");
-    button.textContent = chunk.en;
-    button.onclick = function () { S.course.speechIndex = index; renderCourseSpeechTargets(); };
+    const turnIndex = turns.findIndex(function (turn) { return turn.targetIndex === index; });
+    button.textContent = dialogue ? ((progress?.dialogueResults?.[turnIndex] ? "✓ " : "") + (turns[turnIndex]?.promptRu || ("Реплика " + (index + 1)))) : chunk.en;
+    button.disabled = dialogue && turnIndex !== nextTurn;
+    button.onclick = function () { if (!dialogue) { S.course.speechIndex = index; renderCourseSpeechTargets(); } };
     box.appendChild(button);
   });
 }
 function courseHearTarget() { courseSpeakPhrase(S.course.speechIndex); }
 function courseSay() {
   if (S.tools.mode !== "pwa") {
-    toast("На Mac открою полный разбор через Whisper");
-    go("speak");
+    toast("Используй «Записать себя», переслушай запись и продолжи как самопроверку.", "warn");
     return;
   }
   const chunk = S.course.lesson?.chunks?.[S.course.speechIndex];
@@ -2472,7 +2756,7 @@ function courseSay() {
   call("speech.check").then(function (heard) {
     const alternatives = heard.alternatives?.length ? heard.alternatives : [{transcript: heard.text || ""}];
     return Promise.all(alternatives.map(function (item) {
-      return call("speech.score", {expected: chunk.en, accepted: chunk.accepted || [], heard: item.transcript});
+      return call("speech.score", {expected: chunk.en, accepted: chunk.accepted || [], heard: item.transcript, rule:chunk.rule || {}});
     }));
   }).then(function (scores) {
     scores.sort(function (a, b) { return b.score - a.score; });
@@ -2480,13 +2764,38 @@ function courseSay() {
     const progress = foundationLessonProgress(S.course.lesson.id);
     progress.attempts = (progress.attempts || 0) + 1;
     progress.bestSpeech = Math.max(progress.bestSpeech || 0, score.score || 0);
-    progress.speechDone = true;
-    S.course.speechDone = true;
-    if (S.course.lesson.activeTask?.type === "speak") {
+    const verified = score.outcome ? score.outcome === "correct" : Number(score.score) >= 80;
+    const attempt = recordLearningAttempt(S.course.lesson.id + ":speech:" + S.course.speechIndex,
+      score.outcome || (verified ? "correct" : "incorrect"), score.source || "rule", {heard:score.heard || "", answer:score.heard || "",
+        kind:foundationLessonCompleted(S.course.lesson.id) ? "review" : "practice", sessionId:S.course.currentAttemptId, sampleShown:false});
+    const dialogue = S.course.lesson.activeTask?.type === "dialogue";
+    if (dialogue && verified) {
+      const turns = S.course.lesson.activeTask.dialogueTurns || [];
+      const turnIndex = turns.findIndex(function (turn) { return turn.targetIndex === S.course.speechIndex; });
+      progress.dialogueResults ||= {};
+      progress.dialogueResults[turnIndex] = attempt.id;
+      const nextTurn = Object.keys(progress.dialogueResults).length;
+      if (nextTurn < turns.length) S.course.speechIndex = turns[nextTurn].targetIndex;
+      progress.taskDone = nextTurn >= turns.length;
+      progress.taskAttemptId = progress.taskDone ? attempt.id : "";
+      S.course.taskDone = progress.taskDone;
+      renderCourseTask();
+      renderCourseSpeechTargets();
+    }
+    progress.speechDone = dialogue ? Object.keys(progress.dialogueResults || {}).length >= (S.course.lesson.activeTask.dialogueTurns || []).length : verified;
+    progress.speechVerified = progress.speechDone && verified;
+    progress.independent.speech = verified;
+    progress.lastAttemptId = attempt.id;
+    progress.speechAttemptId = attempt.id;
+    progress.needsReview = !verified;
+    if (!verified) courseReviewFailure(S.course.lesson.id, attempt);
+    S.course.speechDone = progress.speechDone;
+    if (verified && S.course.lesson.activeTask?.type === "speak") {
       progress.taskDone = true;
+      progress.taskAttemptId = attempt.id;
       S.course.taskDone = true;
     }
-    saveState();
+    persistStateNow().catch(function (e) { toast("Попытка не сохранилась: " + e.error, "bad"); });
     renderCourseSpeechScore(score);
     updateCourseFinish();
   }).catch(function (e) {
@@ -2530,13 +2839,22 @@ function courseRecToggle() {
     audio.classList.remove("hidden");
     button.textContent = "Записать ещё раз";
     const progress = foundationLessonProgress(S.course.lesson.id);
-    progress.speechDone = true;
-    S.course.speechDone = true;
-    if (S.course.lesson.activeTask?.type === "speak") {
-      progress.taskDone = true;
-      S.course.taskDone = true;
-    }
-    saveState();
+    const attempt = recordLearningAttempt(S.course.lesson.id + ":speech:" + S.course.speechIndex,
+      "not_verified", "self", {answer:"recording", kind:foundationLessonCompleted(S.course.lesson.id) ? "review" : "practice",
+        sessionId:S.course.currentAttemptId, sampleShown:true});
+    progress.practice.speech = true;
+    progress.lastAttemptId = attempt.id;
+    progress.speechAttemptId = attempt.id;
+    progress.needsReview = true;
+    progress.speechVerified = false;
+    S.course.speechDone = false;
+    courseReviewFailure(S.course.lesson.id, attempt);
+    persistStateNow().catch(function () {});
+    el("courseSpeechResult").className = "speechresult again";
+    el("courseSpeechResult").innerHTML = "<b>Запись готова для самопроверки.</b>" +
+      "<div class='muted small mt'>Переслушай её. Продолжение не будет считаться автоматически проверенным освоением.</div>" +
+      "<button class='btn pri mt' onclick='courseManualContinue()'>Переслушал, продолжить как тренировку</button>";
+    toast("Запись сохранена. Переслушай её перед продолжением.", "warn");
     updateCourseFinish();
   }).catch(function (e) {
     toast(e.error || "запись не остановилась", "bad");
@@ -2546,39 +2864,148 @@ function courseRecToggle() {
     button.classList.remove("recording");
   });
 }
+function courseManualContinue() {
+  const lesson = S.course.lesson;
+  if (!lesson || !S.course.recPath) { toast("Сначала запиши и переслушай свой ответ", "warn"); return; }
+  const progress = foundationLessonProgress(lesson.id);
+  const attempt = recordLearningAttempt(lesson.id + ":speech-self:" + S.course.speechIndex,
+    "not_verified", "self", {answer:"recording-reviewed", kind:foundationLessonCompleted(lesson.id) ? "review" : "practice",
+      sessionId:S.course.currentAttemptId, sampleShown:true, selfChecked:true});
+  const dialogue = lesson.activeTask?.type === "dialogue";
+  if (dialogue) {
+    const turns = lesson.activeTask.dialogueTurns || [];
+    const turnIndex = turns.findIndex(function (turn) { return turn.targetIndex === S.course.speechIndex; });
+    progress.dialogueResults ||= {};
+    progress.dialogueResults[turnIndex] = attempt.id;
+    const nextTurn = Object.keys(progress.dialogueResults).length;
+    if (nextTurn < turns.length) S.course.speechIndex = turns[nextTurn].targetIndex;
+    progress.taskDone = nextTurn >= turns.length;
+    progress.taskAttemptId = progress.taskDone ? attempt.id : "";
+    progress.speechDone = progress.taskDone;
+    S.course.taskDone = progress.taskDone;
+    renderCourseTask();
+    renderCourseSpeechTargets();
+  } else {
+    progress.speechDone = true;
+    if (lesson.activeTask?.type === "speak") {
+      progress.taskDone = true;
+      progress.taskAttemptId = attempt.id;
+      S.course.taskDone = true;
+    }
+  }
+  progress.speechVerified = false;
+  progress.speechAttemptId = attempt.id;
+  progress.lastAttemptId = attempt.id;
+  progress.needsReview = true;
+  S.course.speechDone = progress.speechDone;
+  S.course.recPath = "";
+  el("courseRecAudio").classList.add("hidden");
+  el("courseSpeechResult").innerHTML = "<b>Самопроверка сохранена как тренировка.</b><div class='muted small mt'>Контрольная точка всё равно потребует отдельного проверяемого действия.</div>";
+  persistStateNow().catch(function (e) { toast("Самопроверка не сохранилась: " + (e.error || e), "bad"); });
+  updateCourseFinish();
+}
 function updateCourseFinish() {
   const lesson = S.course.lesson;
   if (!lesson) return;
   const progress = foundationLessonProgress(lesson.id);
-  const ready = !!progress.taskDone && !!progress.speechDone;
+  const sameAttempt = progress.currentAttemptId === S.course.currentAttemptId &&
+    Boolean(progress.taskAttemptId) && Boolean(progress.speechAttemptId);
+  const earlyReview = foundationLessonCompleted(lesson.id) && !S.course.reviewDue;
+  const ready = !!progress.taskDone && !!progress.speechDone && sameAttempt && !earlyReview;
   el("courseFinishBtn").disabled = !ready;
   const passCount = Object.keys(progress.passes || {}).filter(function (key) { return progress.passes[key]; }).length;
-  el("courseFinishHint").textContent = ready
-    ? "Задание и речевая попытка выполнены. Просмотров отмечено: " + passCount + " из 3."
+  el("courseFinishHint").textContent = earlyReview
+    ? "Повтор ещё не назначен. Можно тренироваться, но новая встреча не будет засчитана раньше срока."
+    : ready
+    ? "Задание и речевая попытка выполнены. Шагов отмечено: " + passCount + " из 3."
     : !progress.taskDone
       ? "Сначала выполни активное задание, затем скажи фразу вслух."
       : "Теперь скажи фразу вслух или запиши себя и переслушай.";
+}
+function courseReviewFailure(lessonId, attempt) {
+  const f = foundationState();
+  if (!f.completed[lessonId] || !f.review[lessonId]) return;
+  Object.assign(f.review[lessonId], {
+    due:(S.today.dayNumber || 0) + 1,
+    dueDate:"",
+    successfulStep:-1,
+    lastOutcome:attempt.outcome,
+    lastAttemptId:attempt.id,
+    lastReviewedDate:todayKey(),
+    currentAttemptId:S.course.currentAttemptId,
+    policyVersion:"review-1-3-7-v1",
+  });
 }
 function courseComplete() {
   const lesson = S.course.lesson;
   if (!lesson) return;
   const progress = foundationLessonProgress(lesson.id);
-  if (!progress.taskDone || !progress.speechDone) {
+  const sameAttempt = progress.currentAttemptId === S.course.currentAttemptId &&
+    Boolean(progress.taskAttemptId) && Boolean(progress.speechAttemptId);
+  const f = foundationState();
+  const wasCompleted = foundationLessonCompleted(lesson.id);
+  if (wasCompleted && !S.course.reviewDue) {
+    toast("Повтор ещё не назначен. Тренировка сохранена без продвижения срока.", "warn");
+    return;
+  }
+  if (!progress.taskDone || !progress.speechDone || !sameAttempt || S.course.completionInFlight) {
     toast(!progress.taskDone ? "Сначала выполни активное задание" : "Сначала сделай речевую попытку", "warn");
     return;
   }
-  const f = foundationState();
-  f.completed[lesson.id] = {at: Date.now(), date: todayKey(), bestSpeech: progress.bestSpeech || 0};
-  f.review[lesson.id] = {due: (S.today.dayNumber || 0) + 1, interval: 1};
+  S.course.completionInFlight = true;
+  el("courseFinishBtn").disabled = true;
+  const stateBeforeCompletion = JSON.parse(JSON.stringify(S.state));
+  const wordsBeforeCompletion = JSON.parse(JSON.stringify(S.words));
+  const completionOutcome = progress.speechVerified === false ? "not_verified" : "correct";
+  const completionSource = completionOutcome === "correct" ? "rule" : "self";
+  const completionAttempt = recordLearningAttempt(lesson.id + ":lesson", completionOutcome, completionSource, {
+    answer:"completed", kind:wasCompleted ? "review" : "assessment", sessionId:S.course.currentAttemptId, sampleShown:false,
+  });
+  if (!wasCompleted) {
+    f.completed[lesson.id] = {at: Date.now(), date: todayKey(), bestSpeech: progress.bestSpeech || 0,
+      evidenceStatus:completionOutcome === "correct" ? "verified" : "self_unverified", attemptId:completionAttempt.id};
+  } else {
+    f.completed[lesson.id].lastReviewedAt = Date.now();
+    f.completed[lesson.id].lastAttemptId = completionAttempt.id;
+  }
+  const priorReview = f.review[lesson.id] || {successfulStep:-1};
+  const offsets = [1, 3, 7];
+  const successfulStep = completionOutcome !== "correct" ? -1 : wasCompleted
+    ? Math.min(offsets.length - 1, Number.isInteger(priorReview.successfulStep) ? priorReview.successfulStep + 1 : 0)
+    : 0;
+  const reviewOffset = successfulStep < 0 ? 1 : offsets[successfulStep];
+  f.review[lesson.id] = {
+    due:(S.today.dayNumber || 0) + reviewOffset, dueDate:"", successfulStep:successfulStep,
+    policyVersion:"review-1-3-7-v1", lastOutcome:completionOutcome, lastAttemptId:completionAttempt.id,
+    lastReviewedDate:todayKey(), currentAttemptId:"",
+  };
   const day = ensureDay();
   day.blocks.foundation = true;
   (lesson.chunks || []).forEach(function (chunk) {
-    addWord(chunk.en, chunk.ru, lesson.canDo, "Pre-A1");
+    addWord(chunk.en, chunk.ru, lesson.canDo, guidedLevel());
   });
-  saveState();
-  saveWords();
-  toast("Урок завершён. Фразы вернутся на повторение завтра.");
-  courseBack();
+  persistAllNow().then(function () {
+    toast(completionOutcome !== "correct" ? "Тренировка сохранена без автоматического освоения. Следующий повтор завтра."
+      : wasCompleted ? "Повторение сохранено. Следующий интервал: " + reviewOffset + " дн." : "Урок сохранён. Первый повтор назначен через 1 день.");
+    courseBack();
+  }).catch(async function (e) {
+    // One of the two stores may have succeeded. Restore both the in-memory
+    // view and persistent records so the learner can press Save again without
+    // a false completion or duplicated words.
+    S.state = stateBeforeCompletion;
+    S.words = wordsBeforeCompletion;
+    clearTimeout(saveT); clearTimeout(saveWT);
+    const rollback = await Promise.allSettled([
+      call("state.save", {data:S.state}),
+      call("words.save", {data:{list:S.words}}),
+    ]);
+    const rollbackOk = rollback.every(function (item) { return item.status === "fulfilled"; });
+    toast((rollbackOk ? "Сохранение не выполнено. Ввод оставлен на экране, можно повторить. "
+      : "Сохранение и автоматический откат не подтверждены. Не закрывай экран и повтори. ") + (e.error || e), "bad");
+  }).finally(function () {
+    S.course.completionInFlight = false;
+    updateCourseFinish();
+  });
 }
 
 const ASSESS_SKILL_LABELS = {
@@ -2705,11 +3132,13 @@ function renderCourseAssessment() {
     html += "<div class='row wrap'><button class='btn pri' id='assessmentSpeakBtn' onclick='courseAssessmentSpeak()'>🎙 Сказать и проверить</button>" +
       "<button class='btn ghost' onclick='courseAssessmentShowSelfCheck()'>Сравнить самому</button></div><div id='assessmentFeedback'></div>";
     box.insertAdjacentHTML("beforeend", html);
-  } else if (task.type === "write") {
+  } else if (task.type === "write" || task.type === "structured-write") {
     box.insertAdjacentHTML("beforeend", "<div class='assessprompt'>" + esc(task.promptRu) + "</div>" +
-      "<input id='assessmentWrite' autocomplete='off' autocapitalize='sentences' placeholder='Напиши по-английски'>" +
+      (task.type === "structured-write"
+        ? "<div class='muted small'>Оценивается выполнение структуры и самостоятельность. Грамматика и смысл автоматически полностью не проверяются.</div><textarea id='assessmentWrite' rows='4' lang='en' spellcheck='true' placeholder='2-3 собственных предложения…'></textarea>"
+        : "<input id='assessmentWrite' autocomplete='off' autocapitalize='sentences' placeholder='Напиши по-английски'>") +
       "<div><button class='btn pri' onclick='courseAssessmentWrite()'>Проверить ответ</button></div><div id='assessmentFeedback'></div>");
-    el("assessmentWrite").addEventListener("keydown", function (event) { if (event.key === "Enter") courseAssessmentWrite(); });
+    if (task.type === "write") el("assessmentWrite").addEventListener("keydown", function (event) { if (event.key === "Enter") courseAssessmentWrite(); });
   }
 }
 function renderAssessmentChoices(task) {
@@ -2745,12 +3174,13 @@ function courseAssessmentSpeak() {
   call("speech.check").then(function (heard) {
     const alternatives = heard.alternatives?.length ? heard.alternatives : [{transcript:heard.text || ""}];
     return Promise.all(alternatives.map(function (item) {
-      return call("speech.score", {expected:task.expected, accepted:task.accepted || [], heard:item.transcript});
+      return call("speech.score", {expected:task.expected, accepted:task.accepted || [], heard:item.transcript, rule:task.rule || {}});
     }));
   }).then(function (scores) {
     scores.sort(function (a, b) { return b.score - a.score; });
     const best = scores[0];
-    courseAssessmentRecord(best.score >= 80, {method:"speech", score:best.score, heard:best.heard});
+    const outcome = best.outcome || (Number(best.score) >= 80 ? "correct" : "incorrect");
+    courseAssessmentRecord(outcome === "correct", {method:"speech", outcome:outcome, source:best.source || "rule", score:best.score, heard:best.heard});
   }).catch(function (e) {
     el("assessmentFeedback").innerHTML = "<div class='assessresult again'><b>Автопроверка недоступна.</b><div class='mt'>" + esc(e.error || "Речь не распозналась") +
       "</div><button class='btn mt' onclick='courseAssessmentShowSelfCheck()'>Сравнить самому</button></div>";
@@ -2764,14 +3194,21 @@ function courseAssessmentShowSelfCheck() {
   box.innerHTML = "<div class='assessresult'><div class='muted small'>Послушай образец, произнеси ещё раз и сравни слова.</div>" +
     "<div class='assessprompt mt'>" + esc(task.expected) + "</div><div class='row mt wrap'>" +
     "<button class='btn' onclick='courseAssessmentHearExpected()'>🔊 Образец</button>" +
-    "<button class='btn pri' onclick='courseAssessmentManualPass()'>Я произнёс и сравнил</button></div>" +
-    "<div class='muted small mt'>Это ручная самопроверка, не автоматическая оценка произношения.</div></div>";
+    "<button class='btn' onclick='courseAssessmentManualPass()'>Я произнёс и сравнил</button>" +
+    "<button class='btn pri' onclick='courseAssessmentReviewerPass()'>Проверил преподаватель</button></div>" +
+    "<div class='muted small mt'>Самопроверка остаётся тренировкой. Отдельная отметка преподавателя закрывает действие как внешне проверенное.</div></div>";
 }
 function courseAssessmentHearExpected() {
   const task = assessmentCurrent()?.task;
   if (task) call("speak", {text:task.expected, lang:"en-US"}).catch(function () {});
 }
-function courseAssessmentManualPass() { courseAssessmentRecord(true, {method:"selfCheck", selfChecked:true}); }
+function courseAssessmentManualPass() {
+  courseAssessmentRecord(false, {method:"selfCheck", selfChecked:true, outcome:"not_verified", source:"self"});
+  toast("Самопроверка записана как тренировка и не закрывает контрольную точку.", "warn");
+}
+function courseAssessmentReviewerPass() {
+  courseAssessmentRecord(true, {method:"reviewer", reviewerConfirmed:true, outcome:"correct", source:"reviewer"});
+}
 function normalizedAssessmentText(value) {
   return String(value || "").toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, " ").replace(/\s+/g, " ").trim();
 }
@@ -2779,6 +3216,15 @@ function courseAssessmentWrite() {
   const task = assessmentCurrent()?.task;
   const value = el("assessmentWrite")?.value || "";
   if (!value.trim()) { toast("Сначала напиши короткий ответ", "warn"); return; }
+  if (task.type === "structured-write") {
+    const minWords = Number(task.rule?.minWords || 8);
+    const normalized = normalizedAssessmentText(value);
+    const copied = (task.forbiddenSamples || []).some(function (sample) { return normalized === normalizedAssessmentText(sample); });
+    const enough = courseWritingWordCount(value) >= minWords && (value.match(/[.!?]+/g) || []).length >= 2;
+    if (copied) { toast("Нужен собственный ответ, а не копия фразы курса", "warn"); return; }
+    courseAssessmentRecord(enough, {method:"structured-writing", answer:value, source:"rule", checkedScope:"word-count-and-sentence-structure"});
+    return;
+  }
   const accepted = [task.expected].concat(task.accepted || []).map(normalizedAssessmentText);
   courseAssessmentRecord(accepted.includes(normalizedAssessmentText(value)), {method:"writing", answer:value});
 }
@@ -2786,7 +3232,10 @@ function courseAssessmentRecord(passed, detail) {
   const assess = S.course.assessment;
   const current = assessmentCurrent();
   if (!assess || !current?.task) return;
-  const result = Object.assign({passed:!!passed, at:Date.now()}, detail || {});
+  const outcome = detail?.outcome || (passed ? "correct" : "incorrect");
+  const source = detail?.source || (detail?.method === "selfCheck" ? "self" : "rule");
+  const attempt = recordLearningAttempt(current.task.id, outcome, source, detail || {});
+  const result = Object.assign({passed:!!passed && outcome === "correct", outcome:outcome, source:source, attemptId:attempt.id, at:Date.now()}, detail || {});
   if (assess.mode === "checkpoint") {
     const state = checkpointState(assess.definition.id);
     state.results[current.task.id] = result;
@@ -2812,7 +3261,7 @@ function courseAssessmentRecord(passed, detail) {
       assess.skillId = next?.id || "";
     }
   }
-  saveState();
+  persistStateNow().catch(function (e) { toast("Результат не сохранился: " + e.error, "bad"); });
   renderAssessmentFeedback(passed);
 }
 function renderAssessmentFeedback(passed) {
@@ -2866,7 +3315,7 @@ function renderExitSummary() {
   report += "</div>";
   let actions = "";
   if (ready) {
-    actions = "<button class='btn pri' onclick='courseStartA1()'>Начать A1 →</button>" +
+    actions = guidedLevel() === "A1" ? "<button class='btn pri' onclick='courseFinishA1()'>Сохранить результат A1</button>" : "<button class='btn pri' onclick='courseStartA1()'>Начать A1 →</button>" +
       "<button class='btn ghost' onclick='courseAssessmentBack()'>Остаться на повторении</button>";
   } else if (complete) {
     actions = profile.skills.filter(function (skill) { return !exitSkillState(skill.id).passed; }).map(function (skill) {
@@ -2876,11 +3325,18 @@ function renderExitSummary() {
     actions = "<button class='btn pri' onclick='courseResumeExit()'>Продолжить проверку →</button>";
   }
   el("assessmentTask").innerHTML = "<div class='courselabel'>Профиль навыков</div><h2>" +
-    (ready ? "Готов начинать A1" : complete ? "Нужно укрепить отдельные навыки" : "Проверка ещё не закончена") + "</h2>" +
+    (ready ? (guidedLevel() === "A1" ? "Маршрут A1 завершён" : "Готов начинать A1") : complete ? "Нужно укрепить отдельные навыки" : "Проверка ещё не закончена") + "</h2>" +
     "<div class='muted'>" + (ready
       ? "Все пять практических навыков готовы. Это рекомендация приложения, не официальный экзамен или сертификат CEFR."
       : "Общий процент не скрывает слабое место. Пройденные навыки сохраняются.") + "</div>" + report +
     "<div class='row wrap'>" + actions + "</div>";
+}
+function courseFinishA1() {
+  const f = foundationState();
+  f.status = "completed";
+  f.completedAt = Date.now();
+  persistStateNow().then(function () { toast("Результат A1 сохранён. A2-C1 остаются отдельными этапами."); courseAssessmentBack(); })
+    .catch(function (e) { toast("Результат не сохранился: " + e.error, "bad"); });
 }
 function courseResumeExit() {
   const profile = courseExitProfile();
@@ -2904,16 +3360,18 @@ function courseStartA1() {
   const f = foundationState();
   f.transition = {to:"A1", at:Date.now()};
   S.state.level = "A1";
-  S.state.course = "";
+  S.contextVersion += 1;
+  S.state.course = "a1-v1";
   S.packs = {};
   S.curText = null;
+  S.course.catalog = null;
+  S.course.loading = null;
+  S.course.lessons = [];
   S.course.assessment = null;
   applyLearnerMode();
-  saveState();
+  persistStateNow().catch(function () {});
   toast("A1 открыт. Прогресс Pre-A1 и повторения сохранены.");
-  go("today");
-  newQuestion();
-  renderRead();
+  go("course");
 }
 function courseOpenSource() {
   const url = S.course.lesson?.video?.sourceUrl;
@@ -4864,10 +5322,11 @@ function grade(g) {
   call("srsNext", {streak: w.streak || 0, ease: w.ease, interval: w.interval, grade: g})
     .then(function (r) {
       w.streak = r.streak; w.ease = r.ease; w.interval = r.interval; w.due = r.due;
-      saveWords();
-      S.review.i++; S.review.shown = false; S.review.previewFor = null;
-      S.review.typedVerdict = null;
-      renderReview();
+      persistWordsNow().then(function () {
+        S.review.i++; S.review.shown = false; S.review.previewFor = null;
+        S.review.typedVerdict = null;
+        renderReview();
+      }).catch(function (e) { toast("Результат слова не сохранился: " + e.error, "bad"); });
     }).catch(function (e) { toast(e.error || "не вышло", "bad"); });
 }
 /* Список слов рисуется ПОРЦИЯМИ.
@@ -4936,16 +5395,53 @@ function addManualWord() {
 }
 
 /* ─────────────────────────── пачки контента ────────────────── */
-function packKey(kind) { return kind + "_" + (S.state.level || "B1"); }
+function packKey(kind) { return kind + "_" + (S.state.level || "B1") + "_" + (S.state.audience || "adult"); }
+const CHILD_PRACTICE_BANK = {
+  A2: {
+    questions:["What was the best part of your school day?", "How do you help at home?", "What game would you teach a new friend?"],
+    topics:["A fun day with my class", "A skill I want to learn", "My plan for a free afternoon"],
+    texts:[{title:"The Class Garden", text:"Our class had an empty corner near the window. We decided to grow three small plants there. I brought seeds, Dana found cups, and Amir wrote the names on labels.\n\nAt first, we gave the plants too much water. One plant looked weak, so we read a short guide and changed our plan. A week later, two green leaves appeared.\n\nThe garden is still small, but it belongs to everyone. Each student has one simple job, and we can see how our work changes it."}],
+  },
+  B1: {
+    questions:["How can classmates make a new student feel welcome?", "Which hobby teaches patience, and why?", "What would make your neighbourhood better for children?"],
+    topics:["A project my team completed", "How I solved a problem while learning", "One change that would improve our school"],
+    texts:[{title:"The Missing Robot Wheel", text:"Our science club built a small robot for the school exhibition. On the morning of the event, one wheel disappeared. Everyone had a different idea about where to search.\n\nInstead of arguing, we divided the room into four areas and checked them one by one. The wheel was inside a box of cables. We still had twenty minutes to test the robot.\n\nThe robot did not win a prize, but our teacher noticed something important. We had solved the problem as a team and kept the exhibition on schedule."}],
+  },
+  B2: {
+    questions:["Should students help design the rules of their school?", "How does social media change friendship among teenagers?", "When can competition improve learning, and when can it harm it?"],
+    topics:["A fair rule for a shared space", "How technology changes the way students learn", "A community project young people could lead"],
+    texts:[{title:"A Library Chosen by Students", text:"A school library had a limited budget and hundreds of possible books. Instead of asking one adult to choose everything, the librarian invited students to form a selection group.\n\nThe group surveyed different classes, compared reviews, and reserved part of the budget for unfamiliar authors. Their first list was imperfect, but every choice had a written reason.\n\nBorrowing increased during the next term. The result did not prove that students always choose better books. It showed that participation can create responsibility for a shared resource."}],
+  },
+  C1: {
+    questions:["To what extent should schools limit persuasive technology?", "Can a rule be fair if the people affected by it had no voice?", "How should young people balance privacy with participation online?"],
+    topics:["The difference between access to information and understanding", "How institutions can include young voices without tokenism", "Why a convenient technology may still deserve careful limits"],
+    texts:[{title:"The Quiet Design of a School Platform", text:"A school introduced a platform that rewarded students for opening it every day. The bright counter appeared harmless, yet some students began checking it late at night simply to protect their streak.\n\nA student council asked whether the feature supported learning or merely frequent use. The developers replaced the daily counter with a weekly reflection and added a quiet period for notifications.\n\nThe episode illustrates a broader point. A digital tool teaches habits through its design even when those habits are absent from the curriculum. Evaluating the tool therefore requires attention to behaviour, not only content."}],
+  },
+};
+function childPracticePack(kind, level) {
+  const value = CHILD_PRACTICE_BANK[level]?.[kind];
+  return Array.isArray(value) ? value.slice() : null;
+}
+function audiencePack(items, audience) {
+  if (audience !== "child") return items.slice();
+  const adultSignals = /\b(shawshank|prison|manager|colleague|salary|mortgage|rent|landlord|office|career|job interview|husband|wife|marriage|alcohol|beer|wine|politic|university)\b/i;
+  const safe = items.filter(function (item) { return !adultSignals.test(JSON.stringify(item)); });
+  return safe.length ? safe : items.filter(function (_item, index) { return index % 2 === 0; });
+}
 function loadPack(kind) {
   const key = packKey(kind);
   if (S.packs[key]) return Promise.resolve(S.packs[key]);
-  const seedName = (kind === "topics" || kind === "grammar") ? kind : key;
+  const levelKey = kind + "_" + (S.state.level || "B1");
+  const seedName = (kind === "topics" || kind === "grammar") ? kind : levelKey;
+  const audience = S.state.audience || "adult";
   return call("seed", {name: seedName}).then(function (r) {
     let seedData = r.data;
     if (kind === "topics" || kind === "grammar") seedData = seedData[S.state.level] || [];
+    const childCurated = audience === "child" ? childPracticePack(kind, S.state.level) : null;
+    if (childCurated) seedData = childCurated;
+    seedData = audiencePack(seedData, audience);
     return call("store.load", {rel: "cache/gen/" + key + ".json"}).then(function (g) {
-      const extra = (g.data && g.data.list) || [];
+      const extra = audiencePack((g.data && g.data.list) || [], audience);
       S.packs[key] = seedData.concat(extra);
       return S.packs[key];
     });
@@ -4966,7 +5462,7 @@ function refillPack(kind) {
   const pack = S.packs[key] || [];
   const cmd = kind === "questions" ? "ai.genQuestions" : kind === "texts" ? "ai.genTexts" : "ai.genTopics";
   const avoid = kind === "texts" ? [] : pack.slice(-40);
-  call(cmd, {level: S.state.level, avoid: avoid}).then(function (r) {
+  call(cmd, {level: S.state.level, audience:S.state.audience || "adult", avoid: avoid}).then(function (r) {
     const arr = Array.isArray(r) ? r : (r.data || []);
     if (!arr.length) return;
     call("store.load", {rel: "cache/gen/" + key + ".json"}).then(function (g) {
@@ -5123,11 +5619,15 @@ function checkWriting() {
                    corrected: r.corrected, errors: r.errors || [], comment: r.comment || "", mode:r.mode || "ai",
                    stamp: new Date().toISOString().slice(0, 16)};
     const rel = "writing/" + todayKey() + "-" + Date.now() + ".json";
+    entry.rel = rel;
     await call("store.save", {rel: rel, data: entry});
     if (!S.state.writing) S.state.writing = [];
     S.state.writing.unshift({rel: rel, date: entry.date, topic: entry.topic});
     S.state.writing = S.state.writing.slice(0, 200);
-    saveState();
+    S.currentWriting = entry;
+    el("wRevision").classList.remove("hidden");
+    el("wRevisionText").value = text;
+    await persistStateNow();
     autoMark("write");
     el("wResult").scrollIntoView({behavior: "smooth"});
   }).catch(function (e) {
@@ -5137,6 +5637,24 @@ function checkWriting() {
     el("wErr").classList.remove("hidden");
     toast("Проверка не прошла", "bad");
   }).finally(function () { btn.disabled = false; btn.textContent = document.documentElement.classList.contains("pwa") ? "Базовая проверка" : "Проверить"; });
+}
+async function saveWritingRevision() {
+  const current = S.currentWriting;
+  const revised = el("wRevisionText")?.value.trim() || "";
+  if (!current?.rel || revised.length < 10) { toast("Напиши улучшенную версию текста", "warn"); return; }
+  const button = el("wRevisionBtn");
+  button.disabled = true;
+  try {
+    const checked = await call("ai.checkWriting", {text:revised, level:S.state.level});
+    const stored = Object.assign({}, current, {revision:revised, revisionAt:new Date().toISOString(), revisionCheck:{errors:checked.errors || [], comment:checked.comment || ""}});
+    await call("store.save", {rel:current.rel, data:stored});
+    recordLearningAttempt(current.rel + ":revision", "correct", "rule", {sample:revised});
+    await persistStateNow();
+    S.currentWriting = stored;
+    toast("Улучшенная версия сохранена вместе с исходником.");
+  } catch (e) {
+    toast("Улучшенная версия не сохранилась: " + (e.error || e), "bad");
+  } finally { button.disabled = false; }
 }
 function showWriteHistory() {
   const list = S.state.writing || [];
@@ -5376,7 +5894,9 @@ function prewarmGrammar() {
 
 function newQuestion() {
   S.speakNoSample = false;
+  const contextAtRequest = S.contextVersion;
   takeFromPack("questions", function (q) {
+    if (contextAtRequest !== S.contextVersion) return;
     S.lastQ = q || "Why is it important to learn English?";
     el("sQuestion").textContent = S.lastQ;
     bumpPack("questions");
@@ -5543,7 +6063,9 @@ function openSpeaking(i) {
 
 /* ─────────────────────────── чтение ────────────────────────── */
 function renderRead() {
+  const contextAtRequest = S.contextVersion;
   takeFromPack("texts", function (t) {
+    if (contextAtRequest !== S.contextVersion) return;
     if (!t) {
       el("readTitle").textContent = "Тексты кончились";
       el("readBody").innerHTML = "<p class='muted'>Генерирую новую пачку, зайди через минуту.</p>";
@@ -5777,7 +6299,11 @@ function openLesson(t, i) {
 /// частая ошибка, примеры. Уроки, сохранённые прошлой версией, знают только
 /// сплошной `explain`, поэтому его тоже показываем как есть.
 function showLesson(lsn) {
+  lsn.exercises = (lsn.exercises || []).map(function (exercise, index, all) {
+    return Object.assign({}, exercise, {evidence:exercise.evidence || (index >= Math.max(0, all.length - 2) ? "independent" : "practice")});
+  });
   S.lesson.data = lsn;
+  S.lesson.exerciseResults = {};
   el("gExerciseHint").textContent = lsn.instruction || "Впиши в пропуск слово из скобок в нужной форме. Нужна только вставка, не всё предложение.";
   const box = el("lessonText");
   const secs = [
@@ -5830,7 +6356,8 @@ function showLesson(lsn) {
     d.className = "exrow";
     const q = document.createElement("div");
     q.className = "q";
-    q.innerHTML = esc((i + 1) + ". " + ex.q).replace(/_{2,}/g, "<b class='gap'>___</b>");
+    q.innerHTML = esc((i + 1) + ". " + ex.q).replace(/_{2,}/g, "<b class='gap'>___</b>") +
+      (ex.evidence === "independent" ? " <span class='chip'>самостоятельно</span>" : "");
     const inp = document.createElement("input");
     inp.placeholder = "ответ в пропуск";
     inp.setAttribute("aria-label", "Ответ на упражнение " + (i + 1));
@@ -5842,6 +6369,7 @@ function showLesson(lsn) {
       const normalize = function (s) { return String(s).trim().toLowerCase().replace(/[’‘]/g, "'").replace(/\s+/g, " "); };
       const accepted = [ex.a].concat(ex.accepted || []).map(normalize);
       const ok = accepted.includes(normalize(inp.value));
+      S.lesson.exerciseResults[i] = {ok:ok, evidence:ex.evidence || "practice", at:Date.now()};
       verdict.textContent = ok ? "✓ верно" : "✗ правильно: " + ex.a + (ex.hint ? " (" + ex.hint + ")" : "");
       verdict.style.color = ok ? "var(--ok)" : "var(--danger)";
     };
@@ -5875,21 +6403,31 @@ function gradeBtnG(key, label, days) {
 }
 function gradeGrammar(g) {
   const topic = S.lesson.topic;
+  const independent = (S.lesson.data?.exercises || []).map(function (ex, index) { return {ex:ex,index:index}; })
+    .filter(function (item) { return item.ex.evidence === "independent"; });
+  const independentPassed = independent.length >= 2 && independent.every(function (item) { return S.lesson.exerciseResults?.[item.index]?.ok; });
+  if ((g === "good" || g === "easy") && !independentPassed) {
+    toast("Сначала реши верно две самостоятельные задачи. Самооценка сама по себе не означает освоение.", "warn");
+    return;
+  }
   const c = gcard(topic) || {};
   call("srsNext", {streak: c.streak || 0, ease: c.ease, interval: c.interval, grade: g})
     .then(function (r) {
       gcards()[gcardKey(topic)] = {streak: r.streak, ease: r.ease,
-                                   interval: r.interval, due: r.due};
+                                   interval: r.interval, due: r.due,
+                                   selfRating:g, independentPassed:independentPassed,
+                                   mastery:independentPassed ? "independent" : "needs_review"};
       // Старое поле оставляем: по нему считается «сколько раз за неделю».
       if (!S.state.grammarDone) S.state.grammarDone = {};
-      S.state.grammarDone[gcardKey(topic)] = true;
+      S.state.grammarDone[gcardKey(topic)] = independentPassed;
       if (!S.state.grammarDates) S.state.grammarDates = [];
       if (S.state.grammarDates.indexOf(todayKey()) < 0) S.state.grammarDates.push(todayKey());
-      saveState();
-      autoMark("grammar");
-      closeLesson();
-      renderGrammar();
-      toast("Вернётся через " + r.interval + " " + plural(r.interval, "день", "дня", "дней"));
+      persistStateNow().then(function () {
+        if (independentPassed) autoMark("grammar");
+        closeLesson();
+        renderGrammar();
+        toast((independentPassed ? "Самостоятельная проверка пройдена. " : "Тема оставлена на повторение. ") + "Вернётся через " + r.interval + " " + plural(r.interval, "день", "дня", "дней"));
+      }).catch(function (e) { toast("Результат не сохранился: " + e.error, "bad"); });
     }).catch(function (e) { toast(e.error || "не вышло", "bad"); });
 }
 function closeLesson() {
@@ -6857,30 +7395,54 @@ function doReset(scope) {
 }
 
 function setLevel(l) {
+  S.contextVersion += 1;
   S.state.level = l;
   if (l === "PRE_A1") {
     S.state.course = "foundation-v1";
     if (!S.state.audience) S.state.audience = "adult";
+  } else if (l === "A1") {
+    S.state.course = "a1-v1";
   }
   S.packs = {};
+  S.curText = null;
+  S.lastQ = "";
+  S.lesson = null;
+  S.course.catalog = null;
+  S.course.loading = null;
+  S.course.lessons = [];
+  S.course.lesson = null;
+  S.course.assessment = null;
   applyLearnerMode();
-  saveState();
+  persistStateNow().catch(function () {});
   renderSettings();
   toast("Уровень: " + levelLabel(l));
-  if (l === "PRE_A1") go("course");
+  if (l === "PRE_A1" || l === "A1") go("course");
+  else { go("today"); newQuestion(); renderRead(); }
 }
 function setAudience(audience) {
   if (audience !== "child" && audience !== "adult") return;
+  S.contextVersion += 1;
   S.state.audience = audience;
-  S.course.lessons = S.course.catalog ? (S.course.catalog.lessons || []).filter(function (lesson) {
-    return lesson.audience === audience;
-  }) : [];
+  S.packs = {};
+  S.curText = null;
+  S.lastQ = "";
+  S.lesson = null;
+  S.course.catalog = null;
+  S.course.loading = null;
+  S.course.lessons = [];
+  S.course.lesson = null;
+  S.course.assessment = null;
   applyLearnerMode();
-  saveState();
+  persistStateNow().catch(function () {});
   renderSettings();
   if (isFoundation()) {
     toast(audience === "child" ? "Маршрут: ребёнок 9-12" : "Маршрут: взрослый");
     go("course");
+  } else {
+    newQuestion();
+    renderRead();
+    if (S.screen === "grammar") renderGrammar();
+    toast(audience === "child" ? "Банк практики: ребёнок 9-12" : "Банк практики: взрослый");
   }
 }
 function toggleTheme() {
@@ -6977,6 +7539,9 @@ function onboarding() {
       if (!S.state.audience) { toast("Сначала выбери: ребёнок или взрослый", "warn"); return; }
       S.state.level = l;
       if (l === "PRE_A1") S.state.course = "foundation-v1";
+      if (l === "A1") S.state.course = "a1-v1";
+      S.contextVersion += 1;
+      S.course.catalog = null; S.course.loading = null; S.course.lessons = [];
       S.state.onboarded = true;
       applyLearnerMode();
       saveState();
@@ -6987,7 +7552,7 @@ function onboarding() {
       S.packs = {};
       S.curText = null;
       renderToday();
-      if (l === "PRE_A1") go("course");
+      if (l === "PRE_A1" || l === "A1") go("course");
       else { renderRead(); newQuestion(); }
     };
     box.appendChild(b);
@@ -7001,7 +7566,7 @@ document.addEventListener("focusin", function (e) {
 document.addEventListener("focusout", function () {
   call("typing", {value: false}).catch(function () {});
 });
-document.querySelectorAll(".navb").forEach(function (b) {
+document.querySelectorAll(".navb[data-s]").forEach(function (b) {
   b.addEventListener("click", function () { go(b.dataset.s); });
 });
 
@@ -7017,7 +7582,7 @@ function init() {
     call("listenRules"),
   ]).then(function (rs) {
     S.today = rs[0];
-    S.state = rs[1].data || {};
+    S.state = migrateStateClient(rs[1].data || {});
     S.words = (rs[2].data && rs[2].data.list) || [];
     S.tools = rs[3];
     PASS = rs[4];
@@ -7030,6 +7595,7 @@ function init() {
     }
     applyTheme();
     applyLearnerMode();
+    persistStateNow().catch(function () {});
     // Темы грамматики, пройденные прошлой версией, переносим в карточки со
     // сроком: раньше «пройдена» означала «больше не вернётся никогда».
     migrateGrammar();
@@ -7038,7 +7604,7 @@ function init() {
     // подпись с процентом и значок динамика останутся от значения по умолчанию.
     applyVolume();
     if (S.state.rate) ytRate(S.state.rate);
-    return call("plan", {day: S.today.weekday});
+    return call("plan", {day: S.today.weekday, audience:S.state.audience || "adult"});
   }).then(function (p) {
     S.plan = p.blocks || [];
     // Текущий масштаб: запрос без направления ничего не меняет, только
