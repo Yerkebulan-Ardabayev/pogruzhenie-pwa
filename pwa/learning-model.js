@@ -1,5 +1,5 @@
 export const LEARNING_SCHEMA_VERSION = 2;
-export const RELEASE_ID = "LEARNING-UPDATE-2026-09-rc1";
+export const RELEASE_ID = "LEARNING-UPDATE-2026-09-rc2";
 export const REVIEW_INTERVALS = [1, 3, 7];
 
 function object(value) {
@@ -119,11 +119,23 @@ export function scoreLearningPhrase(expected, heard, accepted = [], rule = {}) {
   const expectedVariants = [expected, ...accepted].filter(Boolean).map(words);
   const heardWords = words(heard);
   const joined = heardWords.join(" ");
-  const expectedJoined = expectedVariants.map((variant) => variant.join(" "));
+  // Дословное совпадение считается только по вариантам без слота «...», иначе голая заготовка проходит.
+  const expectedJoined = [expected, ...accepted].filter((variant) => variant && !String(variant).includes("..."))
+    .map((variant) => words(variant).join(" "));
   const intent = rule.intent || (String(expected).includes("...") && /\b(name is|i am|i'm)\b/i.test(String(expected)) ? "introduce-self" : "closed-phrase");
 
   let correct = expectedJoined.includes(joined);
   let source = "rule";
+  const openSlot = expectedVariants.some((variant) => variant.length > 0) &&
+    [expected, ...accepted].some((variant) => String(variant || "").includes("..."));
+  if (intent === "closed-phrase" && openSlot) {
+    // Шаблон с многоточием: фиксированное начало обязано совпасть, слот обязан быть заполнен хотя бы одним словом.
+    correct = correct || [expected, ...accepted].filter(Boolean).some((variant) => {
+      const stem = words(String(variant).split("...")[0]);
+      return stem.length > 0 && heardWords.length > stem.length &&
+        stem.every((token, index) => heardWords[index] === token);
+    });
+  }
   if (intent === "introduce-self") {
     correct = /^(hello |hi )?(my name is|i am|i'm) [a-z][a-z'-]*$/.test(joined);
   } else if (intent === "day-answer") {
