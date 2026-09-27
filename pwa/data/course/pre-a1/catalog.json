@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "releaseId": "LEARNING-UPDATE-2026-09-rc2",
+  "releaseId": "LEARNING-UPDATE-2026-09-rc3",
   "course": "foundation-v1",
   "level": "PRE_A1",
   "generatedAt": "2026-09-06",
@@ -109,6 +109,30 @@
           "rule": {
             "intent": "closed-phrase"
           }
+        },
+        {
+          "id": "child-instructions-listen-2",
+          "skill": "listening",
+          "type": "audio-choice",
+          "promptEn": "Listen.",
+          "answer": "Послушай.",
+          "options": [
+            "Послушай.",
+            "Встань.",
+            "Сядь."
+          ]
+        },
+        {
+          "id": "child-instructions-speak-2",
+          "skill": "spokenProduction",
+          "type": "speech",
+          "promptRu": "Скажи по-английски: Повтори, пожалуйста.",
+          "promptEn": "",
+          "expected": "Repeat, please.",
+          "accepted": [],
+          "rule": {
+            "intent": "closed-phrase"
+          }
         }
       ]
     },
@@ -151,7 +175,9 @@
           "promptRu": "Скажи по-английски: Я вижу красное.",
           "promptEn": "",
           "expected": "I see red.",
-          "accepted": [],
+          "accepted": [
+            "I can see red."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -198,7 +224,8 @@
           "promptEn": "",
           "expected": "It is a cow.",
           "accepted": [
-            "It's a cow"
+            "It's a cow",
+            "This is a cow."
           ],
           "rule": {
             "intent": "closed-phrase"
@@ -245,7 +272,9 @@
           "promptRu": "Скажи по-английски: У меня есть сестра.",
           "promptEn": "",
           "expected": "I have a sister.",
-          "accepted": [],
+          "accepted": [
+            "I have got a sister."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -337,7 +366,9 @@
           "promptRu": "Скажи по-английски: Я завтракаю.",
           "promptEn": "",
           "expected": "I eat breakfast.",
-          "accepted": [],
+          "accepted": [
+            "I have breakfast."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -383,7 +414,9 @@
           "promptRu": "Скажи по-английски: Который час?",
           "promptEn": "",
           "expected": "What time is it?",
-          "accepted": [],
+          "accepted": [
+            "What is the time?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -429,7 +462,9 @@
           "promptRu": "Скажи по-английски: Приятно познакомиться.",
           "promptEn": "",
           "expected": "Nice to meet you.",
-          "accepted": [],
+          "accepted": [
+            "Pleased to meet you."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -475,7 +510,9 @@
           "promptRu": "Скажи по-английски: Моя электронная почта ...",
           "promptEn": "",
           "expected": "My email is ...",
-          "accepted": [],
+          "accepted": [
+            "My email address is ..."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -521,7 +558,9 @@
           "promptRu": "Скажи по-английски: Сегодня понедельник.",
           "promptEn": "",
           "expected": "Today is Monday.",
-          "accepted": [],
+          "accepted": [
+            "It is Monday today."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -616,7 +655,10 @@
           "promptRu": "Скажи по-английски: Сколько это стоит?",
           "promptEn": "",
           "expected": "How much is it?",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -662,7 +704,9 @@
           "promptRu": "Скажи по-английски: Поверните налево.",
           "promptEn": "",
           "expected": "Turn left.",
-          "accepted": [],
+          "accepted": [
+            "Turn to the left."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -708,7 +752,9 @@
           "promptRu": "Скажи по-английски: Я обедаю в час.",
           "promptEn": "",
           "expected": "I have lunch at one.",
-          "accepted": [],
+          "accepted": [
+            "I have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -754,7 +800,10 @@
           "promptRu": "Скажи по-английски: Повторите, пожалуйста.",
           "promptEn": "",
           "expected": "Could you repeat, please?",
-          "accepted": [],
+          "accepted": [
+            "Could you repeat that, please?",
+            "Can you repeat, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -881,7 +930,8 @@
                 "promptEn": "Do you like pizza?",
                 "expected": "Yes, I do.",
                 "accepted": [
-                  "Yes I do"
+                  "Yes I do",
+                  "Yes, I like pizza."
                 ],
                 "rule": {
                   "intent": "closed-phrase"
@@ -896,8 +946,8 @@
                 "expected": "Today is Monday.",
                 "accepted": [],
                 "rule": {
-                  "intent": "closed-phrase",
-                  "protectTime": true
+                  "intent": "day-answer",
+                  "anyDay": true
                 }
               }
             ]
@@ -914,7 +964,9 @@
                 "promptEn": "",
                 "expected": "Hello!",
                 "accepted": [
-                  "Hi!"
+                  "Hi!",
+                  "Hi there!",
+                  "Good morning!"
                 ],
                 "rule": {
                   "intent": "closed-phrase"
@@ -968,7 +1020,9 @@
                 "promptRu": "Напиши: Это кошка",
                 "expected": "It is a cat.",
                 "accepted": [
-                  "It's a cat."
+                  "It's a cat.",
+                  "This is a cat.",
+                  "That is a cat."
                 ]
               },
               {
@@ -977,7 +1031,10 @@
                 "type": "write",
                 "promptRu": "Напиши: Я вижу красное",
                 "expected": "I see red.",
-                "accepted": []
+                "accepted": [
+                  "I can see red.",
+                  "I see the colour red."
+                ]
               }
             ]
           }
@@ -1099,7 +1156,9 @@
                 "promptEn": "Sorry, I did not hear you.",
                 "expected": "Could you repeat, please?",
                 "accepted": [
-                  "Please repeat."
+                  "Please repeat.",
+                  "Sorry, could you repeat that?",
+                  "Can you say that again, please?"
                 ],
                 "rule": {
                   "intent": "closed-phrase"
@@ -1146,7 +1205,9 @@
                 "promptRu": "Спроси, где станция",
                 "promptEn": "",
                 "expected": "Excuse me, where is the station?",
-                "accepted": [],
+                "accepted": [
+                  "Where is the station?"
+                ],
                 "rule": {
                   "intent": "closed-phrase"
                 }
@@ -1158,7 +1219,10 @@
                 "promptRu": "Попроси о помощи",
                 "promptEn": "",
                 "expected": "Can you help me, please?",
-                "accepted": [],
+                "accepted": [
+                  "Could you help me, please?",
+                  "Can you help me?"
+                ],
                 "rule": {
                   "intent": "closed-phrase"
                 }
@@ -1175,7 +1239,11 @@
                 "type": "write",
                 "promptRu": "Напиши: Мой номер телефона 123",
                 "expected": "My phone number is 123.",
-                "accepted": []
+                "accepted": [
+                  "My number is 123.",
+                  "My telephone number is 123.",
+                  "My phone number is one two three."
+                ]
               },
               {
                 "id": "adult-exit-writing-2",
@@ -1183,7 +1251,11 @@
                 "type": "write",
                 "promptRu": "Напиши: Встреча в десять",
                 "expected": "The meeting is at ten.",
-                "accepted": []
+                "accepted": [
+                  "The meeting is at ten o'clock.",
+                  "The meeting is at 10:00.",
+                  "The meeting's at ten."
+                ]
               },
               {
                 "id": "adult-exit-writing-3",
@@ -1191,7 +1263,9 @@
                 "type": "write",
                 "promptRu": "Напиши: Мы живём в Казахстане",
                 "expected": "We live in Kazakhstan.",
-                "accepted": []
+                "accepted": [
+                  "We are living in Kazakhstan."
+                ]
               }
             ]
           }
@@ -1272,7 +1346,9 @@
           "en": "Nice to meet you.",
           "ru": "Приятно познакомиться.",
           "icon": "🤝",
-          "accepted": [],
+          "accepted": [
+            "Pleased to meet you."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1360,7 +1436,9 @@
           "en": "Nice to meet you.",
           "ru": "Приятно познакомиться.",
           "icon": "🤝",
-          "accepted": [],
+          "accepted": [
+            "Pleased to meet you."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1448,7 +1526,9 @@
           "en": "Nice to meet you.",
           "ru": "Приятно познакомиться.",
           "icon": "🤝",
-          "accepted": [],
+          "accepted": [
+            "Pleased to meet you."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1792,7 +1872,9 @@
           "en": "I see red.",
           "ru": "Я вижу красное.",
           "icon": "🔴",
-          "accepted": [],
+          "accepted": [
+            "I can see red."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1877,7 +1959,9 @@
           "en": "I see red.",
           "ru": "Я вижу красное.",
           "icon": "🔴",
-          "accepted": [],
+          "accepted": [
+            "I can see red."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1962,7 +2046,9 @@
           "en": "I see red.",
           "ru": "Я вижу красное.",
           "icon": "🔴",
-          "accepted": [],
+          "accepted": [
+            "I can see red."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2050,7 +2136,8 @@
           "ru": "Это корова.",
           "icon": "🐄",
           "accepted": [
-            "It's a cow"
+            "It's a cow",
+            "This is a cow."
           ],
           "rule": {
             "intent": "closed-phrase"
@@ -2137,7 +2224,8 @@
           "ru": "Это корова.",
           "icon": "🐄",
           "accepted": [
-            "It's a cow"
+            "It's a cow",
+            "This is a cow."
           ],
           "rule": {
             "intent": "closed-phrase"
@@ -2224,7 +2312,8 @@
           "ru": "Это корова.",
           "icon": "🐄",
           "accepted": [
-            "It's a cow"
+            "It's a cow",
+            "This is a cow."
           ],
           "rule": {
             "intent": "closed-phrase"
@@ -2308,7 +2397,9 @@
           "en": "I have a sister.",
           "ru": "У меня есть сестра.",
           "icon": "👧",
-          "accepted": [],
+          "accepted": [
+            "I have got a sister."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2391,7 +2482,9 @@
           "en": "I have a sister.",
           "ru": "У меня есть сестра.",
           "icon": "👧",
-          "accepted": [],
+          "accepted": [
+            "I have got a sister."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2474,7 +2567,9 @@
           "en": "I have a sister.",
           "ru": "У меня есть сестра.",
           "icon": "👧",
-          "accepted": [],
+          "accepted": [
+            "I have got a sister."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2837,7 +2932,9 @@
           "en": "I eat breakfast.",
           "ru": "Я завтракаю.",
           "icon": "🥣",
-          "accepted": [],
+          "accepted": [
+            "I have breakfast."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2927,7 +3024,9 @@
           "en": "I eat breakfast.",
           "ru": "Я завтракаю.",
           "icon": "🥣",
-          "accepted": [],
+          "accepted": [
+            "I have breakfast."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3017,7 +3116,9 @@
           "en": "I eat breakfast.",
           "ru": "Я завтракаю.",
           "icon": "🥣",
-          "accepted": [],
+          "accepted": [
+            "I have breakfast."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3089,7 +3190,9 @@
           "en": "Today is Monday.",
           "ru": "Сегодня понедельник.",
           "icon": "📅",
-          "accepted": [],
+          "accepted": [
+            "It is Monday today."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -3108,7 +3211,9 @@
           "en": "What time is it?",
           "ru": "Который час?",
           "icon": "🕒",
-          "accepted": [],
+          "accepted": [
+            "What is the time?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3174,7 +3279,9 @@
           "en": "Today is Monday.",
           "ru": "Сегодня понедельник.",
           "icon": "📅",
-          "accepted": [],
+          "accepted": [
+            "It is Monday today."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -3193,7 +3300,9 @@
           "en": "What time is it?",
           "ru": "Который час?",
           "icon": "🕒",
-          "accepted": [],
+          "accepted": [
+            "What is the time?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3259,7 +3368,9 @@
           "en": "Today is Monday.",
           "ru": "Сегодня понедельник.",
           "icon": "📅",
-          "accepted": [],
+          "accepted": [
+            "It is Monday today."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -3278,7 +3389,9 @@
           "en": "What time is it?",
           "ru": "Который час?",
           "icon": "🕒",
-          "accepted": [],
+          "accepted": [
+            "What is the time?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3366,7 +3479,9 @@
           "en": "Nice to meet you.",
           "ru": "Приятно познакомиться.",
           "icon": "🤝",
-          "accepted": [],
+          "accepted": [
+            "Pleased to meet you."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3451,7 +3566,9 @@
           "en": "Nice to meet you.",
           "ru": "Приятно познакомиться.",
           "icon": "🤝",
-          "accepted": [],
+          "accepted": [
+            "Pleased to meet you."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3536,7 +3653,9 @@
           "en": "Nice to meet you.",
           "ru": "Приятно познакомиться.",
           "icon": "🤝",
-          "accepted": [],
+          "accepted": [
+            "Pleased to meet you."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3617,7 +3736,9 @@
           "en": "My email is ...",
           "ru": "Моя электронная почта ...",
           "icon": "✉️",
-          "accepted": [],
+          "accepted": [
+            "My email address is ..."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3698,7 +3819,9 @@
           "en": "My email is ...",
           "ru": "Моя электронная почта ...",
           "icon": "✉️",
-          "accepted": [],
+          "accepted": [
+            "My email address is ..."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3779,7 +3902,9 @@
           "en": "My email is ...",
           "ru": "Моя электронная почта ...",
           "icon": "✉️",
-          "accepted": [],
+          "accepted": [
+            "My email address is ..."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3824,7 +3949,9 @@
           "en": "What time is it?",
           "ru": "Который час?",
           "icon": "🕒",
-          "accepted": [],
+          "accepted": [
+            "What is the time?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3845,7 +3972,9 @@
           "en": "Today is Monday.",
           "ru": "Сегодня понедельник.",
           "icon": "📅",
-          "accepted": [],
+          "accepted": [
+            "It is Monday today."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -3892,7 +4021,9 @@
           "en": "What time is it?",
           "ru": "Который час?",
           "icon": "🕒",
-          "accepted": [],
+          "accepted": [
+            "What is the time?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3913,7 +4044,9 @@
           "en": "Today is Monday.",
           "ru": "Сегодня понедельник.",
           "icon": "📅",
-          "accepted": [],
+          "accepted": [
+            "It is Monday today."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -3960,7 +4093,9 @@
           "en": "What time is it?",
           "ru": "Который час?",
           "icon": "🕒",
-          "accepted": [],
+          "accepted": [
+            "What is the time?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3981,7 +4116,9 @@
           "en": "Today is Monday.",
           "ru": "Сегодня понедельник.",
           "icon": "📅",
-          "accepted": [],
+          "accepted": [
+            "It is Monday today."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -4261,7 +4398,10 @@
           "en": "How much is it?",
           "ru": "Сколько это стоит?",
           "icon": "💳",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -4344,7 +4484,10 @@
           "en": "How much is it?",
           "ru": "Сколько это стоит?",
           "icon": "💳",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -4427,7 +4570,10 @@
           "en": "How much is it?",
           "ru": "Сколько это стоит?",
           "icon": "💳",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -4490,7 +4636,9 @@
           "en": "Turn left.",
           "ru": "Поверните налево.",
           "icon": "⬅️",
-          "accepted": [],
+          "accepted": [
+            "Turn to the left."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -4564,7 +4712,9 @@
           "en": "Turn left.",
           "ru": "Поверните налево.",
           "icon": "⬅️",
-          "accepted": [],
+          "accepted": [
+            "Turn to the left."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -4638,7 +4788,9 @@
           "en": "Turn left.",
           "ru": "Поверните налево.",
           "icon": "⬅️",
-          "accepted": [],
+          "accepted": [
+            "Turn to the left."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -4730,7 +4882,9 @@
           "en": "I have lunch at one.",
           "ru": "Я обедаю в час.",
           "icon": "🍽️",
-          "accepted": [],
+          "accepted": [
+            "I have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -4811,7 +4965,9 @@
           "en": "I have lunch at one.",
           "ru": "Я обедаю в час.",
           "icon": "🍽️",
-          "accepted": [],
+          "accepted": [
+            "I have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -4892,7 +5048,9 @@
           "en": "I have lunch at one.",
           "ru": "Я обедаю в час.",
           "icon": "🍽️",
-          "accepted": [],
+          "accepted": [
+            "I have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -4975,7 +5133,10 @@
           "en": "Could you repeat, please?",
           "ru": "Повторите, пожалуйста.",
           "icon": "🔁",
-          "accepted": [],
+          "accepted": [
+            "Could you repeat that, please?",
+            "Can you repeat, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -5060,7 +5221,10 @@
           "en": "Could you repeat, please?",
           "ru": "Повторите, пожалуйста.",
           "icon": "🔁",
-          "accepted": [],
+          "accepted": [
+            "Could you repeat that, please?",
+            "Can you repeat, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -5145,7 +5309,10 @@
           "en": "Could you repeat, please?",
           "ru": "Повторите, пожалуйста.",
           "icon": "🔁",
-          "accepted": [],
+          "accepted": [
+            "Could you repeat that, please?",
+            "Can you repeat, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }

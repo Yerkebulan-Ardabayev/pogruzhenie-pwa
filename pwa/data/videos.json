@@ -5,7 +5,8 @@
     "channel": "Easy British English",
     "checkedAt": "2026-08-27",
     "sourceUrl": "https://www.youtube.com/watch?v=5K4Pr9Jts5s",
-    "onlineOnly": true
+    "onlineOnly": true,
+    "audience": "all"
   },
   {
     "id": "jm4Ebevh-Dw",
@@ -13,7 +14,8 @@
     "channel": "Learn English with EnglishClass101.com",
     "checkedAt": "2026-08-27",
     "sourceUrl": "https://www.youtube.com/watch?v=jm4Ebevh-Dw",
-    "onlineOnly": true
+    "onlineOnly": true,
+    "audience": "all"
   },
   {
     "id": "0XccoTXPu_c",
@@ -21,6 +23,7 @@
     "channel": "BBC Learning English",
     "checkedAt": "2026-08-27",
     "sourceUrl": "https://www.youtube.com/watch?v=0XccoTXPu_c",
-    "onlineOnly": true
+    "onlineOnly": true,
+    "audience": "adult"
   }
 ]

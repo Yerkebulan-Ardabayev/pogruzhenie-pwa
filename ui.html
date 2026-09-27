@@ -899,7 +899,8 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
   #courseLesson[data-step="task"] #courseTaskCard,
   #courseLesson[data-step="speech"] #courseSpeechCard,
   #courseLesson[data-step="finish"] #courseFinishCard{display:block}
-  #courseStepNav{display:grid; grid-template-columns:repeat(5,minmax(44px,1fr)); gap:4px; position:sticky; top:0; z-index:5; background:var(--bg0); padding:4px 0 8px}
+  /* LEARNING-FIX С7: при увеличении шаги переносятся на новую строку, «Готово» не уходит за край. */
+  #courseStepNav{display:grid; grid-template-columns:repeat(auto-fit,minmax(64px,1fr)); gap:4px; position:sticky; top:0; z-index:5; background:var(--bg0); padding:4px 0 8px}
   #courseStepNav button{min-height:44px; border:1px solid var(--line); border-radius:10px; font-size:12px}
   #courseStepNav button.on{background:var(--acc); color:var(--acc-ink)}
 }
@@ -909,6 +910,12 @@ html[data-audience="adult"] #s-course .phrasecard{border-radius:9px}
   #courseLesson>.card{margin-bottom:0}
 }
 @media (min-width: 601px){#courseStepNav{display:none}}
+/* LEARNING-FIX С6: карточка курса тёмная в обеих темах, в дневной теме текст на ней светлый (контраст не ниже 4,5:1). */
+html[data-theme="day"] #s-course .coursehero{--ink:#f4fbff; --ink2:#d8e8f1; --ink3:#bcd3df; color:var(--ink)}
+/* LEARNING-FIX С7: на планшете основные кнопки и меню не мельче 44 пикселей (spec 3.5). */
+@media (max-width: 1100px), (pointer: coarse) {
+  .btn,.navb{min-height:44px}
+}
 </style>
 </head>
 <body>
@@ -1808,7 +1815,7 @@ function migrateStateClient(raw) {
     state[key] = course;
   });
   state.learningSchemaVersion = 2;
-  state.releaseId = "LEARNING-UPDATE-2026-09-rc2";
+  state.releaseId = "LEARNING-UPDATE-2026-09-rc3";
   return state;
 }
 const MOD2SCREEN = {today:"today", listening:"listen", words:"words", writing:"write",
@@ -1886,7 +1893,43 @@ document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === "hidden" && document.documentElement.classList.contains("pwa")) {
     flushPwaData().catch(function () {});
   }
+  if (document.visibilityState === "visible") refreshTodayIfDayChanged();
 });
+/* LEARNING-FIX Б7: установленная PWA живёт в памяти днями, а S.today выставлялся один раз в init.
+   При возврате в приложение и раз в минуту сверяем РЕАЛЬНУЮ дату устройства. Сработка только при
+   смене реального дня: тесты двигают S.today.dayNumber сами, это не должно их сбивать. */
+let lastDeviceDay = "";
+function deviceDayKey() {
+  const now = new Date();
+  return now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
+}
+function refreshTodayIfDayChanged() {
+  if (!S.today || !S.today.date) return Promise.resolve(false);
+  const key = deviceDayKey();
+  if (!lastDeviceDay) { lastDeviceDay = key; return Promise.resolve(false); }
+  if (key === lastDeviceDay) return Promise.resolve(false);
+  const previousDay = lastDeviceDay;
+  lastDeviceDay = key;
+  return call("today").then(function (today) {
+    S.today = today;
+    return call("plan", {day: S.today.weekday, audience:S.state.audience || "adult"});
+  }).then(function (plan) {
+    S.plan = plan.blocks || [];
+    // Открытый урок и проверку не трогаем: их завершение возьмёт новую дату из S.today.
+    if (S.screen === "today") renderToday();
+    const courseHomeOpen = el("courseLesson").classList.contains("hidden") && el("courseAssessment").classList.contains("hidden");
+    if (S.screen === "course" && courseHomeOpen && S.course.catalog) renderCourseHome();
+    // Идущий повтор слов не сбрасываем: новая очередь соберётся, когда он закончится или экран откроют снова.
+    const reviewInProgress = S.review.i > 0 && S.review.i < (S.review.queue || []).length;
+    if (S.screen === "words" && !reviewInProgress) { buildQueue(); renderReview(); }
+    if (S.screen === "grammar" && !S.lesson) renderGrammar();
+    refreshStreak();
+    return true;
+  }).catch(function () { lastDeviceDay = previousDay; return false; });
+}
+window.addEventListener("focus", function () { refreshTodayIfDayChanged(); });
+window.addEventListener("pageshow", function () { refreshTodayIfDayChanged(); });
+setInterval(function () { refreshTodayIfDayChanged(); }, 60000);
 
 /* ───────────────────────── навигация ───────────────────────── */
 const TITLES = {
@@ -2175,8 +2218,10 @@ function autoMark(key) {
   if (!block) return false;                    // сегодня такого блока в плане нет
   if (d.blocks[key]) return false;             // уже отмечен, молчим
   d.blocks[key] = true;
-  saveState();
-  toast("✓ В плане дня: " + block.title);
+  // LEARNING-FIX С8: отметка дня пишется сразу, сообщение показывается после записи (spec 3.6).
+  persistStateNow().then(function () {
+    toast("✓ В плане дня: " + block.title);
+  }).catch(function (e) { toast("Отметка дня не сохранилась: " + ((e && (e.error || e.message)) || "ошибка записи"), "bad"); });
   if (S.screen === "today") renderToday();
   return true;
 }
@@ -2374,7 +2419,11 @@ function renderCourseHome() {
     : "Короткие ситуации из жизни, ясная русская опора, затем собственная реплика без подсказки.";
   const completed = foundationCompleted();
   const count = S.course.lessons.filter(function (lesson) { return foundationLessonCompleted(lesson.id); }).length;
-  el("courseProgressText").textContent = count + " / " + S.course.lessons.length;
+  // LEARNING-FIX С2: пройденные самопроверкой уроки считаются, но видны отдельно.
+  const selfCount = S.course.lessons.filter(function (lesson) {
+    return foundationLessonCompleted(lesson.id) && foundationState().completed[lesson.id]?.evidenceStatus === "self_unverified";
+  }).length;
+  el("courseProgressText").textContent = count + " / " + S.course.lessons.length + (selfCount ? " · из них самопроверкой " + selfCount : "");
   el("courseBar").style.width = Math.round(count * 100 / Math.max(1, S.course.lessons.length)) + "%";
 
   const due = Object.keys(foundationState().review).filter(function (id) {
@@ -2444,7 +2493,12 @@ function renderCourseHome() {
     const button = document.createElement("button");
     button.className = "courseunit" + (needsCheckpoint && unlocked ? " current" : "") + (!unlocked ? " locked" : "");
     button.disabled = !unlocked;
-    button.innerHTML = "<span class='coursecount'>" + (passed ? "✓ тема" : done + "/3") + "</span>" +
+    const point = courseCheckpoint(group.unit);
+    const selfClosed = passed && point ? point.tasks.filter(function (task) {
+      const r = checkpointState(point.id).results[task.id];
+      return r && r.passed && r.source === "self";
+    }).length : 0;
+    button.innerHTML = "<span class='coursecount'>" + (passed ? (selfClosed ? "✓ тема · самопроверка " + selfClosed + " из " + point.tasks.length : "✓ тема") : done + "/3") + "</span>" +
       "<div class='courseicon'>" + esc(next.chunks[0].icon || "🌱") + "</div>" +
       "<span class='coursetitle'>" + esc(String(next.title).split(":")[0]) + "</span>" +
       "<span class='coursecan'>" + esc(!unlocked ? "Сначала заверши предыдущую тему" : needsCheckpoint ? "Проверить тему" : next.canDo) + "</span>";
@@ -2650,6 +2704,8 @@ async function courseWritingCheck() {
   const minWords = Number(lesson.activeTask.minWords || 8);
   if (courseWritingWordCount(value) < minWords) { toast("Напиши не меньше " + minWords + " английских слов", "warn"); return; }
   if (courseWritingCopiesSample(value, lesson)) { toast("Нужен собственный ответ, а не копия фразы урока", "warn"); return; }
+  const real = writingLooksReal(value);
+  if (!real.ok) { toast(real.why, "warn"); return; }
   const button = el("courseWritingCheckBtn");
   button.disabled = true;
   try {
@@ -2681,6 +2737,8 @@ async function courseWritingRevision() {
     toast("Измени черновик с учётом обратной связи", "warn"); return;
   }
   if (courseWritingCopiesSample(value, lesson)) { toast("Сохрани собственный ответ, а не фразу урока", "warn"); return; }
+  const real = writingLooksReal(value);
+  if (!real.ok) { toast(real.why, "warn"); return; }
   progress.writingRevision = value;
   const attempt = recordLearningAttempt(lesson.id + ":writing:revision", "not_verified", "self", {
     answer:value, kind:"practice", sessionId:S.course.currentAttemptId, sampleShown:false,
@@ -2764,7 +2822,11 @@ function courseSay() {
     const progress = foundationLessonProgress(S.course.lesson.id);
     progress.attempts = (progress.attempts || 0) + 1;
     progress.bestSpeech = Math.max(progress.bestSpeech || 0, score.score || 0);
-    const verified = score.outcome ? score.outcome === "correct" : Number(score.score) >= 80;
+    const recognized = score.outcome ? score.outcome === "correct" : Number(score.score) >= 80;
+    // LEARNING-FIX С1: урок проверен, только если верно сказана фраза задания урока. Другая фраза остаётся практикой.
+    const targetIndex = S.course.lesson.activeTask?.targetIndex || 0;
+    const onTarget = S.course.lesson.activeTask?.type === "dialogue" || S.course.speechIndex === targetIndex;
+    const verified = recognized && onTarget;
     const attempt = recordLearningAttempt(S.course.lesson.id + ":speech:" + S.course.speechIndex,
       score.outcome || (verified ? "correct" : "incorrect"), score.source || "rule", {heard:score.heard || "", answer:score.heard || "",
         kind:foundationLessonCompleted(S.course.lesson.id) ? "review" : "practice", sessionId:S.course.currentAttemptId, sampleShown:false});
@@ -2782,13 +2844,22 @@ function courseSay() {
       renderCourseTask();
       renderCourseSpeechTargets();
     }
-    progress.speechDone = dialogue ? Object.keys(progress.dialogueResults || {}).length >= (S.course.lesson.activeTask.dialogueTurns || []).length : verified;
-    progress.speechVerified = progress.speechDone && verified;
-    progress.independent.speech = verified;
+    if (dialogue) {
+      progress.speechDone = Object.keys(progress.dialogueResults || {}).length >= (S.course.lesson.activeTask.dialogueTurns || []).length;
+      progress.speechVerified = progress.speechDone && verified;
+    } else if (verified) {
+      // Однажды проверенная фраза задания не отменяется следующей тренировкой другой фразы.
+      progress.speechDone = true;
+      progress.speechVerified = true;
+    }
+    progress.independent.speech = Boolean(progress.independent.speech) || verified;
     progress.lastAttemptId = attempt.id;
-    progress.speechAttemptId = attempt.id;
-    progress.needsReview = !verified;
-    if (!verified) courseReviewFailure(S.course.lesson.id, attempt);
+    if (verified || !progress.speechAttemptId) progress.speechAttemptId = attempt.id;
+    // Сбой повтора назначает только нераспознанный ответ, верно сказанная другая фраза это практика.
+    if (!recognized) {
+      progress.needsReview = true;
+      courseReviewFailure(S.course.lesson.id, attempt);
+    } else if (verified) progress.needsReview = false;
     S.course.speechDone = progress.speechDone;
     if (verified && S.course.lesson.activeTask?.type === "speak") {
       progress.taskDone = true;
@@ -2797,6 +2868,10 @@ function courseSay() {
     }
     persistStateNow().catch(function (e) { toast("Попытка не сохранилась: " + e.error, "bad"); });
     renderCourseSpeechScore(score);
+    if (recognized && !onTarget) {
+      el("courseSpeechResult").insertAdjacentHTML("beforeend", "<div class='mt' id='courseSpeechTargetHint'>Фраза верна, это тренировка. Для зачёта урока скажи фразу задания «" +
+        esc(S.course.lesson.chunks[targetIndex]?.en || "") + "».</div>");
+    }
     updateCourseFinish();
   }).catch(function (e) {
     out.className = "speechresult again";
@@ -2900,7 +2975,7 @@ function courseManualContinue() {
   S.course.speechDone = progress.speechDone;
   S.course.recPath = "";
   el("courseRecAudio").classList.add("hidden");
-  el("courseSpeechResult").innerHTML = "<b>Самопроверка сохранена как тренировка.</b><div class='muted small mt'>Контрольная точка всё равно потребует отдельного проверяемого действия.</div>";
+  el("courseSpeechResult").innerHTML = "<b>Самопроверка сохранена.</b><div class='muted small mt'>Речевая попытка засчитана как самопроверка. Когда задание урока выполнено, урок можно завершить, в прогрессе он будет отмечен как пройденный самопроверкой.</div>";
   persistStateNow().catch(function (e) { toast("Самопроверка не сохранилась: " + (e.error || e), "bad"); });
   updateCourseFinish();
 }
@@ -3052,7 +3127,44 @@ function assessmentOptions(task) {
   const options = (task.options || []).slice();
   if (options.length < 2) return options;
   const shift = Array.from(String(task.id || "")).reduce(function (sum, char) { return sum + char.charCodeAt(0); }, 0) % options.length;
-  return options.slice(shift).concat(options.slice(0, shift));
+  const base = options.slice(shift).concat(options.slice(0, shift));
+  if (!assessmentRetried(task)) return base;
+  // LEARNING-FIX Б2: после ошибки варианты идут в новом порядке, перебор по памяти позиций не работает.
+  // Новый порядок отличается и от исходного, и от показанного в прошлой попытке.
+  const assess = S.course.assessment;
+  // Прошлый порядок хранится в состоянии контрольной точки, чтобы пережить выход на карту курса.
+  const store = assess.mode === "checkpoint" ? checkpointState(assess.definition.id) : assess;
+  store.shownOrders = Object.assign({}, store.shownOrders);
+  const avoid = [base.join("\n"), (store.shownOrders[task.id] || []).join("\n")];
+  let shuffled = base.slice();
+  for (let round = 0; round < 12 && avoid.includes(shuffled.join("\n")); round += 1) {
+    shuffled = base.slice().sort(function () { return Math.random() - 0.5; });
+  }
+  for (let shift = 1; shift < base.length && avoid.includes(shuffled.join("\n")); shift += 1) {
+    shuffled = base.slice(shift).concat(base.slice(0, shift));
+  }
+  store.shownOrders[task.id] = shuffled;
+  return shuffled;
+}
+/// Повторялось ли задание после ошибки. Такой верный ответ засчитывается с пометкой «со второй попытки».
+function assessmentRetried(task) {
+  const assess = S.course.assessment;
+  if (!assess || !task) return false;
+  if (assess.mode === "checkpoint") return Number(checkpointState(assess.definition.id).retries?.[task.id] || 0) > 0;
+  const skill = (assess.definition.skills || []).find(function (item) { return item.tasks.some(function (t) { return t.id === task.id; }); });
+  return Boolean(skill && Number(exitSkillState(skill.id).retries || 0) > 0);
+}
+/// Как закрыты задания: самопроверкой, отметкой вручную (старые записи reviewer) или со второй попытки.
+function assessmentEvidenceText(tasks, results) {
+  const passed = tasks.map(function (task) { return results[task.id]; }).filter(function (r) { return r && r.passed; });
+  const self = passed.filter(function (r) { return r.source === "self"; }).length;
+  const manual = passed.filter(function (r) { return r.source === "reviewer"; }).length;
+  const retry = passed.filter(function (r) { return r.helped === "retry"; }).length;
+  const parts = [];
+  if (self) parts.push("самопроверкой " + self + " из " + tasks.length);
+  if (manual) parts.push("отмечено вручную " + manual);
+  if (retry) parts.push("со второй попытки " + retry);
+  return parts.length ? "Закрыто " + parts.join(", ") + "." : "Все задания проверены приложением с первой попытки.";
 }
 function assessmentCurrent() {
   const assess = S.course.assessment;
@@ -3191,26 +3303,83 @@ function courseAssessmentShowSelfCheck() {
   if (!task) return;
   const box = el("assessmentFeedback");
   if (!box) return;
+  const checkpoint = S.course.assessment?.mode === "checkpoint";
   box.innerHTML = "<div class='assessresult'><div class='muted small'>Послушай образец, произнеси ещё раз и сравни слова.</div>" +
     "<div class='assessprompt mt'>" + esc(task.expected) + "</div><div class='row mt wrap'>" +
     "<button class='btn' onclick='courseAssessmentHearExpected()'>🔊 Образец</button>" +
-    "<button class='btn' onclick='courseAssessmentManualPass()'>Я произнёс и сравнил</button>" +
-    "<button class='btn pri' onclick='courseAssessmentReviewerPass()'>Проверил преподаватель</button></div>" +
-    "<div class='muted small mt'>Самопроверка остаётся тренировкой. Отдельная отметка преподавателя закрывает действие как внешне проверенное.</div></div>";
+    "<button class='btn pri' onclick='courseAssessmentManualPass()'>Я произнёс и сравнил</button></div>" +
+    "<div class='muted small mt'>" + (checkpoint
+      ? "Самопроверка закрывает задание. В итоге темы будет видно, что оно закрыто самопроверкой."
+      : "В итоговой проверке самопроверка записывается как практика и в итог навыка не входит.") + "</div></div>";
 }
 function courseAssessmentHearExpected() {
   const task = assessmentCurrent()?.task;
   if (task) call("speak", {text:task.expected, lang:"en-US"}).catch(function () {});
 }
 function courseAssessmentManualPass() {
-  courseAssessmentRecord(false, {method:"selfCheck", selfChecked:true, outcome:"not_verified", source:"self"});
-  toast("Самопроверка записана как тренировка и не закрывает контрольную точку.", "warn");
+  // LEARNING-FIX Б1: отдельной кнопки проверки преподавателем больше нет. В контрольной точке самопроверка
+  // закрывает задание с источником self, происхождение видно в итоге темы и на карте курса. В итоговой
+  // проверке она остаётся практикой (spec 3.2): порог 2 из 3 считает только независимые попытки.
+  const checkpoint = S.course.assessment?.mode === "checkpoint";
+  courseAssessmentRecord(checkpoint, {method:"selfCheck", selfChecked:true, outcome:"not_verified", source:"self"});
+  if (checkpoint) toast("Задание закрыто самопроверкой, в итоге темы это видно.");
+  else toast("Самопроверка записана как практика, в итог проверки она не входит.", "warn");
 }
-function courseAssessmentReviewerPass() {
-  courseAssessmentRecord(true, {method:"reviewer", reviewerConfirmed:true, outcome:"correct", source:"reviewer"});
-}
+/// Та же нормализация, что normalizeAnswerText в pwa/learning-model.js (LEARNING-FIX Б5):
+/// регистр, пунктуация, сокращения и числа до 100 не мешают верному ответу. Копия нужна
+/// Mac-оболочке без моста PWA, равенство двух копий проверяет pwa/test_learning_quality.mjs.
+const ANSWER_CONTRACTIONS = [
+  [/\bcan't\b/g, "can not"], [/\bcannot\b/g, "can not"], [/\bwon't\b/g, "will not"], [/\bshan't\b/g, "shall not"],
+  [/n't\b/g, " not"], [/\bi'm\b/g, "i am"], [/\blet's\b/g, "let us"],
+  [/\b(what|where|who|how|that|there|here|it|he|she|name|today)'s\b/g, "$1 is"],
+  [/'re\b/g, " are"], [/'ve\b/g, " have"], [/'ll\b/g, " will"], [/\b(i|you|he|she|we|they)'d\b/g, "$1 would"],
+];
+const ANSWER_ONES = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven",
+  "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+const ANSWER_TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
 function normalizedAssessmentText(value) {
-  return String(value || "").toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, " ").replace(/\s+/g, " ").trim();
+  let text = String(value || "").toLowerCase().replace(/[’‘]/g, "'");
+  ANSWER_CONTRACTIONS.forEach(function (pair) { text = text.replace(pair[0], pair[1]); });
+  // Распознавание пишет время как «7:00» и «7:30»: это «seven o'clock» и «seven thirty».
+  text = text.replace(/\b(\d{1,2}):00\b/g, "$1 o'clock").replace(/\b(\d{1,2}):([0-5]\d)\b/g, "$1 $2");
+  return text.replace(/[^a-z0-9' ]/g, " ").split(/\s+/).filter(Boolean).map(function (token) {
+    if (!/^\d+$/.test(token) || Number(token) > 100) return token;
+    const n = Number(token);
+    if (n === 100) return "one hundred";
+    if (n < 20) return ANSWER_ONES[n];
+    return ANSWER_TENS[Math.floor(n / 10)] + (n % 10 ? " " + ANSWER_ONES[n % 10] : "");
+  }).join(" ");
+}
+/// Словарь проверки письма (LEARNING-FIX Б3): 2000 самых частых слов из seed/freq_en.txt без взрослых
+/// веб-слов, плюс базовая лексика A1 (семья, еда, школа, дом, животные, глаголы). К нему добавляются
+/// слова курса. Обычный текст A1 проходит, набор букв и русский транслитом нет.
+const COMMON_EN_WORDS = new Set("the of and to a in for is on that by this with i you it not or be are from at as your all have new more an was we will home can us about if page my has search free but our one other do no information time they site he up may what which their news out use any there see only so his when contact here business who web also now help get pm view online c e first am been would how were me s services some these click its like service x than find price date back top people had list name just over state year day into email two health n world re next used go b work last most products music buy data make them should product system post her city t add policy number such please available copyright support message after best software then jan good video well d where info rights public books high school through m each links she review years order very privacy book items company r read group need many user said de does set under general research university january mail full map reviews program life know games way days management p part could great united hotel real f item international center ebay must store travel comments made development report off member details line terms before hotels did send right type because local those using results office education national car design take posted internet address community within states area want phone dvd shipping reserved subject between forum family l long based w code show o even black check special prices website index being women much sign file link open today technology south case project same pages uk version section own found sports house related security both g county american photo game members power while care network down computer systems three total place end following download h him without per access think north resources current posts big media law control water history pictures size art personal since including guide shop directory board location change white text small rating rate government children during usa return students v shopping account times sites level digital profile previous form events love old john main call hours image department title description non k y insurance another why shall property class cd still money quality every listing content country private little visit save tools low reply customer december compare movies include college value article york man card jobs provide j food source author different press u learn sale around print course job canada process room stock training too credit point join science men categories advanced west sales look english left team estate box conditions select windows photos thread week category note live large gallery table register however june october november market library really action start series model features air industry plan human provided tv yes required second hot accessories cost movie forums march la september better say questions july yahoo going medical test friend come dec server pc study application cart staff articles san feedback again play looking issues april never users complete street topic comment financial things working against standard tax person below mobile less got blog party payment equipment login student let programs offers legal above recent park stores side act problem red give memory performance social q august quote language story sell options experience rates create key body young america important field few east paper single ii age activities club example girls additional password z latest something road gift question changes night ca hard texas oct pay four status browse issue range building seller court february always result audio light write war nov offer blue groups al easy given files event release analysis request fax china making picture needs possible might professional yet month major star areas future space committee hand sun cards problems london washington meeting rss become interest id child keep enter california share similar garden schools million added reference companies listed baby learning energy run delivery net popular term film stories put computers journal reports co try welcome central images president notice god original head radio until cell color self council away includes track australia discussion archive once others entertainment agreement format least society months log safety friends sure faq trade edition cars messages marketing tell further updated association able having provides david fun already green studies close common drive specific several gold feb living sep collection called short arts lot ask display limited powered solutions means director daily beach past natural whether due et electronics five upon period planning database says official weather mar land average done technical window france pro region island record direct microsoft conference environment records st district calendar costs style url front statement update parts aug ever downloads early miles sound resource present applications either ago document word works material bill apr written talk federal hosting rules final tickets thing centre requirements via cheap kids finance true minutes else mark third rock gifts europe reading topics bad individual tips plus auto cover usually edit together videos percent fast function fact unit getting global tech meet far economic en player projects lyrics often subscribe submit germany amount watch included feel though bank risk thanks everything deals various words linux jul production commercial james weight town heart advertising received choose treatment newsletter archives points knowledge magazine error camera jun girl currently construction toys registered clear golf receive domain methods chapter makes protection policies loan wide beauty manager india position taken sort listings models michael known half cases step engineering florida simple quick none wireless license paul friday lake whole annual published later basic sony shows corporate google church method purchase customers active response practice hardware figure materials fire holiday chat enough designed along among death writing speed html countries loss face brand discount higher effects created remember standards oil bit yellow political increase advertise kingdom base near environmental thought stuff french storage oh japan doing loans shoes entry stay nature orders availability africa summary turn mean growth notes agency king monday european activity copy although drug pics western income force cash employment overall bay river commission ad package contents seen players engine port album regional stop supplies started administration bar institute views plans double dog build screen exchange types soon sponsored lines electronic continue across benefits needed season apply someone held ny anything printer condition effective believe organization effect asked eur mind sunday selection pdf lost tour menu volume cross anyone mortgage hope silver corporation wish inside solution role rather weeks addition came supply nothing certain usr executive running lower necessary union jewelry according dc clothing mon com particular fine names robert homepage hour gas skills six bush islands advice career military rental decision leave british pre huge sat woman facilities zip bid kind sellers middle move cable opportunities taking values division coming tuesday object appropriate machine logo length actually nice score statistics client ok returns capital follow sample investment sent shown saturday christmas england culture band flash ms lead george choice went starting registration fri thursday courses consumer hi airport foreign artist outside furniture levels channel letter mode phones ideas wednesday structure fund summer allow degree contract button releases wed homes super male matter custom virginia almost took located multiple asian distribution editor inn industrial cause potential song cnet ltd los hp focus late fall featured idea rooms female responsible inc communications win associated thomas primary cancer numbers reason tool browser spring foundation answer voice eg friendly schedule documents communication purpose feature bed comes police everyone independent ip approach cameras brown physical operating hill maps medicine deal hold ratings chicago forms glass happy tue smith wanted developed thank safe unique survey prior telephone sport ready feed animal sources mexico population pa regular secure navigation operations therefore simply evidence station christian round paypal favorite understand option master valley recently probably thu rentals sea built publications blood cut worldwide improve connection publisher hall larger anti networks earth parents nokia impact transfer introduction kitchen strong tel carolina wedding properties hospital ground overview ship accommodation owners disease tx excellent paid italy perfect hair opportunity kit classic basis command cities william express award distance tree peter assessment ensure thus wall ie involved el extra especially interface partners budget rated guides success maximum ma operation existing quite selected boy amazon patients restaurants beautiful warning locations horse vote forward flowers stars significant lists technologies owner retail animals useful directly manufacturer ways est son providing rule mac housing takes iii gmt bring catalog searches max trying mother authority considered told xml traffic programme joined input strategy feet agent valid bin modern senior ireland teaching door grand testing trial charge units instead canadian cool normal wrote enterprise ships entire educational md leading metal positive fl fitness chinese opinion mb asia football abstract uses output funds mr greater likely develop employees artists alternative processing responsibility resolution java guest seems publication pass relations trust van contains session multi photography republic fees components vacation century academic assistance completed skin graphics indian prev ads mary il expected ring grade pacific mountain organizations pop filter mailing vehicle longer consider int northern behind panel floor german buying match proposed default require iraq boys outdoor deep morning otherwise allows rest protein plant reported hit transportation mm pool mini politics partner disclaimer authors boards faculty parties fish membership mission eye string sense modified pack released stage internal goods recommended born unless richard detailed japanese race approved background target except character usb maintenance ability maybe functions ed moving brands places php pretty trademarks spain southern yourself etc winter battery youth pressure submitted boston debt keywords medium television interested core break purposes throughout sets dance wood msn itself defined papers playing awards fee studio reader virtual device established answers rent las remote dark programming external apple le regarding instructions min offered theory enjoy remove aid surface minimum visual host variety teachers isbn martin manual block subjects agents increased repair fair civil steel understanding songs fixed wrong beginning hands associates finally az updates desktop classes paris ohio gets sector capacity requires jersey un fat fully father electric saw instruments quotes officer driver businesses dead respect unknown specified restaurant mike trip pst worth mi procedures poor teacher eyes relationship workers farm georgia peace traditional campus tom showing creative coast benefit progress funding devices lord grant sub agree fiction hear sometimes watches careers beyond goes families led museum themselves fan transport interesting blogs wife evaluation accepted former implementation ten hits zone complex th cat galleries references die presented jack flat flow agencies literature respective parent spanish michigan columbia setting dr scale stand economy highest helpful monthly critical frame musical definition secretary angeles networking path australian employee chief gives kb bottom magazines packages detail francisco laws changed pet heard begin individuals colorado royal clean switch russian largest african guy titles relevant guidelines justice connect bible dev cup basket applied weekly vol installation described demand pp suite vegas na square chris attention advance skip diet army auction gear lee os difference allowed correct charles nation selling lots piece sheet firm seven older illinois regulations elements species jump cells module resort facility random pricing dvds certificate minister motion looks fashion directions visitors documentation monitor trading forest calls whose coverage couple giving chance vision ball ending clients actions listen discuss accept automotive goal successful sold wind communities clinical situation sciences markets lowest highly publishing appear emergency developing lives currency leather determine temperature palm announcements patient actual historical stone bob commerce ringtones perhaps persons difficult scientific satellite fit tests village accounts ex met pain xbox particularly factors coffee www settings buyer cultural steve easily oral ford poster edge functional root au fi closed holidays ice pink zealand balance monitoring graduate replies shot nc architecture initial label thinking scott llc sec recommend canon league waste minute bus provider optional dictionary cold accounting manufacturing sections chair fishing effort phase fields bag fantasy po letters motor va mum mom dad sister brother grandma grandpa grandmother grandfather aunt uncle cousin daughter husband eat ate drink drank milk juice tea bread butter cheese egg meat chicken rice soup salad pizza pasta banana orange fruit vegetable carrot potato tomato onion sugar salt cake cookie chocolate cream breakfast lunch dinner sandwich burger sweet bedroom bathroom sofa lamp classroom lesson homework pen pencil desk pupil maths bird cow pig sheep rabbit mouse lion tiger elephant monkey bear duck purple grey gray ear nose mouth leg arm foot shirt dress shoe hat coat jacket jeans sock supermarket cinema zoo afternoon evening tomorrow yesterday weekend autumn o'clock swim walk sleep cook speak sing ride draw sit tall sad funny favourite slow hello goodbye bye sorry okay zero eight nine eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred".split(" "));
+/// Слово известно, если оно есть в словаре или в фразах курса, в том числе с окончанием -s, -es, -ed, -ing.
+function knownEnglishWord(word) {
+  const base = word.replace(/'s$/, "");
+  const forms = [base, base.replace(/ies$/, "y"), base.replace(/es$/, ""), base.replace(/s$/, ""), base.replace(/ed$/, ""),
+    base.replace(/d$/, ""), base.replace(/ing$/, ""), base.replace(/ing$/, "e")];
+  if (!S.courseWords) {
+    S.courseWords = new Set();
+    (S.course.lessons || []).forEach(function (lesson) {
+      (lesson.chunks || []).forEach(function (chunk) {
+        [chunk.en].concat(chunk.accepted || []).forEach(function (text) {
+          normalizedAssessmentText(text).split(" ").forEach(function (w) { if (w) S.courseWords.add(w); });
+        });
+      });
+    });
+    if (!(S.course.lessons || []).length) S.courseWords = null;
+  }
+  return forms.some(function (form) { return COMMON_EN_WORDS.has(form) || Boolean(S.courseWords && S.courseWords.has(form)); });
+}
+/// Простое правило против бессмыслицы: не меньше 5 разных слов, и половина слов из частого списка.
+/// Смысл и грамматику оно не проверяет, поэтому результат подписан «проверена форма».
+function writingLooksReal(value) {
+  const tokens = normalizedAssessmentText(value).split(" ").filter(function (word) { return /^[a-z']+$/.test(word); });
+  if (new Set(tokens).size < 5) return {ok:false, why:"Нужно хотя бы 5 разных английских слов, а не повтор одного"};
+  const known = tokens.filter(knownEnglishWord).length;
+  if (known * 2 < tokens.length) return {ok:false, why:"Большая часть слов не похожа на английские. Напиши обычными словами"};
+  return {ok:true};
 }
 function courseAssessmentWrite() {
   const task = assessmentCurrent()?.task;
@@ -3222,7 +3391,9 @@ function courseAssessmentWrite() {
     const copied = (task.forbiddenSamples || []).some(function (sample) { return normalized === normalizedAssessmentText(sample); });
     const enough = courseWritingWordCount(value) >= minWords && (value.match(/[.!?]+/g) || []).length >= 2;
     if (copied) { toast("Нужен собственный ответ, а не копия фразы курса", "warn"); return; }
-    courseAssessmentRecord(enough, {method:"structured-writing", answer:value, source:"rule", checkedScope:"word-count-and-sentence-structure"});
+    const real = writingLooksReal(value);
+    if (!real.ok) { toast(real.why, "warn"); return; }
+    courseAssessmentRecord(enough, {method:"structured-writing", answer:value, source:"rule", checkedScope:"form-only"});
     return;
   }
   const accepted = [task.expected].concat(task.accepted || []).map(normalizedAssessmentText);
@@ -3234,11 +3405,18 @@ function courseAssessmentRecord(passed, detail) {
   if (!assess || !current?.task) return;
   const outcome = detail?.outcome || (passed ? "correct" : "incorrect");
   const source = detail?.source || (detail?.method === "selfCheck" ? "self" : "rule");
-  const attempt = recordLearningAttempt(current.task.id, outcome, source, detail || {});
-  const result = Object.assign({passed:!!passed && outcome === "correct", outcome:outcome, source:source, attemptId:attempt.id, at:Date.now()}, detail || {});
+  const extra = Object.assign({helped:assessmentRetried(current.task) ? "retry" : ""}, detail || {});
+  const attempt = recordLearningAttempt(current.task.id, outcome, source, extra);
+  const selfClosed = source === "self" && Boolean(extra.selfChecked) && assess.mode === "checkpoint";
+  const result = Object.assign({passed:!!passed && (outcome === "correct" || selfClosed), outcome:outcome, source:source, attemptId:attempt.id, at:Date.now()}, extra);
   if (assess.mode === "checkpoint") {
     const state = checkpointState(assess.definition.id);
     state.results[current.task.id] = result;
+    if (!result.passed) {
+      // LEARNING-FIX Б2: любая ошибка делает следующую попытку повтором, в том числе после выхода на карту курса.
+      state.retries = Object.assign({}, state.retries);
+      state.retries[current.task.id] = Number(state.retries[current.task.id] || 0) + 1;
+    }
     if (passed) {
       const allPassed = assess.definition.tasks.every(function (task) { return state.results[task.id]?.passed; });
       if (allPassed) {
@@ -3262,19 +3440,27 @@ function courseAssessmentRecord(passed, detail) {
     }
   }
   persistStateNow().catch(function (e) { toast("Результат не сохранился: " + e.error, "bad"); });
-  renderAssessmentFeedback(passed);
+  renderAssessmentFeedback(passed, result);
 }
-function renderAssessmentFeedback(passed) {
+function renderAssessmentFeedback(passed, result) {
   const assess = S.course.assessment;
   const box = el("assessmentTask");
+  const how = !passed ? "" : result?.checkedScope === "form-only" ? " Проверена форма, смысл не проверялся."
+    : result?.source === "self" ? " Закрыто самопроверкой." : result?.helped === "retry" ? " Засчитано со второй попытки." : "";
   if (assess.mode === "checkpoint" && !passed) {
     box.innerHTML = "<div class='assessresult again'><h2>Пока не закрепилось</h2>" +
       "<div class='muted'>Посмотри на правильную опору, затем попробуй это действие ещё раз. Остальная тема не сбрасывается.</div>" +
       "<button class='btn pri mt' onclick='courseAssessmentRetryTask()'>Повторить действие</button></div>";
     return;
   }
+  if (!passed && result?.source === "self") {
+    box.innerHTML = "<div class='assessresult'><h2>Записано как практика</h2>" +
+      "<div class='muted'>Самопроверка не входит в итог проверки навыков. Перейти к A1 можно и без неё: уровень выбирается вручную в Настройках.</div>" +
+      "<button class='btn pri mt' onclick='courseAssessmentContinue()'>Продолжить →</button></div>";
+    return;
+  }
   box.innerHTML = "<div class='assessresult " + (passed ? "good" : "again") + "'><h2>" + (passed ? "Получилось" : "Запишем как слабое место") + "</h2>" +
-    "<div class='muted'>" + (passed ? "Ответ сохранён, идём дальше." : "Заверши остальные задания. Потом приложение предложит повторить только этот навык.") + "</div>" +
+    "<div class='muted'>" + (passed ? "Ответ сохранён, идём дальше." + how : "Заверши остальные задания. Потом приложение предложит повторить только этот навык.") + "</div>" +
     "<button class='btn pri mt' onclick='courseAssessmentContinue()'>Продолжить →</button></div>";
 }
 function courseAssessmentRetryTask() {
@@ -3293,6 +3479,7 @@ function renderCheckpointComplete() {
   renderAssessmentSkills();
   el("assessmentTask").innerHTML = "<div class='assessresult good'><div class='courselabel'>Тема закреплена</div>" +
     "<h2>Следующая глава открыта</h2><div class='muted'>Фразы останутся в повторении, а на карте курса доступна следующая тема.</div>" +
+    "<div class='muted small mt' id='checkpointEvidence'>" + esc(assessmentEvidenceText(S.course.assessment.definition.tasks, checkpointState(S.course.assessment.definition.id).results)) + "</div>" +
     "<button class='btn pri mt' onclick='courseAssessmentBack()'>Вернуться к маршруту →</button></div>";
 }
 function renderExitSummary() {
@@ -3301,6 +3488,9 @@ function renderExitSummary() {
   const complete = profile.skills.every(function (skill) { return Object.keys(exitSkillState(skill.id).results).length === skill.tasks.length; });
   const ready = complete && profile.skills.every(function (skill) { return exitSkillState(skill.id).passed; });
   exit.readyForA1 = ready;
+  const selfPractice = profile.skills.some(function (skill) {
+    return Object.values(exitSkillState(skill.id).results).some(function (result) { return result?.source === "self"; });
+  });
   if (complete) exit.completedAt = Date.now();
   saveState();
   el("assessmentCounter").textContent = complete ? "результат" : "продолжение";
@@ -3310,7 +3500,8 @@ function renderExitSummary() {
     const state = exitSkillState(skill.id);
     const done = Object.keys(state.results).length;
     const good = skill.tasks.filter(function (task) { return state.results[task.id]?.passed; }).length;
-    report += "<div class='" + (state.passed ? "good" : done === skill.tasks.length ? "again" : "") + "'><b>" + esc(skill.title) + "</b><br>" + good + " / 3</div>";
+    const how = state.passed ? "<br><span class='muted small'>" + esc(assessmentEvidenceText(skill.tasks, state.results)) + "</span>" : "";
+    report += "<div class='" + (state.passed ? "good" : done === skill.tasks.length ? "again" : "") + "'><b>" + esc(skill.title) + "</b><br>" + good + " / 3" + how + "</div>";
   });
   report += "</div>";
   let actions = "";
@@ -3328,7 +3519,8 @@ function renderExitSummary() {
     (ready ? (guidedLevel() === "A1" ? "Маршрут A1 завершён" : "Готов начинать A1") : complete ? "Нужно укрепить отдельные навыки" : "Проверка ещё не закончена") + "</h2>" +
     "<div class='muted'>" + (ready
       ? "Все пять практических навыков готовы. Это рекомендация приложения, не официальный экзамен или сертификат CEFR."
-      : "Общий процент не скрывает слабое место. Пройденные навыки сохраняются.") + "</div>" + report +
+      : "Общий процент не скрывает слабое место. Пройденные навыки сохраняются." + (selfPractice
+        ? " Задания, закрытые самопроверкой, записаны как практика и в итог не входят. Уровень A1 можно выбрать вручную в Настройках." : "")) + "</div>" + report +
     "<div class='row wrap'>" + actions + "</div>";
 }
 function courseFinishA1() {
@@ -3350,6 +3542,7 @@ function courseRetryExitSkill(id) {
   state.results = {};
   state.passed = false;
   state.attempts = (state.attempts || 0) + 1;
+  state.retries = Number(state.retries || 0) + 1;
   S.course.assessment.skillId = id;
   saveState();
   renderCourseAssessment();
@@ -3367,6 +3560,7 @@ function courseStartA1() {
   S.course.catalog = null;
   S.course.loading = null;
   S.course.lessons = [];
+  S.courseWords = null;
   S.course.assessment = null;
   applyLearnerMode();
   persistStateNow().catch(function () {});
@@ -3523,7 +3717,11 @@ async function renderPhoneVideos() {
   box.textContent = "Загружаю список…";
   try {
     const bridge = await call.webBridge;
-    const videos = await bridge.onlineVideos();
+    const child = (S.state.audience || "adult") === "child";
+    // LEARNING-FIX Б9: ребёнок видит только ролики с аудиторией child или all, ролик без метки считается взрослым.
+    const videos = (await bridge.onlineVideos()).filter(function (video) {
+      return !child || video.audience === "child" || video.audience === "all";
+    });
     box.innerHTML = "";
     videos.forEach(function (video) {
       const button = document.createElement("button");
@@ -5426,7 +5624,8 @@ function audiencePack(items, audience) {
   if (audience !== "child") return items.slice();
   const adultSignals = /\b(shawshank|prison|manager|colleague|salary|mortgage|rent|landlord|office|career|job interview|husband|wife|marriage|alcohol|beer|wine|politic|university)\b/i;
   const safe = items.filter(function (item) { return !adultSignals.test(JSON.stringify(item)); });
-  return safe.length ? safe : items.filter(function (_item, index) { return index % 2 === 0; });
+  // LEARNING-FIX Б9: пустая безопасная подборка остаётся пустой, взрослые элементы ребёнку не подставляются.
+  return safe;
 }
 function loadPack(kind) {
   const key = packKey(kind);
@@ -6132,9 +6331,12 @@ function updateReadTrBtn(ready) {
   const b = el("readTrBtn");
   if (!b) return;
   if (!ready) {
-    b.textContent = "Перевод готовится";
+    // LEARNING-FIX С5: в PWA конвейера нет, «готовится» было бы неправдой.
+    const pwa = document.documentElement.classList.contains("pwa");
+    b.textContent = pwa ? "Готового перевода нет, нажми на слово" : "Перевод готовится";
     b.disabled = true;
-    b.title = "Конвейер ещё не перевёл этот текст. Кнопка «Пополнить» на Аудировании запускает его вручную";
+    b.title = pwa ? "Для этого текста нет готового перевода. Перевод отдельного слова открывается нажатием на слово"
+      : "Конвейер ещё не перевёл этот текст. Кнопка «Пополнить» на Аудировании запускает его вручную";
     return;
   }
   b.disabled = false;
@@ -6200,7 +6402,9 @@ function gtab(name) {
   renderGrammarList();
 }
 function renderGrammar() {
-  el("gLevel").textContent = S.state.level || "";
+  // LEARNING-FIX Б8: вкладка «К повторению» заменяет заголовок без #gLevel, поэтому элемент может отсутствовать.
+  const levelLabelNode = el("gLevel");
+  if (levelLabelNode) levelLabelNode.textContent = S.state.level || "";
   refreshStreak();
   loadPack("grammar").then(function (topics) {
     S.gtopics = topics;
@@ -6217,8 +6421,9 @@ function renderGrammarList() {
   });
   el("gDueN").textContent = due.length ? String(due.length) : "";
   const list = tab === "due" ? due : topics;
+  // LEARNING-FIX Б8: обе вкладки держат элемент уровня, повторный заход на экран его находит.
   el("gListTitle").innerHTML = tab === "due"
-    ? "К повторению сегодня"
+    ? 'К повторению сегодня · уровень <span id="gLevel">' + esc(S.state.level || "") + "</span>"
     : 'Все темы уровня <span id="gLevel">' + esc(S.state.level || "") + "</span>";
   el("gHint").textContent = tab === "due"
     ? "Пройденная тема возвращается через 1, 3, 8, 20, 50 дней, если отвечать «понятно». Ответишь «с трудом», вернётся раньше."
@@ -6295,6 +6500,40 @@ function openLesson(t, i) {
     if (S.lesson === lesson) el("lessonText").textContent = e.error || "Не удалось открыть сохранённый урок.";
   });
 }
+/// LEARNING-FIX Б4: показанный ответ помнится вне экрана, по теме и тексту задачи, до планового возврата темы.
+/// Иначе «← К темам» и повторный вход превращали показанный ответ в самостоятельный.
+function grammarRevealEntry(topic) {
+  const all = S.state.grammarRevealed;
+  const key = gcardKey(topic);
+  const entry = all && all[key];
+  if (!entry) return null;
+  // Повреждённая запись (строка, число, items не объект) не должна ронять проверку грамматики.
+  if (typeof entry !== "object" || !entry.items || typeof entry.items !== "object") {
+    delete all[key];
+    return null;
+  }
+  const card = gcard(topic);
+  const due = Number(card?.due || 0);
+  // Тема вернулась по расписанию уже после показа: задачи снова проверяют самостоятельность.
+  if (card && due > Number(entry.day || 0) && due <= Number(S.today.dayNumber || 0)) {
+    delete all[key];
+    saveState();
+    return null;
+  }
+  return entry;
+}
+function rememberGrammarReveal(topic, question) {
+  const store = S.state.grammarRevealed;
+  if (!store || typeof store !== "object" || Array.isArray(store)) S.state.grammarRevealed = {};
+  const key = gcardKey(topic);
+  const entry = grammarRevealEntry(topic) || {items:{}};
+  entry.day = Number(S.today.dayNumber || 0);
+  entry.items = Object.assign({}, entry.items);
+  entry.items[question] = true;
+  S.state.grammarRevealed[key] = entry;
+  // Пишем сразу, а не отложенной записью: перезагрузка через долю секунды не должна стереть показ.
+  persistStateNow().catch(function (e) { toast("Отметка подсказки не сохранилась: " + (e && e.error || "ошибка записи"), "bad"); });
+}
 /// Урок рисуется разделами: картинка-образ, правило, отличие от русского,
 /// частая ошибка, примеры. Уроки, сохранённые прошлой версией, знают только
 /// сплошной `explain`, поэтому его тоже показываем как есть.
@@ -6304,6 +6543,9 @@ function showLesson(lsn) {
   });
   S.lesson.data = lsn;
   S.lesson.exerciseResults = {};
+  S.lesson.revealed = {};
+  const shown = grammarRevealEntry(S.lesson.topic)?.items || {};
+  lsn.exercises.forEach(function (exercise, index) { if (shown[exercise.q]) S.lesson.revealed[index] = true; });
   el("gExerciseHint").textContent = lsn.instruction || "Впиши в пропуск слово из скобок в нужной форме. Нужна только вставка, не всё предложение.";
   const box = el("lessonText");
   const secs = [
@@ -6366,11 +6608,20 @@ function showLesson(lsn) {
     const verdict = document.createElement("span");
     verdict.className = "verdict";
     btn.onclick = function () {
-      const normalize = function (s) { return String(s).trim().toLowerCase().replace(/[’‘]/g, "'").replace(/\s+/g, " "); };
+      // LEARNING-FIX Б5: точка или запятая в конце ответа не делают его неверным.
+      const normalize = function (s) {
+        return String(s).trim().toLowerCase().replace(/[’‘]/g, "'").replace(/^[\s.,!?;:"«»]+|[\s.,!?;:"«»]+$/g, "").replace(/\s+/g, " ");
+      };
       const accepted = [ex.a].concat(ex.accepted || []).map(normalize);
       const ok = accepted.includes(normalize(inp.value));
-      S.lesson.exerciseResults[i] = {ok:ok, evidence:ex.evidence || "practice", at:Date.now()};
-      verdict.textContent = ok ? "✓ верно" : "✗ правильно: " + ex.a + (ex.hint ? " (" + ex.hint + ")" : "");
+      // LEARNING-FIX Б4: ответ, введённый после показа правильного, засчитывается «с подсказкой».
+      const helped = Boolean(S.lesson.revealed[i]);
+      S.lesson.exerciseResults[i] = {ok:ok, helped:helped, evidence:ex.evidence || "practice", at:Date.now()};
+      if (!ok) {
+        S.lesson.revealed[i] = true;
+        rememberGrammarReveal(S.lesson.topic, ex.q);
+      }
+      verdict.textContent = ok ? (helped ? "✓ верно, с подсказкой" : "✓ верно") : "✗ правильно: " + ex.a + (ex.hint ? " (" + ex.hint + ")" : "");
       verdict.style.color = ok ? "var(--ok)" : "var(--danger)";
     };
     d.appendChild(q); d.appendChild(inp); d.appendChild(btn); d.appendChild(verdict);
@@ -6405,9 +6656,12 @@ function gradeGrammar(g) {
   const topic = S.lesson.topic;
   const independent = (S.lesson.data?.exercises || []).map(function (ex, index) { return {ex:ex,index:index}; })
     .filter(function (item) { return item.ex.evidence === "independent"; });
-  const independentPassed = independent.length >= 2 && independent.every(function (item) { return S.lesson.exerciseResults?.[item.index]?.ok; });
+  const independentPassed = independent.length >= 2 && independent.every(function (item) {
+    const result = S.lesson.exerciseResults?.[item.index];
+    return result?.ok && !result.helped;
+  });
   if ((g === "good" || g === "easy") && !independentPassed) {
-    toast("Сначала реши верно две самостоятельные задачи. Самооценка сама по себе не означает освоение.", "warn");
+    toast("«Понятно» после двух самостоятельных задач без подсказки. Сейчас выбери «С трудом» или «Не понял», тема вернётся раньше.", "warn");
     return;
   }
   const c = gcard(topic) || {};
@@ -6500,7 +6754,10 @@ function renderRecon() {
 function renderReconDue() {
   const box = el("reconDue");
   const all = reconState();
+  const child = (S.state.audience || "adult") === "child";
   const due = Object.keys(all).filter(function (k) {
+    // LEARNING-FIX Б9: фрагменты 2SUB (взрослый фильм) в профиле ребёнка не показываются.
+    if (child && k.indexOf("2sub:") === 0) return false;
     return (all[k].due || 0) <= (S.today.dayNumber || 0);
   }).sort(function (a, b) { return (all[a].due || 0) - (all[b].due || 0); });
   if (!due.length) { box.classList.add("hidden"); return; }
@@ -6669,6 +6926,7 @@ function reconStartOwn() {
 /// Повтор сохранённого фрагмента: строки лежат рядом с карточкой, поэтому
 /// повторение не зависит ни от сети, ни от того, жив ли ещё тот ролик.
 function reconReopen(key) {
+  if ((S.state.audience || "adult") === "child" && String(key).indexOf("2sub:") === 0) { toast("Этот фрагмент из взрослого фильма", "warn"); return; }
   const f = reconState()[key];
   if (!f || !f.lines) { toast("Фрагмент потерялся", "bad"); return; }
   reconOpen({key: key, title: f.title || "Фрагмент", lines: f.lines, repeat: true});
@@ -7406,10 +7664,14 @@ function setLevel(l) {
   S.packs = {};
   S.curText = null;
   S.lastQ = "";
+  // LEARNING-FIX Б8: открытый урок грамматики прежнего уровня закрывается, темы перечитываются.
+  if (S.lesson && el("gLesson")) closeLesson();
   S.lesson = null;
+  S.gtopics = null;
   S.course.catalog = null;
   S.course.loading = null;
   S.course.lessons = [];
+  S.courseWords = null;
   S.course.lesson = null;
   S.course.assessment = null;
   applyLearnerMode();
@@ -7423,13 +7685,20 @@ function setAudience(audience) {
   if (audience !== "child" && audience !== "adult") return;
   S.contextVersion += 1;
   S.state.audience = audience;
+  // LEARNING-FIX Б9: список роликов собирался под прежнюю аудиторию, его нужно собрать заново.
+  if (el("phoneVideoCards")) delete el("phoneVideoCards").dataset.loaded;
+  if (el("phoneVideoPlayer")) el("phoneVideoPlayer").innerHTML = "";
   S.packs = {};
   S.curText = null;
   S.lastQ = "";
+  // LEARNING-FIX Б8: открытый урок грамматики прежнего уровня закрывается, темы перечитываются.
+  if (S.lesson && el("gLesson")) closeLesson();
   S.lesson = null;
+  S.gtopics = null;
   S.course.catalog = null;
   S.course.loading = null;
   S.course.lessons = [];
+  S.courseWords = null;
   S.course.lesson = null;
   S.course.assessment = null;
   applyLearnerMode();
@@ -7582,6 +7851,8 @@ function init() {
     call("listenRules"),
   ]).then(function (rs) {
     S.today = rs[0];
+    // Точка отсчёта это дата устройства, а не S.today: мост в тестах отдаёт свою дату.
+    lastDeviceDay = deviceDayKey();
     S.state = migrateStateClient(rs[1].data || {});
     S.words = (rs[2].data && rs[2].data.list) || [];
     S.tools = rs[3];

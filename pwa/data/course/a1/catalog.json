@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "releaseId": "LEARNING-UPDATE-2026-09-rc2",
+  "releaseId": "LEARNING-UPDATE-2026-09-rc3",
   "course": "a1-v1",
   "level": "A1",
   "generatedAt": "2026-09-06",
@@ -214,7 +214,9 @@
           "en": "I go to school at eight.",
           "ru": "Я иду в школу в восемь.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "I go to school at eight o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -233,7 +235,9 @@
           "en": "We have lunch at one.",
           "ru": "Мы обедаем в час.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "We have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -272,7 +276,9 @@
           "en": "I go to school at eight.",
           "ru": "Я иду в школу в восемь.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "I go to school at eight o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -291,7 +297,9 @@
           "en": "We have lunch at one.",
           "ru": "Мы обедаем в час.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "We have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -344,7 +352,9 @@
           "en": "I go to school at eight.",
           "ru": "Я иду в школу в восемь.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "I go to school at eight o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -363,7 +373,9 @@
           "en": "We have lunch at one.",
           "ru": "Мы обедаем в час.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "We have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -404,7 +416,9 @@
           "en": "I would like an apple, please.",
           "ru": "Я хочу яблоко, пожалуйста.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Can I have an apple, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -413,7 +427,10 @@
           "en": "How much is it?",
           "ru": "Сколько это стоит?",
           "icon": "👂",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -460,7 +477,9 @@
           "en": "I would like an apple, please.",
           "ru": "Я хочу яблоко, пожалуйста.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Can I have an apple, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -469,7 +488,10 @@
           "en": "How much is it?",
           "ru": "Сколько это стоит?",
           "icon": "👂",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -530,7 +552,9 @@
           "en": "I would like an apple, please.",
           "ru": "Я хочу яблоко, пожалуйста.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Can I have an apple, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -539,7 +563,10 @@
           "en": "How much is it?",
           "ru": "Сколько это стоит?",
           "icon": "👂",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -772,7 +799,9 @@
           "en": "Would you like to play after school?",
           "ru": "Хочешь поиграть после школы?",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Do you want to play after school?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -829,7 +858,9 @@
           "en": "Would you like to play after school?",
           "ru": "Хочешь поиграть после школы?",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Do you want to play after school?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -900,7 +931,9 @@
           "en": "Would you like to play after school?",
           "ru": "Хочешь поиграть после школы?",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Do you want to play after school?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -977,7 +1010,9 @@
           "en": "I like it because we speak together.",
           "ru": "Мне нравится, потому что мы говорим вместе.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "I like it because we talk together."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1033,7 +1068,9 @@
           "en": "I like it because we speak together.",
           "ru": "Мне нравится, потому что мы говорим вместе.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "I like it because we talk together."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1103,7 +1140,9 @@
           "en": "I like it because we speak together.",
           "ru": "Мне нравится, потому что мы говорим вместе.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "I like it because we talk together."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1161,7 +1200,11 @@
           "en": "My phone number is 123.",
           "ru": "Мой номер телефона 123.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "My number is 123.",
+            "My phone number is one two three.",
+            "My number is one two three."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1218,7 +1261,11 @@
           "en": "My phone number is 123.",
           "ru": "Мой номер телефона 123.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "My number is 123.",
+            "My phone number is one two three.",
+            "My number is one two three."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1289,7 +1336,11 @@
           "en": "My phone number is 123.",
           "ru": "Мой номер телефона 123.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "My number is 123.",
+            "My phone number is one two three.",
+            "My number is one two three."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1330,7 +1381,9 @@
           "en": "I start work at nine.",
           "ru": "Я начинаю работу в девять.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "I start work at nine o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1340,7 +1393,9 @@
           "en": "I usually have lunch at one.",
           "ru": "Обычно я обедаю в час.",
           "icon": "👂",
-          "accepted": [],
+          "accepted": [
+            "I usually have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1350,7 +1405,9 @@
           "en": "I do not work on Sunday.",
           "ru": "Я не работаю в воскресенье.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "I do not work on Sundays."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1389,7 +1446,9 @@
           "en": "I start work at nine.",
           "ru": "Я начинаю работу в девять.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "I start work at nine o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1399,7 +1458,9 @@
           "en": "I usually have lunch at one.",
           "ru": "Обычно я обедаю в час.",
           "icon": "👂",
-          "accepted": [],
+          "accepted": [
+            "I usually have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1409,7 +1470,9 @@
           "en": "I do not work on Sunday.",
           "ru": "Я не работаю в воскресенье.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "I do not work on Sundays."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1462,7 +1525,9 @@
           "en": "I start work at nine.",
           "ru": "Я начинаю работу в девять.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "I start work at nine o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1472,7 +1537,9 @@
           "en": "I usually have lunch at one.",
           "ru": "Обычно я обедаю в час.",
           "icon": "👂",
-          "accepted": [],
+          "accepted": [
+            "I usually have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1482,7 +1549,9 @@
           "en": "I do not work on Sunday.",
           "ru": "Я не работаю в воскресенье.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "I do not work on Sundays."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -1523,7 +1592,9 @@
           "en": "I would like a coffee, please.",
           "ru": "Я бы хотел кофе, пожалуйста.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Can I have a coffee, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1532,7 +1603,10 @@
           "en": "How much is it?",
           "ru": "Сколько это стоит?",
           "icon": "👂",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1541,7 +1615,9 @@
           "en": "This is not my order.",
           "ru": "Это не мой заказ.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "That is not my order."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1579,7 +1655,9 @@
           "en": "I would like a coffee, please.",
           "ru": "Я бы хотел кофе, пожалуйста.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Can I have a coffee, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1588,7 +1666,10 @@
           "en": "How much is it?",
           "ru": "Сколько это стоит?",
           "icon": "👂",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1597,7 +1678,9 @@
           "en": "This is not my order.",
           "ru": "Это не мой заказ.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "That is not my order."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1649,7 +1732,9 @@
           "en": "I would like a coffee, please.",
           "ru": "Я бы хотел кофе, пожалуйста.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Can I have a coffee, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1658,7 +1743,10 @@
           "en": "How much is it?",
           "ru": "Сколько это стоит?",
           "icon": "👂",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1667,7 +1755,9 @@
           "en": "This is not my order.",
           "ru": "Это не мой заказ.",
           "icon": "✍️",
-          "accepted": [],
+          "accepted": [
+            "That is not my order."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1894,7 +1984,9 @@
           "en": "Could you help me, please?",
           "ru": "Вы можете мне помочь?",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Can you help me, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -1951,7 +2043,9 @@
           "en": "Could you help me, please?",
           "ru": "Вы можете мне помочь?",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Can you help me, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2022,7 +2116,9 @@
           "en": "Could you help me, please?",
           "ru": "Вы можете мне помочь?",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "Can you help me, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2081,7 +2177,9 @@
           "en": "Yesterday I missed my bus.",
           "ru": "Вчера я пропустил автобус.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "I missed my bus yesterday."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2138,7 +2236,9 @@
           "en": "Yesterday I missed my bus.",
           "ru": "Вчера я пропустил автобус.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "I missed my bus yesterday."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2209,7 +2309,9 @@
           "en": "Yesterday I missed my bus.",
           "ru": "Вчера я пропустил автобус.",
           "icon": "💬",
-          "accepted": [],
+          "accepted": [
+            "I missed my bus yesterday."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2354,7 +2456,9 @@
           "promptEn": "I go to school at eight.",
           "promptRu": "Без подсказки: Я иду в школу в восемь.",
           "expected": "I go to school at eight.",
-          "accepted": [],
+          "accepted": [
+            "I go to school at eight o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -2391,7 +2495,9 @@
           "promptEn": "We have lunch at one.",
           "promptRu": "Без подсказки: Мы обедаем в час.",
           "expected": "We have lunch at one.",
-          "accepted": [],
+          "accepted": [
+            "We have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -2404,7 +2510,9 @@
           "promptEn": "I go to school at eight.",
           "promptRu": "Без подсказки: Я иду в школу в восемь.",
           "expected": "I go to school at eight.",
-          "accepted": [],
+          "accepted": [
+            "I go to school at eight o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -2445,7 +2553,9 @@
           "promptEn": "I would like an apple, please.",
           "promptRu": "Без подсказки: Я хочу яблоко, пожалуйста.",
           "expected": "I would like an apple, please.",
-          "accepted": [],
+          "accepted": [
+            "Can I have an apple, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           },
@@ -2463,7 +2573,10 @@
           "promptEn": "How much is it?",
           "promptRu": "Без подсказки: Сколько это стоит?",
           "expected": "How much is it?",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           },
@@ -2493,7 +2606,9 @@
           "promptEn": "I would like an apple, please.",
           "promptRu": "Без подсказки: Я хочу яблоко, пожалуйста.",
           "expected": "I would like an apple, please.",
-          "accepted": [],
+          "accepted": [
+            "Can I have an apple, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2505,7 +2620,10 @@
           "promptEn": "How much is it?",
           "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
           "expected": "How much is it?",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "structured-write",
             "minWords": 8
@@ -2621,7 +2739,9 @@
           "promptEn": "Would you like to play after school?",
           "promptRu": "Без подсказки: Хочешь поиграть после школы?",
           "expected": "Would you like to play after school?",
-          "accepted": [],
+          "accepted": [
+            "Do you want to play after school?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           },
@@ -2670,7 +2790,9 @@
           "promptEn": "Would you like to play after school?",
           "promptRu": "Без подсказки: Хочешь поиграть после школы?",
           "expected": "Would you like to play after school?",
-          "accepted": [],
+          "accepted": [
+            "Do you want to play after school?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2746,7 +2868,9 @@
           "promptEn": "I like it because we speak together.",
           "promptRu": "Без подсказки: Мне нравится, потому что мы говорим вместе.",
           "expected": "I like it because we speak together.",
-          "accepted": [],
+          "accepted": [
+            "I like it because we talk together."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -2834,7 +2958,11 @@
           "promptEn": "My phone number is 123.",
           "promptRu": "Без подсказки: Мой номер телефона 123.",
           "expected": "My phone number is 123.",
-          "accepted": [],
+          "accepted": [
+            "My number is 123.",
+            "My phone number is one two three.",
+            "My number is one two three."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -2887,7 +3015,9 @@
           "promptEn": "I start work at nine.",
           "promptRu": "Без подсказки: Я начинаю работу в девять.",
           "expected": "I start work at nine.",
-          "accepted": [],
+          "accepted": [
+            "I start work at nine o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -2906,7 +3036,9 @@
           "promptEn": "I usually have lunch at one.",
           "promptRu": "Без подсказки: Обычно я обедаю в час.",
           "expected": "I usually have lunch at one.",
-          "accepted": [],
+          "accepted": [
+            "I usually have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -2925,7 +3057,9 @@
           "promptEn": "I do not work on Sunday.",
           "promptRu": "Без подсказки: Я не работаю в воскресенье.",
           "expected": "I do not work on Sunday.",
-          "accepted": [],
+          "accepted": [
+            "I do not work on Sundays."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -2938,7 +3072,9 @@
           "promptEn": "I start work at nine.",
           "promptRu": "Без подсказки: Я начинаю работу в девять.",
           "expected": "I start work at nine.",
-          "accepted": [],
+          "accepted": [
+            "I start work at nine o'clock."
+          ],
           "rule": {
             "intent": "closed-phrase",
             "protectTime": true
@@ -2951,7 +3087,9 @@
           "promptEn": "I usually have lunch at one.",
           "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
           "expected": "I usually have lunch at one.",
-          "accepted": [],
+          "accepted": [
+            "I usually have lunch at one o'clock."
+          ],
           "rule": {
             "intent": "structured-write",
             "minWords": 8
@@ -2979,7 +3117,9 @@
           "promptEn": "I would like a coffee, please.",
           "promptRu": "Без подсказки: Я бы хотел кофе, пожалуйста.",
           "expected": "I would like a coffee, please.",
-          "accepted": [],
+          "accepted": [
+            "Can I have a coffee, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           },
@@ -2997,7 +3137,10 @@
           "promptEn": "How much is it?",
           "promptRu": "Без подсказки: Сколько это стоит?",
           "expected": "How much is it?",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           },
@@ -3015,7 +3158,9 @@
           "promptEn": "This is not my order.",
           "promptRu": "Без подсказки: Это не мой заказ.",
           "expected": "This is not my order.",
-          "accepted": [],
+          "accepted": [
+            "That is not my order."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3027,7 +3172,9 @@
           "promptEn": "I would like a coffee, please.",
           "promptRu": "Без подсказки: Я бы хотел кофе, пожалуйста.",
           "expected": "I would like a coffee, please.",
-          "accepted": [],
+          "accepted": [
+            "Can I have a coffee, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3039,7 +3186,10 @@
           "promptEn": "How much is it?",
           "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
           "expected": "How much is it?",
-          "accepted": [],
+          "accepted": [
+            "How much does it cost?",
+            "How much is this?"
+          ],
           "rule": {
             "intent": "structured-write",
             "minWords": 8
@@ -3156,7 +3306,9 @@
           "promptEn": "Could you help me, please?",
           "promptRu": "Без подсказки: Вы можете мне помочь?",
           "expected": "Could you help me, please?",
-          "accepted": [],
+          "accepted": [
+            "Can you help me, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           },
@@ -3205,7 +3357,9 @@
           "promptEn": "Could you help me, please?",
           "promptRu": "Без подсказки: Вы можете мне помочь?",
           "expected": "Could you help me, please?",
-          "accepted": [],
+          "accepted": [
+            "Can you help me, please?"
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3245,7 +3399,9 @@
           "promptEn": "Yesterday I missed my bus.",
           "promptRu": "Без подсказки: Вчера я пропустил автобус.",
           "expected": "Yesterday I missed my bus.",
-          "accepted": [],
+          "accepted": [
+            "I missed my bus yesterday."
+          ],
           "rule": {
             "intent": "closed-phrase"
           },
@@ -3294,7 +3450,9 @@
           "promptEn": "Yesterday I missed my bus.",
           "promptRu": "Без подсказки: Вчера я пропустил автобус.",
           "expected": "Yesterday I missed my bus.",
-          "accepted": [],
+          "accepted": [
+            "I missed my bus yesterday."
+          ],
           "rule": {
             "intent": "closed-phrase"
           }
@@ -3400,7 +3558,9 @@
                 "promptEn": "I go to school at eight.",
                 "promptRu": "Выполни без подсказки: Я иду в школу в восемь.",
                 "expected": "I go to school at eight.",
-                "accepted": [],
+                "accepted": [
+                  "I go to school at eight o'clock."
+                ],
                 "rule": {
                   "intent": "closed-phrase",
                   "protectTime": true
@@ -3437,7 +3597,9 @@
                 "promptEn": "We have lunch at one.",
                 "promptRu": "Выполни без подсказки: Мы обедаем в час.",
                 "expected": "We have lunch at one.",
-                "accepted": [],
+                "accepted": [
+                  "We have lunch at one o'clock."
+                ],
                 "rule": {
                   "intent": "closed-phrase",
                   "protectTime": true
@@ -3462,7 +3624,9 @@
                 "promptEn": "I would like an apple, please.",
                 "promptRu": "Выполни без подсказки: Я хочу яблоко, пожалуйста.",
                 "expected": "I would like an apple, please.",
-                "accepted": [],
+                "accepted": [
+                  "Can I have an apple, please?"
+                ],
                 "rule": {
                   "intent": "closed-phrase"
                 }
@@ -3474,7 +3638,10 @@
                 "promptEn": "How much is it?",
                 "promptRu": "Выполни без подсказки: Сколько это стоит?",
                 "expected": "How much is it?",
-                "accepted": [],
+                "accepted": [
+                  "How much does it cost?",
+                  "How much is this?"
+                ],
                 "rule": {
                   "intent": "closed-phrase"
                 }
@@ -3546,7 +3713,9 @@
                 "promptEn": "Would you like to play after school?",
                 "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
                 "expected": "Would you like to play after school?",
-                "accepted": [],
+                "accepted": [
+                  "Do you want to play after school?"
+                ],
                 "rule": {
                   "intent": "structured-write",
                   "minWords": 8
@@ -3694,7 +3863,11 @@
                 "promptEn": "My phone number is 123.",
                 "promptRu": "Выполни без подсказки: Мой номер телефона 123.",
                 "expected": "My phone number is 123.",
-                "accepted": [],
+                "accepted": [
+                  "My number is 123.",
+                  "My phone number is one two three.",
+                  "My number is one two three."
+                ],
                 "rule": {
                   "intent": "closed-phrase",
                   "protectTime": true
@@ -3719,7 +3892,9 @@
                 "promptEn": "I start work at nine.",
                 "promptRu": "Выполни без подсказки: Я начинаю работу в девять.",
                 "expected": "I start work at nine.",
-                "accepted": [],
+                "accepted": [
+                  "I start work at nine o'clock."
+                ],
                 "rule": {
                   "intent": "closed-phrase",
                   "protectTime": true
@@ -3738,7 +3913,9 @@
                 "promptEn": "I usually have lunch at one.",
                 "promptRu": "Выполни без подсказки: Обычно я обедаю в час.",
                 "expected": "I usually have lunch at one.",
-                "accepted": [],
+                "accepted": [
+                  "I usually have lunch at one o'clock."
+                ],
                 "rule": {
                   "intent": "closed-phrase",
                   "protectTime": true
@@ -3757,7 +3934,9 @@
                 "promptEn": "I do not work on Sunday.",
                 "promptRu": "Выполни без подсказки: Я не работаю в воскресенье.",
                 "expected": "I do not work on Sunday.",
-                "accepted": [],
+                "accepted": [
+                  "I do not work on Sundays."
+                ],
                 "rule": {
                   "intent": "closed-phrase",
                   "protectTime": true
@@ -3782,7 +3961,9 @@
                 "promptEn": "I would like a coffee, please.",
                 "promptRu": "Выполни без подсказки: Я бы хотел кофе, пожалуйста.",
                 "expected": "I would like a coffee, please.",
-                "accepted": [],
+                "accepted": [
+                  "Can I have a coffee, please?"
+                ],
                 "rule": {
                   "intent": "closed-phrase"
                 }
@@ -3794,7 +3975,10 @@
                 "promptEn": "How much is it?",
                 "promptRu": "Выполни без подсказки: Сколько это стоит?",
                 "expected": "How much is it?",
-                "accepted": [],
+                "accepted": [
+                  "How much does it cost?",
+                  "How much is this?"
+                ],
                 "rule": {
                   "intent": "closed-phrase"
                 }
@@ -3806,7 +3990,9 @@
                 "promptEn": "This is not my order.",
                 "promptRu": "Выполни без подсказки: Это не мой заказ.",
                 "expected": "This is not my order.",
-                "accepted": [],
+                "accepted": [
+                  "That is not my order."
+                ],
                 "rule": {
                   "intent": "closed-phrase"
                 }
@@ -3867,7 +4053,9 @@
                 "promptEn": "Could you help me, please?",
                 "promptRu": "Напиши 2-3 собственных связанных предложения по теме. Не копируй фразы урока.",
                 "expected": "Could you help me, please?",
-                "accepted": [],
+                "accepted": [
+                  "Can you help me, please?"
+                ],
                 "rule": {
                   "intent": "structured-write",
                   "minWords": 8

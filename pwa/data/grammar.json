@@ -1313,14 +1313,33 @@
         {
           "q": "They are ___ tired after work.",
           "a": "sometimes",
-          "accepted": [],
+          "accepted": [
+            "often",
+            "usually",
+            "always",
+            "never",
+            "rarely",
+            "seldom",
+            "hardly ever",
+            "occasionally",
+            "frequently",
+            "normally"
+          ],
           "hint": "Наречие частоты обычно стоит перед смысловым глаголом, но после be: I often walk; she is always early. Never уже содержит отрицание.",
           "evidence": "independent"
         },
         {
           "q": "I have ___ seen snow.",
           "a": "never",
-          "accepted": [],
+          "accepted": [
+            "often",
+            "rarely",
+            "seldom",
+            "sometimes",
+            "hardly ever",
+            "occasionally",
+            "frequently"
+          ],
           "hint": "Наречие частоты обычно стоит перед смысловым глаголом, но после be: I often walk; she is always early. Never уже содержит отрицание.",
           "evidence": "independent"
         }

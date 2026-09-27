@@ -1,5 +1,5 @@
 import {grammarLesson, speakingSample, writingHints, basicWritingCheck, onlineVideos} from "./offline-learning.js";
-import {LEARNING_SCHEMA_VERSION, RELEASE_ID, migrateLearningState, scoreLearningPhrase, validateBackupPayload} from "./learning-model.js";
+import {LEARNING_SCHEMA_VERSION, RELEASE_ID, migrateLearningState, scoreLearningPhrase, validateBackupPayload, normalizeAnswerText} from "./learning-model.js";
 
 const DB_NAME = "pogruzhenie-pwa";
 // The record schema is versioned inside the `state` value. IndexedDB itself
@@ -1048,5 +1048,7 @@ function preparePwaPage() {
   registerServiceWorker();
 }
 
+// Нормализация ответа одна на речь и письмо (LEARNING-FIX Б5): ui.html сверяет с ней свою копию для Mac-оболочки.
+bridge.normalizeAnswerText = normalizeAnswerText;
 window.PogruzheniePWA = bridge;
 preparePwaPage();
